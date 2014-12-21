@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | and path to your installation. However, you should always configure this
 | explicitly and never rely on auto-guessing, especially in production
 | environments.
-|
+| test
 */
 $config['base_url'] = '';
 
