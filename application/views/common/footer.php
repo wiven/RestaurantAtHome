@@ -17,11 +17,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 
-<footer>
-    &COPY; Restaurant At Home
-</footer>
+    <footer>
+        &COPY; Restaurant At Home
+    </footer>
 
     
+</div>
 
 
 </body>

@@ -16,18 +16,19 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
+<div id="main">
+    <header>
+        <div class="pure-menu pure-menu-open pure-menu-horizontal">
 
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Resaurant At Home</a>
+            <a class="pure-menu-heading" href=""><img src="public/img/logo_big.png" alt="Resaurant At Home" width="250px"></a>
 
-        <ul>
-            <li class="pure-menu-selected"><a href="#">Home</a></li>
-            <li><a href="#">something</a></li>
-            <li><a href="#">something</a></li>
-        </ul>
-    </div>
-</div>
+            <ul class="login">
+                <li><a href="#">Login/ registreer</a></li>
+                <li><a href="#"><img src="public/img/small_be_flag.png" alt="Nederlands - Belgie" ></a></li>
+            </ul>
+
+        </div>
+    </header>
 
 
 <?php //EOF  -'It all ends here'-   ?>
