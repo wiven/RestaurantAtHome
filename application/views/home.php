@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="pure-u-1-5">
-                <button  class="pure-button pure-button-primary button-xlarge"><i class="fa fa-search fa-lg"></i>
+                <button  class="pure-button pure-button-primary button-xlarge" onclick="window.location.href='./Search'"><i class="fa fa-search fa-lg"></i>
                     Zoeken!
                 </button>
             </div>
