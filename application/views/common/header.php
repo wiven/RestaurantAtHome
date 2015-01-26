@@ -22,21 +22,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8" />
 	<title>Restaurant At Home</title>
-         
-        <!-- Let's put all the css we need right here: -->
-        <!-- first of all the normalize css framework -->
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css">
-        <!-- Then the pure css framwork -->
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-        <!--[if lte IE 8]>
-            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-        <!--<![endif]-->
+
+
+        <!-- First of all the bootstrap framework -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        
         
         <!-- add our own css bits -->
         <link rel="stylesheet" href="./public/css/screen.css">
+        
+        
+        
         
         <!-- Font Awesome for some cool icons -->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -44,6 +40,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <!-- define the viewport for mobile use -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 
 </head>
 <body>
