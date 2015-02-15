@@ -47,4 +47,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
+    <div id="wrap">
 <?php //EOF  -'It all ends here'-   ?>

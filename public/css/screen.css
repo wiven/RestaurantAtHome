@@ -13,6 +13,9 @@
  * @since	Version 1.0.0
 */
 
+
+
+/** ------------- HEADER -----------------*/
 .float-right{
     float:right;
 }
@@ -49,21 +52,174 @@ line-height: 27px;
     margin-right: 10px;
 }
 
-.inputfield {
-    
-    //
-    width:100%;
-        padding-top: 150px;
-    padding-bottom: 300px;
-    //padding-bottom: 300px;
-    background: url(../img/duck.jpg) no-repeat center 15px ;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+/** ---------------- END OF HEADER --------------------*/
+
+
+/** ---------------- FOOTER ----------------------*/
+
+/* sticky footer */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+.footer {
+  height: 60px;
+  background-color: #f5f5f5;
 }
 
 
+
+/** ----------------END OF HEADER ------------------*/
+
+
+
+/** ---------------- HOMEPAGE ----------------------- */
+
+
+/* Thats one wide background that is */
+.homepageback .carousel { z-index: -9999; 
+position: absolute;
+top: 150px;
+left: 0px;
+max-height: 500px;
+min-width:100%;
+max-width: 100%;
+/*margin-top: 150px;*/
+margin-left: 0px;
+display: inline;
+}
+
+.homepageback .carousel img{
+    min-height: 100%;
+    max-width:100%;
+    width: auto;
+    
+    
+    /*NOT GOOD YET!!!!!!!!!!!!!!!!!!!
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    max-width: 177.78vw;
+    
+    top:0;bottom:0; /* vertical center */
+    left:0;right:0; /* horizontal center */
+    */
+    
+}
+
+
+.homepageback .carousel .item {
+    min-width: 100%;
+    height: 500px;
+}
+
+.homepage .panel{
+    
+    margin-top: 150px;
+    margin-bottom: 250px;
+}
+
+/* Those search bars can't be too small cant they? */
+.homepage .form-inline input {
+    min-width: 300px;
+}
+
+.homepage .form-inline label {
+    min-width: 200px;
+}
+
+
+/* For Small devices and up give the search form some space */
+@media (min-width:768px) {
+    .homepage .form-inline div.form-group {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+/* For Large and Medium devices make the search button on homepage go a bit down */
+@media (min-width:992px) {
+    .homepage .form-inline div.form-group button.searchbtn{
+        margin-top: 13px;
+    }
+}
+
+/** ---------------END OF HOMEPAGE ----------------*/
+
+
+
+
+
+/*
+  Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
+  CSS from:       http://codepen.io/transportedman/pen/NPWRGq
+  and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
+  Inspired from:  http://codepen.io/Rowno/pen/Afykb 
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
 
 
 /**
