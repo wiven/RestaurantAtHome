@@ -134,8 +134,10 @@ display: inline;
 }
 
 /* Those search bars can't be too small cant they? */
-.homepage .form-inline input {
-    min-width: 300px;
+@media (min-width:768px) {
+    .homepage .form-inline input {
+        min-width: 300px;
+    }
 }
 
 .homepage .form-inline label {
