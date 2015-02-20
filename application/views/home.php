@@ -17,17 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <div class="homepageback">
-<div id="backgroundcarousel" class="carousel carousel-fade slide" data-ride="carousel">
-
- <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="public/img/Duck_big.jpg" alt="...">
-    </div>
-    <div class="item">
-      <img src="public/img/Vegi_big.jpg" alt="...">
-    </div>
-  </div>
-</div>
+ <!-- here will appear the background images -->
 </div>
     
 <div class="container homepage">

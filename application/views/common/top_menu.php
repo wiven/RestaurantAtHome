@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
 
-                <a class="navbar-brand" href="#"><img src="public/img/logo_big.png" alt="Resaurant At Home" width="250px"></a>
+                <a class="navbar-brand" href="#"><img src="public/img/logo_big.png" alt="Resaurant At Home" width="250px" /></a>
                 
                 <button type="button" class="navbar-toggle navbar-right right pull-right collapsed navbar-link glyphicon glyphicon-user  drop-shadow" data-toggle="collapse" data-target="#collapse-user-menu">
         </button>
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               
 
                 <ul class="nav navbar-default navbar-nav navbar-right drop-shadow hidden-xs">
-                  <li><a href="#">Login/ registreer</a></li>
+                  <li><a href="#">Login / registreer</a></li>
                   <li><a href="#"><img src="public/img/small_be_flag.png" alt="Nederlands - Belgie" ></a></li>
                 </ul>
               

@@ -88,43 +88,13 @@ body {
 
 
 /** ---------------- HOMEPAGE ----------------------- */
-
-
-/* Thats one wide background that is */
-.homepageback .carousel { z-index: -9999; 
-position: absolute;
-top: 150px;
-left: 0px;
-max-height: 500px;
-min-width:100%;
-max-width: 100%;
-/*margin-top: 150px;*/
-margin-left: 0px;
-display: inline;
-}
-
-.homepageback .carousel img{
-    min-height: 100%;
-    max-width:100%;
-    width: auto;
-    
-    
-    /*NOT GOOD YET!!!!!!!!!!!!!!!!!!!
-    width: 100vw;
-    height: 56.25vw;
-    min-height: 100vh;
-    max-width: 177.78vw;
-    
-    top:0;bottom:0; /* vertical center 
-    left:0;right:0; /* horizontal center 
-    */
-    
-}
-
-
-.homepageback .carousel .item {
-    min-width: 100%;
+.homepageback {
+    width:100%;
+    position: absolute;
+    top: 150px;
+    left: 0px;
     height: 500px;
+    z-index: -9999;
 }
 
 .homepage .panel{
