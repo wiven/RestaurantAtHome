@@ -55,6 +55,20 @@ line-height: 27px;
 /** ---------------- END OF HEADER --------------------*/
 
 
+
+/** -----------------ADMIN HEADER --------------------*/
+
+ .admin > .navbar-default .navbar-nav > .active > a, .admin > .navbar-default .navbar-nav > .active > a:focus, .admin > .navbar-default .navbar-nav > .active > a:hover {
+    background-color: #ebebeb;
+    color: #336fb6;
+    font-weight: bold;
+}
+
+
+
+/** --------------- END OF ADMIN HEADER ---------------*/
+
+
 /** ---------------- FOOTER ----------------------*/
 
 /* sticky footer */
@@ -83,7 +97,7 @@ body {
 
 
 
-/** ----------------END OF HEADER ------------------*/
+/** ----------------END OF FOOTER ------------------*/
 
 
 
