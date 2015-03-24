@@ -66,6 +66,32 @@ line-height: 27px;
 
 
 
+.admin .navbar-toggle {
+  float: left;
+  margin-left: 15px;
+}
+
+.admin .navbar {
+    right: 0px !important;
+}
+
+@media (min-width: 0) {
+  .admin .navbar-toggle {
+    display: block !important; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+
+  .admin .navbar {
+    /*right: auto;*/
+    background: none;
+    border: none;
+  }
+}
+
+
+
 /** --------------- END OF ADMIN HEADER ---------------*/
 
 

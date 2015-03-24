@@ -1,8 +1,9 @@
 
 
 
+    <div class="container-fluid">
+      <div class="page-header">
+        <h2>Mijn Gerechten</h2>
+      </div>
 
-    <aside class="col-xs-2" style="height:1000px; background-color: gray;">
-        
-    </aside>
-    
+    </div><!-- /.container-fluid -->

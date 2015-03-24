@@ -27,14 +27,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- First of all the bootstrap framework -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         
+        <!-- Additions to the bootstrap framework by Jasny: http://jasny.github.io/bootstrap -->
+        <link rel="stylesheet" href="./public/css/jasny-bootstrap.min.css">
+        
         <!-- add our own css bits -->
         <link rel="stylesheet" href="./public/css/screen.css">
+        
+        
+        
         
         <!-- Font Awesome for some cool icons -->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+        
         <!-- define the viewport for mobile use -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 

@@ -13,10 +13,10 @@ class Admin extends CI_Controller {
 	public function index()
 	{
             
-                $this->load->view('/common/header');
+                $this->load->view('/common_admin/header_admin');
                 $this->load->view('/common_admin/top_menu_admin');
 		$this->load->view('admin');
-                $this->load->view('/common/footer');
+                $this->load->view('/common_admin/footer_admin');
 	}
 }
 
