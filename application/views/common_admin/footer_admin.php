@@ -28,9 +28,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- Bootstrap Extention Jasny: http://jasny.github.io/bootstrap/ -->
     <script src="public/js/jasny-bootstrap.min.js"></script>
+    <!-- Another Bootstrap Extention:  http://www.bootstraptoggle.com/ -->
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
     <!-- Backstretch script http://srobbin.com/jquery-plugins/backstretch/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <script src="public/js/script.js"></script>
+
 </body>
 
 </html>

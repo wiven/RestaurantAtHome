@@ -30,6 +30,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Additions to the bootstrap framework by Jasny: http://jasny.github.io/bootstrap -->
         <link rel="stylesheet" href="./public/css/jasny-bootstrap.min.css">
         
+        <!-- Another addidtion to bootstrap: http://www.bootstraptoggle.com/ -->
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+        
         <!-- add our own css bits -->
         <link rel="stylesheet" href="./public/css/screen.css">
         
