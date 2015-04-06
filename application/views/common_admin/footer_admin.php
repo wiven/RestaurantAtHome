@@ -25,6 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- Enable jquery ui on touch hack http://touchpunch.furf.com/ -->
+    <script src="public/js/jquery.ui.touch-punch.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- Bootstrap Extention Jasny: http://jasny.github.io/bootstrap/ -->
     <script src="public/js/jasny-bootstrap.min.js"></script>
@@ -33,7 +36,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Backstretch script http://srobbin.com/jquery-plugins/backstretch/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <script src="public/js/script.js"></script>
-
+    
+    
+	<script>
+	$(function() {
+		$( "#selectable" ).selectable(
+                     );
+	});
+	</script>
 </body>
 
 </html>

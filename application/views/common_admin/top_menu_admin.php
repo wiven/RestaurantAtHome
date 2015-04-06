@@ -60,10 +60,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a class="navbar-brand" href="#" style="padding:7px;">
                     <img alt="Restaurant at Home" src="public/img/logo_small.png" height="35px">
                 </a>
+                <p class="navbar-text">Ingelogd als  Mark Otto</p>
             </div>
             
             
-            <p class="navbar-text">Ingelogd als  Mark Otto</p>
+            
             
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Menu's & Gerechten <span class="sr-only">(current)</span></a></li>

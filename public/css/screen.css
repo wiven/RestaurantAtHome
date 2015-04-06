@@ -75,19 +75,8 @@ line-height: 27px;
     right: 0px !important;
 }
 
-@media (min-width: 0) {
-  .admin .navbar-toggle {
+.admin .navbar-toggle {
     display: block !important; /* force showing the toggle */
-  }
-}
-
-@media (min-width: 992px) {
-
-  .admin .navbar {
-    /*right: auto;*/
-    background: none;
-    border: none;
-  }
 }
 
 
@@ -171,6 +160,46 @@ body {
 }
 
 /** ---------------END OF HOMEPAGE ----------------*/
+
+
+
+
+
+
+
+/** ---------------- ADMIN PAGE --------------------*/
+
+#selectable .ui-selecting .title{ 
+    background: rgb(0, 107, 73) !important;
+    background: rgba(0, 107, 73, .8) !important;
+}
+
+#selectable .ui-selected .selected_check {
+    visibility: visible !important;
+}
+
+#selectable .ui-selected .title{ 
+    background: rgb(29, 157, 116) !important;
+    background: rgba(29, 157, 116, .7) !important;
+}
+
+
+
+/** ---------------- END OF ADMIN PAGE --------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
