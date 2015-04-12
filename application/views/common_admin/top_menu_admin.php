@@ -18,29 +18,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="admin">
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
-      <a class="navmenu-brand" href="#">Project name</a>
+      <a class="navmenu-brand" href="#">Restaurant At Home</a>
       <ul class="nav navmenu-nav">
-        <li><a href="../navmenu/">Slide in</a></li>
-        <li class="active"><a href="./">Push</a></li>
-        <li><a href="../navmenu-reveal/">Reveal</a></li>
-        <li><a href="../navbar-offcanvas/">Off canvas navbar</a></li>
+        <li><a href="#/">&nbsp;&nbsp;Overzicht</a></li>
+        
+        <li><a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;Profiel</a></li>
+        
+        <li class="active"><a href="#"><i class="fa fa-cutlery"></i>&nbsp;&nbsp;Mijn Gerechten</a></li>
+        
       </ul>
       <ul class="nav navmenu-nav">
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu navmenu-nav">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+          <li style="height: 10px; margin-left: 10px; margin-right:10px;   border-top:1px solid #E7E7E7;"></li>
+        <li><a href="#"><i class="fa fa-bars"></i>&nbsp;&nbsp;Bestellingen</a></li>
+        <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Slots beheren</a></li>
+        <li><a href="#"><i class="fa fa-fire"></i>&nbsp;&nbsp;Acties</a></li>
+      </ul>
+    <ul class="nav navmenu-nav">
+        <li style="height: 10px; margin-left: 10px; margin-right:10px;   border-top:1px solid #E7E7E7;"></li>
+        <li><a href="#"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;Contact</a></li>
       </ul>
     </div>
 </div><!--/admin -->
@@ -66,10 +61,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             
             
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Menu's & Gerechten <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link</a></li>
-            </ul>
+            <div class="nav navbar-form navbar-right">
+                <div class="btn btn-success">Uitloggen</div>
+                <!--<li class="active"><a href="#">Menu's & Gerechten <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>-->
+            </div>
             
             
         </div>
