@@ -79,6 +79,21 @@ line-height: 27px;
     display: block !important; /* force showing the toggle */
 }
 
+.admin .navmenu-fixed-left.offcanvas {
+    background-color: #336FB6 !important;
+    
+}
+
+.admin .navmenu-fixed-left.offcanvas a{
+    color: white !important;
+    
+}
+
+.admin .navmenu-fixed-left.offcanvas li.active a{
+    color: black !important;
+    background-color: white !important;
+}
+
 
 
 /** --------------- END OF ADMIN HEADER ---------------*/
