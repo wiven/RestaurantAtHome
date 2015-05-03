@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
       <a class="navmenu-brand" href="#">Restaurant At Home</a>
       <ul class="nav navmenu-nav">
-        <li><a href="#/">&nbsp;&nbsp;Overzicht</a></li>
+        <li><a href="./">&nbsp;&nbsp;Overzicht</a></li>
         
         <li><a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;Profiel</a></li>
         
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <ul class="nav navmenu-nav">
           <li style="height: 10px; margin-left: 10px; margin-right:10px;   border-top:1px solid #E7E7E7;"></li>
         <li><a href="#"><i class="fa fa-bars"></i>&nbsp;&nbsp;Bestellingen</a></li>
-        <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Slots beheren</a></li>
+        <li><a href="slotedit"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Slots beheren</a></li>
         <li><a href="#"><i class="fa fa-fire"></i>&nbsp;&nbsp;Acties</a></li>
       </ul>
     <ul class="nav navmenu-nav">
@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             <div class="navbar-header" style="margin-left:50px;">
                 <a class="navbar-brand" href="#" style="padding:7px;">
-                    <img alt="Restaurant at Home" src="public/img/logo_small.png" height="35px">
+                    <img alt="Restaurant at Home" src="<?php echo public_url() ; ?>/img/logo_small.png" height="35px">
                 </a>
                 <p class="navbar-text">Ingelogd als  Mark Otto</p>
             </div>

@@ -28,13 +28,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         
         <!-- Additions to the bootstrap framework by Jasny: http://jasny.github.io/bootstrap -->
-        <link rel="stylesheet" href="./public/css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo public_url() ; ?>css/jasny-bootstrap.min.css">
+        
+        <!-- Bootstrap datepicker theme https://gist.github.com/miwahall/7028640 -->
+        <link rel="stylesheet" href="<?php echo public_url() ; ?>css/bootstrap_datepicker.css">
+        
+        <!-- Bootstrap timepicker theme http://jdewit.github.io/bootstrap-timepicker/ -->
+        <link rel="stylesheet" href="<?php echo public_url() ; ?>css/bootstrap-timepicker.css">
+        
+        <!-- Bootstrap touchspin theme http://www.virtuosoft.eu/code/bootstrap-touchspin/ -->
+        <link rel="stylesheet" href="<?php echo public_url() ; ?>css/jquery.bootstrap-touchspin.min.css">
         
         <!-- Another addidtion to bootstrap: http://www.bootstraptoggle.com/ -->
         <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
         
         <!-- add our own css bits -->
-        <link rel="stylesheet" href="./public/css/screen.css">
+        <link rel="stylesheet" href="<?php echo public_url() ; ?>css/screen.css">
         
         
         

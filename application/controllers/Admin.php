@@ -18,6 +18,13 @@ class Admin extends CI_Controller {
 		$this->load->view('admin');
                 $this->load->view('/common_admin/footer_admin');
 	}
+        
+        public function slotedit(){
+                $this->load->view('/common_admin/header_admin');
+                $this->load->view('/common_admin/top_menu_admin');
+		$this->load->view('admin_edit_slot');
+                $this->load->view('/common_admin/footer_admin');
+        }
 }
 
 /* EOF */
