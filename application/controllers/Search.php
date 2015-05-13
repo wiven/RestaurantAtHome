@@ -19,7 +19,7 @@ class Search extends CI_Controller {
 
     public function restaurantdetail() {
         $this->load->view('/common/header');
-        $this->load->view('/common/top_menu');
+        $this->load->view('/common/top_menu_clients');
         $this->load->view('restaurantdetail');
         $this->load->view('/common/footer');
     }
