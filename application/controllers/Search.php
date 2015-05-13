@@ -18,7 +18,11 @@ class Search extends CI_Controller {
 	}
 
     public function restaurantdetail() {
-        $this->load->view('/common/header');
+        $data_header = array(
+            'page_title' => ' - Zoeken'
+        );
+
+        $this->load->view('/common/header', $data_header);
         $this->load->view('/common/top_menu_clients');
         $this->load->view('restaurantdetail');
         $this->load->view('/common/footer');
