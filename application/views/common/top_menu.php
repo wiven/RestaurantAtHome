@@ -10,7 +10,7 @@
  * @copyright	Copyright (c) 2014 - 2015
  * @copyright	
  * @license	*
- * @link	http://resaturantathome.be
+ * @link	http://restaurantathome.be
  * @since	Version 1.0.0
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
 
-                <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>public/img/logo_big.png" alt="Resaurant At Home" width="250px" /></a>
+                <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>public/img/logo_big.png" alt="Restaurant At Home" width="250px" /></a>
                 
                 <button type="button" class="navbar-toggle navbar-right right pull-right collapsed navbar-link glyphicon glyphicon-user  drop-shadow" data-toggle="collapse" data-target="#collapse-user-menu">
         </button>
