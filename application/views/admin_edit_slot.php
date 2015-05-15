@@ -9,8 +9,10 @@
     </div>
     
     
-    <div class="bs-callout bs-callout-default" style="text-align: center;">
-        <button class="btn btn-default" data-toggle="modal" data-target="#WeekShed">Standaard weekschema aanpassen</button>
+    <div class="bs-callout bs-callout-default">
+        <div class="col-lg-offset-2">
+            <button class="btn btn-default" data-toggle="modal" data-target="#WeekShed">Standaard weekschema aanpassen</button>
+        </div>
     </div>
     
     <div class="bs-callout bs-callout-danger" style="text-align: center;">
