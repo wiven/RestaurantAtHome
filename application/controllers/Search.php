@@ -10,14 +10,23 @@ class Search extends CI_Controller {
 	 * Index Page for this controller.
          * MARK: This page is set as the main controller!
 	 */
-	public function index()
-	{
-            
-                $this->load->view('/common/header');
-                $this->load->view('/common/top_menu');
+	public function index() {
+        $this->load->view('/common/header');
+        $this->load->view('/common/top_menu');
 		$this->load->view('search');
-                $this->load->view('/common/footer');
+        $this->load->view('/common/footer');
 	}
+
+    public function restaurantdetail() {
+        $data_header = array(
+            'page_title' => ' - Zoeken'
+        );
+
+        $this->load->view('/common/header', $data_header);
+        $this->load->view('/common/top_menu_clients');
+        $this->load->view('restaurantdetail');
+        $this->load->view('/common/footer');
+    }
 }
 
 /* EOF */

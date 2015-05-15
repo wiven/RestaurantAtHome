@@ -9,7 +9,7 @@
  * @copyright	Copyright (c) 2014 - 2015
  * @copyright	
  * @license	*
- * @link	http://resaturantathome.be
+ * @link	http://restaurantathome.be
  * @since	Version 1.0.0
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 
                 <div class="form-group col-sm-2">
-                    <button type="button" class="btn btn-primary btn-lg searchbtn" onclick="window.location.href='./Search'"><i class="fa fa-search"></i>
+                    <button type="button" class="btn btn-primary btn-lg searchbtn" onclick="window.location.href='./search'"><i class="fa fa-search"></i>
                         Zoeken!
                     </button>
                 </div>
