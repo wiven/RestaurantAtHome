@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
     <!-- add our own css bits -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/screen.css">
+    <link rel="stylesheet" href="<?php echo public_url(); ?>css/screen.css">
 
     <!-- Font Awesome for some cool icons -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">

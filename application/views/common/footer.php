@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- Backstretch script http://srobbin.com/jquery-plugins/backstretch/ -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <script src="<?php echo base_url(); ?>public/js/script.js"></script>
+    <script src="<?php echo public_url(); ?>js/script.js"></script>
 </body>
 
 </html>

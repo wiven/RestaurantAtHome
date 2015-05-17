@@ -12,11 +12,15 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-            
-                $this->load->view('/common/header');
-                $this->load->view('/common/top_menu');
+
+        $data_header = array(
+            'page_title' => ''
+        );
+
+        $this->load->view('/common/header', $data_header);
+        $this->load->view('/common/top_menu');
 		$this->load->view('home');
-                $this->load->view('/common/footer');
+        $this->load->view('/common/footer');
 	}
 }
 
