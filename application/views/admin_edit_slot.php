@@ -34,8 +34,8 @@
           
             <div class="row">
                 <?php for($i=1;$i<7;$i++){?>
-                <div class="col-xs-12 col-md-4 col-sm-12 col-lg-3" style="padding-left:5px; padding-right:5px;">
-                    <div class="thumbnail">
+                <div class="col-xs-12 col-md-4 col-sm-12 col-lg-3" style="padding-left:5px; padding-right:5px; ">
+                    <div class="thumbnail" style="height:206px;">
                         <h4>Shift &sharp;<?php echo $i?></h3>
                         <div style="width:100%; display:block;"> 
                             <div class="input-group bootstrap-timepicker" >
@@ -63,6 +63,7 @@
                     </div>
                 </div>
                 <?php }?>
+                <div class="col-xs-12 col-md-4 col-sm-12 col-lg-3" style="height:200px; position: relative; display: block;"><button style="position:absolute; bottom:0;" class="btn btn-primary">+ Shift toevoegen</button></div>
             </div>
         </div>
     </div>
@@ -115,6 +116,7 @@
                     </div>
                 </div>
                 <?php }?>
+                <div class="col-xs-12 col-md-4 col-sm-12 col-lg-3" style="height:200px; position: relative; display: block;"><button style="position:absolute; bottom:0;" class="btn btn-primary">+ Shift toevoegen</button></div>
             </div>
         </div>
     </div>
