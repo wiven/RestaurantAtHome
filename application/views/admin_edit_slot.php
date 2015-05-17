@@ -2,7 +2,7 @@
 <div class="col-lg-3 col-md-3 col-sm-4">
     <div class="bs-callout bs-callout-primary">
         <h4>Selecteer Datum</h4>
-        <div class="col-lg-offset-2 input-group">
+        <div class="input-group">
             <input type="text" id="datepicker" class="form-control" placeholder="Datum" readonly="true" aria-describedby="addon1" style="cursor: default; background-color: #fff;">
             <span class="input-group-addon" id="addon1"><i class="fa fa-calendar"></i></span>
         </div>
@@ -10,8 +10,8 @@
     
     
     <div class="bs-callout bs-callout-default">
-        <div class="col-lg-offset-2">
-            <button class="btn btn-default" data-toggle="modal" data-target="#WeekShed">Standaard weekschema aanpassen</button>
+        <div class="">
+            <button class="btn btn-default" data-toggle="modal" data-target="#WeekShed" style="white-space: normal;">Standaard weekschema aanpassen</button>
         </div>
     </div>
     
@@ -55,7 +55,7 @@
 
 
                         <div style="width:100%; display:block; margin-top: 60px; background-color:#5cb85c; border-radius:4px; padding:4px;">
-                            <span for="sph" style="padding:8px; color:white;">Aantal slots per uur:</span>
+                            <span for="sph" style="padding:8px; color:white;">Aantal slots per uur (sph):</span>
                             <div style="width: 170px; margin:0 auto;">
                                 <input id="sph" type="text" value="" name="slotph" >
                             </div>
@@ -107,7 +107,7 @@
 
 
                         <div style="width:100%; display:block; margin-top: 60px; background-color:#5cb85c; border-radius:4px; padding:4px;">
-                            <span for="sph" style="padding:8px; color:white;">Aantal slots per uur:</span>
+                            <span for="sph" style="padding:8px; color:white;">Aantal slots per uur (sph):</span>
                             <div style="width: 170px; margin:0 auto;">
                                 <input id="sph" type="text" value="" name="slotph" >
                             </div>
