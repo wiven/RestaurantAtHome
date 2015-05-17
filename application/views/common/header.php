@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="RestaurantAtHome">
     <meta name="author" content="http://wiven.be">
 
-    <title>RestaurantAtHome<?php echo $page_title; ?></title>
+    <title>RestaurantAtHome<?php echo (isset($page_title) ? $page_title : '') ?></title>
 
     <!-- First of all the bootstrap framework -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
