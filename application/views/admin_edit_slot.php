@@ -2,7 +2,7 @@
 <div class="col-lg-3 col-md-3 col-sm-4">
     <div class="bs-callout bs-callout-primary">
         <h4>Selecteer Datum</h4>
-        <div class="col-lg-offset-2 input-group">
+        <div class="input-group">
             <input type="text" id="datepicker" class="form-control" placeholder="Datum" readonly="true" aria-describedby="addon1" style="cursor: default; background-color: #fff;">
             <span class="input-group-addon" id="addon1"><i class="fa fa-calendar"></i></span>
         </div>
@@ -10,8 +10,8 @@
     
     
     <div class="bs-callout bs-callout-default">
-        <div class="col-lg-offset-2">
-            <button class="btn btn-default" data-toggle="modal" data-target="#WeekShed">Standaard weekschema aanpassen</button>
+        <div class="">
+            <button class="btn btn-default" data-toggle="modal" data-target="#WeekShed" style="white-space: normal;">Standaard weekschema aanpassen</button>
         </div>
     </div>
     
@@ -34,8 +34,8 @@
           
             <div class="row">
                 <?php for($i=1;$i<7;$i++){?>
-                <div class="col-xs-12 col-md-4 col-sm-12 col-lg-3" style="padding-left:5px; padding-right:5px;">
-                    <div class="thumbnail">
+                <div class="col-xs-12 col-md-4 col-sm-12 col-lg-3" style="padding-left:5px; padding-right:5px; ">
+                    <div class="thumbnail" style="height:206px;">
                         <h4>Shift &sharp;<?php echo $i?></h3>
                         <div style="width:100%; display:block;"> 
                             <div class="input-group bootstrap-timepicker" >
@@ -55,7 +55,7 @@
 
 
                         <div style="width:100%; display:block; margin-top: 60px; background-color:#5cb85c; border-radius:4px; padding:4px;">
-                            <span for="sph" style="padding:8px; color:white;">Aantal slots per uur:</span>
+                            <span for="sph" style="padding:8px; color:white;">Aantal slots per uur (sph):</span>
                             <div style="width: 170px; margin:0 auto;">
                                 <input id="sph" type="text" value="" name="slotph" >
                             </div>
@@ -63,6 +63,7 @@
                     </div>
                 </div>
                 <?php }?>
+                <div class="col-xs-12 col-md-4 col-sm-12 col-lg-3" style="height:200px; position: relative; display: block;"><button style="position:absolute; bottom:0;" class="btn btn-primary">+ Shift toevoegen</button></div>
             </div>
         </div>
     </div>
@@ -107,7 +108,7 @@
 
 
                         <div style="width:100%; display:block; margin-top: 60px; background-color:#5cb85c; border-radius:4px; padding:4px;">
-                            <span for="sph" style="padding:8px; color:white;">Aantal slots per uur:</span>
+                            <span for="sph" style="padding:8px; color:white;">Aantal slots per uur (sph):</span>
                             <div style="width: 170px; margin:0 auto;">
                                 <input id="sph" type="text" value="" name="slotph" >
                             </div>
@@ -115,6 +116,7 @@
                     </div>
                 </div>
                 <?php }?>
+                <div class="col-xs-12 col-md-4 col-sm-12 col-lg-3" style="height:200px; position: relative; display: block;"><button style="position:absolute; bottom:0;" class="btn btn-primary">+ Shift toevoegen</button></div>
             </div>
         </div>
     </div>
