@@ -10,12 +10,19 @@
         </div>
     </div>
         
-<ul style="margin-bottom: 20px;" role="tablist" class="nav nav-pills nav-justified">
-        <li class="active" role="presentation"><a data-toggle="pill" role="tab" aria-controls="voorgerechten" href="#voorgerechten"><h4>VOORGERECHTEN</h4></a></li>
-        <li role="presentation"><a data-toggle="pill" role="tab" aria-controls="hoofdgerechten" href="#hoofdgerechten"><h4>HOOFDGERECHTEN</h4></a></li>
-        <li role="presentation"><a data-toggle="pill" role="tab" aria-controls="desserts" href="#desserts"><h4>DESSERTS</h4></a></li>
-        <li role="presentation"><a data-toggle="pill" role="tab" aria-controls="dranken" href="#dranken"><h4>DRANKEN</h4></a></li>
+    
+      
+<ul style="margin-bottom: 20px;" role="group" class="nav nav-pills nav-justified">
+        <li class="active" role="group"><a data-toggle="pill" role="tab" aria-controls="voorgerechten" href="#voorgerechten"><h4>VOORGERECHTEN</h4></a></li>
+        <li class="" role="group"><a data-toggle="pill" role="tab" aria-controls="hoofdgerechten" href="#hoofdgerechten"><h4>HOOFDGERECHTEN</h4></a></li>
+        <li class="" role="group"><a data-toggle="pill" role="tab" aria-controls="desserts" href="#desserts"><h4>DESSERTS</h4></a></li>
+        <li class="" role="group"><a data-toggle="pill" role="tab" aria-controls="dranken" href="#dranken"><h4>DRANKEN</h4></a></li>
+        
 </ul>
+        
+
+        
+        
         
         <div id="recipes">
         <?php for ($x = 0; $x <= 7; $x++) { ?>
