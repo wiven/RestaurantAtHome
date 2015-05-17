@@ -182,7 +182,7 @@ body {
 
 
 
-/** ---------------- ADMIN PAGE --------------------*/
+/** ---------------- ADMIN MY RECIPES PAGE --------------------*/
 
 #selectable .ui-selecting .title{ 
     background: rgb(0, 107, 73) !important;
@@ -198,9 +198,15 @@ body {
     background: rgba(29, 157, 116, .7) !important;
 }
 
+#recipes a:hover {
+        background: rgb(29, 157, 116) !important;
+    background: rgba(29, 157, 116, .7) !important;
+    
+}
 
 
-/** ---------------- END OF ADMIN PAGE --------------*/
+
+/** ---------------- END OF ADMIN MY RECIPES PAGE --------------*/
 
 
 

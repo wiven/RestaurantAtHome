@@ -3,14 +3,16 @@
     <div class="bs-callout bs-callout-primary">
         <h4>Selecteer Datum</h4>
         <div class="col-lg-offset-2 input-group">
-            <input type="text" id="datepicker" class="form-control" placeholder="Datum" readonly="true" aria-describedby="addon1">
+            <input type="text" id="datepicker" class="form-control" placeholder="Datum" readonly="true" aria-describedby="addon1" style="cursor: default; background-color: #fff;">
             <span class="input-group-addon" id="addon1"><i class="fa fa-calendar"></i></span>
         </div>
     </div>
     
     
-    <div class="bs-callout bs-callout-default" style="text-align: center;">
-        <button class="btn btn-default" data-toggle="modal" data-target="#WeekShed">Standaard weekschema aanpassen</button>
+    <div class="bs-callout bs-callout-default">
+        <div class="col-lg-offset-2">
+            <button class="btn btn-default" data-toggle="modal" data-target="#WeekShed">Standaard weekschema aanpassen</button>
+        </div>
     </div>
     
     <div class="bs-callout bs-callout-danger" style="text-align: center;">
