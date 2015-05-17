@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $("input[name='slotph']").TouchSpin({
                     initval: 60,
                     step: 5,
-                    postfix: "spm",
+                    postfix: "sph"
                     
           
                     
