@@ -6,11 +6,11 @@
  * - The top menu
  *
  * @package	RestoAtHome
- * @author	A collaboration of: Wiven Web Solutions - VDW Web - KolorFlux
+ * @author	A collaboration of: WiVen Web Solutions - VDW Web - KolorFlux
  * @copyright	Copyright (c) 2014 - 2015
  * @copyright	
  * @license	*
- * @link	http://resaturantathome.be
+ * @link	http://restaurantathome.be
  * @since	Version 1.0.0
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <ul class="nav navmenu-nav">
           <li style="height: 10px; margin-left: 10px; margin-right:10px;   border-top:1px solid #E7E7E7;"></li>
         <li><a href="#"><i class="fa fa-bars"></i>&nbsp;&nbsp;Bestellingen</a></li>
-        <li><a href="slotedit"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Slots beheren</a></li>
+        <li><a href="<?php echo admin_url(); ?>slotedit"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Slots beheren</a></li>
         <li><a href="#"><i class="fa fa-fire"></i>&nbsp;&nbsp;Acties</a></li>
       </ul>
     <ul class="nav navmenu-nav">

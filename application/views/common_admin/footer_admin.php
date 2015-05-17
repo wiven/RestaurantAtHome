@@ -54,8 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $( "#addon1" ).click(function(){$( "#datepicker" ).datepicker( "show" )});
                 
                 $('.timepicker').timepicker({
-                    showMeridian: false,
-                    
+                    showMeridian: false
                 });
                 
                 $("input[name='slotph']").TouchSpin({
