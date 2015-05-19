@@ -190,7 +190,7 @@
                     </div>-->
 
                     <div class="col-lg-3 hidden-md hidden-sm col-xs-12 pull-right">
-                        <a href="<?php echo base_url(); ?>search/restaurantdetail" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                        <a href="<?php echo base_url(); ?>search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
                     </div>
 
                     <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
