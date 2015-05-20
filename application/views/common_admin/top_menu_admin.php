@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <li><a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;Profiel</a></li>
         
-        <li class="active"><a href="#"><i class="fa fa-cutlery"></i>&nbsp;&nbsp;Mijn Gerechten</a></li>
+        <li class="active"><a href="<?php echo admin_url(); ?>myrecipes"><i class="fa fa-cutlery"></i>&nbsp;&nbsp;Mijn Gerechten</a></li>
         
       </ul>
       <ul class="nav navmenu-nav">

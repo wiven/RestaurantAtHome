@@ -198,10 +198,21 @@ body {
     background: rgba(29, 157, 116, .7) !important;
 }
 
-#recipes a:hover {
+#recipes div.recipe:hover{
+    border: 2px solid #1D9D74 !important;
+    
+}
+
+#recipes div.recipe:hover > div.title{
         background: rgb(29, 157, 116) !important;
     background: rgba(29, 157, 116, .7) !important;
-    
+}
+
+#recipes div.recipe:hover > div.editbutton{
+            background: rgb(29, 157, 116) !important;
+    background: rgba(29, 157, 116, .7) !important;
+    border: 2px solid #1D9D74 !important;
+    color:white !important;
 }
 
 
