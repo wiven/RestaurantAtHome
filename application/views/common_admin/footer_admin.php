@@ -65,6 +65,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
                     
                 });
+                
+                $('.fileinput').fileinput();
+                
+                $('.contentedit').click(
+                  function(e){
+                      e.preventDefault();
+                      var tar = $(e.target);
+                      tar.parent().attr("contentEditable","true");
+                      tar.removeClass("fa-wrench contentedit");
+                      tar.addClass("fa-check");
+                      tar.css("color","green");
+                  }      
+                );
+                
+                
 	});
 	</script>
 </body>
