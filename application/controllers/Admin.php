@@ -19,18 +19,25 @@ class Admin extends CI_Controller {
     }
     
     
-	public function myrecipes()
-	{
+    public function myrecipes()
+    {
         $this->load->view('/common_admin/header_admin');
         $this->load->view('/common_admin/top_menu_admin');
-		$this->load->view('admin_my_recipes');
+        $this->load->view('admin_my_recipes');
         $this->load->view('/common_admin/footer_admin');
-	}
+    }
         
     public function slotedit(){
         $this->load->view('/common_admin/header_admin');
         $this->load->view('/common_admin/top_menu_admin');
         $this->load->view('admin_edit_slot');
+        $this->load->view('/common_admin/footer_admin');
+    }
+    
+    public function actions(){
+        $this->load->view('/common_admin/header_admin');
+        $this->load->view('/common_admin/top_menu_admin');
+        $this->load->view('admin_actions');
         $this->load->view('/common_admin/footer_admin');
     }
 }
