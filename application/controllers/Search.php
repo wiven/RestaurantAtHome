@@ -11,10 +11,12 @@ class Search extends CI_Controller {
          * MARK: This page is set as the main controller!
 	 */
 	public function index() {
-        $data_header = array(
-            'page_title' => ' - Zoeken'
-        );
+        $this->lang->load('nl', 'dutch');
 
+        $data_header = array(
+            'page_title' => ' - Zoeken',
+            'language_test' => lang('hello')
+        );
 
         $this->load->view('/common/header', $data_header);
         $this->load->view('/common/top_menu_clients');
