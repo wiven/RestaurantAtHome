@@ -108,7 +108,19 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language'] = "dutch";
+
+/* default language abbreviation */
+$config['language_abbr'] = "nl";
+
+/* set available language abbreviations */
+$config['lang_uri_abbr'] = array("nl" => "dutch", "fr" => "french", "en" => "english");
+
+/* hide the language segment (use cookie) */
+$config['lang_ignore'] = TRUE;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
