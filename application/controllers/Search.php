@@ -14,8 +14,8 @@ class Search extends CI_Controller {
         $this->lang->load('nl', 'dutch');
 
         $data_header = array(
-            'page_title' => ' - Zoeken',
-            'language_test' => lang('hello')
+            'page_title' => ' - Zoeken'
+            //'language_test' => lang('hello')
         );
 
         $this->load->view('/common/header', $data_header);
