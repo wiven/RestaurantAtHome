@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 | test
 */
-$config['base_url'] = 'http://localhost/RestoAtHome/';
+$config['base_url'] = 'http://dev.restaurantathome.be';
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ $config['base_url'] = 'http://localhost/RestoAtHome/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '/home';
 
 /*
 |--------------------------------------------------------------------------
@@ -108,13 +108,27 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language'] = "dutch";
+$config['language']	= 'english';
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Default Language
+|--------------------------------------------------------------------------
+|
+| This determines which set of language files should be used. Make sure
+| there is an available translation if you intend to use something other
+| than english.
+|
+*/
+$config['language'] = "spanish";
 
 /* default language abbreviation */
-$config['language_abbr'] = "nl";
+$config['language_abbr'] = "es";
 
 /* set available language abbreviations */
-$config['lang_uri_abbr'] = array("nl" => "dutch", "fr" => "french", "en" => "english");
+$config['lang_uri_abbr'] = array("es" => "spanish", "en" => "english", "ja" => "japanese");
 
 /* hide the language segment (use cookie) */
 $config['lang_ignore'] = TRUE;

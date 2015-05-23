@@ -11,8 +11,56 @@ class Search extends CI_Controller {
          * MARK: This page is set as the main controller!
 	 */
 	public function index() {
-        $this->lang->load('nl', 'dutch');
+        $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
+        switch ($lang){
+            case "nl":
+                $data_header = array(
+                    'page_title' => ' - Zoeken'
+                );
+
+                $this->load->view('/common/header', $data_header);
+                $this->load->view('/common/top_menu_clients');
+                $this->load->view('search');
+                $this->load->view('/common/footer_clients');
+
+                break;
+            case "fr":
+                $data_header = array(
+                    'page_title' => ' - Chercher'
+                );
+
+                $this->load->view('/common/header', $data_header);
+                $this->load->view('/common/top_menu_clients');
+                $this->load->view('search');
+                $this->load->view('/common/footer_clients');
+
+                break;
+            case "en":
+                $data_header = array(
+                    'page_title' => ' - Search'
+                );
+
+                $this->load->view('/common/header', $data_header);
+                $this->load->view('/common/top_menu_clients');
+                $this->load->view('search');
+                $this->load->view('/common/footer_clients');
+
+                break;
+            default:
+                $data_header = array(
+                    'page_title' => ' - Search'
+                );
+
+                $this->load->view('/common/header', $data_header);
+                $this->load->view('/common/top_menu_clients');
+                $this->load->view('search');
+                $this->load->view('/common/footer_clients');
+
+                break;
+        }
+
+        /*
         $data_header = array(
             'page_title' => ' - Zoeken'
             //'language_test' => lang('hello')
@@ -22,6 +70,7 @@ class Search extends CI_Controller {
         $this->load->view('/common/top_menu_clients');
 		$this->load->view('search');
         $this->load->view('/common/footer_clients');
+        */
 	}
 
     public function restaurantdetail() {
