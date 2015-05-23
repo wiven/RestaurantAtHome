@@ -89,5 +89,9 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//route example: http://domain.tld/en/controller => http://domain.tld/controller
+$route['(\w{2})/(.*)'] = '$2';
+$route['(\w{2})'] = $route['default_controller'];
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
