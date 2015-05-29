@@ -4,7 +4,7 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Contact extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -20,7 +20,7 @@ class Home extends CI_Controller {
         $this->load->view('/common/header', $data_header);
         $this->load->view('/common/top_menu');
         $this->load->view('contact');
-        $this->load->view('/common/footer');
+        $this->load->view('/common/footer_clients');
     }
 }
 

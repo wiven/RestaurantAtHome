@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo public_url(); ?>img/logo_big.png" alt="Restaurant At Home" width="250px" /></a>
                 
-                <button type="button" class="navbar-toggle navbar-right right pull-right collapsed navbar-link glyphicon glyphicon-user  drop-shadow" data-toggle="collapse" data-target="#collapse-user-menu">
+                <button type="button" class="navbar-toggle navbar-right right pull-right collapsed navbar-link glyphicon glyphicon-user  drop-shadow" data-toggle="collapse" data-target="#collapse-user-menu" style="margin: 31px 0;">
         </button>
                </div>
               
