@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
       <a class="navmenu-brand" href="#">Restaurant At Home</a>
       <ul class="nav navmenu-nav">
-        <li><a href="./">&nbsp;&nbsp;Overzicht</a></li>
+        <li><a href="<?php echo admin_url(); ?>">&nbsp;&nbsp;Overzicht</a></li>
         
         <li><a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;Profiel</a></li>
         

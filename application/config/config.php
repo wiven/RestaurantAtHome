@@ -51,9 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | and path to your installation. However, you should always configure this
 | explicitly and never rely on auto-guessing, especially in production
 | environments.
-| test
+| 
+ * Let Codeigniter guess, we can set this when in production.
+ * http://dev.restaurantathome.be
 */
-$config['base_url'] = 'http://dev.restaurantathome.be';
+$config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------
