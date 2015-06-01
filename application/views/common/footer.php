@@ -16,6 +16,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 ?>
+</div><!-- close container fluid --> 
 </div><!-- end wrap -->
 
     <footer class="footer">
