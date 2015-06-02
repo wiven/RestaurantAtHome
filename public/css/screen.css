@@ -137,14 +137,14 @@ body {
     position: absolute;
     top: 150px;
     left: 0px;
-    height: 500px;
+    height: 400px;
     z-index: -9999;
 }
 
 .homepage .panel{
     
     margin-top: 150px;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
 }
 
 /* Those search bars can't be too small cant they? */
