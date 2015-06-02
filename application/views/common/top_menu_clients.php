@@ -72,6 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </div>
 
+    <!--
     <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -166,5 +167,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
         }
     </style>
+    -->
 
 <?php //EOF  -'It all ends here'-   ?>

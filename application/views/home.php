@@ -104,7 +104,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
   </div>
 
-    <div class="row"><h2 class="col-lg-12" style="margin: 30px 0 15px;">Restaurants in de kijker</h2>
+    <div class="row">
+        <h2 class="col-lg-12" style="margin: 30px 0 15px;">Restaurants in de kijker</h2>
 
         <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="thumbnail">

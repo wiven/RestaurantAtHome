@@ -37,13 +37,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               
 
                 <ul class="nav navbar-default navbar-nav navbar-right drop-shadow hidden-xs">
-                  <li><a href="#">Login / registreer</a></li>
+                  <li><a href="#" data-toggle="modal" data-target=".login-modal">Login / registreer</a></li>
                   <li><a href="#"><img src="<?php echo public_url(); ?>img/small_be_flag.png" alt="Nederlands - Belgi&euml;" ></a></li>
                 </ul>
               
             <div class="collapse navbar-collapse" id="collapse-user-menu">
                 <ul class="nav navbar-default navbar-nav navbar-right drop-shadow hidden-sm hidden-md hidden-lg">
-                        <li><a href="#">Login / registreer</a></li>
+                        <li><a href="#" data-toggle="modal" data-target=".login-modal">Login / registreer</a></li>
                         <li><a href="#"><img src="<?php echo public_url(); ?>img/small_be_flag.png" alt="Nederlands - Belgi&euml;" ></a></li>
                 </ul>
             </div> 
