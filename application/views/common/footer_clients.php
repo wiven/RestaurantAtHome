@@ -177,6 +177,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			$('#results_map').height(map_height);
 
+            /*
+			$('#generalConditionsModal').on('hide.bs.modal', function (e) {
+                console.log('hide');
+            });
+
+            $('#generalConditionsModal').modal({
+              backdrop: 'static'
+            });*/
+
 			//$('body').css('padding-top', $('#topnav').outerHeight());
 
 			if(!(document.URL).includes("contact")) {
