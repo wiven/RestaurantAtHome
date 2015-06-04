@@ -1,0 +1,26 @@
+
+/* Very small devices (smartphones, <768px) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 136px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    body {
+        padding-top: 71px;
+    }
+}
+
+
+/*
+body {
+    padding-top: 71px;
+    position: relative;
+}*/
+
+a.product_info {
+    text-decoration: none;
+    color: inherit;
+}

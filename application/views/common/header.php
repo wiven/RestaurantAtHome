@@ -30,6 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- add our own css bits -->
     <link rel="stylesheet" href="<?php echo public_url(); ?>css/screen.css">
+    <?php echo $additional_styles; ?>
 
     <!-- Font Awesome for some cool icons -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">

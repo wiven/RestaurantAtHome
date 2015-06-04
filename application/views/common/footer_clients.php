@@ -200,9 +200,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			//$('body').css('padding-top', $('#topnav').outerHeight());
 
+            /*
 			if(!(document.URL).includes("contact")) {
 			    $('body').css('padding-top', '71px');
-			}
+			}*/
 
             if((document.URL).includes("search")) {
 			    var margin_all_results = parseInt($('#filterrow').outerHeight()) + parseInt($('#filterrow').css('margin-bottom').substring(0,$('#filterrow').css('margin-bottom').length-2));
