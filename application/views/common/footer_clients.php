@@ -135,6 +135,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	<script src="<?php echo public_url(); ?>js/jquery.ui.touch-punch.min.js"></script>
 
+	<script src="<?php echo public_url(); ?>js/jquery.steps.js"></script>
+	<script src="<?php echo public_url(); ?>js/jquery.steps.min.js"></script>
+
     <script type="text/javascript">
 		var pos = '';
 		var markersArray = [];
@@ -185,6 +188,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $('#generalConditionsModal').modal({
               backdrop: 'static'
             });*/
+
+
+            $('.passwordrecovery').on('click', function(e) {
+                e.preventDefault();
+
+                $('#test').modal({
+                    backdrop: 'static'
+                });
+            });
 
 			//$('body').css('padding-top', $('#topnav').outerHeight());
 

@@ -28,6 +28,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="col-lg-12">
+
+
+
+
+
+
             <form class="form-horizontal">
                 <div class="form-group has-feedback">
                     <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Ik ben</label>
@@ -72,15 +78,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="form-group has-feedback">
                     <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Paswoord</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" />
-                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                    </div>
-                </div>
-
-                <div class="form-group has-feedback">
-                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Herhaal paswoord</label>
                     <div class="col-sm-10">
                         <input type="password" class="form-control" />
                         <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>

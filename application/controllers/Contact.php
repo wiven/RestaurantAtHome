@@ -20,7 +20,7 @@ class Contact extends CI_Controller {
         $this->load->view('/common/header', $data_header);
         $this->load->view('/common/top_menu');
         $this->load->view('contact');
-        $this->load->view('/common/footer_clients');
+        $this->load->view('/common/footer');
     }
 }
 

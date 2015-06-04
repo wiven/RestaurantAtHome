@@ -27,15 +27,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </p>
         </div>
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: 20px 0;" id="contact_type_btns">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-bottom: 15px;"><a class="btn btn-primary btn-block" href="#consument">Ik ben een consument</a></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-bottom: 15px;"><a class="btn btn-primary btn-block" href="#restaurant">Ik heb een restaurant</a></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-bottom: 15px;"><a class="btn btn-primary btn-block" href="#pers">Ik ben van de pers</a></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="margin-bottom: 15px;"><a class="btn btn-primary btn-block" href="#marketing">Ik heb een marketingvoorstel</a></div>
-        </div>
-
         <div class="col-lg-8">
             <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" style="text-align: left;">Ik</label>
+                    <div class="col-sm-10">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default">
+                                <input type="radio" name="gender" value="male" /> ben een consument
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="gender" value="female" /> heb een restaurant
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="gender" value="other" /> ben van de pers
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="gender" value="other" /> heb een marketingvoorstel
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="form-group has-feedback">
                     <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam</label>
                     <div class="col-sm-10">
@@ -74,11 +87,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="col-lg-4">
-            <p><a href="mailto:info@restaurantathome.be">info@restaurantathome.be</a></p>
+            <ul id="contact_methods">
+                <li>
+                    <a href="mailto:info@restaurantathome.be">
+                        <img src="https://cdn1.iconfinder.com/data/icons/lumin-social-media-icons/512/Email-48.png" />info@restaurantathome.be
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/restaurantathome.be" target="_blank">
+                        <img src="https://cdn1.iconfinder.com/data/icons/lumin-social-media-icons/512/Facebook-48.png" />RestaurantAtHome.be
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/restoathome" target="_blank">
+                        <img src="https://cdn1.iconfinder.com/data/icons/lumin-social-media-icons/512/Twitter-48.png" />@RestoAtHome
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
 
+<style type="text/css">
+    #contact_methods li {
+        list-style-type: none;
+    }
+
+    #contact_methods li a {
+        display: block;
+    }
+
+    #contact_methods li  img {
+        margin: 2px 2px 2px 0;
+    }
+</style>
 
 
 <?php //EOF  -'It all ends here'-   ?>
