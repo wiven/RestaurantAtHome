@@ -16,7 +16,8 @@ class Search extends CI_Controller {
         switch ($lang){
             case "nl":
                 $data_header = array(
-                    'page_title' => ' - Zoeken'
+                    'page_title' => ' - Zoeken',
+                    'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
                 );
 
                 $this->load->view('/common/header', $data_header);
@@ -27,7 +28,8 @@ class Search extends CI_Controller {
                 break;
             case "fr":
                 $data_header = array(
-                    'page_title' => ' - Chercher'
+                    'page_title' => ' - Chercher',
+                    'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
                 );
 
                 $this->load->view('/common/header', $data_header);
@@ -38,7 +40,8 @@ class Search extends CI_Controller {
                 break;
             case "en":
                 $data_header = array(
-                    'page_title' => ' - Search'
+                    'page_title' => ' - Search',
+                    'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
                 );
 
                 $this->load->view('/common/header', $data_header);
@@ -49,7 +52,8 @@ class Search extends CI_Controller {
                 break;
             default:
                 $data_header = array(
-                    'page_title' => ' - Search'
+                    'page_title' => ' - Search',
+                    'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
                 );
 
                 $this->load->view('/common/header', $data_header);
@@ -75,7 +79,8 @@ class Search extends CI_Controller {
 
     public function restaurantdetail() {
         $data_header = array(
-            'page_title' => ' - Restaurant'
+            'page_title' => ' - Restaurant',
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
         );
 
         $this->load->view('/common/header', $data_header);
