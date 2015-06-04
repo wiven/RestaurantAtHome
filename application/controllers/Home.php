@@ -14,7 +14,8 @@ class Home extends CI_Controller {
 	{
 
         $data_header = array(
-            'page_title' => ''
+            'page_title' => '',
+            'additional_styles' => ''
         );
 
         $this->load->view('/common/header', $data_header);
