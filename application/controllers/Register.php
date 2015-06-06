@@ -7,7 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Register extends CI_Controller {
     public function index() {
         $data_header = array(
-            'page_title' => ' - Registreren'
+            'page_title' => ' - Registreren',
+            'additional_styles' => ''
             //'language_test' => lang('hello')
         );
 
