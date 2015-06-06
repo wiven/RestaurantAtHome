@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input type="text" placeholder="Sushi, 'Het steakhuis', Aardbei-Sabayon " id="itemTop" class="form-control" /> 
                 </div>
                 
-                <div class="form-group col-sm-2">
+                <div class="form-group col-xs-12 col-md-5 col-lg-2 col-sm-2">
                     <button type="button" class="btn btn-primary btn-lg searchbtn" onclick="window.location.href='./search'"><i class="fa fa-search"></i>
                         Zoeken!
                     </button>
