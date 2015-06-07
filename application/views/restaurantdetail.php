@@ -2,7 +2,7 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix" style="margin-top: 10px; line-height: 34px;">
             <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="margin-top: 0px; line-height: 36px;">
-                <a href="http://dev.restaurantathome.be/search/searchnew.html">Zoekresultaten</a> >
+                <a href="#" onclick="window.history.back();">Zoekresultaten</a> >
                 Fleur De Lin
             </h3>
             <button class="btn btn-primary pull-right" style="margin-left: 25px;">
@@ -34,7 +34,7 @@
             <ul class="list-group clearfix">
                 <li class="list-group-item clearfix" id="info_resto">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-right" id="important_info_resto">
-                        <a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal"><img style="margin-top: -3px;" src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-16.png" /> IJzerfrontlaan 13, 8500 Kortrijk</a><br />
+                        <a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal" data-backdrop="static"><img style="margin-top: -3px;" src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-16.png" /> IJzerfrontlaan 13, 8500 Kortrijk</a><br />
                         +32 2 123 45 67<br />
                         <a href="mailto:info@restaurantathome.be">info@restaurantathome.be</a><br />
                         <a href="http://restaurantathome.be" target="_blank">http://restaurantathome.be</a><br />
@@ -76,13 +76,23 @@
 
         <div role="tabpanel" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <!-- PRODUCT TYPE CHOOSER -->
+            <div id="product_type_chooser" class="clearfix" role="tablist" style="margin-bottom: 20px;">
+                <a href="#acties" aria-controls="acties" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>ACTIES</h4></a>
+                <a href="#voorgerechten" aria-controls="voorgerechten" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>VOORGERECHTEN</h4></a>
+                <a href="#hoofdgerechten" aria-controls="hoofdgerechten" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>HOOFDGERECHTEN</h4></a>
+                <a href="#desserts" aria-controls="desserts" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>DESSERTS</h4></a>
+                <a href="#dranken" aria-controls="dranken" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>DRANKEN</h4></a>
+                <a href="#extras" aria-controls="extras" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>EXTRA'S</h4></a>
+            </div>
+
+            <!--
             <ul class="nav nav-pills nav-justified" role="tablist" style="margin-bottom: 20px;">
                 <li role="presentation" class="active"><a href="#acties" aria-controls="acties" role="tab" data-toggle="pill"><h4>ACTIES</h4></a></li>
                 <li role="presentation"><a href="#voorgerechten" aria-controls="voorgerechten" role="tab" data-toggle="pill"><h4>VOORGERECHTEN</h4></a></li>
                 <li role="presentation"><a href="#hoofdgerechten" aria-controls="hoofdgerechten" role="tab" data-toggle="pill"><h4>HOOFDGERECHTEN</h4></a></li>
                 <li role="presentation"><a href="#desserts" aria-controls="desserts" role="tab" data-toggle="pill"><h4>DESSERTS</h4></a></li>
                 <li role="presentation"><a href="#dranken" aria-controls="dranken" role="tab" data-toggle="pill"><h4>DRANKEN</h4></a></li>
-            </ul>
+            </ul>-->
 
             <!-- PRODUCT TYPE CHOOSER CONTENT -->
             <div class="tab-content">
@@ -92,10 +102,10 @@
                     <ul class="list-group col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix">
                         <li class="list-group-item clearfix">
                             <div class="col-lg-2 col-md-4 col-sm-2 col-xs-3" style="padding: 0;">
-                                <a href="#" data-toggle="modal" data-target="#addProductModal"><img src="http://lorempixel.com/300/300/food" width="100%"></a>
+                                <a href="#" data-toggle="modal" data-target="#addProductModal" data-backdrop="static"><img src="http://lorempixel.com/300/300/food" width="100%"></a>
                             </div>
                             <div class="col-lg-7 col-md-8 col-sm-2 col-xs-3">
-                                <a href="#" data-toggle="modal" data-target="#addProductModal" class="product_info">
+                                <a href="#" data-toggle="modal" data-target="#addProductModal" data-backdrop="static" class="product_info">
                                     <h3 style="margin: 0 0 20px 0;">
                                         Weg is pech <span class="label label-warning">Specialiteit</span>
                                     </h3>
