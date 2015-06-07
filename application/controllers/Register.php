@@ -12,9 +12,13 @@ class Register extends CI_Controller {
             //'language_test' => lang('hello')
         );
 
+        $data_footer = array(
+            'additional_scripts' => ''
+        );
+
         $this->load->view('/common/header', $data_header);
         $this->load->view('/common/top_menu');
         $this->load->view('register');
-        $this->load->view('/common/footer');
+        $this->load->view('/common/footer', $data_footer);
     }
 }

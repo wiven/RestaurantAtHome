@@ -24,3 +24,11 @@ a.product_info {
     text-decoration: none;
     color: inherit;
 }
+
+#product_type_chooser a.active {
+    background-color: #337ab7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: white;
+}

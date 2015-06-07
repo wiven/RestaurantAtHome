@@ -14,13 +14,18 @@ class Contact extends CI_Controller {
     {
 
         $data_header = array(
-            'page_title' => ' - Contact'
+            'page_title' => ' - Contact',
+            'additional_styles' => ''
+        );
+
+        $data_footer = array(
+            'additional_scripts' => ''
         );
 
         $this->load->view('/common/header', $data_header);
         $this->load->view('/common/top_menu');
         $this->load->view('contact');
-        $this->load->view('/common/footer');
+        $this->load->view('/common/footer', $data_footer);
     }
 }
 
