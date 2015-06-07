@@ -132,11 +132,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <!-- Will be included in the controller as a parameter when needed on a page -->
+	<!--<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
 	<script src="<?php echo public_url(); ?>js/jquery.ui.touch-punch.min.js"></script>
 
 	<script src="<?php echo public_url(); ?>js/jquery.steps.js"></script>
 	<script src="<?php echo public_url(); ?>js/jquery.steps.min.js"></script>
+
+	<?php echo $additional_scripts; ?>
 
     <script type="text/javascript">
 		var pos = '';
@@ -178,7 +181,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			var map_height = $("body").innerHeight()-$("header").height();
 
-			$('#results_map').height(map_height);
+			$('#map_search_pane').height(map_height);
+
+			$('#product_type_chooser > a h4').on('click', function() {
+                $(this).addClass('active');
+                console.log('active');
+            });
 
             /*
 			$('#generalConditionsModal').on('hide.bs.modal', function (e) {
@@ -205,7 +213,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			    $('body').css('padding-top', '71px');
 			}*/
 
-            if((document.URL).includes("search")) {
+            if((document.URL).indexOf("search") != -1) {
 			    var margin_all_results = parseInt($('#filterrow').outerHeight()) + parseInt($('#filterrow').css('margin-bottom').substring(0,$('#filterrow').css('margin-bottom').length-2));
             }
 
