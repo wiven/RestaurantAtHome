@@ -159,6 +159,202 @@
             </ul>
 
             <ul class="list-group" id="all_results">
+                <!-- new ones -->
+                <li class="list-group-item clearfix">
+
+
+                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="padding: 0; /* min-height: 78px; */">
+                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 1.3rem;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+
+                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
+                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
+                    </div>
+                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
+    padding: 0;
+    /* margin-top: 10px; */
+">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
+    padding: 0;
+    margin-top: 10px;
+">
+                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
+                    </div>
+
+                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                    </div>
+                </li>
+
+                <li class="list-group-item clearfix">
+
+
+                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="
+    padding: 0;
+    /* min-height: 78px; */
+">
+                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 18px;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+
+
+
+                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
+                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
+                    </div>
+                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
+    padding: 0;
+    /* margin-top: 10px; */
+">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
+    padding: 0;
+    margin-top: 10px;
+">
+                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
+                    </div>
+
+                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                    </div>
+                </li>
+
+                <li class="list-group-item clearfix">
+
+
+                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="
+    padding: 0;
+    /* min-height: 78px; */
+">
+                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 18px;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+
+
+
+                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
+                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
+                    </div>
+                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
+    padding: 0;
+    /* margin-top: 10px; */
+">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
+    padding: 0;
+    margin-top: 10px;
+">
+                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
+                    </div>
+
+                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                    </div>
+                </li>
+
+                <li class="list-group-item clearfix">
+
+
+                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="
+    padding: 0;
+    /* min-height: 78px; */
+">
+                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 18px;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+
+
+
+                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
+                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
+                    </div>
+                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
+    padding: 0;
+    /* margin-top: 10px; */
+">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
+    padding: 0;
+    margin-top: 10px;
+">
+                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
+                    </div>
+
+                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                    </div>
+                </li>
+
+                <li class="list-group-item clearfix">
+
+
+                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="
+    padding: 0;
+    /* min-height: 78px; */
+">
+                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 18px;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+
+
+
+                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
+                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
+                    </div>
+                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
+    padding: 0;
+    /* margin-top: 10px; */
+">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
+    padding: 0;
+    margin-top: 10px;
+">
+                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
+                    </div>
+
+                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
+                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                    </div>
+                </li>
+
+
+
+
+                <!-- originals -->
+
+
+
+
+
+
                 <li class="list-group-item clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
                         <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;" /></a>
@@ -170,16 +366,7 @@
                         <!--<a href="#" data-toggle="modal" data-target="#shopHoursModal"><span class="label-warning" style="color: black; font-weight: bold; padding: 6px 10px; border-radius: 5px; margin-left: 20px;  line-height: 26px;" data-toggle="tooltip" data-placement="top" title="Nu open">Sluit om 18:00</span></a>
                         <a href="#" class="resto_maps_viewer" style="color: black;" data-restaurant="Fleur De Lin" data-toggle="tooltip" data-placement="top" title="test">Lokerenbaan 100, 9240 Zele</a>-->
 
-							<span style="line-height: 26px; display: block; clearfix" class="text-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_45.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_46.png" style="margin-top: -3px;" width="16"alt=""/>
-								<span class="badge">6</span>
-							</span>
-
-                        <p class="col-md-12 clearfix" style="margin-top: 15px; text-align: justify;">
+                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                     </div>
@@ -198,7 +385,7 @@
                     </div>
 
                     <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
-                        <a href="restaurantdetail.php" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                        <a href="<?php echo base_url(); ?>search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
                     </div>
                 </li>
 
@@ -390,7 +577,7 @@
             </ul>
         </div>
 
-        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs" id="map_search_pane">
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs" id="map_search_pane" style="position: fixed; right: 0;">
             <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80688.98286051827!2d3.2797849999999893!3d50.802805100000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c33ae2d8706a49%3A0xf791d8c0a601b993!2sKortrijk!5e0!3m2!1snl!2sbe!4v1426550913974" width="100%" height="500" frameborder="0" style="border: 0; position: fixed;" id="results_map"></iframe>-->
         </div>
     </div>

@@ -25,6 +25,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </footer>-->
 
+    <div class="modal fade loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" style="border: 0; padding: 15px 15px 0 15px">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Login via</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="social-buttons clearfix">
+                        <a href="#" class="btn btn-fb col-xs-5"><i class="fa fa-facebook"></i> Facebook</a>
+                        <a href="#" class="btn btn-tw col-xs-5 col-xs-offset-2"><i class="fa fa-twitter"></i> Twitter</a>
+                    </div>
+                    <span style="margin: 15px 0 15px;display: block;">OF</span>
+                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail2">E-mail</label>
+                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword2">Paswoord</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Paswoord" required>
+                            <div class="help-block text-right"><a href="<?php echo base_url(); ?>user/passwordrecovery">Paswoord vergeten?</a></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Hou me ingelogd
+                            </label>
+                        </div>
+                    </form>
+
+                    <div class="bottom text-center">
+                        Nieuw hier? <a href="<?php echo base_url(); ?>register"><b>Registreer nu</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -177,11 +219,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			    $(this).addClass('btn-success');
 			});
 
-			$('body').scrollspy({ target: '#results_map' });
 
-			var map_height = $("body").innerHeight()-$("header").height();
-
-			$('#map_search_pane').height(map_height);
+            if((document.URL).indexOf("restaurantdetail") == -1) {
+                $('body').scrollspy({ target: '#map_search_pane' });
+                var map_height = $("body").innerHeight()-$("header").height();
+                $('#map_search_pane').height(map_height);
+            }
 
 			$('#product_type_chooser > a h4').on('click', function() {
                 $(this).addClass('active');
@@ -213,7 +256,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			    $('body').css('padding-top', '71px');
 			}*/
 
-            if((document.URL).indexOf("search") != -1) {
+            if((document.URL).indexOf("search") != -1 && (document.URL).indexOf("restaurantdetail") == -1) {
 			    var margin_all_results = parseInt($('#filterrow').outerHeight()) + parseInt($('#filterrow').css('margin-bottom').substring(0,$('#filterrow').css('margin-bottom').length-2));
             }
 
@@ -389,7 +432,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				//$('#resto_name_map').text(resto);
 
-				$("#map_resto_overview").html('<iframe src="https://maps.google.com/maps?q='+encodeURIComponent(adres)+'&amp;output=embed" height="230" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" kwframeid="1"></iframe>');
+                if((document.URL).indexOf("restaurantdetail") == -1) {
+                    $("#map_resto_overview").html('<iframe src="https://maps.google.com/maps?q='+encodeURIComponent(adres)+'&amp;output=embed" height="230" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" kwframeid="1"></iframe>');
+                }
+
+
 				$('#myModal').modal('show');
 			});
 
