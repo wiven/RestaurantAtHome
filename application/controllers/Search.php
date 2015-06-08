@@ -37,10 +37,15 @@ class Search extends CI_Controller {
                     'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
                 );
 
+				$data_footer = array(
+                    'additional_scripts' => "<script src='".public_url()."js/search.js'></script>
+                    <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>"
+                );
+
                 $this->load->view('/common/header', $data_header);
                 $this->load->view('/common/top_menu_clients');
                 $this->load->view('search');
-                $this->load->view('/common/footer_clients');
+                $this->load->view('/common/footer_clients', $data_footer);
 
                 break;
             case "en":
@@ -48,11 +53,16 @@ class Search extends CI_Controller {
                     'page_title' => ' - Search',
                     'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
                 );
+			
+				$data_footer = array(
+                    'additional_scripts' => "<script src='".public_url()."js/search.js'></script>
+                    <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>"
+                );
 
                 $this->load->view('/common/header', $data_header);
                 $this->load->view('/common/top_menu_clients');
                 $this->load->view('search');
-                $this->load->view('/common/footer_clients');
+                $this->load->view('/common/footer_clients', $data_footer);
 
                 break;
             default:
@@ -60,11 +70,16 @@ class Search extends CI_Controller {
                     'page_title' => ' - Search',
                     'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
                 );
+			
+				$data_footer = array(
+                    'additional_scripts' => "<script src='".public_url()."js/search.js'></script>
+                    <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>"
+                );
 
                 $this->load->view('/common/header', $data_header);
                 $this->load->view('/common/top_menu_clients');
                 $this->load->view('search');
-                $this->load->view('/common/footer_clients');
+                $this->load->view('/common/footer_clients', $data_footer);
 
                 break;
         }
@@ -89,9 +104,8 @@ class Search extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => "<script src='".public_url()."js/search.js'></script>
-        <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-        <script src='".public_url()."js/script.js'></script>"
+            'additional_scripts' => "<script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
+        <script src='".public_url()."js/restaurantdetail.js'></script>"
         );
 
         $this->load->view('/common/header', $data_header);

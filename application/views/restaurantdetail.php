@@ -1,20 +1,22 @@
 
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix" style="margin-top: 10px; line-height: 34px;">
-            <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="margin-top: 0px; line-height: 36px;">
-                <a href="#" onclick="window.history.back();">Zoekresultaten</a> >
-                Fleur De Lin
+            <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="margin-top: 0px; padding: 0; line-height: 36px;">
+                <a href="#" class="btn btn-default col-xs-12 col-sm-6 col-md-3 col-lg-3"><span class="fa fa-chevron-circle-left"></span> Terug</a>
             </h3>
-            <button class="btn btn-primary pull-right" style="margin-left: 25px;">
+
+
+            <button id="checkout_btn" class="btn btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right" style="margin-left: 25px;">
                 Afrekenen
             </button>
 
             <div class="form-group">
-                <button class="btn btn-default pull-right" data-toggle="modal" data-target="#basketModal" style="margin-left: 25px;">
+                <button id="basket_btn" class="btn btn-default col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right" data-toggle="modal" data-target="#basketModal" data-backdrop="static" style="margin-left: 25px;">
                     <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="margin-right: 10px;"></span>
                     &euro; 164,89
+                    <span class="badge basket_count_badge">11</span>
                 </button>
-                <p class="badge" style="color: #FFF; background: #5cb85c; position: absolute; top: -8px; right: 122px; z-index: 500;">11</p>
+
             </div>
             <!--
             <div class="form-group">
@@ -33,26 +35,34 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <ul class="list-group clearfix">
                 <li class="list-group-item clearfix" id="info_resto">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-right" id="important_info_resto">
-                        <a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal" data-backdrop="static"><img style="margin-top: -3px;" src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-16.png" /> IJzerfrontlaan 13, 8500 Kortrijk</a><br />
-                        +32 2 123 45 67<br />
-                        <a href="mailto:info@restaurantathome.be">info@restaurantathome.be</a><br />
-                        <a href="http://restaurantathome.be" target="_blank">http://restaurantathome.be</a><br />
-                        <br />
-                        Specialiteit: Ribbetjes<br />
-                        Keuken: Belgisch<br /><br />
-                        <a href="#" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/capsocial-square-flat-3/500/facebook-32.png" title="Facebook" class="pull-right" /></a>
-                        <a href="#" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/capsocial-square-flat-3/500/twitter-32.png" title="Twitter" class="pull-right" style="margin: 0 10px;" /></a>
-                        <a href="#" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/capsocial-square-flat-3/500/instagram-32.png" title="Instagram" class="pull-right" style="margin: 0;" /></a>
-                        <a href="#" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/miu/22/editor_image_picture_photo-32.png" title="Foto's" class="pull-right" style="margin: 3px 10px;" /></a>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-center">
+                    <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
                         <!--<img src="http://lorempixel.com/700/300/city" width="100%">-->
                         <img id="logo_resto" src="http://www.restaurantfleurdelin.be/img/1.png">
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center" id="important_info_resto">
+                        <a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal" data-backdrop="static"><img style="margin-top: -3px;" src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-16.png" /> IJzerfrontlaan 13, 8500 Kortrijk</a><br />
+                        +32 2 123 45 67<br />
+                        <a href="mailto:info@restaurantathome.be">info@restaurantathome.be</a><br />
+                        <a href="http://restaurantathome.be" target="_blank">http://restaurantathome.be</a><br />
+                        <span class="hidden_info_mobile">
+                            Specialiteit: Ribbetjes<br />
+                            Keuken: Belgisch<br /><br />
+                            <span class="socials">
+                               <a href="#" target="_blank"><span class="fa fa-facebook-square fa-2x pull-right"></span></a>
+                                <a href="#" target="_blank"><span class="fa fa-twitter-square fa-2x pull-right"></span></a>
+                                <a href="#" target="_blank"><span class="fa fa-instagram fa-2x pull-right"></span></a>
+                                <a href="#" target="_blank"><span class="fa fa-picture-o fa-2x pull-right"></span></a>
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center">
+                        <!--<img src="http://lorempixel.com/700/300/city" width="100%">-->
+                        <img id="logo_resto" src="http://www.restaurantfleurdelin.be/img/1.png">
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden_info_mobile">
                         <p>
                             Ma: 15:00 - 23:00<br />
                             Di: 15:00 - 23:00<br />
@@ -62,14 +72,22 @@
                             Za: 12:00 - 00:00<br />
                             Zo: 12:00 - 00:00
                             <br /><br />
+                            <span class="fa fa-credit-card fa-2x" title="Bancontact/Mister Cash/Maestro"></span>
+                            <span class="fa fa-cc-visa fa-2x" title="VISA/MasterCard"></span>
+                            <span class="fa fa-bitcoin fa-2x" title="Bitcoin"></span>
+                            <span class="fa fa-money fa-2x" title="Cash"></span>
+<!--
                             <img src="http://www.dialogic-agency.eu/site/wp-content/uploads/Logo-BCMC3.jpg" height="32" title="Bancontact/Mister cash" />
                             <img src="http://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Maestro_logo.svg/1280px-Maestro_logo.svg.png" height="32" title="Maestro" />
                             <img src="http://linuxplace.com.br/wp-content/uploads/2010/08/visa_mastercard_logo.gif" height="32" title="VISA/MasterCard" />
                             <img src="https://bongous.com/wp-content/uploads/2014/01/Bitcoin-300x300.png" height="32" title="Bitcoin" />
                             <img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Euro-Coin-32.png" height="32" title="Cash" />
-
+-->
                         </p>
                     </div>
+
+                    <a href="#" class="btn_more_resto_info btn btn-primary hidden-lg hidden-md hidden-sm col-xs-8 col-xs-offset-2" style="margin-top: 10px;"><span class="fa fa-chevron-circle-down"></span> Meer info</a>
+                    <a href="#" class="btn_more_resto_info btn btn-primary hidden-lg hidden-md hidden-sm col-xs-8 col-xs-offset-2" style="margin-top: 10px; display: none;"><span class="fa fa-chevron-circle-up"></span> Minder info</a>
                 </li>
             </ul>
         </div>
@@ -77,12 +95,12 @@
         <div role="tabpanel" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <!-- PRODUCT TYPE CHOOSER -->
             <div id="product_type_chooser" class="clearfix" role="tablist" style="margin-bottom: 20px;">
-                <a href="#acties" aria-controls="acties" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>ACTIES</h4></a>
-                <a href="#voorgerechten" aria-controls="voorgerechten" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>VOORGERECHTEN</h4></a>
-                <a href="#hoofdgerechten" aria-controls="hoofdgerechten" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>HOOFDGERECHTEN</h4></a>
-                <a href="#desserts" aria-controls="desserts" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>DESSERTS</h4></a>
-                <a href="#dranken" aria-controls="dranken" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>DRANKEN</h4></a>
-                <a href="#extras" aria-controls="extras" role="tab" data-toggle="pill" class="col-lg-2 text-center" style="line-height: 40px;"><h4>EXTRA'S</h4></a>
+                <a href="#acties" aria-controls="acties" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center active" style="line-height: 40px;"><h4>ACTIES</h4></a>
+                <a href="#voorgerechten" aria-controls="voorgerechten" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>VOORGERECHTEN</h4></a>
+                <a href="#hoofdgerechten" aria-controls="hoofdgerechten" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>HOOFDGERECHTEN</h4></a>
+                <a href="#desserts" aria-controls="desserts" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>DESSERTS</h4></a>
+                <a href="#dranken" aria-controls="dranken" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>DRANKEN</h4></a>
+                <a href="#extras" aria-controls="extras" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>EXTRA'S</h4></a>
             </div>
 
             <!--
@@ -138,6 +156,49 @@
                                 </div>
                             </div>
                         </li>
+
+                        <li class="list-group-item clearfix">
+                            <div class="col-lg-2 col-md-6 col-sm-2 col-xs-5" style="padding: 0;">
+                                <a href="#" data-toggle="modal" data-target="#addProductModal" data-backdrop="static"><img src="http://lorempixel.com/300/300/food" width="100%"></a>
+                            </div>
+
+                            <div class="col-lg-3 col-xs-7" style="padding-right: 0;">
+                                <div class="input-group">
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[51]">
+                                                <span class="glyphicon glyphicon-minus"></span>
+                                            </button>
+										</span>
+                                    <input type="text" name="quant[51]" id="quant_51" class="form-control input-number text-center" value="1" min="1" max="10">
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[51]">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+										</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <a href="#" class="btn btn-primary add_product_btn" id="prod_id_51" style="width: 100%; margin-top: 26px;">Toevoegen</a>
+                                    <p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7 col-md-8 col-sm-2 col-xs-12">
+                                <a href="#" data-toggle="modal" data-target="#addProductModal" data-backdrop="static" class="product_info">
+                                    <h3 style="margin: 0 0 20px 0;">
+                                        Weg is pech <span class="label label-warning">Specialiteit</span>
+                                    </h3>
+                                    <p class="text-justify" style="line-height: 20px;">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <h4 style="margin: 15px 0 0 0;">
+                                        &euro; 14,99
+                                    </h4>
+                                </a>
+                            </div>
+
+                        </li>
+
                         <li class="list-group-item clearfix">
                             <div class="col-lg-2 col-md-3 col-sm-2 col-xs-3" style="padding: 0;">
                                 <img src="http://lorempixel.com/300/300/food" width="100%">
@@ -567,6 +628,7 @@
                 <div role="tabpanel" class="tab-pane" id="hoofdgerechten">hoofdgerechten</div>
                 <div role="tabpanel" class="tab-pane" id="desserts">desserts</div>
                 <div role="tabpanel" class="tab-pane" id="dranken">dranken</div>
+                <div role="tabpanel" class="tab-pane" id="extras">extra's</div>
             </div>
         </div>
     </div>

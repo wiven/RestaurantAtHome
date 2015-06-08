@@ -5,11 +5,11 @@
  * - the main css file for (additional) markup
  *
  * @package	RestoAtHome
- * @author	A collaboration of: Wiven Web Solutions - VDW Web - KolorFlux
+ * @author	A collaboration of: WiVen Web Solutions - VDW Web - KolorFlux
  * @copyright	Copyright (c) 2014 - 2015
  * @copyright	
  * @license	*
- * @link	http://resaturantathome.be
+ * @link	http://restaurantathome.be
  * @since	Version 1.0.0
 */
 
@@ -50,6 +50,23 @@ line-height: 27px;
 
 .nav.steps > li > i {
     margin-right: 10px;
+}
+
+/* Very small devices (smartphones, <768px) */
+@media (max-width: 768px) {
+    #home_logo img {
+        max-width: 180px;
+    }
+
+    .homepageback {
+        height: 420px !important;
+        margin-top: -50px;
+    }
+
+    .homepage .panel {
+        margin-top: 50px !important;
+        margin-bottom: 75px !important;
+     }
 }
 
 /** ---------------- END OF HEADER --------------------*/
