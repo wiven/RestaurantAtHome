@@ -80,21 +80,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="panel-body">
             <form class="form-inline">
                 <div class="col-lg-1"></div>
-                <div class="form-group col-xs-12 col-md-5 col-lg-4">
+                <div class="form-group col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <label for="addressTop" class="labelStyle">
                         Waar wil je eten?
                     </label>
                     <input type="text" placeholder="Straat, Nummer, Stad of Postcode" id="addressTop" class="form-control" />
                 </div>
                 
-                <div class="form-group col-xs-12 col-md-5 col-lg-4">
+                <div class="form-group col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <label for="itemTop" class="labelStyle">
                         Wat wil je eten? <small>Optioneel</small>
                     </label>
                     <input type="text" placeholder="Sushi, 'Het steakhuis', Aardbei-Sabayon " id="itemTop" class="form-control" /> 
                 </div>
                 
-                <div class="form-group col-xs-12 col-md-5 col-lg-2 col-sm-2"><!--onclick="window.location.href='./search'"-->
+                <div class="form-group col-xs-12 col-md-2 col-lg-2 col-sm-2"><!--onclick="window.location.href='./search'"-->
                     <button type="button" id="main_search_button" class="btn btn-primary btn-lg searchbtn" ><i class="fa fa-search"></i>
                         Zoeken!
                     </button>
