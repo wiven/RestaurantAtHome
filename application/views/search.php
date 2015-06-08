@@ -1,6 +1,23 @@
 <div class="container-fluid" style="margin-top: 20px;">
 
+    <div class="modal fade inviteRestoModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content text-center" style="min-height: 150px; width: 250px; padding: 20px 15px;margin: 100px auto;">
+                <p style="text-align: center; font-weight: 700; margin-bottom: 20px;">Wil u restaurant "Restaurant Food &amp; Flavours" graag op RestaurantAtHome?</p>
+                <a href="#" class="btn btn-default btnNoInvite">Nee</a>
+                <a href="#" class="btn btn-primary">Ja</a>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade loadingModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="height: 150px; width: 250px; margin: 100px auto;">
+                <span class="fa fa-spinner fa-spin fa-3x text-center" style="margin: 50px auto 15px; width: 100%;"></span>
+                <p class="text-center">Laden ... even geduld aub</p>
+            </div>
+        </div>
+    </div>
 
 
     <div class="row" id="content-container">
@@ -159,191 +176,246 @@
             </ul>
 
             <ul class="list-group" id="all_results">
-                <!-- new ones -->
-                <li class="list-group-item clearfix">
+                <!-- optimized for mobile (iPhone) --
+                <li class="list-group-item clearfix resto_result">
+                    <a href="<?php echo base_url(); ?>restaurantdetail">
+                        <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8 clearfix">
+                            <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix"><em>Restaurant Food &amp; Flavours</em></h3>
+                            <p class="resto_address">Lokerenbaan 121, Zele</p>
+                            <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <span class="label label-success resto_current_state">Open</span>
+                        </div>
 
+                        <div class="hidden-lg col-md-5 col-sm-4 hidden-xs">
+                            <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                        </div>
 
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="padding: 0; /* min-height: 78px; */">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 1.3rem;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 pull-right">
+                            <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
+                        </div>
+                    </a>
+                </li>-->
 
-                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
+                <!-- optimized for tablets (portrait mode) --
+                <li class="list-group-item clearfix resto_result">
+                    <a href="http://dev.restaurantathome.be/restaurantdetail">
+                        <div class="col-lg-7 col-md-10 col-sm-10 col-xs-8 clearfix" style="padding-left: 0;">
+                            <h3 class="col-lg-6 col-md-6 col-sm-12 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 0px 0; color: #336FB6; padding: 0; word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+                            <p class="resto_address">Lokerenbaan 121, Zele</p>
+                            <p class="col-md-12 hidden-xs clearfix resto_subtext" style="margin: 15px 0 15px; text-align: justify;padding: 0;color: #000;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <span class="label label-success resto_current_state" style="font-size: 100%; font-weight: 700;">Open</span>
+                        </div>
+
+                    </a><div class="hidden-lg col-md-5 hidden-sm hidden-xs"><a href="http://dev.restaurantathome.be/restaurantdetail">
+                        </a><a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
                     </div>
 
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 pull-right" style="padding-right: 0;">
+                        <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right" style="width: 100%;">
                     </div>
-                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
-    padding: 0;
-    /* margin-top: 10px; */
-">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
-                    </div>
+                </li>-->
 
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
-    padding: 0;
-    margin-top: 10px;
-">
-                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
-                    </div>
+                <!-- optimized for tablets (landscape mode) --
+                <li class="list-group-item clearfix resto_result">
+                    <a href="#">
+                        <div class="col-lg-7 col-md-9 col-sm-10 col-xs-8 clearfix" style="padding-left: 0;">
+                            <h3 class="col-lg-6 col-md-12 col-sm-12 col-xs-12 clearfix" style="font-weight: bold;   margin: 0 0 0px 0;   color: #336FB6;   padding: 0;   word-wrap: break-word;font-style: italic;">Restaurant Food &amp; Flavours</h3>
+                            <p class="resto_address">Lokerenbaan 121, Zele</p>
+                            <p class="col-md-12 hidden-xs clearfix resto_subtext" style="margin: 0 0 15px;   text-align: justify;   padding: 0;   color: #000;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <span class="label label-success resto_current_state" style="font-size: 100%;   font-weight: 700;">Open</span>
+                        </div>
 
-                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
-                    </div>
-                </li>
-
-                <li class="list-group-item clearfix">
-
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="
-    padding: 0;
-    /* min-height: 78px; */
-">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 18px;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
-
-
-
-                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
+                    </a><div class="hidden-lg hidden-md hidden-sm hidden-xs"><a href="http://dev.restaurantathome.be/restaurantdetail">
+                        </a><a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6">Menu bekijken</a>
                     </div>
 
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
+                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-4 pull-right" style="padding-right: 0;">
+                        <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right" style="width: 100%;max-width: 140px;">
                     </div>
-                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
-    padding: 0;
-    /* margin-top: 10px; */
-">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
-                    </div>
+                </li>-->
 
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
-    padding: 0;
-    margin-top: 10px;
-">
-                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
-                    </div>
+                <!-- optimized for large screens (desktops) --
+                <li class="list-group-item clearfix resto_result">
+                    <a href="#">
+                        <div class="col-lg-7 col-md-9 col-sm-10 col-xs-8 clearfix">
+                            <h3 class="col-lg-6 col-md-12 col-sm-12 col-xs-12 clearfix">Fleur De Lin</h3>
+                            <p class="resto_address">Lokerenbaan 121, Zele</p>
+                            <p class="col-md-12 hidden-xs clearfix resto_subtext">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <span class="label label-success resto_current_state">Open</span>
+                        </div>
 
-                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
-                    </div>
-                </li>
-
-                <li class="list-group-item clearfix">
-
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="
-    padding: 0;
-    /* min-height: 78px; */
-">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 18px;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
-
-
-
-                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
+                    </a><div class="hidden-lg hidden-md hidden-sm hidden-xs"><a href="http://dev.restaurantathome.be/restaurantdetail">
+                        </a><a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6">Menu bekijken</a>
                     </div>
 
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
-                    </div>
-                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
-    padding: 0;
-    /* margin-top: 10px; */
-">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
-    padding: 0;
-    margin-top: 10px;
-">
-                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
-                    </div>
-
-                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-4 pull-right">
+                        <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
                     </div>
                 </li>
 
-                <li class="list-group-item clearfix">
+                <li class="list-group-item clearfix resto_result resto_not_connected">
+                    <a href="#" data-toggle="modal" data-target=".inviteRestoModal" data-backdrop="static">
+                        <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8 clearfix" style="padding: 0; /* min-height: 78px; */">
+                            <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 0px 0; color: #336FB6;padding: 0;font-size: 110%;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+                            <p class="resto_address" style="margin-top: 10px; font-size: 100%;">Lokerenbaan 121, Zele</p>
+                            <span class="label label-default resto_current_state" style="font-size: 100%; font-weight: 700;">Niet aangesloten</span>
+                            <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
 
+                        <div class="hidden-lg col-md-5 col-sm-4 hidden-xs">
+                            <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
+                        </div>
 
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="
-    padding: 0;
-    /* min-height: 78px; */
-">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 18px;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 pull-right" style="background-color: white; padding-right: 0px;">
+                            <img src="/public/img/not_connected.png" class="pull-right" style="width: 100%;/* max-height: 63px; */max-width: 70px;/* float: right; */">
+                        </div>
+                    </a>
+                </li>-->
 
+                <!-- PERFECT -->
+                <li class="list-group-item clearfix resto_result">
+                    <a href="<?php echo base_url(); ?>restaurantdetail">
+                        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix"">
+                            <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
+                            <p class="resto_address">Lokerenbaan 121, Zele</p>
+                            <p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <span class="label label-success resto_current_state">Open</span>
+                            <span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
+                            <span class="label label-default resto_labels hidden-xs" >Belgisch</span>
+                            <span class="label label-info resto_labels">ACTIES</span>
+                        </div>
 
-
-                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
-                    </div>
-                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
-    padding: 0;
-    /* margin-top: 10px; */
-">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
-    padding: 0;
-    margin-top: 10px;
-">
-                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
-                    </div>
-
-                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
-                    </div>
+                        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
+                            <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
+                        </div>
+                    </a>
                 </li>
 
-                <li class="list-group-item clearfix">
+                <li class="list-group-item clearfix resto_result">
+                    <a href="<?php echo base_url(); ?>restaurantdetail">
+                        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix"">
+                        <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
+                        <p class="resto_address">Lokerenbaan 121, Zele</p>
+                        <p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="label label-warning resto_current_state">Sluit binnenkort</span>
+                        <span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
+                        <span class="label label-default resto_labels hidden-xs" >Belgisch</span>
+                        <span class="label label-info resto_labels">ACTIES</span>
+                        </div>
 
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 clearfix" style="
-    padding: 0;
-    /* min-height: 78px; */
-">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 10px 0; color: #336FB6;padding: 0;font-size: 18px;word-wrap: break-word;"><em>Restaurant Food &amp; Flavours</em></h3>
-
-
-
-                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;"></a>
-                    </div>
-                    <div class="col-lg-3 hidden-md hidden-sm col-xs-8 pull-right" style="
-    padding: 0;
-    /* margin-top: 10px; */
-">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary btn-sm col-lg-12 col-md-12 col-sm-6" style="width: 100%; /* margin-bottom: 14px; */">Menu bekijken</a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-8 pull-right" style="
-    padding: 0;
-    margin-top: 10px;
-">
-                        <button type="button" class="btn btn-sm label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open</span></button>
-                    </div>
-
-                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
-                        <a href="http://dev.restaurantathome.be/search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
-                    </div>
+                        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
+                            <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
+                        </div>
+                    </a>
                 </li>
+
+                <li class="list-group-item clearfix resto_result">
+                    <a href="<?php echo base_url(); ?>restaurantdetail">
+                        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix"">
+                        <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
+                        <p class="resto_address">Lokerenbaan 121, Zele</p>
+                        <p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="label label-danger resto_current_state">Gesloten</span>
+                        <span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
+                        <span class="label label-default resto_labels hidden-xs" >Belgisch</span>
+                        <span class="label label-info resto_labels">ACTIES</span>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
+                            <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item clearfix resto_result">
+                    <a href="<?php echo base_url(); ?>restaurantdetail">
+                        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix"">
+                        <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
+                        <p class="resto_address">Lokerenbaan 121, Zele</p>
+                        <p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="label label-success resto_current_state">Open</span>
+                        <span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
+                        <span class="label label-default resto_labels hidden-xs" >Belgisch</span>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
+                            <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item clearfix resto_result">
+                    <a href="#" data-toggle="modal" data-target=".inviteRestoModal" data-backdrop="static">
+                        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix"">
+                            <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
+                            <p class="resto_address">Lokerenbaan 121, Zele</p>
+                            <p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <span class="label label-default resto_current_state">Niet aangesloten</span>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
+                            <img src="/public/img/not_connected.png" class="pull-right">
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item clearfix resto_result">
+                    <a href="<?php echo base_url(); ?>restaurantdetail">
+                        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix"">
+                        <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
+                        <p class="resto_address">Lokerenbaan 121, Zele</p>
+                        <p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="label label-success resto_current_state">Open</span>
+                        <span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
+                        <span class="label label-default resto_labels hidden-xs" >Belgisch</span>
+                        <span class="label label-info resto_labels">ACTIES</span>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
+                            <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
+                        </div>
+                    </a>
+                </li>
+
+                <?php
+                for($i = 0; $i < 15; $i++) {
+                    echo '<li class="list-group-item clearfix resto_result">
+                    <a href="'.base_url().'restaurantdetail">
+                        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix"">
+                            <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
+                            <p class="resto_address">Lokerenbaan 121, Zele</p>
+                            <p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <span class="label label-success resto_current_state">Open</span>
+                            <span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
+                            <span class="label label-default resto_labels hidden-xs" >Belgisch</span>
+                            <span class="label label-info resto_labels">ACTIES</span>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
+                            <img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
+                        </div>
+                    </a>
+                </li>';
+                }
+                ?>
+
+
+
+
+
+
+
+
 
 
 
@@ -355,40 +427,7 @@
 
 
 
-                <li class="list-group-item clearfix">
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;" /></a>
-                    </div>
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="font-weight: bold; margin: 0 0 0 0; color: #336FB6;"><em>Fleur De Lin</em></h3>
-
-                        <!--<a href="#" data-toggle="modal" data-target="#shopHoursModal"><span class="label-warning" style="color: black; font-weight: bold; padding: 6px 10px; border-radius: 5px; margin-left: 20px;  line-height: 26px;" data-toggle="tooltip" data-placement="top" title="Nu open">Sluit om 18:00</span></a>
-                        <a href="#" class="resto_maps_viewer" style="color: black;" data-restaurant="Fleur De Lin" data-toggle="tooltip" data-placement="top" title="test">Lokerenbaan 100, 9240 Zele</a>-->
-
-                        <p class="col-md-12 hidden-xs clearfix" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-                    <!--
-                    <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs" >
-                        <button type="button" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</button>
-                        <button type="button" class="btn label-warning" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open tot 15:00</span></button>
-                    </div>-->
-
-                    <div class="col-lg-3 hidden-md hidden-sm col-xs-12 pull-right">
-                        <a href="<?php echo base_url(); ?>search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn label-success" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open tot 15:00</span></button>
-                    </div>
-
-                    <div class="hidden-lg col-md-5 col-sm-4 hidden-xs pull-right">
-                        <a href="<?php echo base_url(); ?>search/restaurantdetail/9240/fleur_de_lin" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
-                    </div>
-                </li>
-
+<!--
                 <li class="list-group-item clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
                         <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;" /></a>
@@ -396,7 +435,7 @@
 
                     <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8">
                         <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="font-weight: bold; margin: 0 0 0 0; color: #336FB6;"><em>Fleur De Lin</em></h3>
-							
+
 							<span style="line-height: 26px; display: block;" class="text-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
 								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
 								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
@@ -418,162 +457,7 @@
                     <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
                         <button type="button" class="btn label-warning" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open tot 15:00</span></button>
                     </div>
-                </li>
-
-                <li class="list-group-item clearfix">
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;" /></a>
-                    </div>
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="font-weight: bold; margin: 0 0 0 0; color: #336FB6;"><em>Fleur De Lin</em></h3>
-							
-							<span style="line-height: 26px; display: block;" class="text-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_45.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_46.png" style="margin-top: -3px;" width="16"alt=""/>
-								<span class="badge">6</span>
-							</span>
-
-                        <p class="col-md-12" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</button>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn label-danger" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Gesloten</span></button>
-                    </div>
-                </li>
-
-                <li class="list-group-item clearfix">
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;" /></a>
-                    </div>
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="font-weight: bold; margin: 0 0 0 0; color: #336FB6;"><em>Fleur De Lin</em></h3>
-							
-							<span style="line-height: 26px; display: block;" class="text-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_45.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_46.png" style="margin-top: -3px;" width="16"alt=""/>
-								<span class="badge">6</span>
-							</span>
-
-                        <p class="col-md-12" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</button>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn label-warning" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open tot 15:00</span></button>
-                    </div>
-                </li>
-
-                <li class="list-group-item clearfix">
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;" /></a>
-                    </div>
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="font-weight: bold; margin: 0 0 0 0; color: #336FB6;"><em>Fleur De Lin</em></h3>
-							
-							<span style="line-height: 26px; display: block;" class="text-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_45.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_46.png" style="margin-top: -3px;" width="16"alt=""/>
-								<span class="badge">6</span>
-							</span>
-
-                        <p class="col-md-12" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <a href="" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn label-warning" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open tot 15:00</span></button>
-                    </div>
-                </li>
-
-                <li class="list-group-item clearfix">
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;" /></a>
-                    </div>
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="font-weight: bold; margin: 0 0 0 0; color: #336FB6;"><em>Fleur De Lin</em></h3>
-							
-							<span style="line-height: 26px; display: block;" class="text-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_45.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_46.png" style="margin-top: -3px;" width="16"alt=""/>
-								<span class="badge">6</span>
-							</span>
-
-                        <p class="col-md-12" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</button>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn label-warning" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open tot 15:00</span></button>
-                    </div>
-                </li>
-
-                <li class="list-group-item clearfix">
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" style="background-color: white; padding-left: 0px;">
-                        <a href="#"><img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" style="width: 100%;" /></a>
-                    </div>
-
-                    <div class="col-lg-7 col-md-10 col-sm-9 col-xs-8">
-                        <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="font-weight: bold; margin: 0 0 0 0; color: #336FB6;"><em>Fleur De Lin</em></h3>
-							
-							<span style="line-height: 26px; display: block;" class="text-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_44.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_45.png" style="margin-top: -3px;" width="16"alt=""/>
-								<img src="https://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_46.png" style="margin-top: -3px;" width="16"alt=""/>
-								<span class="badge">6</span>
-							</span>
-
-                        <p class="col-md-12" style="margin-top: 15px; text-align: justify;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn btn-primary col-lg-12 col-md-12 col-sm-6" style="width: 100%; margin-bottom: 14px;">Menu bekijken</button>
-                    </div>
-
-                    <div class="col-lg-3 col-md-5 col-sm-4 col-xs-12 pull-right">
-                        <button type="button" class="btn label-warning" style="width: 100%; margin-bottom: 14px; font-weight: bold;" data-toggle="modal" data-target="#shopHoursModal"><span data-toggle="tooltip" data-placement="top" title="" data-original-title="Nu open">Open tot 15:00</span></button>
-                    </div>
-                </li>
+                </li>-->
             </ul>
         </div>
 

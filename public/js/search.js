@@ -52,5 +52,10 @@ $(document).ready(function() {
         e.preventDefault();
         alert('ok');
     });
+
+    $('.btnNoInvite').on('click', function(e) {
+        e.preventDefault();
+        $('.inviteRestoModal').modal('hide');
+    });
 });
 
