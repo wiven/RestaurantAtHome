@@ -56,7 +56,8 @@ class Search extends CI_Controller {
 			
 				$data_footer = array(
                     'additional_scripts' => "<script src='".public_url()."js/search.js'></script>
-                    <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>"
+                    <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
+<!--<script src='".public_url()."js/pace.min.js'></script><script src='//fast.eager.io/r8wePleTBw.js'></script>-->"
                 );
 
                 $this->load->view('/common/header', $data_header);

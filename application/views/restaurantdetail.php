@@ -2,7 +2,7 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix" style="margin-top: 10px; line-height: 34px;">
             <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="margin-top: 0px; padding: 0; line-height: 36px;">
-                <a href="#" class="btn btn-default col-xs-12 col-sm-6 col-md-3 col-lg-3"><span class="fa fa-chevron-circle-left"></span> Terug</a>
+                <span class="btn btn-default col-xs-12 col-sm-6 col-md-3 col-lg-3" onclick="window.history.back(-1);"><span class="fa fa-chevron-circle-left"></span> Terug</span>
             </h3>
 
 

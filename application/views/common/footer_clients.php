@@ -181,6 +181,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo public_url(); ?>js/jquery.steps.js"></script>
 	<script src="<?php echo public_url(); ?>js/jquery.steps.min.js"></script>
 
+	<!--<script src="<?php //echo public_url(); ?>js/instantclick.min.js" data-no-instant></script>
+    <script data-no-instant>InstantClick.init('mousedown');</script>-->
+
 	<?php echo $additional_scripts; ?>
 
     <script type="text/javascript">

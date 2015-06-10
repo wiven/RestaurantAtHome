@@ -4,11 +4,11 @@ $(document).ready(function() {
     var Zele = new google.maps.LatLng(51.07043, 4.02642);
 
     var locations = [
-        ['Thuis', 51.07043, 4.02642, 4],
-        ['Lesley', 51.07453, 4.03257, 5],
-        ['Tante Kristien', 51.01458, 4.00242, 3],
-        ['Thomas De Pauw', 51.09932, 3.84445, 2],
-        ['Werk', 50.72592, 4.22001, 1]
+        ['<span class="resto_pointer">Thuis</span>', 51.07043, 4.02642, 4],
+        ['<span class="resto_pointer">Lesley</span>', 51.07453, 4.03257, 5],
+        ['<span class="resto_pointer">Tante Kristien</span>', 51.01458, 4.00242, 3],
+        ['<span class="resto_pointer">Thomas De Pauw</span>', 51.09932, 3.84445, 2],
+        ['<span class="resto_pointer">Werk</span>', 50.72592, 4.22001, 1]
     ];
 
     var map = new google.maps.Map(document.getElementById('map_search_pane'), {
@@ -56,6 +56,15 @@ $(document).ready(function() {
     $('.btnNoInvite').on('click', function(e) {
         e.preventDefault();
         $('.inviteRestoModal').modal('hide');
+    });
+
+    $('.resto_pointer').on('click', function() {
+        var scroll_to = $('.resto_result:first-child').offset().top-91;
+        $('html,body').animate({
+                scrollTop: scroll_to},
+            'slow');
+
+        $('.resto_result:first-child').css('background-color', '#eee');
     });
 });
 

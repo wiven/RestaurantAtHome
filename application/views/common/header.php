@@ -73,6 +73,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!--<script src='//fast.eager.io/r8wePleTBw.js'></script>-->
 </head>
 <body>
     <div id="wrap">

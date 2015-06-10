@@ -8,7 +8,8 @@ $(document).ready(function() {
         var what = $('#itemTop').val();
 
         console.log('Zoeken naar '+what+' in '+where);
-        window.location.href = './search/'+what+'/'+where;
+        window.location.href = './search';
+        //window.location.href = './search/'+what+'/'+where;
     });
 });
 
