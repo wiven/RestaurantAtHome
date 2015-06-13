@@ -20,7 +20,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <footer class="footer">
         <div class="container">
-            <p class="text-muted">&COPY; Restaurant At Home</p>
+            <p class="text-muted" style="line-height: 60px; margin-bottom: 0;">
+                &COPY; Restaurant At Home &mdash;
+                <a href="<?php echo base_url(); ?>contact">Contact</a> &mdash;
+                <a href="<?php echo base_url(); ?>privacy">Privacy Charter</a>
+            </p>
         </div>
     </footer>
 

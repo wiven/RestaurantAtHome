@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <ul class="nav navmenu-nav">
         <li><a href="<?php echo admin_url(); ?>">&nbsp;&nbsp;Overzicht</a></li>
         
-        <li><a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;Profiel</a></li>
+        <li><a href="<?php echo admin_url(); ?>profile"><i class="fa fa-user"></i>&nbsp;&nbsp;Profiel</a></li>
         
         <li class="active"><a href="<?php echo admin_url(); ?>myrecipes"><i class="fa fa-cutlery"></i>&nbsp;&nbsp;Mijn Gerechten</a></li>
         
@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </ul>
     <ul class="nav navmenu-nav">
         <li style="height: 10px; margin-left: 10px; margin-right:10px;   border-top:1px solid #E7E7E7;"></li>
-        <li><a href="#"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;Contact</a></li>
+        <li><a href="<?php echo base_url(); ?>contact"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;Contact</a></li>
       </ul>
     </div>
 </div><!--/admin -->
