@@ -40,6 +40,13 @@ class Admin extends CI_Controller {
         $this->load->view('/admin/admin_actions');
         $this->load->view('/common_admin/footer_admin');
     }
+    
+    public function profile(){
+        $this->load->view('/common_admin/header_admin');
+        $this->load->view('/common_admin/top_menu_admin');
+        $this->load->view('/admin/admin_profile');
+        $this->load->view('/common_admin/footer_admin');        
+    }
 }
 
 /* EOF */
