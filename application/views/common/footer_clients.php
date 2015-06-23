@@ -162,12 +162,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
     </style>
 
-
-    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <!--<script src="<?php echo public_url(); ?>js/script.js"></script>-->
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- jQuery UI (necessary for some other plugins) -->
@@ -181,8 +175,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo public_url(); ?>js/jquery.steps.js"></script>
 	<script src="<?php echo public_url(); ?>js/jquery.steps.min.js"></script>
 
-	<!--<script src="<?php //echo public_url(); ?>js/instantclick.min.js" data-no-instant></script>
+<!--
+	<script src="<?php echo public_url(); ?>js/instantclick.min.js" data-no-instant></script>
     <script data-no-instant>InstantClick.init('mousedown');</script>-->
+
+	<!--<script src="<?php echo public_url(); ?>js/script.js"></script>-->
 
 	<?php echo $additional_scripts; ?>
 

@@ -130,6 +130,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Backstretch script http://srobbin.com/jquery-plugins/backstretch/ -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <script src="<?php echo public_url(); ?>js/script.js"></script>
+<!--
+	<script src="<?php echo public_url(); ?>js/instantclick.min.js" data-no-instant></script>
+    <script data-no-instant>InstantClick.init('mousedown');</script>-->
+
+    <?php echo $additional_scripts; ?>
 </body>
 
 </html>
