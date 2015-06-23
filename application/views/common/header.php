@@ -39,8 +39,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
     <!-- define the viewport for mobile use -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- favicons and shortcut icons for all mayor OS'es -->
     <link rel="shortcut icon" href="http://restaurantathome.be/assets/img/favicon.ico">
