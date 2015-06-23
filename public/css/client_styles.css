@@ -311,3 +311,10 @@ li .resto_not_connected {
 
   pointer-events: none;
 }
+
+.fixed {
+    position: fixed;
+    top: 80px;
+    z-index: 2;
+    right: 15px;
+}

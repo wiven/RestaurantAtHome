@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <div class="form-group has-feedback col-lg-4 col-md-3 col-sm-6 clearfix" style="margin-top: 20px; padding: 0;">
                         <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
-                        <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Zoeken ..." value="Kortrijk">
+                        <input type="search" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Zoeken ..." value="Kortrijk">
                         <span id="inputSuccess2Status" class="sr-only">(search)</span>
 
                         <!--<input type="button" class="btn btn-primary" value="Meer filters" />-->

@@ -23,8 +23,7 @@
                 <button class="btn btn-primary glyphicon glyphicon-shopping-cart" type="submit">Toevoegen</button>
                 <p class="badge red" style="color: #FFF; background: #3878C4; position: absolute; top: -8px; right: 122px; z-index: 500;">1</p>
             </div>-->
-
-
+            
         </div>
     </nav>
 </header>
@@ -117,6 +116,24 @@
                 <!-- ACTIES -->
                 <div role="tabpanel" class="tab-pane active" id="acties">
                     <!-- FIRST 3 RESULTS -->
+
+                    <div class="col-lg-6">
+                        <div class="item simpleCart_shelfItem" id="item-01">
+                            <div class="info">
+                                <div class="dots"></div>
+                                <span class="name item_name">1. TARO SHRIMP</span>
+                                <span class="price item_price">$ 8.50</span>
+                            </div>
+                            <div class="description">Shrimp wrapped in taro, deep fried and served with chili sauce</div>
+                            <div class="legend"><span>SPICY</span><a class="add item_add" href="javascript:;">ADD</a></div>
+                            <input type="hidden" value="1" class="item_Quantity">
+                        </div>
+                    </div>
+
+
+
+
+
                     <ul class="list-group col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix">
                         <li class="list-group-item clearfix">
                             <div class="col-lg-2 col-md-4 col-sm-2 col-xs-3" style="padding: 0;">
@@ -628,7 +645,27 @@
                 <div role="tabpanel" class="tab-pane" id="hoofdgerechten">hoofdgerechten</div>
                 <div role="tabpanel" class="tab-pane" id="desserts">desserts</div>
                 <div role="tabpanel" class="tab-pane" id="dranken">dranken</div>
-                <div role="tabpanel" class="tab-pane" id="extras">extra's</div>
+                <div role="tabpanel" class="tab-pane" id="extras">
+                    <ul class="list-group">
+                        <li class="list-group-item col-lg-4 col-xs-12"></li>
+                        <li class="list-group-item col-lg-4 col-xs-12"></li>
+                        <li class="list-group-item col-lg-4 col-xs-12"></li>
+                        <li class="list-group-item col-lg-4 col-xs-12"></li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="col-lg-3" id="shopping_list" style="padding-right: 0;">
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+
+                <button class="btn btn-default">&euro; 164,89</button>
+                <button class="btn btn-primary">Afrekenen</button>
             </div>
         </div>
     </div>
