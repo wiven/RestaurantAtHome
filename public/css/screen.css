@@ -221,12 +221,12 @@ body {
 }
 
 #recipes div.recipe:hover > div.title{
-        background: rgb(29, 157, 116) !important;
+    background: rgb(29, 157, 116) !important;
     background: rgba(29, 157, 116, .7) !important;
 }
 
 #recipes div.recipe:hover > div.editbutton{
-            background: rgb(29, 157, 116) !important;
+    background: rgb(29, 157, 116) !important;
     background: rgba(29, 157, 116, .7) !important;
     border: 2px solid #1D9D74 !important;
     color:white !important;
@@ -242,7 +242,18 @@ body {
 
 
 
+/** ---------------- GENERAL STYLES --------------*/
 
+
+.modal-backdrop {
+    background-color: #fff !important; /* made the modal background white because of the in-app styles */
+}
+
+.modal-backdrop.in {
+    opacity: 0.75;
+}
+
+/** ---------------- END OF GENERAL STYLES --------------*/
 
 
 /* Bootstrap Callout addition
