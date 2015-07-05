@@ -241,6 +241,73 @@ body {
 /** ---------------- END OF ADMIN MY RECIPES PAGE --------------*/
 
 
+/** ------------------ADMIN PROFILE STYLES ----------------------*/
+
+ul.openhours li span {
+    float:left;
+    width: 40px;
+}
+ul.closertogether{
+    margin-left: 2px;
+}
+
+ul.closertogether li {
+    padding: 0 !important;
+        
+}
+
+/** bootstrap fix for timepicker in modal */
+.dropdown-menu {
+    z-index: 1041 !important;
+}
+
+
+/** ---------------- END OF ADMIN PROFILE PAGE --------------*/
+
+
+/** ---------------- ADMIN ORDERS STYLES -----------------*/
+
+
+
+.orders .orderblock {
+    text-align: justify; 
+    margin-bottom: 7px !important;
+    
+     /* IE special */  
+    width: 100%;  
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+}
+.orders .orderblock:after{
+    content: '';    
+    display: inline-block;    
+    width: 100%;    
+    height: 0;    
+    font-size:0;    
+    line-height:0;
+}
+.orders .orderblock h5{
+    display:inline-block;
+    /* ie 7*/     
+    *display: inline;    
+    *zoom: 1;    
+    *text-align: left;  
+}
+.orders .orderblock div.orderbuttons{
+    padding: 4px;
+    display: inline-block;    
+    vertical-align: baseline;     
+    /* ie 7*/    
+    *display: inline;    
+    *zoom:1;    
+    *text-align: right;
+}
+.orders .alert{
+    height:55px;
+}
+
+/** ---------------- END OF ADMIN ORDERS PAGE --------------*/
+
 
 /** ---------------- GENERAL STYLES --------------*/
 
@@ -251,6 +318,18 @@ body {
 
 .modal-backdrop.in {
     opacity: 0.75;
+}
+
+.alert-default {
+    background-color: #fefefe;
+    border-color: #e8e8e8;
+    color: #757575;
+}
+.alert-default hr {
+    border-top-color: #e1e1e1;
+}
+.alert-default .alert-link {
+    color: #505050;
 }
 
 /** ---------------- END OF GENERAL STYLES --------------*/

@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </ul>
       <ul class="nav navmenu-nav">
           <li style="height: 10px; margin-left: 10px; margin-right:10px;   border-top:1px solid #E7E7E7;"></li>
-        <li><a href="#"><i class="fa fa-bars"></i>&nbsp;&nbsp;Bestellingen</a></li>
+        <li><a href="<?php echo admin_url(); ?>orders"><i class="fa fa-bars"></i>&nbsp;&nbsp;Bestellingen</a></li>
         <li><a href="<?php echo admin_url(); ?>slotedit"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Slots beheren</a></li>
         <li><a href="<?php echo admin_url(); ?>actions"><i class="fa fa-fire"></i>&nbsp;&nbsp;Acties</a></li>
       </ul>
