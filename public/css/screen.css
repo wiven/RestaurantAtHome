@@ -81,7 +81,9 @@ line-height: 27px;
     font-weight: bold;
 }
 
-
+.admin .navbar-header {
+    min-width: 225px;
+}
 
 .admin .navbar-toggle {
   float: left;
