@@ -27,6 +27,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- First of all the bootstrap framework -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- OR locally if the server isn't responding @todo
+    <link rel="stylesheet" href="<?php //echo public_url(); ?>css/bootstrap.min.css">-->
 
     <!-- add our own css bits -->
     <link rel="stylesheet" href="<?php echo public_url(); ?>css/screen.css">
@@ -34,6 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Font Awesome for some cool icons -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- OR locally if the server isn't responding @todo
+    <link href="<?php //echo public_url(); ?>css/font-awesome.min.css" rel="stylesheet">
 
     <!-- jQuery smoothness for scrolling on mobile devices -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">

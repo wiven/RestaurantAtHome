@@ -17,12 +17,14 @@ class Search extends CI_Controller {
             case "nl":
                 $data_header = array(
                     'page_title' => ' - Zoeken',
-                    'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>"
+                    'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/client_styles.css'>
+                    <link rel='stylesheet' href='".public_url()."css/sweetalert.css'>"
                 );
 
                 $data_footer = array(
                     'additional_scripts' => "<script src='".public_url()."js/search.js'></script>
-                    <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>"
+                    <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
+                    <script src='".public_url()."js/sweetalert.min.js'></script>"
                 );
 
                 $this->load->view('/common/header', $data_header);
