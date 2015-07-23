@@ -36,12 +36,12 @@
 	</div>
 
 	<div class="row">
-		<h2 class="col-lg-12" style="margin: 30px 0 15px;">Restaurants in de kijker</h2>
+		<h2 class="col-lg-12">Restaurants in de kijker</h2>
 
 		<a href="#" class="top_resto">
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true">
 					<div class="caption">
 						<h3 id="thumbnail-label">Restaurant 1</h3>
 					</div>
@@ -52,7 +52,7 @@
 		<a href="#" class="top_resto">
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true">
 					<div class="caption">
 						<h3 id="thumbnail-label">Restaurant 2</h3>
 					</div>
@@ -63,7 +63,7 @@
 		<a href="#" class="top_resto">
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true">
 					<div class="caption">
 						<h3 id="thumbnail-label">Restaurant 3</h3>
 					</div>
@@ -74,7 +74,7 @@
 		<a href="#" class="top_resto">
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true">
 					<div class="caption">
 						<h3 id="thumbnail-label">Restaurant 4</h3>
 					</div>
@@ -83,26 +83,26 @@
 		</a>
 	</div>
 
-	<div class="row clearfix" style="margin-bottom: 50px;">
-		<h2 class="col-lg-12" style="margin: 30px 0 15px;">Onze partners</h2>
+	<div class="row clearfix">
+		<h2 class="col-lg-12">Onze partners</h2>
 
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2" style="height: 71px;">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/sodexo.jpg" data-holder-rendered="true" style="width: 100%; display: block;margin-top: 9px;">
+		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/sodexo.jpg" data-holder-rendered="true">
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/unizo.jpg" data-holder-rendered="true" style="width: 100%; display: block;">
+			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/unizo.jpg" data-holder-rendered="true">
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/stad-kortrijk.jpg" data-holder-rendered="true" style="margin-top: 8px;width: 100%; display: block;">
+			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/stad-kortrijk.jpg" data-holder-rendered="true">
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/moonen-packaging.jpg" data-holder-rendered="true" style="width: 100%; margin-top: 5px;display: block;">
+			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/moonen-packaging.jpg" data-holder-rendered="true">
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/vinddevis.jpg" data-holder-rendered="true" style="width: 100%; display: block;margin-top: 20px;">
+			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/vinddevis.jpg" data-holder-rendered="true">
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/wiven.jpg" data-holder-rendered="true" style="width: 100%; display: block; margin-top: 10px;vertical-align: middle;">
+			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/wiven.jpg" data-holder-rendered="true">
 		</div>
 	</div>
 </div>

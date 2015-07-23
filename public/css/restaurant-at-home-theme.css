@@ -5453,6 +5453,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default {
 	background-color: #ffffff;
 	border-color: transparent;
+	top: 25px;
+	position: relative;
 }
 
 .navbar-default .navbar-brand {
@@ -7119,6 +7121,7 @@ button.close {
 	-ms-transform: translate(0, 0);
 	-o-transform: translate(0, 0);
 	transform: translate(0, 0);
+	z-index: 999999;
 }
 
 .modal-open .modal {
@@ -8955,11 +8958,43 @@ input[type="checkbox"]:disabled:checked:after,
 	background-color: white !important;
 }
 
-/* Nog te filteren!! */
-
-.float-right {
-	float: right;
+.steps {
+	position: relative;
+	top: 43px;
+	left: 360px;
 }
+
+.steps li {
+	padding: 0 25px 0 0;
+}
+
+.homepageback {
+	width: 100%;
+	position: absolute;
+	top: 125px;
+	left: 0px;
+	height: 400px;
+	z-index: -9999;
+}
+
+@media (max-width: 768px) {
+	.homepageback {
+		height: 550px;
+	}
+}
+
+.homepage .panel {
+	margin: 85px 0 125px;
+}
+
+@media (max-width: 768px) {
+	.navbar-toggle {
+		top: 20px;
+		right: -9px;
+		font-size: 22px;
+	}
+}
+/* Nog te filteren!! */
 
 .navbar-brand {
 	height: 100%;
@@ -8967,28 +9002,6 @@ input[type="checkbox"]:disabled:checked:after,
 
 .navbar-right.nav.navbar-default.navbar-nav > li > a {
 	line-height: 27px;
-}
-
-.nav.steps > li {
-	margin-left: 30px;
-}
-
-.nav.steps > li > i {
-	margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-	#home_logo img {
-		max-width: 180px;
-	}
-	.homepageback {
-		height: 420px !important;
-		margin-top: -50px;
-	}
-	.homepage .panel {
-		margin-top: 50px !important;
-		margin-bottom: 75px !important;
-	}
 }
 
 #wrap {
@@ -9001,19 +9014,6 @@ input[type="checkbox"]:disabled:checked:after,
 .footer {
 	height: 60px;
 	background-color: #f5f5f5;
-}
-
-.homepageback {
-	width: 100%;
-	position: absolute;
-	top: 125px;
-	left: 0px;
-	height: 400px;
-	z-index: -9999;
-}
-
-.homepage .panel {
-	margin: 125px 0;
 }
 
 .panel-default>.panel-heading {
@@ -9039,12 +9039,6 @@ input[type="checkbox"]:disabled:checked:after,
 @media (min-width: 768px) {
 	.homepage .form-inline input {
 		min-width: 300px;
-	}
-	.navbar>.container .navbar-brand,
-	.navbar>.container-fluid .navbar-brand {
-		margin-left: -15px;
-		top: 10px;
-		position: relative;
 	}
 }
 
