@@ -1,473 +1,438 @@
 /**
  * Restaurant At Home
- * 
+ *
  * This file contains:
  * - the main css file for (additional) markup
  *
  * @package	RestoAtHome
  * @author	A collaboration of: WiVen Web Solutions - VDW Web - KolorFlux
  * @copyright	Copyright (c) 2014 - 2015
- * @copyright	
+ * @copyright
  * @license	*
  * @link	http://restaurantathome.be
  * @since	Version 1.0.0
 */
-
-
-
 /** ------------- HEADER -----------------*/
-.float-right{
-    float:right;
+
+.float-right {
+	float: right;
 }
 
-.navbar-brand{
-    height: 100%;
+.navbar-brand {
+	height: 100%;
 }
 
 .navbar-right.nav.navbar-default.navbar-nav > li > a {
-
-line-height: 27px;
+	line-height: 27px;
 }
+
 .drop-shadow {
-    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+	-webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
 }
 
-
-.nav.steps{
-    color: #d3d3d3;
-    
-    font-size: 13px;
-    right: 230px;
-    position: absolute;
-    top: 15px;
+.nav.steps {
+	color: #d3d3d3;
+	font-size: 13px;
+	right: 230px;
+	position: absolute;
+	top: 15px;
 }
 
 .nav.steps > li {
-    margin-left: 30px;
-    
+	margin-left: 30px;
 }
 
 .nav.steps > li > i {
-    margin-right: 10px;
+	margin-right: 10px;
 }
-
 /* Very small devices (smartphones, <768px) */
+
 @media (max-width: 768px) {
-    #home_logo img {
-        max-width: 180px;
-    }
-
-    .homepageback {
-        height: 420px !important;
-        margin-top: -50px;
-    }
-
-    .homepage .panel {
-        margin-top: 50px !important;
-        margin-bottom: 75px !important;
-     }
+	#home_logo img {
+		max-width: 180px;
+	}
+	.homepageback {
+		height: 420px !important;
+		margin-top: -50px;
+	}
+	.homepage .panel {
+		margin-top: 50px !important;
+		margin-bottom: 75px !important;
+	}
 }
-
 /** ---------------- END OF HEADER --------------------*/
-
-
-
 /** -----------------ADMIN HEADER --------------------*/
 
- .admin > .navbar-default .navbar-nav > .active > a, .admin > .navbar-default .navbar-nav > .active > a:focus, .admin > .navbar-default .navbar-nav > .active > a:hover {
-    background-color: #ebebeb;
-    color: #336fb6;
-    font-weight: bold;
+.admin > .navbar-default .navbar-nav > .active > a,
+.admin > .navbar-default .navbar-nav > .active > a:focus,
+.admin > .navbar-default .navbar-nav > .active > a:hover {
+	background-color: #ebebeb;
+	color: #336fb6;
+	font-weight: bold;
 }
 
 .admin .navbar-header {
-    min-width: 225px;
+	min-width: 225px;
 }
 
 .admin .navbar-toggle {
-  float: left;
-  margin-left: 15px;
+	float: left;
+	margin-left: 15px;
 }
 
 .admin .navbar {
-    right: 0px !important;
+	right: 0px !important;
 }
 
 .admin .navbar-toggle {
-    display: block !important; /* force showing the toggle */
+	display: block !important;
+	/* force showing the toggle */
 }
 
 .admin .navmenu-fixed-left.offcanvas {
-    background-color: #336FB6 !important;
-    
+	background-color: #336FB6 !important;
 }
 
-.admin .navmenu-fixed-left.offcanvas a{
-    color: white !important;
-    
+.admin .navmenu-fixed-left.offcanvas a {
+	color: white !important;
 }
 
-.admin .navmenu-fixed-left.offcanvas li.active a{
-    color: black !important;
-    background-color: white !important;
+.admin .navmenu-fixed-left.offcanvas li.active a {
+	color: black !important;
+	background-color: white !important;
 }
-
-
-
 /** --------------- END OF ADMIN HEADER ---------------*/
-
-
 /** ---------------- FOOTER ----------------------*/
-
 /* sticky footer */
 
 html,
 body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
 }
-
 /* Wrapper for page content to push down footer */
+
 #wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
+	min-height: 100%;
+	height: auto;
+	/* Negative indent footer by its height */
 
+	margin: 0 auto -60px;
+	/* Pad bottom by footer height */
+
+	padding: 0 0 60px;
+}
 /* Set the fixed height of the footer here */
+
 .footer {
-  height: 60px;
-  background-color: #f5f5f5;
+	height: 60px;
+	background-color: #f5f5f5;
 }
-
-
-
 /** ----------------END OF FOOTER ------------------*/
-
-
-
 /** ---------------- HOMEPAGE ----------------------- */
+
 .homepageback {
-    width:100%;
-    position: absolute;
-    top: 150px;
-    left: 0px;
-    height: 400px;
-    z-index: -9999;
+	width: 100%;
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	height: 400px;
+	z-index: -9999;
 }
 
-.homepage .panel{
-    
-    margin-top: 150px;
-    margin-bottom: 150px;
+.homepage .panel {
+	margin-top: 150px;
+	margin-bottom: 150px;
 }
-
 /* Those search bars can't be too small cant they? */
-@media (min-width:768px) {
-    .homepage .form-inline input {
-        min-width: 300px;
-    }
+
+@media (min-width: 768px) {
+	.homepage .form-inline input {
+		min-width: 300px;
+	}
 }
 
 .homepage .form-inline label {
-    min-width: 200px;
+	min-width: 200px;
 }
-
-
 /* For Small devices and up give the search form some space */
-@media (min-width:768px) {
-    .homepage .form-inline div.form-group {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-}
 
+@media (min-width: 768px) {
+	.homepage .form-inline div.form-group {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
 /* For Large and Medium devices make the search button on homepage go a bit down */
-@media (min-width:992px) {
-    .homepage .form-inline div.form-group button.searchbtn{
-        margin-top: 13px;
-    }
+
+@media (min-width: 992px) {
+	.homepage .form-inline div.form-group button.searchbtn {
+		margin-top: 13px;
+	}
 }
-
 /** ---------------END OF HOMEPAGE ----------------*/
-
-
-
-
-
-
-
 /** ---------------- ADMIN MY RECIPES PAGE --------------------*/
 
-#selectable .ui-selecting .title{ 
-    background: rgb(0, 107, 73) !important;
-    background: rgba(0, 107, 73, .8) !important;
+#selectable .ui-selecting .title {
+	background: rgb(0, 107, 73) !important;
+	background: rgba(0, 107, 73, .8) !important;
 }
 
 #selectable .ui-selected .selected_check {
-    visibility: visible !important;
+	visibility: visible !important;
 }
 
-#selectable .ui-selected .title{ 
-    background: rgb(29, 157, 116) !important;
-    background: rgba(29, 157, 116, .7) !important;
+#selectable .ui-selected .title {
+	background: rgb(29, 157, 116) !important;
+	background: rgba(29, 157, 116, .7) !important;
 }
 
-#recipes div.recipe:hover{
-    border: 2px solid #1D9D74 !important;
-    
+#recipes div.recipe:hover {
+	border: 2px solid #1D9D74 !important;
 }
 
-#recipes div.recipe:hover > div.title{
-    background: rgb(29, 157, 116) !important;
-    background: rgba(29, 157, 116, .7) !important;
+#recipes div.recipe:hover > div.title {
+	background: rgb(29, 157, 116) !important;
+	background: rgba(29, 157, 116, .7) !important;
 }
 
-#recipes div.recipe:hover > div.editbutton{
-    background: rgb(29, 157, 116) !important;
-    background: rgba(29, 157, 116, .7) !important;
-    border: 2px solid #1D9D74 !important;
-    color:white !important;
+#recipes div.recipe:hover > div.editbutton {
+	background: rgb(29, 157, 116) !important;
+	background: rgba(29, 157, 116, .7) !important;
+	border: 2px solid #1D9D74 !important;
+	color: white !important;
 }
 
 .thumbnail:hover {
-    box-shadow: 0px 2px 5px #888888;
+	box-shadow: 0px 2px 5px #888888;
 }
-
-
-
 /** ---------------- END OF ADMIN MY RECIPES PAGE --------------*/
-
-
 /** ------------------ADMIN PROFILE STYLES ----------------------*/
 
 ul.openhours li span {
-    float:left;
-    width: 40px;
+	float: left;
+	width: 40px;
 }
-ul.closertogether{
-    margin-left: 2px;
+
+ul.closertogether {
+	margin-left: 2px;
 }
 
 ul.closertogether li {
-    padding: 0 !important;
-        
+	padding: 0 !important;
 }
-
 /** bootstrap fix for timepicker in modal */
+
 .dropdown-menu {
-    z-index: 1041 !important;
+	z-index: 1041 !important;
 }
-
-
 /** ---------------- END OF ADMIN PROFILE PAGE --------------*/
-
-
 /** ---------------- ADMIN ORDERS STYLES -----------------*/
 
-
-
 .orders .orderblock {
-    text-align: justify; 
-    margin-bottom: 7px !important;
-    
-     /* IE special */  
-    width: 100%;  
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
-}
-.orders .orderblock:after{
-    content: '';    
-    display: inline-block;    
-    width: 100%;    
-    height: 0;    
-    font-size:0;    
-    line-height:0;
-}
-.orders .orderblock h5{
-    display:inline-block;
-    /* ie 7*/     
-    *display: inline;    
-    *zoom: 1;    
-    *text-align: left;  
-}
-.orders .orderblock div.orderbuttons{
-    padding: 4px;
-    display: inline-block;    
-    vertical-align: baseline;     
-    /* ie 7*/    
-    *display: inline;    
-    *zoom:1;    
-    *text-align: right;
-}
-.orders .alert{
-    height:55px;
+	text-align: justify;
+	margin-bottom: 7px !important;
+	/* IE special */
+
+	width: 100%;
+	-ms-text-justify: distribute-all-lines;
+	text-justify: distribute-all-lines;
 }
 
+.orders .orderblock:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+.orders .orderblock h5 {
+	display: inline-block;
+	/* ie 7*/
+
+	*display: inline;
+	*zoom: 1;
+	*text-align: left;
+}
+
+.orders .orderblock div.orderbuttons {
+	padding: 4px;
+	display: inline-block;
+	vertical-align: baseline;
+	/* ie 7*/
+
+	*display: inline;
+	*zoom: 1;
+	*text-align: right;
+}
+
+.orders .alert {
+	height: 55px;
+}
 /** ---------------- END OF ADMIN ORDERS PAGE --------------*/
-
-
 /** ---------------- GENERAL STYLES --------------*/
 
-
 .modal-backdrop {
-    background-color: #fff !important; /* made the modal background white because of the in-app styles */
+	background-color: #fff !important;
+	/* made the modal background white because of the in-app styles */
 }
 
 .modal-backdrop.in {
-    opacity: 0.75;
+	opacity: 0.75;
 }
 
 .alert-default {
-    background-color: #fefefe;
-    border-color: #e8e8e8;
-    color: #757575;
+	background-color: #fefefe;
+	border-color: #e8e8e8;
+	color: #757575;
 }
+
 .alert-default hr {
-    border-top-color: #e1e1e1;
+	border-top-color: #e1e1e1;
 }
+
 .alert-default .alert-link {
-    color: #505050;
+	color: #505050;
 }
-
 /** ---------------- END OF GENERAL STYLES --------------*/
-
-
 /* Bootstrap Callout addition
 http://cpratt.co/twitter-bootstrap-callout-css-styles/
 */
 
-
 .bs-callout {
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #eee;
-    border-left-width: 5px;
-    border-radius: 3px;
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
 }
+
 .bs-callout h4 {
-    margin-top: 0;
-    margin-bottom: 5px;
+	margin-top: 0;
+	margin-bottom: 5px;
 }
+
 .bs-callout p:last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
+
 .bs-callout code {
-    border-radius: 3px;
+	border-radius: 3px;
 }
+
 .bs-callout+.bs-callout {
-    margin-top: -5px;
+	margin-top: -5px;
 }
+
 .bs-callout-default {
-    border-left-color: #777;
+	border-left-color: #777;
 }
+
 .bs-callout-default h4 {
-    color: #777;
+	color: #777;
 }
+
 .bs-callout-primary {
-    border-left-color: #428bca;
+	border-left-color: #428bca;
 }
+
 .bs-callout-primary h4 {
-    color: #428bca;
+	color: #428bca;
 }
+
 .bs-callout-success {
-    border-left-color: #5cb85c;
+	border-left-color: #5cb85c;
 }
+
 .bs-callout-success h4 {
-    color: #5cb85c;
+	color: #5cb85c;
 }
+
 .bs-callout-danger {
-    border-left-color: #d9534f;
+	border-left-color: #d9534f;
 }
+
 .bs-callout-danger h4 {
-    color: #d9534f;
+	color: #d9534f;
 }
+
 .bs-callout-warning {
-    border-left-color: #f0ad4e;
+	border-left-color: #f0ad4e;
 }
+
 .bs-callout-warning h4 {
-    color: #f0ad4e;
+	color: #f0ad4e;
 }
+
 .bs-callout-info {
-    border-left-color: #5bc0de;
+	border-left-color: #5bc0de;
 }
+
 .bs-callout-info h4 {
-    color: #5bc0de;
+	color: #5bc0de;
 }
-
 /* end of bs calout addition */
-
-
-
-
-
-
-
-
-
-
 /*
   Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
   CSS from:       http://codepen.io/transportedman/pen/NPWRGq
   and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
-  Inspired from:  http://codepen.io/Rowno/pen/Afykb 
+  Inspired from:  http://codepen.io/Rowno/pen/Afykb
 */
+
 .carousel-fade .carousel-inner .item {
-  opacity: 0;
-  transition-property: opacity;
+	opacity: 0;
+	transition-property: opacity;
 }
 
 .carousel-fade .carousel-inner .active {
-  opacity: 1;
+	opacity: 1;
 }
 
 .carousel-fade .carousel-inner .active.left,
 .carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
+	left: 0;
+	opacity: 0;
+	z-index: 1;
 }
 
 .carousel-fade .carousel-inner .next.left,
 .carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
+	opacity: 1;
 }
 
 .carousel-fade .carousel-control {
-  z-index: 2;
+	z-index: 2;
 }
-
 /*
   WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
   Need to override the 3.3 new styles for modern browsers & apply opacity
 */
-@media all and (transform-3d), (-webkit-transform-3d) {
-    .carousel-fade .carousel-inner > .item.next,
-    .carousel-fade .carousel-inner > .item.active.right {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.prev,
-    .carousel-fade .carousel-inner > .item.active.left {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.next.left,
-    .carousel-fade .carousel-inner > .item.prev.right,
-    .carousel-fade .carousel-inner > .item.active {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+	.carousel-fade .carousel-inner > .item.next,
+	.carousel-fade .carousel-inner > .item.active.right {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-inner > .item.prev,
+	.carousel-fade .carousel-inner > .item.active.left {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-inner > .item.next.left,
+	.carousel-fade .carousel-inner > .item.prev.right,
+	.carousel-fade .carousel-inner > .item.active {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
 }
-
-
 /**
 EOF - Arr mate!
 */
