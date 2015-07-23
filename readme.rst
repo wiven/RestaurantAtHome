@@ -5,7 +5,7 @@ Restaurant At Home
 Restaurant At Home is a collaboration project between 4 partys:
 
 | **Large In Vision**       \- Idea think tank;
-| **Wiven Web Solutions**   \- Management, front-end development and Consulting;
+| **WiVen Web Solutions**   \- Management, front-end development and Consulting;
 | **IneTh**               \- Back-end development and Consulting;
 | **Shout!**             \- Front-end development and Consulting.
 | 
