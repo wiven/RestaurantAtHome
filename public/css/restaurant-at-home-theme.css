@@ -7151,7 +7151,7 @@ button.close {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 1040;
+	/*z-index: 1040;  // caused the modal to be shown behind the added layer */
 	background-color: #000000;
 }
 
