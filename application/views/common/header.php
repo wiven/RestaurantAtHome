@@ -20,9 +20,11 @@
 
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css">
 	<?php echo $additional_styles; ?>
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
+	<link rel="stylesheet" href="<?php echo public_url(); ?>css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="<?php echo public_url(); ?>css/jquery-ui.css">
+	<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
 
 	<link rel="shortcut icon" href="http://restaurantathome.be/assets/img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url(); ?>apple-touch-icon-57x57.png">

@@ -163,11 +163,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </style>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <script src="<?php echo public_url(); ?>js/jquery.min.js"></script>
 	<!-- jQuery UI (necessary for some other plugins) -->
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
+    <script src="<?php echo public_url(); ?>js/bootstrap.min.js"></script>
     <!-- Will be included in the controller as a parameter when needed on a page -->
 	<!--<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
 	<script src="<?php echo public_url(); ?>js/jquery.ui.touch-punch.min.js"></script>
@@ -181,7 +183,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<!--<script src="<?php echo public_url(); ?>js/script.js"></script>-->
 
-	<?php echo $additional_scripts; ?>
+	<?php echo (isset($additional_scripts) ? $additional_scripts : '') ?>
 
     <script type="text/javascript">
 		var pos = '';
