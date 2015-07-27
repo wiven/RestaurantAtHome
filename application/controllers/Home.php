@@ -19,9 +19,7 @@ class Home extends CI_Controller {
 		);
 
 		$data_footer = array(
-			'additional_scripts' => '<script src="'.public_url().'js/home.js"></script>',
-			'additional_scripts' => '<script src="'.public_url().'js/places-lib.js"></script>',
-			'additional_scripts' => '<script src="'.public_url().'js/autocomplete.js"></script>'
+			'additional_scripts' => '<script src="'.public_url().'js/home.js"></script>'
 		);
 
 		$this->load->view('/common/header', $data_header);
