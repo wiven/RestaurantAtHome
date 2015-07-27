@@ -30,11 +30,11 @@
 						</ul>
 					</div>
 
-					<ul class="nav navbar-nav steps hidden-xs hidden-sm">
+					<!--<ul class="nav navbar-nav steps hidden-xs hidden-sm">
 						<li><i class="fa fa-tag fa-2x fa-rotate-90"></i>Gratis Bestellen</li>
 						<li><i class="fa fa-check fa-2x"></i>Afhalen</li>
 						<li><i class="fa fa-child fa-2x"></i>Smullen!</li>
-					</ul>
+					</ul>-->
 
 				</div>
 				<!-- /.container-fluid -->

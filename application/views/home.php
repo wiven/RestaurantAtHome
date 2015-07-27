@@ -5,17 +5,18 @@
 	<!-- here will appear the background images -->
 </div>
 
+
 <div class="container homepage">
 	<div class="panel panel-default">
 		<div class="panel-heading">Zoek meteen naar je favoriete restaurant:</div>
 		<div class="panel-body">
 			<form class="form-inline">
 				<div class="col-lg-1"></div>
-				<div class="form-group col-xs-12 col-sm-6 col-md-5 col-lg-4">
+				<div class="form-group col-xs-12 col-sm-6 col-md-5 col-lg-4" id="locationField">
 					<label for="addressTop" class="labelStyle">
 						Waar wil je eten?
 					</label>
-					<input type="text" placeholder="Straat, Nummer, Stad of Postcode" id="addressTop" class="form-control" tabindex="1" />
+					<input type="text" placeholder="Straat, Nummer, Stad of Postcode" id="autocomplete" id="addressTop" class="form-control" tabindex="1" onFocus="geolocate()" />
 				</div>
 
 				<div class="form-group col-xs-12 col-sm-6 col-md-5 col-lg-4">

@@ -689,7 +689,7 @@
 			</div>
 			<div class="modal-body clearfix" style="padding-top: 0;">
 				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-					<?php for ($i=1 ; $i <=1 1; $i++) { echo '
+					<?php for ($i=1 ; $i <=11; $i++) { echo '
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="heading'.$i. '">
 								<h4 class="panel-title clearfix">

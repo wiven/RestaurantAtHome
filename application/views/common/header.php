@@ -119,7 +119,7 @@
 
 </head>
 
-<body>
+<body onload="initialize()">
 	<div id="wrap">
 		<?php //EOF - 'It all ends here'- ?>
 >>>>>>> origin/RestoAtHome

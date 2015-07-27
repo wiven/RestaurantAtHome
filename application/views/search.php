@@ -1,5 +1,11 @@
 <div class="container-fluid" style="margin-top: 20px;">
 
+	<div class="form-group has-feedback col-lg-4 col-md-3 col-sm-6 clearfix">
+		<span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+		<input type="search" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Zoeken ..." value="Kortrijk">
+		<span id="inputSuccess2Status" class="sr-only">(search)</span>
+	</div>
+
 	<div class="modal fade inviteRestoModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content text-center" style="min-height: 150px; width: 250px; padding: 20px 15px;margin: 100px auto;">
