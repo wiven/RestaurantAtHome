@@ -125,10 +125,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</style>
 
 
-	<script src="public/js/min/jquery-1.11.3.js"></script>
-	<script src="public/js/min/bootstrap-3.3.2.js"></script>
-	<script src="public/js/min/jquery-backstretch-2.0.4.js"></script>
-	<script src="<?php echo public_url(); ?>js/script.js"></script>
+	<script src="public/js/min/jquery-1.11.3.min.js"></script>
+	<script src="public/js/min/bootstrap-3.3.2.min.js"></script>
+	<script src="public/js/min/jquery-backstretch-2.0.4.min.js"></script>
+	<script src="<?php echo public_url(); ?>js/min/script.min.js"></script>
 
 	<?php echo $additional_scripts; ?>
 </body>

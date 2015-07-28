@@ -18,12 +18,12 @@
 		<?php //echo $language_test; ?>
 	</title>
 
-	<link rel="stylesheet" href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css">
+	<link rel="stylesheet" href="<?php echo public_url(); ?>css/min/restaurant-at-home-theme.min.css">
 	<?php echo $additional_styles; ?>
 
-	<link href="public/css/min/font-awesome-4.3.0.css" rel="stylesheet">
+	<link href="<?php echo public_url(); ?>css/min/font-awesome-4.3.0.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="public/css/min/jquery-ui.css">
+	<link rel="stylesheet" href="public/css/min/jquery-ui.min.css">
 
 	<link rel="shortcut icon" href="http://restaurantathome.be/assets/img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url(); ?>apple-touch-icon-57x57.png">
