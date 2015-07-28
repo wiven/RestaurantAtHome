@@ -39,7 +39,7 @@
 		<a href="#" class="top_resto">
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true">
+					<img src="public/img/restaurant-thumbail-preview.jpg">
 					<div class="caption">
 						<h3 id="thumbnail-label">Restaurant 1</h3>
 					</div>
@@ -49,7 +49,7 @@
 		<a href="#" class="top_resto">
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true">
+					<img src="public/img/restaurant-thumbail-preview.jpg">
 					<div class="caption">
 						<h3 id="thumbnail-label">Restaurant 2</h3>
 					</div>
@@ -59,7 +59,7 @@
 		<a href="#" class="top_resto">
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true">
+					<img src="public/img/restaurant-thumbail-preview.jpg">
 					<div class="caption">
 						<h3 id="thumbnail-label">Restaurant 3</h3>
 					</div>
@@ -69,7 +69,7 @@
 		<a href="#" class="top_resto">
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/restaurant-thumbail-preview.jpg" data-holder-rendered="true">
+					<img src="public/img/restaurant-thumbail-preview.jpg">
 					<div class="caption">
 						<h3 id="thumbnail-label">Restaurant 4</h3>
 					</div>
@@ -78,26 +78,26 @@
 		</a>
 	</div>
 
-	<div class="row clearfix">
+	<div class="row clearfix hidden-xs">
 		<h2 class="col-lg-12">Onze partners</h2>
 		<br>
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/sodexo.jpg" data-holder-rendered="true">
+		<div class="col-sm-6 col-md-4 col-lg-2">
+			<img src="public/img/sodexo.jpg">
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/unizo.jpg" data-holder-rendered="true">
+		<div class="col-sm-6 col-md-4 col-lg-2">
+			<img src="public/img/unizo.jpg">
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/stad-kortrijk.jpg" data-holder-rendered="true">
+		<div class="col-sm-6 col-md-4 col-lg-2">
+			<img src="public/img/stad-kortrijk.jpg">
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/moonen-packaging.jpg" data-holder-rendered="true">
+		<div class="col-sm-6 col-md-4 col-lg-2">
+			<img src="public/img/moonen-packaging.jpg">
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/vinddevis.jpg" data-holder-rendered="true">
+		<div class="col-sm-6 col-md-4 col-lg-2">
+			<img src="public/img/vinddevis.jpg">
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-			<img data-src="holder.js/100%x200" alt="100%x200" src="public/img/logos-footer/wiven.jpg" data-holder-rendered="true">
+		<div class="col-sm-6 col-md-4 col-lg-2">
+			<img src="public/img/wiven.jpg">
 		</div>
 	</div>
 </div>
