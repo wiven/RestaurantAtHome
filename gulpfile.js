@@ -5,7 +5,7 @@ var rename = require('gulp-rename');
 
 gulp.task('minify', function () {
 
-	gulp.src('public/css/*.css')
+	gulp.src('public/css/min/*.css')
 		.pipe(minifyCss({
 			keepBreaks: true
 		}))
@@ -14,7 +14,7 @@ gulp.task('minify', function () {
 		}))
 		.pipe(gulp.dest('public/css/min'));
 
-	return gulp.src('public/js/*.js')
+	return gulp.src('public/js/min/*.js')
 		.pipe(uglify())
 		.pipe(rename({
 			suffix: '.min'
