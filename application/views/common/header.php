@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/min/restaurant-at-home-theme.min.css">
 	<?php echo $additional_styles; ?>
 
-	<link href="public/css/min/font-awesome-4.3.0.min.css" rel="stylesheet">
+	<link href="public/css/font-awesome-4.3.0.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="public/css/min/jquery-ui.min.css">
 
