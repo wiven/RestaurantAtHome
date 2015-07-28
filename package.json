@@ -1,0 +1,24 @@
+{
+  "name": "restaurantathome",
+  "version": "0.0.1",
+  "description": "Restaurant At Home",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wivenwebsolutions/RestaurantAtHome.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wivenwebsolutions/RestaurantAtHome/issues"
+  },
+  "homepage": "https://github.com/wivenwebsolutions/RestaurantAtHome#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-rename": "^1.2.2"
+  }
+}
