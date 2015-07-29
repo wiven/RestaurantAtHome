@@ -6353,7 +6353,7 @@ a.thumbnail.active {
 	padding-left: 0;
 }
 
-.list-group-item {
+.list-group-item, article {
 	position: relative;
 	display: block;
 	padding: 10px 15px;
@@ -9455,4 +9455,8 @@ ul.closertogether li {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	right: 0;
+}
+
+.menu-item h3 {
+	margin: 0 0 10px;
 }
