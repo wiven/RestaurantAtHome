@@ -60,6 +60,7 @@
 <script src="<?php echo public_url(); ?>js/jquery-1.11.3.js"></script>
 <script src="<?php echo public_url(); ?>js/bootstrap-3.3.2.js"></script>
 <script src="<?php echo public_url(); ?>js/jquery-backstretch-2.0.4.js"></script>
+<script src="<?php echo public_url(); ?>js/jquery-placeholder.js"></script>
 <script src="<?php echo public_url(); ?>js/script.js"></script>
 
 <?php echo $additional_scripts; ?>

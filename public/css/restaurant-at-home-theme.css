@@ -8388,7 +8388,8 @@ input[type=number],
 [type=password].form-control,
 [type=email].form-control,
 [type=tel].form-control,
-[contenteditable].form-control {
+[contenteditable].form-control,
+.placeholder {
 	padding: 0;
 	border: none;
 	border-radius: 0;
@@ -8409,7 +8410,8 @@ input[type=number]:focus,
 [type=password].form-control:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
-[contenteditable].form-control:focus {
+[contenteditable].form-control:focus,
+.placeholder:focus {
 	-webkit-box-shadow: inset 0 -2px 0 #3F81B5;
 	box-shadow: inset 0 -2px 0 #3F81B5;
 	transition: .25s all ease-in-out;
