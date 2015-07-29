@@ -181,7 +181,7 @@
 
 <!--<script src="<?php echo public_url(); ?>js/script.js"></script>-->
 
-<?php echo $additional_scripts; ?>
+<?php echo (isset($additional_scripts) ? $additional_scripts : '') ?>
 
 <script type="text/javascript">
 	var pos = '';

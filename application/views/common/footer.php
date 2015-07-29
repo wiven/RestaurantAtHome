@@ -63,7 +63,7 @@
 <script src="<?php echo public_url(); ?>js/jquery-placeholder.js"></script>
 <script src="<?php echo public_url(); ?>js/script.js"></script>
 
-<?php echo $additional_scripts; ?>
+<?php echo (isset($additional_scripts) ? $additional_scripts : '') ?>
 </body>
 
 </html>
