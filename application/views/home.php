@@ -26,7 +26,7 @@
 				</div>
 
 				<div class="form-group col-xs-12 col-md-2 col-lg-2 col-sm-2">
-					<button type="button" id="main_search_button" class="btn btn-primary btn-lg searchbtn" tabindex="3"><i class="fa fa-search"></i> Zoeken!
+					<button type="button" id="main_search_button" class="btn btn-primary btn-lg searchbtn" tabindex="3"><i class="fa fa-search"></i> Zoeken
 					</button>
 				</div>
 				<div class="col-lg-1"></div>
