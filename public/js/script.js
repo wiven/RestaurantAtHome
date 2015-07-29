@@ -1,6 +1,4 @@
 $(document).ready(function () {
-	//$('.carousel').carousel({interval: 7000});
-
 
 	$('.homepageback').backstretch([
 			"http://more.restaurantathome.be/img/homepageslider/aperitiefglaasje%20met%20tomaat%20buffelmozzarella%20en%20italiaanse%20ham.jpg"
@@ -12,10 +10,9 @@ $(document).ready(function () {
 			, "http://more.restaurantathome.be/img/homepageslider/risotto%20milanese%20met%20crunchy%20extra's.jpg"
 			, "http://more.restaurantathome.be/img/homepageslider/tomatenbruchetta.jpg"
 		], {
-		duration: 5000,
-		fade: 750
-	});
-
+	duration: 5000,
+	fade: 750
+});
 
 
 	$('#back_to_results').on('click', function (e) {

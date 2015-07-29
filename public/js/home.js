@@ -7,6 +7,5 @@ $(document).ready(function () {
 
 		console.log('Zoeken naar ' + what + ' in ' + where);
 		window.location.href = './search';
-		//window.location.href = './search/'+what+'/'+where;
 	});
 });

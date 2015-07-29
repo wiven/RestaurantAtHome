@@ -160,12 +160,13 @@
 	}
 </style>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="<?php echo public_url(); ?>js/jquery-1.11.3.js"></script>
+<script src="<?php echo public_url(); ?>js/bootstrap-3.3.2.js"></script>
+<script src="<?php echo public_url(); ?>js/jquery-backstretch-2.0.4.js"></script>
+<script src="<?php echo public_url(); ?>js/script.js"></script>
+
 <!-- jQuery UI (necessary for some other plugins) -->
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <!-- Will be included in the controller as a parameter when needed on a page -->
 <!--<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
 <script src="<?php echo public_url(); ?>js/jquery.ui.touch-punch.min.js"></script>
@@ -218,13 +219,11 @@
 		});
 
 
-		if ((document.URL).indexOf("restaurantdetail") == -1) {
-			$('body').scrollspy({
-				target: '#map_search_pane'
-			});
-			var map_height = $("body").innerHeight() - $("header").height();
-			$('#map_search_pane').height(map_height);
-		}
+		$('body').scrollspy({ target: '#map_search_pane' });
+				var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+				var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+				var map_height = $("body").innerHeight()-$("header").height();
+				$('#map_search_pane').height(h);
 
 		$('#product_type_chooser > a h4').on('click', function () {
 			$(this).addClass('active');

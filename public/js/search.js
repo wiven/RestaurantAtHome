@@ -23,7 +23,6 @@ $(document).ready(function () {
 
 	var marker, i;
 
-	//var image = '../../favicon-32x32.png';
 	var image = '../../public/img/resto_marker.png';
 
 	for (i = 0; i < locations.length; i++) {
@@ -40,13 +39,6 @@ $(document).ready(function () {
 			}
 		})(marker, i));
 	}
-
-	/*
-	$('#product_type_chooser > a').on('click', function() {
-		$(this).addClass('active');
-		console.log('active');
-	});
-	*/
 
 	$('.btn_more_resto_info').on('click', function (e) {
 		e.preventDefault();

@@ -20,13 +20,6 @@ $(document).ready(function () {
 		var quant_to_add = parseInt($("#quant_" + prod_id).val());
 		var new_quant = original_quant + quant_to_add;
 
-		/*
-		 alert($(badge_parent).children('.badge'));
-		 alert(parseInt($(badge_parent).children('.badge').text())+1);
-		 alert('id: "'+$(this).attr('id').substring(8) + '"');
-		 alert('quant_to_add: '+quant_to_add);
-		 */
-
 		$(badge_parent).children('.badge').text(new_quant);
 		$(badge_parent).children('.badge').show();
 	});

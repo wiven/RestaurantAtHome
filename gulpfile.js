@@ -5,7 +5,7 @@ var rename = require('gulp-rename');
 
 gulp.task('minify', function () {
 
-	gulp.src('public/css/*.css')
+	return gulp.src('public/css/*.css')
 		.pipe(minifyCss({
 			keepBreaks: true
 		}))
@@ -22,6 +22,4 @@ gulp.task('minify', function () {
 		.pipe(gulp.dest('public/js/min'));
 });
 
-gulp.task('default', ['minify'], function () {
-
-});
+gulp.task('default', ['minify'], function () {});
