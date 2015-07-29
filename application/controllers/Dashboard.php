@@ -13,13 +13,17 @@ class Dashboard extends CI_Controller {
             'additional_styles' => ''
         );
 
+        $data_content = array(
+            'pretty_page_title' => 'Dashboard'
+        );
+
         $data_footer = array(
             'additional_scripts' => ''
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
         $this->load->view('/dashboard/common/top_menu');
-        $this->load->view('/dashboard/overview');
+        $this->load->view('/dashboard/overview', $data_content);
         $this->load->view('/dashboard/common/footer');
     }
 }
