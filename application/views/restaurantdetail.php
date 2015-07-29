@@ -1,38 +1,34 @@
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix" style="margin-top: 10px; line-height: 34px;">
-	<h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix" style="margin-top: 0px; padding: 0; line-height: 36px;">
-				<span class="btn btn-default col-xs-12 col-sm-6 col-md-3 col-lg-3" onclick="window.history.back(-1);"><span class="fa fa-chevron-circle-left"></span> Terug</span>
-			</h3>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
 
+	<button class="btn btn-default col-lg-2 col-md-2 col-sm-2 col-xs-12" onclick="window.history.back(-1);">
+		<span class="fa fa-chevron-circle-left"></span> Terug</span>
+	</button>
 
-	<button id="checkout_btn" class="btn btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right" style="margin-left: 25px;">
+	<button id="checkout_btn" class="btn btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right">
 		Afrekenen
 	</button>
 
 	<div class="form-group">
-		<button id="basket_btn" class="btn btn-default col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right" data-toggle="modal" data-target="#basketModal" data-backdrop="static" style="margin-left: 25px;">
-			<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="margin-right: 10px;"></span> &euro; 164,89
+		<button id="basket_btn" class="btn btn-default col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right" data-toggle="modal" data-target="#basketModal" data-backdrop="static">
+			<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> &euro; 164,89
 			<span class="badge basket_count_badge">11</span>
 		</button>
-
 	</div>
 
 </div>
-</nav>
-</header>
 
-<div class="container-fluid" style="margin-top: 0px;">
+<div class="container-fluid">
 	<div class="row" id="content-container">
 		<!-- TOP INFO BOX RESTAURANT -->
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<ul class="list-group clearfix">
 				<li class="list-group-item clearfix" id="info_resto">
 					<div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
-						<!--<img src="http://lorempixel.com/700/300/city" width="100%">-->
 						<img id="logo_resto" src="http://www.restaurantfleurdelin.be/img/1.png">
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center" id="important_info_resto">
-						<a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal" data-backdrop="static"><img style="margin-top: -3px;" src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-16.png" /> IJzerfrontlaan 13, 8500 Kortrijk</a>
+						<a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal" data-backdrop="static"><img src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-16.png" /> IJzerfrontlaan 13, 8500 Kortrijk</a>
 						<br /> +32 2 123 45 67
 						<br />
 						<a href="mailto:info@restaurantathome.be">info@restaurantathome.be</a>
@@ -53,7 +49,6 @@
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center">
-						<!--<img src="http://lorempixel.com/700/300/city" width="100%">-->
 						<img id="logo_resto" src="http://www.restaurantfleurdelin.be/img/1.png">
 					</div>
 
@@ -93,488 +88,214 @@
 				<a href="#extras" aria-controls="extras" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>EXTRA'S</h4></a>
 			</div>
 
-			<!-- PRODUCT TYPE CHOOSER CONTENT -->
 			<div class="tab-content">
-				<!-- ACTIES -->
-				<div role="tabpanel" class="tab-pane" id="acties">
-					<!-- FIRST 3 RESULTS -->
-					<ul class="list-group col-lg-6 col-md-2 col-sm-2 col-xs-12 clearfix">
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 1 <span class="label label-warning">Specialiteit</span>
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
 
-								<div class="form-group">
+				<section role="tabpanel" class="tab-pane active" id="acties">
+
+					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
+						<div class="col-lg-3 col-sm-3 col-xs-3">
+							<img src="http://lorempixel.com/300/300/food" width="100%">
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5">
+							<h3>Actie</h3>
+							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								</span>
+								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+<span class="glyphicon glyphicon-plus"></span>
+								</button>
+								</span>
+							</div>
+							<div class="form-group">
 									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
 									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
 								</div>
-							</div>
-						</li>
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 2
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[2]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
+						</div>
+					</article>'; } ?>
 
-								<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<!--<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>-->
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 3
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
+				</section>
 
-								<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<!--<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>-->
-								</div>
-							</div>
-						</li>
-					</ul>
-					<!-- NEXT 3 RESULTS -->
-					<ul class="list-group col-lg-6 col-md-2 col-sm-2 col-xs-1 clearfix" style="padding: 0 0 0 15px;">
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 4
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[4]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[4]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[4]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
+				<section role="tabpanel" class="tab-pane" id="voorgerechten">
 
-								<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">10</p>
-								</div>
+					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
+						<div class="col-lg-3 col-sm-3 col-xs-3">
+							<img src="http://lorempixel.com/300/300/food" width="100%">
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5">
+							<h3>Voorgerecht</h3>
+							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								</span>
+								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+<span class="glyphicon glyphicon-plus"></span>
+								</button>
+								</span>
 							</div>
-						</li>
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 5 <span class="label label-warning">Nieuw</span>
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[5]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[5]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[5]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
-
-								<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<!--<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>-->
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 6
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[6]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[6]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[6]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
-
-								<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<!--<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>-->
-								</div>
-							</div>
-						</li>
-					</ul>
-					<!-- ADVERT -->
-					<ul class="list-group col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix" style="padding-right: 0;">
-						<li class="list-group-item clearfix">
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
-								<img src="http://placehold.it/3000x250" width="100%">
-							</div>
-						</li>
-					</ul>
-				</div>
-				<!-- VOORGERECHTEN -->
-				<div role="tabpanel" class="tab-pane" id="voorgerechten">
-					<!-- FIRST 3 RESULTS -->
-					<ul class="list-group col-lg-6 col-md-2 col-sm-2 col-xs-12 clearfix">
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 1 <span class="label label-warning">Specialiteit</span>
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
-
-								<div class="form-group">
+							<div class="form-group">
 									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
 									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
 								</div>
-							</div>
-						</li>
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 2
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[2]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
+						</div>
+					</article>'; } ?>
 
-								<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<!--<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>-->
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 3
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
+				</section>
 
-								<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<!--<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>-->
-								</div>
-							</div>
-						</li>
-					</ul>
-					<!-- NEXT 3 RESULTS -->
-					<ul class="list-group col-lg-6 col-md-2 col-sm-2 col-xs-1 clearfix" style="padding: 0 0 0 15px;">
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 4
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[4]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[4]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[4]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
+				<section role="tabpanel" class="tab-pane" id="hoofdgerechten">
 
-								<div class="form-group">
+					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
+						<div class="col-lg-3 col-sm-3 col-xs-3">
+							<img src="http://lorempixel.com/300/300/food" width="100%">
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5">
+							<h3>Hoofdgerecht</h3>
+							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								</span>
+								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+<span class="glyphicon glyphicon-plus"></span>
+								</button>
+								</span>
+							</div>
+							<div class="form-group">
 									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">10</p>
+									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
 								</div>
-							</div>
-						</li>
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 5 <span class="label label-warning">Nieuw</span>
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[5]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[5]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[5]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
+						</div>
+					</article>'; } ?>
 
-								<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<!--<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>-->
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item clearfix">
-							<div class="col-lg-2" style="padding: 0;">
-								<img src="http://lorempixel.com/300/300/food" width="100%">
-							</div>
-							<div class="col-lg-7">
-								<h3 style="margin: 0 0 20px 0;">
-									Voorgerecht 6
-								</h3>
-								<p class="text-justify" style="line-height: 20px;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<h4 style="margin: 15px 0 0 0;">
-									&euro; 14,99
-								</h4>
-							</div>
-							<div class="col-lg-3 col-xs-12" style="padding: 0;">
-								<div class="input-group">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[6]">
-												<span class="glyphicon glyphicon-minus"></span>
-									</button>
-									</span>
-									<input type="text" name="quant[6]" class="form-control input-number text-center" value="1" min="1" max="10">
-									<span class="input-group-btn">
-											<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[6]">
-												<span class="glyphicon glyphicon-plus"></span>
-									</button>
-									</span>
-								</div>
+				</section>
 
-								<div class="form-group">
+				<section role="tabpanel" class="tab-pane" id="desserts">
+
+					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
+						<div class="col-lg-3 col-sm-3 col-xs-3">
+							<img src="http://lorempixel.com/300/300/food" width="100%">
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5">
+							<h3>Dessert</h3>
+							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								</span>
+								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+<span class="glyphicon glyphicon-plus"></span>
+								</button>
+								</span>
+							</div>
+							<div class="form-group">
 									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<!--<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>-->
+									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
 								</div>
+						</div>
+					</article>'; } ?>
+
+				</section>
+
+				<section role="tabpanel" class="tab-pane" id="dranken">
+
+					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
+						<div class="col-lg-3 col-sm-3 col-xs-3">
+							<img src="http://lorempixel.com/300/300/food" width="100%">
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5">
+							<h3>Drank</h3>
+							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								</span>
+								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+<span class="glyphicon glyphicon-plus"></span>
+								</button>
+								</span>
 							</div>
-						</li>
-					</ul>
-					<!-- ADVERT -->
-					<ul class="list-group col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix" style="padding-right: 0;">
-						<li class="list-group-item clearfix">
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
-								<img src="http://placehold.it/3000x250" width="100%">
+							<div class="form-group">
+									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
+									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
+								</div>
+						</div>
+					</article>'; } ?>
+
+				</section>
+
+				<section role="tabpanel" class="tab-pane" id="extras">
+
+					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
+						<div class="col-lg-3 col-sm-3 col-xs-3">
+							<img src="http://lorempixel.com/300/300/food" width="100%">
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5">
+							<h3>Extra</h3>
+							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-xs-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								</span>
+								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
+								<span class="input-group-btn">
+<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+<span class="glyphicon glyphicon-plus"></span>
+								</button>
+								</span>
 							</div>
-						</li>
-					</ul>
-				</div>
-				<div role="tabpanel" class="tab-pane" id="hoofdgerechten">hoofdgerechten</div>
-				<div role="tabpanel" class="tab-pane" id="desserts">desserts</div>
-				<div role="tabpanel" class="tab-pane" id="dranken">dranken</div>
-				<div role="tabpanel" class="tab-pane" id="extras">
-					<ul class="list-group">
-						<li class="list-group-item col-lg-4 col-xs-12"></li>
-						<li class="list-group-item col-lg-4 col-xs-12"></li>
-						<li class="list-group-item col-lg-4 col-xs-12"></li>
-						<li class="list-group-item col-lg-4 col-xs-12"></li>
-					</ul>
-				</div>
+							<div class="form-group">
+									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
+									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
+								</div>
+						</div>
+					</article>'; } ?>
+
+				</section>
 			</div>
 
-			<div class="col-lg-3" id="shopping_list" style="padding-right: 0;">
+			<!--<div class="col-lg-3" id="shopping_list" style="padding-right: 0;">
 				<ul class="list-group">
 					<li class="list-group-item">Cras justo odio</li>
 					<li class="list-group-item">Dapibus ac facilisis in</li>
@@ -585,11 +306,10 @@
 
 				<button class="btn btn-default">&euro; 164,89</button>
 				<button class="btn btn-primary">Afrekenen</button>
-			</div>
+			</div>-->
 		</div>
 	</div>
 </div>
-<!-- /.container -->
 
 <!-- Basket Modal -->
 <div class="modal fade" id="basketModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
