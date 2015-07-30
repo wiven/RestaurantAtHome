@@ -22,6 +22,14 @@ $(document).ready(function () {
 
 	$('input, textarea').placeholder();
 
+	$('.form-horizontal').parsley();
+
+	$(':password').pwstrength({
+		ui: {
+			showVerdictsInsideProgressBar: true
+		}
+	});
+
 });
 
 function goBack() {
