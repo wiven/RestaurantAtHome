@@ -42,9 +42,9 @@
 		<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img src="public/img/restaurant-thumbail-preview.jpg">
+					<img src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
 					<div class="caption">
-						<h3 id="thumbnail-label">Restaurant 1</h3>
+						<h3 id="thumbnail-label">Kaai 17</h3>
 					</div>
 				</div>
 			</div>
@@ -52,9 +52,9 @@
 		<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img src="public/img/restaurant-thumbail-preview.jpg">
+					<img src="http://dubaifurniture.co/wp-content/uploads/2014/06/restaurant-furniture.jpg">
 					<div class="caption">
-						<h3 id="thumbnail-label">Restaurant 2</h3>
+						<h3 id="thumbnail-label">Marcel</h3>
 					</div>
 				</div>
 			</div>
@@ -62,9 +62,9 @@
 		<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img src="public/img/restaurant-thumbail-preview.jpg">
+					<img src="http://www.restauranthoteldelakei.nl/wp-content/uploads/2014/01/restaurant.jpeg">
 					<div class="caption">
-						<h3 id="thumbnail-label">Restaurant 3</h3>
+						<h3 id="thumbnail-label">D'artagnan</h3>
 					</div>
 				</div>
 			</div>
@@ -72,9 +72,9 @@
 		<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img src="public/img/restaurant-thumbail-preview.jpg">
+					<img src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
 					<div class="caption">
-						<h3 id="thumbnail-label">Restaurant 4</h3>
+						<h3 id="thumbnail-label">De bomma</h3>
 					</div>
 				</div>
 			</div>
