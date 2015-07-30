@@ -26,7 +26,7 @@
 						<li><a href="#" data-toggle="modal" data-target=".login-modal" data-backdrop="static">Login / registreer</a>
 						</li>
 						<li>
-							<a href="#"><img src="http://test.restaurantathome.be/public/img/small_be_flag.png" alt="Nederlands - België">
+							<a href="#"><img src="<?php echo public_url(); ?>img/small_be_flag.png" alt="Nederlands - België">
 							</a>
 						</li>
 					</ul>

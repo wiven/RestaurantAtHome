@@ -1,3 +1,5 @@
+/* ----- styles present in initial setup ----- */
+
 body {
     background-color: #f8f8f8;
 }
@@ -34,7 +36,7 @@ body {
 }
 
 .navbar-top-links li a {
-    padding: 15px;
+    padding: 20.5px;
     min-height: 50px;
 }
 
@@ -79,9 +81,16 @@ body {
     left: auto;
 }
 
+.navbar-brand img {
+    width: 23px;
+    display: inline;
+    margin-right: 20px;
+}
+
 .sidebar .sidebar-nav.navbar-collapse {
     padding-right: 0;
     padding-left: 0;
+    margin-top: 1em;
 }
 
 .sidebar .sidebar-search {
@@ -94,6 +103,19 @@ body {
 
 .sidebar ul li a.active {
     background-color: #eee;
+}
+
+.sidebar ul li a.active:hover {
+    background-color: #397ABF;
+    color: #FFFFFF;
+}
+
+.sidebar ul li:hover {
+    background-color: #397ABF;
+}
+
+.sidebar ul li a:hover {
+    color: #FFFFFF;
 }
 
 .sidebar .arrow {
@@ -345,4 +367,8 @@ table.dataTable thead .sorting:after {
 
 .panel-yellow a:hover {
     color: #df8a13;
+}
+
+#contact_methods {
+    margin: 75px 0;
 }

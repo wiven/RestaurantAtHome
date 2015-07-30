@@ -9,12 +9,12 @@
 class Dashboard extends CI_Controller {
     public function index() {
         $data_header = array(
-            'page_title' => ' - Dashboard',
+            'page_title' => ' - Dashboard overzicht',
             'additional_styles' => ''
         );
 
         $data_content = array(
-            'pretty_page_title' => 'Dashboard'
+            'pretty_page_title' => 'Dashboard overzicht'
         );
 
         $data_footer = array(
@@ -24,6 +24,30 @@ class Dashboard extends CI_Controller {
         $this->load->view('/dashboard/common/header', $data_header);
         $this->load->view('/dashboard/common/top_menu');
         $this->load->view('/dashboard/overview', $data_content);
-        $this->load->view('/dashboard/common/footer');
+        $this->load->view('/dashboard/common/footer', $data_footer);
+    }
+
+    public function overview() {
+        $this->index();
+    }
+
+    public function contact() {
+        $data_header = array(
+            'page_title' => ' - Contact',
+            'additional_styles' => ''
+        );
+
+        $data_content = array(
+            'pretty_page_title' => 'Contacteer ons'
+        );
+
+        $data_footer = array(
+            'additional_scripts' => ''
+        );
+
+        $this->load->view('/dashboard/common/header', $data_header);
+        $this->load->view('/dashboard/common/top_menu');
+        $this->load->view('/dashboard/contact', $data_content);
+        $this->load->view('/dashboard/common/footer', $data_footer);
     }
 }
