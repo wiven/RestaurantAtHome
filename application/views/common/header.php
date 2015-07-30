@@ -19,7 +19,7 @@
 	</title>
 
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css">
-	<?php echo $additional_styles; ?>
+	<?php echo (isset($additional_styles) ? $additional_styles : '') ?>
 
 	<link href="public/css/font-awesome-4.3.0.css" rel="stylesheet">
 
