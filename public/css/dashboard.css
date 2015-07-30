@@ -82,9 +82,10 @@ body {
 }
 
 .navbar-brand img {
-	width: 23px;
-	display: inline;
-	margin-right: 20px;
+    width: 23px !important;
+    display: inline;
+    margin-right: 20px;
+    min-width: 23px;
 }
 
 .sidebar .sidebar-nav.navbar-collapse {
@@ -407,4 +408,29 @@ table.dataTable thead .sorting:after {
 	font-weight: 600;
 	font-size: 40px;
 	border-bottom: 1px solid #fff;
+}
+
+
+/* ----- own styles ----- */
+
+.edit-action-icon {
+	line-height: 23px !important;
+}
+
+@media (min-width: 768px) {
+	#btn_new_action {
+		position: relative;
+	}
+
+	#col_new_action {
+		margin-top: -85px;
+	}
+}
+
+@media (max-width: 767px) {
+	#btn_new_action {
+		position: initial;
+		margin-bottom: 25px;
+		width: 100%;
+	}
 }

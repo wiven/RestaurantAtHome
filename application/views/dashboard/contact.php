@@ -80,13 +80,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="col-lg-4 text-center">
                 <a href="https://www.facebook.com/restaurantathome.be" target="_blank">
-                    <span class="fa fa-facebook fa-fw"></span> info@restaurantathome.be
+                    <span class="fa fa-facebook fa-fw"></span> restaurantAtHome.be
                 </a>
             </div>
 
             <div class="col-lg-4 text-center">
                 <a href="https://twitter.com/restoathome" target="_blank">
-                    <span class="fa fa-twitter fa-fw"></span> info@restaurantathome.be
+                    <span class="fa fa-twitter fa-fw"></span> restoAtHome
                 </a>
             </div>
         </div>
