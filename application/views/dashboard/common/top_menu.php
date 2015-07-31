@@ -250,13 +250,13 @@
                         <a href="/dashboard/profile"><i class="fa fa-user fa-fw"></i> Profiel</a>
                     </li>
                     <li>
-                        <a href="/dashboard/products"><i class="fa fa-cutlery fa-fw"></i> Mijn producten</a>
+                        <a href="/dashboard/products"><i class="fa fa-cutlery fa-fw"></i> Producten</a>
                     </li>
                     <li>
                         <a href="/dashboard/orders"><i class="fa fa-bars fa-fw"></i> Bestellingen</a>
                     </li>
                     <li>
-                        <a href="/dashboard/slots"><i class="fa fa-pencil-square-o fa-fw"></i> Slots beheren</a>
+                        <a href="/dashboard/slots"><i class="fa fa-pencil-square-o fa-fw"></i> Slots</a>
                     </li>
                     <li>
                         <a href="/dashboard/actions"><i class="fa fa-fire fa-fw"></i> Acties</a>
@@ -268,7 +268,7 @@
                         <a href="/dashboard/contact"><i class="fa fa-envelope-o fa-fw"></i> Contact</a>
                     </li>
                     <li>
-                        <a href="/bugreport"><i class="fa fa-bug fa-fw"></i> Bug melden</a>
+                        <a href="/dashboard/bugreport"><i class="fa fa-bug fa-fw"></i> Bug melden</a>
                     </li>
 
 <!--
