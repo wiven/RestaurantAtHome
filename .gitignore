@@ -18,3 +18,5 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /nbproject/
 
 node_modules
+
+.idea

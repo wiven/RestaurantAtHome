@@ -82,7 +82,7 @@ class Dashboard extends CI_Controller {
 
         $this->load->view('/dashboard/common/header', $data_header);
         $this->load->view('/dashboard/common/top_menu');
-        $this->load->view('/dashboard/producten', $data_content);
+        $this->load->view('/dashboard/products', $data_content);
         $this->load->view('/dashboard/common/footer', $data_footer);
     }
 

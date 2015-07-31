@@ -428,9 +428,17 @@ table.dataTable thead .sorting:after {
 }
 
 @media (max-width: 767px) {
-	#btn_new_action {
+	#btn_new_action, #btn_new_product {
 		position: initial;
 		margin-bottom: 25px;
 		width: 100%;
 	}
+}
+
+.load_more_actions_btn {
+	color: #666666 !important;
+}
+
+#dash_product_search {
+    margin: 15px 0;
 }
