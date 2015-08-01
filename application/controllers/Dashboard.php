@@ -12,7 +12,7 @@ class Dashboard extends CI_Controller {
      * executed when '/dashboard' is loaded
      */
     public function index() {
-        //TODO: session_start();
+        session_start();
 
         $data_header = array(
             'page_title' => ' - Dashboard overzicht',
@@ -205,6 +205,8 @@ class Dashboard extends CI_Controller {
      * executed when '/dashboard/bugreport' is loaded
      */
     public function bugreport() {
+        die('http://'.$_SERVER['HTTP_HOST'].$_SERVER['PATH_INFO']);
+
         $data_header = array(
             'page_title' => ' - Bug melden',
             'additional_styles' => ''

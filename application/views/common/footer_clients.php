@@ -170,10 +170,13 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <!-- Will be included in the controller as a parameter when needed on a page -->
 <!--<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
-<script src="<?php echo public_url(); ?>js/jquery.ui.touch-punch.min.js"></script>
-
-<script src="<?php echo public_url(); ?>js/jquery.steps.js"></script>
+<script src="<?php echo public_url(); ?>js/min/jquery.ui.touch-punch.min.js"></script>
 <script src="<?php echo public_url(); ?>js/jquery.steps.min.js"></script>
+
+<script src="<?php echo public_url(); ?>js/parsley.js"></script>
+<script src="<?php echo public_url(); ?>js/parsley-nl.js"></script>
+<script src="<?php echo public_url(); ?>js/jquery-placeholder.js"></script>
+<script src="<?php echo public_url(); ?>js/jquery-password-check.js"></script>
 
 <!--
 	<script src="<?php echo public_url(); ?>js/instantclick.min.js" data-no-instant></script>
