@@ -9,7 +9,9 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="panel panel-default">
-				<div class="panel-heading pending-orders"><h4>U heeft <span class="order-number">3</span> nieuwe bestellingen</h4></div>
+				<div class="panel-heading pending-orders">
+					<h4>U heeft <span class="order-number">3</span> nieuwe bestellingen</h4>
+				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4">
