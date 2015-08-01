@@ -15,8 +15,8 @@ class Language extends CI_Controller {
 
         $lang = locale_accept_from_http($_SERVER['HTTP_ACCEPT_LANGUAGE']);
         $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
-        die('http://'.$_SERVER['HTTP_HOST'].$_SERVER['PATH_INFO']);
-        die($lang.'\n'.$actual_link);
+        //die('http://'.$_SERVER['HTTP_HOST'].$_SERVER['PATH_INFO']);
+        die($lang);
     }
 }
 
