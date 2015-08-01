@@ -236,7 +236,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Lijkt op</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Lijkt op">
+                                <select class="form-control">
+                                    <option value=""></option>
+                                    <option value="">Voorgerechten</option>
+                                    <option value="">Hoofdgerechten</option>
+                                    <option value="">Desserts</option>
+                                    <option value="">Dranken</option>
+                                    <option value="">Extra's</option>
+                                </select>
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
@@ -266,8 +273,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="#">?</a>
                             </label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Aantal stempels">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <input type="number" min="0" step="1" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Aantal stempels">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
