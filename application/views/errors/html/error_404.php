@@ -36,66 +36,79 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
+?>
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
-<meta charset="utf-8">
-<title>404 Page Not Found</title>
-<style type="text/css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>RestaurantAtHome - 404</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-::selection { background-color: #E13300; color: white; }
-::-moz-selection { background-color: #E13300; color: white; }
-::-webkit-selection { background-color: #E13300; color: white; }
+	<link rel="stylesheet" href="http://localhost:8888/public/css/restaurant-at-home-theme.css">
+	<style>
+		body {
+			padding-top: 50px;
+			padding-bottom: 20px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 100vh;
+		}
 
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
-}
+		#logo {
+			display: block;
+			max-width: 50%;
+			margin: -25px auto 25px;
+		}
 
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
+		#error_actions {
+			margin: 50px auto;
+		}
 
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-}
-
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
-
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
-}
-
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
+		#error_msg_client {
+			margin: 20px auto;
+		}
+	</style>
 </head>
 <body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<img id="logo" class="text-center" src="http://restaurantathome.be/more/img/logo.png" />
+
+<h1 class="text-center">Oeps, hier ging iets mis!</h1>
+
+<p class="text-center" id="error_msg_client">
+	<br />
+	<strong>Blijkbaar bestaat de pagina die je vroeg niet (meer).</strong><br />
+	<br />
+	Geen zorgen, het probleem werd gemeld <br />aan de webmaster!<br />
+	We brengen dit zo snel mogelijk in orde, <br />onze excuses voor het ongemak.
+</p>
+
+<div class="text-center" id="error_actions">
+	<a href="javascript:history.go(-1)" class="btn btn-default btn-lg text-center">Naar de vorige pagina</a>
+	<a href="http://restaurantathome.be" class="btn btn-primary btn-lg text-center">Terug naar de homepage</a>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script src="http://localhost:8888/public/js/min/bootstrap-3.3.2.min.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+	(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script>
 </body>
 </html>
