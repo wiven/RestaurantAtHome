@@ -93,15 +93,15 @@
 				<section role="tabpanel" class="tab-pane active" id="acties">
 
 					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
-						<div class="col-lg-3 col-sm-3 col-xs-3">
+						<div class="col-lg-3 col-sm-3 col-xs-12">
 							<img src="http://lorempixel.com/300/300/food" width="100%">
 						</div>
-						<div class="col-lg-5 col-sm-5 col-xs-5">
+						<div class="col-lg-5 col-sm-5 col-xs-12">
 							<h3>Actie</h3>
-							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
+							<h5><span class="label label-warning">Specialiteit</span></h5>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 						</div>
-						<div class="col-lg-4 col-sm-4 col-xs-4">
+						<div class="col-lg-4 col-sm-4 col-xs-12">
 							<div class="input-group">
 								<span class="input-group-btn">
 <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">

@@ -167,114 +167,7 @@
 			</ul>
 
 			<ul class="list-group" id="all_results">
-
-
-				<!-- PERFECT -->
-				<li class="list-group-item clearfix resto_result">
-					<a href="<?php echo base_url(); ?>restaurantdetail">
-						<div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix">
-							<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
-							<p class="resto_address">Lokerenbaan 121, Zele</p>
-							<p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="label label-success resto_current_state">Open</span>
-							<span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
-							<span class="label label-default resto_labels hidden-xs">Belgisch</span>
-							<span class="label label-info resto_labels">ACTIES</span>
-						</div>
-
-						<div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
-							<img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
-						</div>
-					</a>
-				</li>
-
-				<li class="list-group-item clearfix resto_result">
-					<a href="<?php echo base_url(); ?>restaurantdetail">
-						<div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix">
-							<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
-							<p class="resto_address">Lokerenbaan 121, Zele</p>
-							<p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="label label-warning resto_current_state">Sluit binnenkort</span>
-							<span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
-							<span class="label label-default resto_labels hidden-xs">Belgisch</span>
-							<span class="label label-info resto_labels">ACTIES</span>
-						</div>
-
-						<div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
-							<img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
-						</div>
-					</a>
-				</li>
-
-				<li class="list-group-item clearfix resto_result">
-					<a href="<?php echo base_url(); ?>restaurantdetail">
-						<div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix">
-							<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
-							<p class="resto_address">Lokerenbaan 121, Zele</p>
-							<p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="label label-danger resto_current_state">Gesloten</span>
-							<span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
-							<span class="label label-default resto_labels hidden-xs">Belgisch</span>
-							<span class="label label-info resto_labels">ACTIES</span>
-						</div>
-
-						<div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
-							<img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
-						</div>
-					</a>
-				</li>
-
-				<li class="list-group-item clearfix resto_result">
-					<a href="<?php echo base_url(); ?>restaurantdetail">
-						<div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix">
-							<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
-							<p class="resto_address">Lokerenbaan 121, Zele</p>
-							<p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="label label-success resto_current_state">Open</span>
-							<span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
-							<span class="label label-default resto_labels hidden-xs">Belgisch</span>
-						</div>
-
-						<div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
-							<img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
-						</div>
-					</a>
-				</li>
-
-				<li class="list-group-item clearfix resto_result">
-					<a href="#" data-toggle="modal" data-target=".inviteRestoModal" data-backdrop="static">
-						<div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix">
-							<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
-							<p class="resto_address">Lokerenbaan 121, Zele</p>
-							<p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="label label-default resto_current_state">Niet aangesloten</span>
-						</div>
-
-						<div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
-							<img src="/public/img/not_connected.png" class="pull-right">
-						</div>
-					</a>
-				</li>
-
-				<li class="list-group-item clearfix resto_result">
-					<a href="<?php echo base_url(); ?>restaurantdetail">
-						<div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix">
-							<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
-							<p class="resto_address">Lokerenbaan 121, Zele</p>
-							<p class="col-md-12 hidden-xs clearfix resto_subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<span class="label label-success resto_current_state">Open</span>
-							<span class="label label-default resto_labels hidden-xs">Ribbetjes</span>
-							<span class="label label-default resto_labels hidden-xs">Belgisch</span>
-							<span class="label label-info resto_labels">ACTIES</span>
-						</div>
-
-						<div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 pull-right">
-							<img src="//s3-media1.fl.yelpassets.com/bphoto/4FAeNpaaC4Pu1XMaIAIsjA/90s.jpg" class="pull-right">
-						</div>
-					</a>
-				</li>
-
-				<?php for($i=0 ; $i < 15; $i++) { echo '<li class="list-group-item clearfix resto_result">
+				<?php for($i=0 ; $i < 3; $i++) { echo '<li class="list-group-item clearfix resto_result">
 					<a href="'.base_url(). 'restaurantdetail">
 						<div class="col-lg-9 col-md-9 col-sm-10 col-xs-8 clearfix">
 							<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">Restaurant Food &amp; Flavours</h3>
@@ -292,10 +185,10 @@
 					</a>
 				</li>'; } ?>
 			</ul>
+
 		</div>
 
 		<div class="col-lg-4 col-md-4 hidden-sm hidden-xs" id="map_search_pane" style="position: fixed; right: 0;">
-			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80688.98286051827!2d3.2797849999999893!3d50.802805100000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c33ae2d8706a49%3A0xf791d8c0a601b993!2sKortrijk!5e0!3m2!1snl!2sbe!4v1426550913974" width="100%" height="500" frameborder="0" style="border: 0; position: fixed;" id="results_map"></iframe>-->
 		</div>
 	</div>
 </div>
