@@ -47,6 +47,15 @@
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#009688">
 
+	<!-- BEGIN TRACKJS -->
+	<script type="text/javascript">
+		window._trackJs = {
+			token: 'bc42372f6bd04df4ad8783ea5cebd8c2'
+		};
+	</script>
+	<script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" crossorigin="anonymous"></script>
+	<!-- END TRACKJS -->
+
 	<script src="<?php echo public_url(); ?>js/modernizr.js"></script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
