@@ -4,12 +4,18 @@
 </div>
 <!-- end wrap -->
 
-<footer class="footer hidden-xs hidden-sm">
+<footer class="footer">
 	<div class="container">
-		<p class="text-muted" style="line-height: 60px; margin-bottom: 0;">
+		<p class="pull-left">
 			&COPY; Restaurant At Home &mdash;
 			<a href="<?php echo base_url(); ?>contact">Contact</a> &mdash;
 			<a href="<?php echo base_url(); ?>privacy">Privacy Charter</a>
+		</p>
+		<p class="pull-right" id="lang-choice">
+			<a href="#" title="Nederlands - België"><img src="<?php echo public_url(); ?>img/flags/4x3/be.svg" width="24" alt="Nederlands - België"></a>
+			<a href="#" title="Frans - België"><img src="<?php echo public_url(); ?>img/flags/4x3/be.svg" width="24" alt="Frans - België"></a>
+			<a href="#" title="Nederlands - Nederland"><img src="<?php echo public_url(); ?>img/flags/4x3/nl.svg" width="24" alt="Nederlands - Nederland"></a>
+			<a href="#" title="Frans - Frankrijk"><img src="<?php echo public_url(); ?>img/flags/4x3/fr.svg" width="24" alt="Frans - Frankrijk"></a>
 		</p>
 	</div>
 </footer>
@@ -52,6 +58,7 @@
 				<div class="bottom text-center">
 					Nieuw hier? <a href="<?php echo base_url(); ?>register"><b>Registreer nu</b></a>
 				</div>
+
 			</div>
 		</div>
 	</div>

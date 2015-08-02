@@ -1608,14 +1608,11 @@ h2,
 }
 
 h2:after {
-	content: '—';
-	width: 50px;
-	font-size: 50px;
-	text-align: left;
-	margin: -10px 0 -15px 0px;
+	content: '';
+	border-bottom: 1px solid #ccc;
 	display: block;
-	color: #ccc;
-	opacity: .5;
+	width: 50px;
+	margin: 10px 0 10px;
 }
 
 h3,
@@ -9026,9 +9023,11 @@ input[type="checkbox"]:disabled:checked:after,
 }
 
 .footer {
-	height: 60px;
+	height: auto;
+	min-height: 60px;
 	background-color: #f5f5f5;
 	margin: 25px 0 0;
+	line-height: 60px;
 }
 
 .panel-default>.panel-heading {
@@ -9432,13 +9431,7 @@ ul.closertogether li {
 		border-top: 0 none;
 	}
 	#searchbox-detail {
-		margin: 0;
-	}
-	.navbar-brand > img {
-		display: block;
-		margin: 0 auto;
-		width: 75%;
-		min-width: 50%;
+		margin: 25px 0 0;
 	}
 }
 
@@ -9475,4 +9468,43 @@ ul.closertogether li {
 	font-weight: 500;
 	list-style: none;
 	font-size: 14px;
+}
+
+li .fa {
+	margin: 0 5px 0 8px;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar-brand-centered {
+		position: absolute;
+		left: 50%;
+		display: block;
+		text-align: center;
+	}
+	.navbar>.container .navbar-brand-centered,
+	.navbar>.container-fluid .navbar-brand-centered {
+		margin-left: -160px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.navbar-brand-centered {
+		position: relative;
+		text-align: left;
+		margin: 0 0 0 15px;
+	}
+}
+
+.sum-item {
+	float: none !important;
+}
+
+#login-header {
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.homepage .panel {
+		margin: 0;
+	}
 }

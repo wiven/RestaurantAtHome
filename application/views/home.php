@@ -38,45 +38,44 @@
 
 	<div class="row hidden-xs">
 		<h2 class="col-lg-12">Restaurants in de kijker</h2>
-		<br>
 		<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
-				<div class="thumbnail">
-					<img src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
-					<div class="caption">
+				<figure class="thumbnail">
+					<img class="img-responsive" src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
+					<figcaption class="caption">
 						<h3 id="thumbnail-label">Kaai 17</h3>
-					</div>
-				</div>
+					</figcaption>
+				</figure>
 			</div>
 		</a>
 		<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
-				<div class="thumbnail">
-					<img src="http://dubaifurniture.co/wp-content/uploads/2014/06/restaurant-furniture.jpg">
-					<div class="caption">
-						<h3 id="thumbnail-label">Marcel</h3>
-					</div>
-				</div>
+				<figure class="thumbnail">
+					<img class="img-responsive" src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
+					<figcaption class="caption">
+						<h3 id="thumbnail-label">Kaai 17</h3>
+					</figcaption>
+				</figure>
 			</div>
 		</a>
 		<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
-				<div class="thumbnail">
-					<img src="http://www.restauranthoteldelakei.nl/wp-content/uploads/2014/01/restaurant.jpeg">
-					<div class="caption">
-						<h3 id="thumbnail-label">D'artagnan</h3>
-					</div>
-				</div>
+				<figure class="thumbnail">
+					<img class="img-responsive" src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
+					<figcaption class="caption">
+						<h3 id="thumbnail-label">Kaai 17</h3>
+					</figcaption>
+				</figure>
 			</div>
 		</a>
 		<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
-				<div class="thumbnail">
-					<img src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
-					<div class="caption">
-						<h3 id="thumbnail-label">De bomma</h3>
-					</div>
-				</div>
+				<figure class="thumbnail">
+					<img class="img-responsive" src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
+					<figcaption class="caption">
+						<h3 id="thumbnail-label">Kaai 17</h3>
+					</figcaption>
+				</figure>
 			</div>
 		</a>
 	</div>
@@ -87,22 +86,29 @@
 		<h2 class="col-lg-12">Onze partners</h2>
 		<br>
 		<div class="col-md-4 col-lg-2">
-			<img src="public/img/sodexo.jpg">
+			<figure>
+				<img class="img-responsive" src="public/img/sodexo.jpg">
+			</figure>
 		</div>
 		<div class="col-md-4 col-lg-2">
-			<img src="public/img/unizo.jpg">
+			<figure><img class="img-responsive" src="public/img/unizo.jpg">
+			</figure>
 		</div>
 		<div class="col-md-4 col-lg-2">
-			<img src="public/img/stad-kortrijk.jpg">
+			<figure><img class="img-responsive" src="public/img/stad-kortrijk.jpg">
+			</figure>
 		</div>
 		<div class="col-md-4 col-lg-2">
-			<img src="public/img/moonen-packaging.jpg">
+			<figure><img class="img-responsive" src="public/img/moonen-packaging.jpg">
+			</figure>
 		</div>
 		<div class="col-md-4 col-lg-2">
-			<img src="public/img/vinddevis.jpg">
+			<figure><img class="img-responsive" src="public/img/vinddevis.jpg">
+			</figure>
 		</div>
 		<div class="col-md-4 col-lg-2">
-			<img src="public/img/wiven.jpg">
+			<figure><img class="img-responsive" src="public/img/wiven.jpg">
+			</figure>
 		</div>
 	</div>
 </div>
