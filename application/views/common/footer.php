@@ -12,9 +12,9 @@
 			<a href="<?php echo base_url(); ?>privacy">Privacy Charter</a>
 		</p>
 		<p class="pull-right" id="lang-choice">
-			<a href="<?php echo 'http://nl.'.$current_url; ?>" title="Nederlands">NL</a> &mdash;
-			<a href="<?php echo 'http://fr.'.$current_url; ?>" title="Fran&ccedil;ais">FR</a> &mdash;
-			<a href="<?php echo 'http://en.'.$current_url; ?>" title="English">EN</a>
+			<a href="<?php echo 'http://nl.'.(isset($current_url) ? $current_url : ''); ?>" title="Nederlands">NL</a> &mdash;
+			<a href="<?php echo 'http://fr.'.(isset($current_url) ? $current_url : ''); ?>" title="Fran&ccedil;ais">FR</a> &mdash;
+			<a href="<?php echo 'http://en.'.(isset($current_url) ? $current_url : ''); ?>" title="English">EN</a>
 		</p>
 		<!--<p class="pull-right" id="lang-choice">
 			<a href="<?php /*echo 'http://nl.'.$current_url; */?>" title="Nederlands - België"><img src="<?php /*echo public_url(); */?>img/flags/4x3/be.svg" width="24" alt="Nederlands - België"></a> &mdash;

@@ -4,9 +4,9 @@
 		<span class="fa fa-chevron-circle-left"></span> Terug</span>
 	</button>
 
-	<button id="checkout_btn" class="btn btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right">
+	<a href="/checkout" id="checkout_btn" class="btn btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right">
 		Afrekenen
-	</button>
+	</a>
 
 	<div class="form-group">
 		<button id="basket_btn" class="btn btn-default col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right" data-toggle="modal" data-target="#basketModal" data-backdrop="static">
@@ -348,7 +348,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-primary">Afrekenen</button>
+				<a href="/checkout" type="button" class="btn btn-primary">Afrekenen</a>
 			</div>
 		</div>
 	</div>

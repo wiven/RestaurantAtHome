@@ -29,13 +29,23 @@ class User extends CI_Controller {
     }
 
     public function passwordrecovery() {
+        if(!empty(explode('.', (@$_SERVER['HTTP_HOST'].@$_SERVER['PATH_INFO']))[1])) {
+            $cur_url = explode('.', (@$_SERVER['HTTP_HOST'].@$_SERVER['PATH_INFO']))[1];
+        } else {
+            $cur_url = explode('.', (@$_SERVER['HTTP_HOST'].@$_SERVER['PATH_INFO']))[0];
+        }
+
         $data_header = array(
             'page_title' => ' - Paswoordherstel'
+        );
+
+        $data_footer = array(
+            'current_url' => $cur_url
         );
 
         $this->load->view('/common/header', $data_header);
         $this->load->view('/common/top_menu');
         $this->load->view('passwordrecovery');
-        $this->load->view('/common/footer');
+        $this->load->view('/common/footer', $data_footer);
     }
 }
