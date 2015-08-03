@@ -11,9 +11,10 @@
 
 <!-- Morris Charts JavaScript -->
 <script src="<?php echo public_url(); ?>js/min/raphael-min.js"></script>
-<script src="<?php echo public_url(); ?>js/min/morris.min.js"></script>
+<!--<script src="--><?php //echo public_url(); ?><!--js/min/morris.min.js"></script>-->
 
 <script src="<?php echo public_url(); ?>js/dashboard.js"></script>
+<?php echo (isset($additional_scripts) ? $additional_scripts : '') ?>
 
 <script src="<?php echo public_url(); ?>js/parsley.js"></script>
 <script src="<?php echo public_url(); ?>js/parsley-nl.js"></script>

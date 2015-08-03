@@ -24,10 +24,11 @@
     <link href="<?php echo public_url(); ?>css/dashboard.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="<?php echo public_url(); ?>css/morris.css" rel="stylesheet">
+<!--    <link href="--><?php //echo public_url(); ?><!--css/morris.css" rel="stylesheet">-->
 
     <!-- Custom Fonts -->
     <link href="<?php echo public_url(); ?>css/font-awesome-4.3.0.css" rel="stylesheet" type="text/css">
+    <?php echo (isset($additional_styles) ? $additional_styles : '') ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -54,14 +54,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
         <!-- START VERLOPEN ACTIES -->
         <div class="col-lg-12">
-            <div class="panel panel-default panel-red">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     Mijn producten
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <?php
-                        for($i = 0; $i < 16; $i++) {
+                        for($i = 0; $i < 12; $i++) {
                             echo '<a href="#" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">

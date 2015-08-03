@@ -138,7 +138,7 @@ class Dashboard extends CI_Controller {
     public function actions() {
         $data_header = array(
             'page_title' => ' - Acties',
-            'additional_styles' => ''
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>"
         );
 
         $data_content = array(
@@ -146,7 +146,9 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
+            <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
+            <script src='".public_url()."js/dashboardactions.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);

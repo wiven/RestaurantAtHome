@@ -75,9 +75,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </table>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="btn btn-default load_more_actions_btn">
-                            <span class="fa fa-plus-square"></span>
-                            Meer acties weergeven ...
+                        <a href="#" class="btn btn-default btn-block">
+                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
                         </a>
                     </div>
                     <!-- /.table-responsive -->
@@ -134,9 +133,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </table>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="btn btn-default load_more_actions_btn">
-                            <span class="fa fa-plus-square"></span>
-                            Meer acties weergeven ...
+                        <a href="#" class="btn btn-default btn-block">
+                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
                         </a>
                     </div>
                     <!-- /.table-responsive -->
@@ -195,10 +193,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </table>
                     </div>
                     <div class="text-center">
+                        <a href="#" class="btn btn-default btn-block">
+                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
+                        </a><!--
                         <a href="#" class="btn btn-default load_more_actions_btn">
                             <span class="fa fa-plus-square"></span>
                             Meer acties weergeven ...
-                        </a>
+                        </a>-->
                     </div>
                     <!-- /.table-responsive -->
                 </div>
@@ -250,19 +251,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Datum geldig</label>
-                            <div class="col-sm-10">
-                                <input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Datum geldig">
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Geldig van</label>
+
+
+                            <div class="col-sm-4">
+                                <input type="text" id="action_start_date" type="text" class="form-control datepicker">
+
+                                <!--<input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Datum geldig">
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                <span id="inputSuccess2Status" class="sr-only">(success)</span>-->
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label class="col-sm-2 control-label text-center"><strong>tot</strong></label>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <input type="text" id="action_end_date" type="text" class="form-control datepicker">
+
+                                <!--<input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Datum geldig">
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span id="inputSuccess2Status" class="sr-only">(success)</span>-->
                             </div>
                         </div>
 
+                        <!--<div class="input-group date">
+                            <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                        </div>-->
+
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Type korting</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Type korting">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+
+                            <div class="col-sm-5 form-group has-feedback">
+                                <div class="col-sm-12">
+                                    <div class="radio">
+                                        <label class="col-xs-6">
+                                            <input type="radio" name="reductionType" value="percentage" checked="checked" required="required"> %
+                                        </label>
+                                        <label class="col-xs-6">
+                                            <input type="radio" name="reductionType" value="euro" required="required"> €
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Hoeveelheid</label>
+
+                            <div class="col-sm-3 form-group has-feedback">
+                                <input type="number" min="0" step="1" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Hoeveelheid">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
@@ -288,41 +324,102 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Foto's</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Foto</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Foto's">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                <span class="btn btn-success fileinput-button">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                    <span>Foto kiezen</span>
+                                    <input type="file" name="files[]">
+                                </span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Actieproducten</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-7">
                                 <input type="email" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Actieproducten">
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                <a href="#" class="btn btn-primary btn-sm">Producten selecteren</a>
                             </div>
+                            <a href="#" class="btn btn-primary btn-sm col-sm-3">Producten selecteren</a>
                         </div>
 
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Capaciteit</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+
+
+                                <div class="col-sm-6 form-group has-feedback">
+                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Ma</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 form-group has-feedback">
+                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Vr</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 form-group has-feedback">
+                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Di</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 form-group has-feedback">
+                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Za</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 form-group has-feedback">
+                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Wo</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 form-group has-feedback">
+                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Zo</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 form-group has-feedback">
+                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Do</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+
+
+
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
 
             <div class="modal-footer">
                 <div class="form-group">

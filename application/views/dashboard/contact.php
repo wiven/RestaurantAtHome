@@ -65,7 +65,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-sm-offset-2 col-sm-10">
                         <p class="help-block"><span style="color: #a94442; font-weight: bold;">&ast;</span> Verplicht in te vullen</p>
                         <button type="submit" class="btn btn-primary">Versturen</button>
-                        <button type="cancel" class="btn btn-default">Annuleren</button>
                     </div>
                 </div>
             </form>
