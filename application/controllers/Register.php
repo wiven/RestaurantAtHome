@@ -13,7 +13,8 @@ class Register extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => '',
+            'current_url' => @explode('.', (@$_SERVER['HTTP_HOST'].@$_SERVER['PATH_INFO']))[1]
         );
 
         $this->load->view('/common/header', $data_header);
