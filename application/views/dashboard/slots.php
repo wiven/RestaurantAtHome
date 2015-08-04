@@ -29,23 +29,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <div class="row">
-        <div class="col-lg-12" id="dash_product_search">
-            <div class="col-lg-6">
+        <div id="dash_product_search">
+            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
                 <div class="form-group has-feedback clearfix">
-                    <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
-                    <input type="search" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Product zoeken ...">
-                    <span id="inputSuccess2Status" class="sr-only">(search)</span>
+                    <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                    <input type="text" id="action_start_date" type="text" class="form-control datepicker" placeholder="Kies een datum">
+                    <!--<input type="search" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Product zoeken ...">
+                    <span id="inputSuccess2Status" class="sr-only">(date)</span>-->
                 </div>
             </div>
-            <div class="col-lg-6">
-                <select class="form-control">
-                    <option value="">Kies de productcategorie</option>
-                    <option value="">Voorgerechten</option>
-                    <option value="">Hoofdgerechten</option>
-                    <option value="">Desserts</option>
-                    <option value="">Dranken</option>
-                    <option value="">Extra's</option>
-                </select>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="#" class="btn btn-success form-control">0 zetten</a>
             </div>
 
         </div>
@@ -53,184 +47,89 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="row">
         <!-- START LOPENDE ACTIES -->
-        <div class="col-lg-6">
-            <div class="panel panel-default panel-green">
-                <div class="panel-heading">
-                    Lopende acties
-                </div>
-                <!-- /.panel-heading -->
+        <div class="col-lg-3">
+            <div class="panel panel-default">
                 <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs">T.e.m. </span>31/12/2015</td>
-                                <td>
-                                    31
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
-                                <td>
-                                    23
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
-                                <td>
-                                    7
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="text-center">
-                        <a href="#" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a>
-                    </div>
-                    <!-- /.table-responsive -->
+
+                    <form class="form-horizontal">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Van</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value=""></option>
+                                    <option value="">Voorgerechten</option>
+                                    <option value="">Hoofdgerechten</option>
+                                    <option value="">Desserts</option>
+                                    <option value="">Dranken</option>
+                                    <option value="">Extra's</option>
+                                </select>
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Tot</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value=""></option>
+                                    <option value="">Voorgerechten</option>
+                                    <option value="">Hoofdgerechten</option>
+                                    <option value="">Desserts</option>
+                                    <option value="">Dranken</option>
+                                    <option value="">Extra's</option>
+                                </select>
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback">
+                            <div class="col-sm-6">
+                                <select class="form-control">
+                                    <option value=""></option>
+                                    <option value="">Voorgerechten</option>
+                                    <option value="">Hoofdgerechten</option>
+                                    <option value="">Desserts</option>
+                                    <option value="">Dranken</option>
+                                    <option value="">Extra's</option>
+                                </select>
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                            </div>
+                            <label class="col-sm-6 control-label" for="inputSuccess2"># slots/uur</label>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
                 </div>
                 <!-- /.panel-body -->
             </div>
             <!-- /.panel -->
         </div>
         <!-- END LOPENDE ACTIES -->
-
-        <!-- START AANKOMENDE ACTIES -->
-        <div class="col-lg-6">
-            <div class="panel panel-default panel-yellow">
-                <div class="panel-heading">
-                    Aankomende acties
-                </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs">Start </span>31/10/2015</td>
-                                <td>
-                                    31
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs">Start </span>30/09/2015</td>
-                                <td>
-                                    23
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs">Start </span>15/10/2015</td>
-                                <td>
-                                    7
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="text-center">
-                        <a href="#" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a>
-                    </div>
-                    <!-- /.table-responsive -->
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-        </div>
-        <!-- END AANKOMENDE ACTIES -->
-    </div>
-
-    <div class="row">
-        <!-- START VERLOPEN ACTIES -->
-        <div class="col-lg-12">
-            <div class="panel panel-default panel-red">
-                <div class="panel-heading">
-                    Verlopen acties
-                </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>31/12/2014</td>
-                                <td>
-                                    31
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>30/06/2015</td>
-                                <td>
-                                    23
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>15/02/2015</td>
-                                <td>
-                                    7
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="text-center">
-                        <a href="#" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a><!--
-                        <a href="#" class="btn btn-default load_more_actions_btn">
-                            <span class="fa fa-plus-square"></span>
-                            Meer acties weergeven ...
-                        </a>-->
-                    </div>
-                    <!-- /.table-responsive -->
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-        </div>
-        <!-- END VERLOPEN ACTIES -->
     </div>
     <!-- /#page-wrapper -->
 </div>
@@ -278,23 +177,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                             <div class="col-sm-4">
-                                <input type="text" id="action_start_date" type="text" class="form-control datepicker">
-
-                                <!--<input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Datum geldig">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>-->
+                                <div class="form-group has-feedback clearfix">
+                                    <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                                    <input type="text" id="action_start_date" type="text" class="form-control datepicker">
+                                </div>
                             </div>
 
-                            <div class="col-sm-2">
-                                <label class="col-sm-2 control-label text-center"><strong>tot</strong></label>
+                            <div class="col-sm-2 text-center">
+                                <label class="control-label"><strong>tot</strong></label>
                             </div>
 
                             <div class="col-sm-4">
-                                <input type="text" id="action_end_date" type="text" class="form-control datepicker">
-
-                                <!--<input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Datum geldig">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>-->
+                                <div class="form-group has-feedback clearfix">
+                                    <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                                    <input type="text" id="action_end_date" type="text" class="form-control datepicker">
+                                </div>
                             </div>
                         </div>
 
