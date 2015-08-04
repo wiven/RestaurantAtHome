@@ -46,7 +46,7 @@ class Dashboard extends CI_Controller {
     public function profile() {
         $data_header = array(
             'page_title' => ' - Profiel',
-            'additional_styles' => ''
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap-switch.min.css'>"
         );
 
         $data_content = array(
@@ -54,7 +54,8 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-switch.min.js'></script>
+            <script src='".public_url()."js/dashboardprofile.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
@@ -115,7 +116,7 @@ class Dashboard extends CI_Controller {
     public function slots() {
         $data_header = array(
             'page_title' => ' - Slots',
-            'additional_styles' => ''
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>"
         );
 
         $data_content = array(
@@ -123,7 +124,9 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
+            <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
+            <script src='".public_url()."js/dashboardslots.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);

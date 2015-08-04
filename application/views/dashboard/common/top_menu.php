@@ -271,7 +271,7 @@
                         <a href="/dashboard/contact"><i class="fa fa-envelope-o fa-fw"></i> Contact</a>
                     </li>
                     <li>
-                        <a href="/dashboard/bugreport"><i class="fa fa-bug fa-fw"></i> Bug melden</a>
+                        <a href="http://restaurantathome.be/support"><i class="fa fa-bug fa-fw"></i> Bug melden</a>
                     </li>
 
 <!--

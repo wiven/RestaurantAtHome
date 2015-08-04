@@ -255,23 +255,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                             <div class="col-sm-4">
-                                <input type="text" id="action_start_date" type="text" class="form-control datepicker">
-
-                                <!--<input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Datum geldig">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>-->
+                                <div class="form-group has-feedback clearfix">
+                                    <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                                    <input type="text" id="action_start_date" type="text" class="form-control datepicker">
+                                </div>
                             </div>
 
-                            <div class="col-sm-2">
-                                <label class="col-sm-2 control-label text-center"><strong>tot</strong></label>
+                            <div class="col-sm-2 text-center">
+                                <label class="control-label"><strong>tot</strong></label>
                             </div>
 
                             <div class="col-sm-4">
-                                <input type="text" id="action_end_date" type="text" class="form-control datepicker">
-
-                                <!--<input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Datum geldig">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>-->
+                                <div class="form-group has-feedback clearfix">
+                                    <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                                    <input type="text" id="action_end_date" type="text" class="form-control datepicker">
+                                </div>
                             </div>
                         </div>
 
