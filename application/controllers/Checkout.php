@@ -16,14 +16,16 @@ class Checkout extends CI_Controller {
 
         $data_header = array(
             'page_title' => ' - Checkout',
-            'additional_styles' => ''
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/min/bootstrap-timepicker.min.css'>"
         );
 
         $data_footer = array(
             'current_url' => $cur_url,
-            'additional_scripts' => '<script type="text/javascript" src="'.public_url().'js/bootstrap-timepicker.js"></script>
-            <script type="text/javascript" src="'.public_url().'js/bootstrap-datepicker.min.js"></script>
-            <script src="'.public_url().'js/checkout.js"></script>'
+            'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
+            <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
+            <script src='".public_url()."js/checkout.js'></script>
+            <script src='".public_url()."js/min/bootstrap-timepicker.min.js'></script>"
         );
 
         $this->load->view('/common/header', $data_header);

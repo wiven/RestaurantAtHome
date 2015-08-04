@@ -74,21 +74,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <form class="form-horizontal">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Afhaaldatum</label>
-                    <div class="col-sm-10">
-                        <input type="text" id="datepicker" class="form-control hasDatepicker" placeholder="Datum" aria-describedby="addon1" style="cursor: default; background-color: #fff;">
+                    <div class="col-sm-4">
+                        <input type="text" id="orderdate" class="form-control datepicker" placeholder="Datum" aria-describedby="addon1" style="cursor: default; background-color: #fff;">
+                    </div>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Afhaaltijdstip</label>
+                    <div class="col-sm-4 bootstrap-timepicker">
+                        <input id="ordertime" type="text" class="form-control timepicker" name="ordertime">
                     </div>
                 </div>
 
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Afhaaltijdstip</label>
                     <div class="col-sm-10">
                         <div class="bootstrap-timepicker">
                             <input id="timepicker" type="text" class="input-small">
                             <i class="icon-time"></i>
                         </div>
-                        <!--<input id="timepicker1" type="text" class="form-control timepicker" aria-describedby="addon2" style="width:62px;">-->
+                        <input id="timepicker1" type="text" class="form-control timepicker" aria-describedby="addon2" style="width:62px;">
                     </div>
-                </div>
+                </div>-->
 
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Voornaam</label>
@@ -159,7 +163,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-sm-offset-2 col-sm-10">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" required="required"> Ik heb de <a href="" target="_blank">algemene voorwaarden</a> gelezen en ik aanvaard ze.
+                                <input type="checkbox" required="required"> Ik heb de <a href="/generalconditions" target="_blank">algemene voorwaarden</a> gelezen en ik aanvaard ze.
                             </label>
                         </div>
                     </div>

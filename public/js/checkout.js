@@ -1,16 +1,13 @@
 $(document).ready(function() {
-    $( "#datepicker" ).datepicker({
-        dateFormat: "dd/mm/yyyy",
-        todayHighlight: true,
-        language: 'nl-BE',
+    $('.datepicker').datepicker({
+        format: "dd/mm/yyyy",
         weekStart: 1,
-        todayHighlight: true,
-        disableTouchKeyboard: true,
-        immediateUpdates: true
+        language: "nl-BE",
+        autoclose: true,
+        todayHighlight: true
     });
-    $( "#addon1" ).click(function(){$( "#datepicker" ).datepicker( "show" )});
 
-    $('#timepicker').timepicker({
+    $('.timepicker').timepicker({
         template: false,
         showInputs: false,
         minuteStep: 5,
