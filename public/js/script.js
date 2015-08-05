@@ -30,6 +30,11 @@ $(document).ready(function () {
 		}
 	});
 
+	$.cookieBar({
+		fixed: true,
+		acceptOnScroll: 200
+	});
+
 });
 
 function goBack() {

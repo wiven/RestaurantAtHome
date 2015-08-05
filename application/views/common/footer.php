@@ -1,4 +1,4 @@
-<?php /** * Restaurant At Home * * This file contains: * - The footer tags and main js * * @package RestoAtHome * @author A collaboration of: WiVen Web Solutions - VDW Web - KolorFlux * @copyright Copyright (c) 2014 - 2015 * @copyright * @license * * @link http://restaurantathome.be * @since Version 1.0.0 */ defined( 'BASEPATH') OR exit( 'No direct script access allowed'); ?>
+<?php /** * Restaurant At Home * * This file contains: * - The footer tags and main js * * @package RestoAtHome * @author A collaboration of: WiVen Web Solutions - IneTh - Shout! * @copyright Copyright (c) 2014 - 2015 * @copyright * @license * * @link http://restaurantathome.be * @since Version 1.0.0 */ defined( 'BASEPATH') OR exit( 'No direct script access allowed'); ?>
 </div>
 <!-- close container fluid -->
 </div>
@@ -76,6 +76,7 @@
 <script src="<?php echo public_url(); ?>js/jquery-password-check.js"></script>
 <script src="<?php echo public_url(); ?>js/parsley.js"></script>
 <script src="<?php echo public_url(); ?>js/parsley-nl.js"></script>
+<script src="<?php echo public_url(); ?>js/jquery.cookiebar.js"></script>
 <script src="<?php echo public_url(); ?>js/script.js"></script>
 
 <?php echo (isset($additional_scripts) ? $additional_scripts : '') ?>

@@ -1,60 +1,54 @@
-<?php /** * Restaurant At Home * * * This file contains: * - Header tags with css and pre-js * * @package RestoAtHome * @author A collaboration of: WiVen Web Solutions - VDW Web - KolorFlux * @copyright Copyright (c) 2014 - 2015 * @copyright * @link http://restaurantathome.be * @since Version 1.0.0 */ defined( 'BASEPATH') OR exit( 'No direct script access allowed'); ?>
+<?php /** * Restaurant At Home * * * This file contains: * - Header tags with css and pre-js * * @package RestoAtHome * @author A collaboration of: WiVen Web Solutions - IneTh - Shout! * @copyright Copyright (c) 2014 - 2015 * @copyright * @link http://restaurantathome.be * @since Version 1.0.0 */ defined( 'BASEPATH') OR exit( 'No direct script access allowed'); ?>
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="nl">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="description" content="RestaurantAtHome">
-	<meta name="author" content="http://wiven.be">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>RestaurantAtHome
+		<?php echo (isset($page_title) ? $page_title : '') ?>
+	</title>
+
+	<meta name="description" content="" />
+	<meta name="theme-color" content="#3F81B5" />
+
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="1 days" />
 
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
-	<title>RestaurantAtHome
-		<?php echo (isset($page_title) ? $page_title : '') ?>
-		<?php //echo $language_test; ?>
-	</title>
+	<link rel="shortcut icon" href="http://restaurantathome.be/assets/img/favicon.ico">
+
+	<meta property="og:title" content="Restaurant at home" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://restaurantathome.be/" />
+	<meta property="og:image" content="http://restaurantathome.be/img/logo-marginaalst-facebook.jpg" />
+
+	<meta name="twitter:card" content="Restaurant at home">
+	<meta name="twitter:site" content="http://restaurantathome.be/">
+	<meta name="twitter:creator" content="@Restaurant at home">
+	<meta name="twitter:title" content="Restaurant at home">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="http://restaurantathome.be/img/logo-marginaalst.jpg">
 
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css">
 	<?php echo (isset($additional_styles) ? $additional_styles : '') ?>
+	<link rel="stylesheet" href="<?php echo public_url(); ?>css/font-awesome-4.3.0.css">
+	<link rel="stylesheet" href="<?php echo public_url(); ?>css/jquery.cookiebar.css">
+	<link rel="stylesheet" href="<?php echo public_url(); ?>css/jquery-ui.css">
 
-	<link href="public/css/font-awesome-4.3.0.css" rel="stylesheet">
-
-	<link rel="stylesheet" href="public/css/jquery-ui.css">
-
-	<link rel="shortcut icon" href="http://restaurantathome.be/assets/img/favicon.ico">
-	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url(); ?>apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url(); ?>apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url(); ?>apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(); ?>apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url(); ?>apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url(); ?>apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url(); ?>apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url(); ?>apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url(); ?>apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>favicon-194x194.png" sizes="194x194">
-	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>android-chrome-192x192.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>favicon-16x16.png" sizes="16x16">
-
-	<link rel="manifest" href="<?php echo base_url(); ?>manifest.json">
-
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-	<meta name="theme-color" content="#009688">
-
-	<!-- BEGIN TRACKJS -->
 	<script type="text/javascript">
 		window._trackJs = {
-			token: 'bc42372f6bd04df4ad8783ea5cebd8c2'
-		};
+			token: "bc42372f6bd04df4ad8783ea5cebd8c2",
+			application: "restoathome"
+		}
 	</script>
-	<script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" crossorigin="anonymous"></script>
-	<!-- END TRACKJS -->
+	<script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" crossorigin="anonymous">
+	</script>
 
 	<script src="<?php echo public_url(); ?>js/modernizr.js"></script>
 
