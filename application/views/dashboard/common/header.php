@@ -15,7 +15,7 @@
     <link href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="<?php echo public_url(); ?>css/min/metisMenu.min.css" rel="stylesheet">
+    <!--<link href="<?php /*echo public_url(); */?>css/min/metisMenu.min.css" rel="stylesheet">-->
 
     <!-- Timeline CSS -->
     <link href="<?php echo public_url(); ?>css/timeline.css" rel="stylesheet">
