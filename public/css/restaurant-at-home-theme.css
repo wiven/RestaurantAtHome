@@ -9550,3 +9550,16 @@ li .fa {
 	position: absolute;
 	left: 20px;
 }
+
+.edit_hours_link {
+	/*visibility: hidden;*/
+}
+
+#panel_lopende_acties_overview {
+    min-height: 393px;
+}
+
+.btn_slot_zero {
+    margin-top: 15px;
+    margin-bottom: -10px;
+}

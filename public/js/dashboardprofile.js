@@ -1,5 +1,8 @@
 // When the document is ready
 $(document).ready(function () {
+    $('.timepicker').timepicker({
+        showMeridian: false
+    });
 
     $(".day_openings").bootstrapSwitch({
         onText: 'open',
@@ -14,7 +17,11 @@ $(document).ready(function () {
         console.log(state); // true | false
 
         if(state) {
-            $(this).append('<h1>test</h1>');
+            /*console.log($(this).parent().parent().next().parent('.edit_hours_link'));
+            $(this).parent().parent().next().parent('.edit_hours_link').show();*/
+            $(this).closest('col-sm-10').appendTo('<a href="#" class="edit_hours_link" title="Openingsuren maandag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>');
+        } else {
+            $(this).closest('.edit_hours_link').hide();
         }
     });
 

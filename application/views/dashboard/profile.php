@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center">
-                        <a href="#" id="edit_cover_photo" data-toggle="modal" data-target="#newActionModal" data-backdrop="static" title="Bewerk coverfoto" data-><span class="fa fa-edit fa-fw fa-2x"></span></a>
+                        <a href="#" id="edit_cover_photo" data-toggle="modal" data-target="#editCoverModal" data-backdrop="static" title="Bewerk coverfoto" data-><span class="fa fa-edit fa-fw fa-2x"></span></a>
                         <img id="logo_resto" class="img-responsive vcenter" src="http://www.restaurantfleurdelin.be/img/1.png">
                     </div>
 
@@ -90,6 +90,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
+
+<!-- Modal edit cover modal -->
+<div class="modal fade" id="editCoverModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Betaalmogelijkheden bewerken</h4>
+            </div>
+            <div class="modal-body text-justify">
+                <div class="col-lg-12">
+                    <form class="form-horizontal">
+                        <div class="form-group has-feedback">
+                            <div class="text-center">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Cash
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox2" value="option2"> BanContact
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> VISA/MasterCard
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> BitCoin
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Gegevens opslaan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- Modal edit payments info -->
@@ -292,13 +336,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-group has-feedback col-lg-6">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Ma</label>
                             <div class="col-sm-10">
-                                <input type="checkbox" name="my-checkbox" class="day_openings" checked>
+                                <input type="checkbox" name="my-checkbox" class="day_openings">
+                                <a href="#" class="edit_hours_link" title="Openingsuren maandag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
                             </div>
                         </div>
                         <div class="form-group has-feedback col-lg-6 pull-right">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Vr</label>
                             <div class="col-sm-10">
                                 <input type="checkbox" name="my-checkbox" class="day_openings" checked>
+                                <a href="#" class="edit_hours_link" title="Openingsuren vrijdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
                             </div>
                         </div>
 
@@ -306,12 +352,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Di</label>
                             <div class="col-sm-10">
                                 <input type="checkbox" name="my-checkbox" class="day_openings" checked>
+                                <a href="#" class="edit_hours_link" title="Openingsuren dinsdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
                             </div>
                         </div>
                         <div class="form-group has-feedback col-lg-6 pull-right">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Za</label>
                             <div class="col-sm-10">
                                 <input type="checkbox" name="my-checkbox" class="day_openings" checked>
+                                <a href="#" class="edit_hours_link" title="Openingsuren zaterdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
                             </div>
                         </div>
 
@@ -319,12 +367,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Wo</label>
                             <div class="col-sm-10">
                                 <input type="checkbox" name="my-checkbox" class="day_openings" checked>
+                                <a href="#" class="edit_hours_link" title="Openingsuren woensdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
                             </div>
                         </div>
                         <div class="form-group has-feedback col-lg-6 pull-right">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Zo</label>
                             <div class="col-sm-10">
                                 <input type="checkbox" name="my-checkbox" class="day_openings" checked>
+                                <a href="#" class="edit_hours_link" title="Openingsuren zondag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
                             </div>
                         </div>
 
@@ -332,6 +382,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Do</label>
                             <div class="col-sm-10">
                                 <input type="checkbox" name="my-checkbox" class="day_openings" checked>
+                                <a href="#" class="edit_hours_link" title="Openingsuren donderdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
                             </div>
                         </div>
                     </form>
@@ -341,9 +392,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="modal-footer">
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <p class="help-block"><span style="color: #a94442; font-weight: bold;">&ast;</span> Verplicht in te vullen</p>
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Actie cre&euml;eren</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Gegevens opslaan</button>
                     </div>
                 </div>
             </div>

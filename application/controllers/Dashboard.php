@@ -46,7 +46,8 @@ class Dashboard extends CI_Controller {
     public function profile() {
         $data_header = array(
             'page_title' => ' - Profiel',
-            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap-switch.min.css'>"
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap-switch.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/min/bootstrap-timepicker.min.css'>"
         );
 
         $data_content = array(
@@ -55,6 +56,7 @@ class Dashboard extends CI_Controller {
 
         $data_footer = array(
             'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-switch.min.js'></script>
+            <script src='".public_url()."js/min/bootstrap-timepicker.min.js'></script>
             <script src='".public_url()."js/dashboardprofile.js'></script>"
         );
 
@@ -78,7 +80,7 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => "<script src='".public_url()."js/dashboardproducts.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);

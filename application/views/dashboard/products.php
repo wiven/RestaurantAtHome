@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- /.col-lg-12 -->
         <div class="col-xs-12 text-right" id="col_new_action">
-            <a href="#" data-toggle="modal" data-target="#newProductModal" data-backdrop="static" class="btn btn-primary btn-lg" id="btn_new_product">
+            <a href="#" data-toggle="modal" data-title="Nieuw product aanmaken" data-target="#newProductModal" data-backdrop="static" class="btn btn-primary btn-lg" id="btn_new_product">
                 <span class="fa fa-plus"></span>
                 Nieuw product
             </a>
@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="panel-body">
                     <?php
                         for($i = 0; $i < 12; $i++) {
-                            echo '<a href="#" class="top_resto">
+                            echo '<a href="#" data-toggle="modal" data-title="Product bewerken" data-target="#newProductModal" data-backdrop="static" class="edit_product">
 			<div class="col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
 					<img src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
@@ -86,13 +86,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- /#wrapper -->
 
 <!-- Modal new action -->
-<div class="modal fade" id="newActionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="newProductModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Nieuwe actie aanmaken</h4>
+                <h4 class="modal-title" id="myModalLabel">Nieuw product aanmaken</h4>
             </div>
             <div class="modal-body text-justify">
                 <div class="col-lg-12">
@@ -184,12 +184,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </form>
                 </div>
             </div>
-
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
 
             <div class="modal-footer">
                 <div class="form-group">

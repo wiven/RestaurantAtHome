@@ -9,4 +9,10 @@ $(document).ready(function () {
         todayHighlight: true
     });
 
+    $('#set_today_active_btn').on('click', function() {
+        /*var date = new Date();
+        $('.datepicker').val(date.now);
+        $('.datepicker').trigger('leave');*/
+    });
+
 });

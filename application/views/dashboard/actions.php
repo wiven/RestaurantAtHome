@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- /.col-lg-12 -->
         <div class="col-xs-12 text-right" id="col_new_action">
-            <a href="#" data-toggle="modal" data-target="#newActionModal" data-backdrop="static" class="btn btn-primary btn-lg" id="btn_new_action">
+            <a href="#" data-toggle="modal" data-title="Nieuwe actie aanmaken" data-target="#newActionModal" data-backdrop="static" class="btn btn-primary btn-lg" id="btn_new_action">
                 <span class="fa fa-plus"></span>
                 Nieuwe actie
             </a>
@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td><span class="hidden-xs">T.e.m. </span>31/12/2015</td>
                                 <td>
                                     31
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             <tr>
@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
                                 <td>
                                     23
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             <tr>
@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
                                 <td>
                                     7
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             </tbody>
@@ -110,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td><span class="hidden-xs">Start </span>31/10/2015</td>
                                 <td>
                                     31
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             <tr>
@@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td><span class="hidden-xs">Start </span>30/09/2015</td>
                                 <td>
                                     23
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             <tr>
@@ -126,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <td><span class="hidden-xs">Start </span>15/10/2015</td>
                                 <td>
                                     7
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             </tbody>
@@ -167,26 +167,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <tbody>
                             <tr>
                                 <td>OP = OP</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>31/12/2014</td>
+                                <td><span class="hidden-xs">T.e.m.</span>31/12/2014</td>
                                 <td>
                                     31
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Weg is pech</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>30/06/2015</td>
+                                <td><span class="hidden-xs">T.e.m. </span>30/06/2015</td>
                                 <td>
                                     23
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>15/02/2015</td>
+                                <td><span class="hidden-xs">T.e.m. </span>15/02/2015</td>
                                 <td>
                                     7
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
                                 </td>
                             </tr>
                             </tbody>
