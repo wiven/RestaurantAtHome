@@ -158,7 +158,13 @@ class Dashboard extends CI_Controller {
 
         $this->load->view('/dashboard/common/header', $data_header);
         $this->load->view('/dashboard/common/top_menu');
-        $this->load->view('/dashboard/actions', $data_content);
+
+        if(strlen($this->uri->segment(3)) != 0) {
+            $this->load->view('/dashboard/actions/'.$this->uri->segment(3), $data_content);
+        } else {
+            $this->load->view('/dashboard/actions', $data_content);
+        }
+
         $this->load->view('/dashboard/common/footer', $data_footer);
     }
 

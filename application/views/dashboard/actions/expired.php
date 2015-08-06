@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><?php echo (isset($pretty_page_title) ? $pretty_page_title : '') ?></h1>
+            <h1 class="page-header">Verlopen acties</h1>
         </div>
         <!-- /.col-lg-12 -->
         <div class="col-xs-12 text-right" id="col_new_action">
@@ -30,11 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="row">
         <!-- START LOPENDE ACTIES -->
-        <div class="col-lg-6">
-            <div class="panel panel-default panel-green">
-                <div class="panel-heading">
-                    Lopende acties
-                </div>
+        <div class="col-lg-12">
+            <div class="panel panel-default panel-red">
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <div class="table-responsive">
@@ -74,11 +71,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </tbody>
                         </table>
                     </div>
-                    <div class="text-center">
-                        <a href="/dashboard/actions/current" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a>
-                    </div>
                     <!-- /.table-responsive -->
                 </div>
                 <!-- /.panel-body -->
@@ -86,128 +78,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- /.panel -->
         </div>
         <!-- END LOPENDE ACTIES -->
-
-        <!-- START AANKOMENDE ACTIES -->
-        <div class="col-lg-6">
-            <div class="panel panel-default panel-yellow">
-                <div class="panel-heading">
-                    Aankomende acties
-                </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs">Start </span>31/10/2015</td>
-                                <td>
-                                    31
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs">Start </span>30/09/2015</td>
-                                <td>
-                                    23
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs">Start </span>15/10/2015</td>
-                                <td>
-                                    7
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="text-center">
-                        <a href="/dashboard/actions/future" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a>
-                    </div>
-                    <!-- /.table-responsive -->
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-        </div>
-        <!-- END AANKOMENDE ACTIES -->
-    </div>
-
-    <div class="row">
-        <!-- START VERLOPEN ACTIES -->
-        <div class="col-lg-12">
-            <div class="panel panel-default panel-red">
-                <div class="panel-heading">
-                    Verlopen acties
-                </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs">T.e.m.</span>31/12/2014</td>
-                                <td>
-                                    31
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs">T.e.m. </span>30/06/2015</td>
-                                <td>
-                                    23
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs">T.e.m. </span>15/02/2015</td>
-                                <td>
-                                    7
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="text-center">
-                        <a href="/dashboard/actions/expired" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a><!--
-                        <a href="#" class="btn btn-default load_more_actions_btn">
-                            <span class="fa fa-plus-square"></span>
-                            Meer acties weergeven ...
-                        </a>-->
-                    </div>
-                    <!-- /.table-responsive -->
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-        </div>
-        <!-- END VERLOPEN ACTIES -->
     </div>
     <!-- /#page-wrapper -->
 </div>
