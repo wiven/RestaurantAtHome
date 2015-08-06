@@ -9563,3 +9563,7 @@ li .fa {
     margin-top: 15px;
     margin-bottom: -10px;
 }
+
+.order_overview:hover {
+    cursor: pointer;
+}

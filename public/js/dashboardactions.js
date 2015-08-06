@@ -30,6 +30,12 @@ $(document).ready(function() {
         $('#datetimepicker1').datetimepicker();
     });*/
 
+    initTooltips('.fa-edit', 'top', 'Actie bewerken');
+
+    /*$('.fa-edit').attr('data-toggle', 'tooltip');
+    $('.fa-edit').attr('data-placement', 'top');
+    $('.fa-edit').attr('title', 'Actie bewerken');*/
+
     $('#newActionModal').on('show.bs.modal', function(e) {
         var button = $(e.relatedTarget); // Button that triggered the modal
         var title = button.data('title'); // Extract info from data-* attributes
@@ -48,4 +54,21 @@ $(document).ready(function() {
         todayHighlight: true
     });
 
+    $('#futureactions').dataTable( {
+        "paging":   false,
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Dutch.json"
+        }
+    } );
+
+    $('[data-toggle="tooltip"]').tooltip();
+
 });
+
+function initTooltips(element, position, title) {
+    var div = $(element);
+
+    div.attr('data-toggle', 'tooltip');
+    div.attr('data-placement', position);
+    div.attr('title', title);
+}

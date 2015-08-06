@@ -30,7 +30,7 @@
 								<tr>
 									<th>Naam actie</th>
 									<th>Looptijd</th>
-									<th># gebruikt</th>
+									<th>#<span class="hidden-xs"> gebruikt</span></th>
 								</tr>
 								</thead>
 								<tbody>
@@ -89,12 +89,12 @@
 				<!-- /.panel -->
 			</div>
 			<!-- BESTELLINGEN VANDAAG -->
-			<div class="col-lg-6">
+<!--			<div class="col-lg-6">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<i class="fa fa-tasks fa-fw"></i> Bestellingen vandaag
 					</div>
-					<!-- /.panel-heading -->
+					<!-- /.panel-heading --
 					<div class="panel-body">
 						<div class="list-group">
 							<a href="#" class="list-group-item">
@@ -143,13 +143,71 @@
 									</span>
 							</a>
 						</div>
-						<!-- /.list-group -->
+						<!-- /.list-group --
 						<a href="#" class="btn btn-default btn-block">View All Alerts</a>
 					</div>
-					<!-- /.panel-body -->
+					<!-- /.panel-body --
 				</div>
-				<!-- /.panel -->
-			</div>
+				<!-- /.panel --
+			</div>-->
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="panel_lopende_acties_overview">
+                    <div class="panel-heading">
+                        <i class="fa fa-tasks fa-fw"></i> Bestellingen vandaag
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Afhaal<span class="hidden-xs">tijdstip</span></th>
+                                    <th># producten</th>
+                                    <th>Prijs</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="warning order_overview">
+                                    <td>16u30</td>
+                                    <td>4 producten</td>
+                                    <td>&euro; 64,99</td>
+                                </tr>
+                                <tr class="success order_overview">
+                                    <td>17u30</td>
+                                    <td>2 producten</td>
+                                    <td>&euro; 24,69</td>
+                                </tr>
+                                <a href="#" class="warning order_overview">
+                                    <tr class="success order_overview">
+                                        <td>17u45</td>
+                                        <td>11 producten</td>
+                                        <td>&euro; 164,46</td>
+                                    </tr>
+                                </a>
+                                <tr class="warning order_overview">
+                                    <td>19u30</td>
+                                    <td>1 product</td>
+                                    <td>&euro; 8,50</td>
+                                </tr>
+                                <tr class="danger order_overview">
+                                    <td>19u30</td>
+                                    <td>7 producten</td>
+                                    <td>&euro; 64,99</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center">
+                            <a href="/dashboard/orders" class="btn btn-default btn-block">
+                                <span class="fa fa-plus-square"></span> Alle bestellingen weergeven ...
+                            </a>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
 			<!-- /.col-lg-4 -->
 			<!-- Partners -->
 			<div class="col-lg-12">
@@ -191,6 +249,44 @@
 <!-- /#wrapper -->
 
 
+<!-- Modal order info-->
+<div class="modal fade" id="orderInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content clearfix">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Orderinfo</h4>
+            </div>
+            <div class="modal-body text-justify clearfix">
+                <div class="col-lg-12">
+                    <ul>
+                        <?php
+                            for($i = 0; $i < 11; $i++) {
+                                echo '<li>Product '.($i+1).'</li>';
+                            }
+                        ?>
+                    </ul>
+                </div>
+                <div class="col-lg-12 text-center clear">
+                    <strong>TOTAALBEDRAG: €112,67</strong>
+                </div>
+                <div class="col-lg-12">
+                    <a href="#" class="btn btn-warning btn-block clear">
+                        <span class="fa fa-check fa-fw"></span>
+                        Markeer als bezig
+                    </a>
+                </div>
+                <div class="col-lg-12">
+                    <a href="#" class="btn btn-success btn-block">
+                        <span class="fa fa-check fa-fw"></span>
+                         Markeer als klaar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Modal new action -->
 <div class="modal fade" id="newActionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

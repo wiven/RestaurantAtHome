@@ -161,4 +161,31 @@ $(function() {
         modal.find('.modal-title').text(title);
         //modal.find('.modal-body input').val(title);
     });
+
+    initTooltips('.fa-edit', 'top', 'Actie bewerken');
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('.order_overview').on('click', function() {
+        $('#orderInfoModal').modal({
+            'backdrop': 'static'
+        });
+    });
+
+    $('#orderInfoModal').on('show.bs.modal', function(e) {
+        /*var button = $(e.relatedTarget); // Button that triggered the modal
+        var title = button.data('title'); // Extract info from data-* attributes*/
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this);
+        modal.find('.modal-title').text('Orderinfo');
+        //modal.find('.modal-body input').val(title);
+    });
 });
+
+function initTooltips(element, position, title) {
+    var div = $(element);
+
+    div.attr('data-toggle', 'tooltip');
+    div.attr('data-placement', position);
+    div.attr('title', title);
+}

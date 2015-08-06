@@ -153,7 +153,9 @@ class Dashboard extends CI_Controller {
         $data_footer = array(
             'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
             <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
-            <script src='".public_url()."js/dashboardactions.js'></script>"
+            <script src='".public_url()."js/jquery.dataTables.js'></script>
+            <script src='".public_url()."js/dashboardactions.js'></script>
+            "
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
