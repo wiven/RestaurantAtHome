@@ -1,309 +1,81 @@
+<?php
+/**
+ * Restaurant At Home
+ *
+ * Contact page for restaurants
+ *
+ * @package	RestoAtHome
+ * @author	A collaboration of: WiVen Web Solutions - IneTh - Shout!
+ * @copyright	Copyright (c) 2014 - 2015
+ * @copyright
+ * @license	*
+ * @link	http://restaurantathome.be
+ * @since	Version 1.0.0
+ */
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <div id="page-wrapper">
-	<div class="row">
-		<div class="col-lg-12">
-			<h1 class="page-header"><?php echo (isset($pretty_page_title) ? $pretty_page_title : '') ?></h1>
-		</div>
-		<!-- /.col-lg-12 -->
-	</div>
-	<!-- /.row -->
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="panel panel-default">
-				<div class="panel-heading pending-orders">
-                    <a href="/dashboard/orders/new" id="new_orders_msg">
-                        <h4>U heeft <span class="order-number">3</span> nieuwe bestellingen</h4>
-                    </a>
-				</div>
-			</div>
-		</div>
-		<!-- /.row -->
-		<div class="row clearfix">
-            <!-- LOPENDE ACTIES -->
-			<div class="col-lg-6">
-				<div class="panel panel-default" id="panel_lopende_acties_overview">
-					<div class="panel-heading">
-						<i class="fa fa-fire fa-fw"></i> Lopende acties
-					</div>
-					<!-- /.panel-heading -->
-					<div class="panel-body">
-						<div class="table-responsive">
-							<table class="table table-hover">
-								<thead>
-								<tr>
-									<th>Naam actie</th>
-									<th>Looptijd</th>
-									<th>#<span class="hidden-xs"> gebruikt</span></th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-									<td>OP = OP</td>
-									<td><span class="hidden-xs">T.e.m. </span>31/12/2015</td>
-									<td>
-										31
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-									</td>
-								</tr>
-								<tr>
-									<td>Weg is pech</td>
-									<td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
-									<td>
-										23
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-									</td>
-								</tr>
-								<tr>
-									<td>Suggestie van de chef</td>
-									<td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
-									<td>
-										7
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-									</td>
-								</tr>
-                                <tr>
-                                    <td>Weg is pech</td>
-                                    <td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
-                                    <td>
-                                        23
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Suggestie van de chef</td>
-                                    <td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
-                                    <td>
-                                        7
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                    </td>
-                                </tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="text-center">
-							<a href="/dashboard/actions" class="btn btn-default btn-block">
-								<span class="fa fa-plus-square"></span> Meer acties weergeven ...
-							</a>
-						</div>
-						<!-- /.table-responsive -->
-					</div>
-					<!-- /.panel-body -->
-				</div>
-				<!-- /.panel -->
-			</div>
-			<!-- BESTELLINGEN VANDAAG -->
-<!--			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<i class="fa fa-tasks fa-fw"></i> Bestellingen vandaag
-					</div>
-					<!-- /.panel-heading --
-					<div class="panel-body">
-						<div class="list-group">
-							<a href="#" class="list-group-item">
-								<i class="fa fa-comment fa-fw"></i> New Comment
-								<span class="pull-right text-muted small"><em>4 minutes ago</em>
-									</span>
-							</a>
-							<a href="#" class="list-group-item">
-								<i class="fa fa-twitter fa-fw"></i> 3 New Followers
-								<span class="pull-right text-muted small"><em>12 minutes ago</em>
-									</span>
-							</a>
-							<a href="#" class="list-group-item">
-								<i class="fa fa-envelope fa-fw"></i> Message Sent
-								<span class="pull-right text-muted small"><em>27 minutes ago</em>
-									</span>
-							</a>
-							<a href="#" class="list-group-item">
-								<i class="fa fa-tasks fa-fw"></i> New Task
-								<span class="pull-right text-muted small"><em>43 minutes ago</em>
-									</span>
-							</a>
-							<a href="#" class="list-group-item">
-								<i class="fa fa-upload fa-fw"></i> Server Rebooted
-								<span class="pull-right text-muted small"><em>11:32 AM</em>
-									</span>
-							</a>
-							<a href="#" class="list-group-item">
-								<i class="fa fa-bolt fa-fw"></i> Server Crashed!
-								<span class="pull-right text-muted small"><em>11:13 AM</em>
-									</span>
-							</a>
-							<a href="#" class="list-group-item">
-								<i class="fa fa-warning fa-fw"></i> Server Not Responding
-								<span class="pull-right text-muted small"><em>10:57 AM</em>
-									</span>
-							</a>
-							<a href="#" class="list-group-item">
-								<i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
-								<span class="pull-right text-muted small"><em>9:49 AM</em>
-									</span>
-							</a>
-							<a href="#" class="list-group-item">
-								<i class="fa fa-money fa-fw"></i> Payment Received
-								<span class="pull-right text-muted small"><em>Yesterday</em>
-									</span>
-							</a>
-						</div>
-						<!-- /.list-group --
-						<a href="#" class="btn btn-default btn-block">View All Alerts</a>
-					</div>
-					<!-- /.panel-body --
-				</div>
-				<!-- /.panel --
-			</div>-->
-            <div class="col-lg-6">
-                <div class="panel panel-default" id="panel_lopende_acties_overview">
-                    <div class="panel-heading">
-                        <i class="fa fa-tasks fa-fw"></i> Bestellingen vandaag
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th>Afhaal<span class="hidden-xs">tijdstip</span></th>
-                                    <th>Naam<span class="hidden-xs"> klant</span></th>
-                                    <th>#<span class="hidden-xs"> items</span></th>
-                                    <th>Prijs</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="warning order_overview">
-                                    <td>16u30</td>
-                                    <td>Lesley Beunen</td>
-                                    <td>4</td>
-                                    <td>&euro; 64,99</td>
-                                </tr>
-                                <tr class="success order_overview">
-                                    <td>17u30</td>
-                                    <td>Wim Vandevenne</td>
-                                    <td>2</td>
-                                    <td>&euro; 24,69</td>
-                                </tr>
-                                <tr class="success order_overview">
-                                    <td>17u45</td>
-                                    <td>Thomas De Pauw</td>
-                                    <td>11</td>
-                                    <td>&euro; 164,46</td>
-                                </tr>
-                                <tr class="warning order_overview">
-                                    <td>19u30</td>
-                                    <td>Frederik De Roover</td>
-                                    <td>1</td>
-                                    <td>&euro; 8,50</td>
-                                </tr>
-                                <tr class="danger order_overview">
-                                    <td>19u30</td>
-                                    <td>Klant X</td>
-                                    <td>7</td>
-                                    <td>&euro; 64,99</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="text-center">
-                            <a href="/dashboard/orders" class="btn btn-default btn-block">
-                                <span class="fa fa-plus-square"></span> Alle bestellingen weergeven ...
-                            </a>
-                        </div>
-                        <!-- /.table-responsive -->
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
-            </div>
-			<!-- /.col-lg-4 -->
-			<!-- Partners -->
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<i class="fa fa-link fa-fw"></i> Onze partners
-					</div>
-					<!-- /.panel-heading -->
-					<div class="panel-body">
-						<?php
-						for($i = 0; $i < 4; $i++) {
-							echo '<a href="#" class="top_resto">
-			<div class="col-sm-6 col-md-3 col-lg-3">
-				<div class="thumbnail">
-					<img src="http://localhost:1500/overview-of-the-restaurant.jpg">
-					<div class="caption">
-						<h3 id="thumbnail-label">Kaai 17</h3>
-					</div>
-				</div>
-			</div>
-		</a>';
-						}
-						?>
-						<div class="col-lg-12">
-							<a href="/dashboard/partners" class="btn btn-default btn-block">Bekijk alle partners</a>
-						</div>
-					</div>
-					<!-- /.panel-body -->
-				</div>
-				<!-- /.panel -->
-			</div>
-			<!-- Partners -->
-		</div>
-		<!-- /.row -->
-	</div>
-	<!-- /#page-wrapper -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Nieuwe bestellingen</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
 
+    <div class="row">
+        <!-- START LOPENDE ACTIES -->
+        <div class="col-lg-12">
+            <div class="panel panel-default panel-green">
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Naam actie</th>
+                                <th>Looptijd</th>
+                                <th># gebruikt</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>OP = OP</td>
+                                <td><span class="hidden-xs">T.e.m. </span>31/12/2015</td>
+                                <td>
+                                    31
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Weg is pech</td>
+                                <td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
+                                <td>
+                                    23
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Suggestie van de chef</td>
+                                <td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
+                                <td>
+                                    7
+                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- END LOPENDE ACTIES -->
+    </div>
+    <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
-
-
-<!-- Modal order info-->
-<div class="modal fade" id="orderInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content clearfix">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Orderinfo</h4>
-            </div>
-            <div class="modal-body text-justify clearfix">
-                <div class="col-lg-6">
-                    Afhaaldatum: <strong><span>19/08/2015</span></strong><br />
-                    Afhaaluur: <strong><span>19u30</span></strong>
-                </div>
-                <div class="col-lg-6 text-right ">
-                    Klant: <strong><span>Wim Vandevenne</span></strong><br />
-                    Adres: <em><span>Stokstraat 47, Zele</span></em>
-                </div>
-                <div class="col-lg-12 clear">
-                    Opmerkingen klant: <span>De steak moet niet te hard gebakken zijn, en de frietjes mogen nog wat slap zijn!</span>
-                </div>
-                <div class="col-lg-12">
-                    <ul>
-                        <?php
-                            for($i = 0; $i < 11; $i++) {
-                                echo '<li>Product '.($i+1).'</li>';
-                            }
-                        ?>
-                    </ul>
-                </div>
-                <div class="col-lg-12 text-center clear">
-                    <strong>TOTAALBEDRAG: €112,67</strong>
-                </div>
-                <div class="col-lg-6 col-xs-12">
-                    <a href="#" class="btn btn-warning btn-block">
-                        <span class="fa fa-check fa-fw"></span>
-                        Markeer als bezig
-                    </a>
-                </div>
-                <div class="col-lg-6 col-xs-12">
-                    <a href="#" class="btn btn-success btn-block">
-                        <span class="fa fa-check fa-fw"></span>
-                         Markeer als klaar
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Modal new action -->
 <div class="modal fade" id="newActionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -516,7 +288,7 @@
                     <div class="col-sm-offset-2 col-sm-10">
                         <p class="help-block"><span style="color: #a94442; font-weight: bold;">&ast;</span> Verplicht in te vullen</p>
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Wijzigingen opslaan</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Actie cre&euml;eren</button>
                     </div>
                 </div>
             </div>

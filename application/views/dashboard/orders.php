@@ -20,20 +20,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h1 class="page-header"><?php echo (isset($pretty_page_title) ? $pretty_page_title : '') ?></h1>
         </div>
         <!-- /.col-lg-12 -->
-        <div class="col-xs-12 text-right" id="col_new_action">
-            <a href="#" data-toggle="modal" data-target="#newActionModal" data-backdrop="static" class="btn btn-primary btn-lg" id="btn_new_action">
-                <span class="fa fa-plus"></span>
-                Nieuwe actie
-            </a>
-        </div>
     </div>
 
     <div class="row">
-        <!-- START LOPENDE ACTIES -->
-        <div class="col-lg-6">
-            <div class="panel panel-default panel-green">
+        <!-- START nieuwe bestellingen -->
+        <div class="col-lg-12">
+            <div class="panel panel-default panel-red">
                 <div class="panel-heading">
-                    Lopende acties
+                    Nieuwe bestellingen
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -41,43 +35,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <table class="table table-hover">
                             <thead>
                             <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
+                                <th>Afhaaltijdstip</th>
+                                <th>Naam klant</th>
+                                <th># items</th>
+                                <th># slots</th>
+                                <th>Prijs</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs">T.e.m. </span>31/12/2015</td>
-                                <td>
-                                    31
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
-                                <td>
-                                    23
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
-                                <td>
-                                    7
-                                    <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
+                            <?php
+                                for($i = 0; $i < 5; $i++) {
+                                    echo '<tr class="order_detail_tr">
+                                <td>17/0'.($i+1).'/2015 '.($i+10).'u00</td>
+                                <td>Wim Vandevenne</td>
+                                <td>4</td>
+                                <td>31</td>
+                                <td>&euro; 24,85</td>
+                            </tr>';
+                                }
+
+                            ?>
                             </tbody>
                         </table>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a>
+                        <a href="/dashboard/orders/new" class="btn btn-default btn-block">
+                            <span class="fa fa-plus-square"></span> Meer bestellingen weergeven ...
+                        </a><!--
+                        <a href="#" class="btn btn-default load_more_actions_btn">
+                            <span class="fa fa-plus-square"></span>
+                            Meer bestellingen weergeven ...
+                        </a>-->
                     </div>
                     <!-- /.table-responsive -->
                 </div>
@@ -85,13 +73,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <!-- /.panel -->
         </div>
-        <!-- END LOPENDE ACTIES -->
+        <!-- END nieuwe bestellingen -->
+    </div>
 
-        <!-- START AANKOMENDE ACTIES -->
+    <div class="row">
+        <!-- START  bestellingen in verwerking -->
         <div class="col-lg-6">
             <div class="panel panel-default panel-yellow">
                 <div class="panel-heading">
-                    Aankomende acties
+                    Bestellingen in verwerking
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -99,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <table class="table table-hover">
                             <thead>
                             <tr>
-                                <th>Naam actie</th>
+                                <th>Naam bestelling</th>
                                 <th>Looptijd</th>
                                 <th># gebruikt</th>
                             </tr>
@@ -133,8 +123,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </table>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
+                        <a href="/dashboard/orders/busy" class="btn btn-default btn-block">
+                            <span class="fa fa-plus-square"></span> Meer bestellingen weergeven ...
                         </a>
                     </div>
                     <!-- /.table-responsive -->
@@ -143,15 +133,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <!-- /.panel -->
         </div>
-        <!-- END AANKOMENDE ACTIES -->
-    </div>
+        <!-- END  bestellingen in verwerking -->
 
-    <div class="row">
-        <!-- START VERLOPEN ACTIES -->
-        <div class="col-lg-12">
-            <div class="panel panel-default panel-red">
+        <!-- START afgeronde bestellingen -->
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-green">
                 <div class="panel-heading">
-                    Verlopen acties
+                    Afgeronde bestellingen
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -159,7 +147,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <table class="table table-hover">
                             <thead>
                             <tr>
-                                <th>Naam actie</th>
+                                <th>Naam bestelling</th>
                                 <th>Looptijd</th>
                                 <th># gebruikt</th>
                             </tr>
@@ -167,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <tbody>
                             <tr>
                                 <td>OP = OP</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>31/12/2014</td>
+                                <td><span class="hidden-xs">T.e.m. </span>31/12/2015</td>
                                 <td>
                                     31
                                     <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
@@ -175,7 +163,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </tr>
                             <tr>
                                 <td>Weg is pech</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>30/06/2015</td>
+                                <td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
                                 <td>
                                     23
                                     <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
@@ -183,7 +171,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </tr>
                             <tr>
                                 <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs"><span class="hidden-xs">T.e.m. </span></span>15/02/2015</td>
+                                <td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
                                 <td>
                                     7
                                     <a href="" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
@@ -193,13 +181,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </table>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a><!--
-                        <a href="#" class="btn btn-default load_more_actions_btn">
-                            <span class="fa fa-plus-square"></span>
-                            Meer acties weergeven ...
-                        </a>-->
+                        <a href="/dashboard/orders/completed" class="btn btn-default btn-block">
+                            <span class="fa fa-plus-square"></span> Meer bestellingen weergeven ...
+                        </a>
                     </div>
                     <!-- /.table-responsive -->
                 </div>
@@ -207,7 +191,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <!-- /.panel -->
         </div>
-        <!-- END VERLOPEN ACTIES -->
+        <!-- END afgeronde bestellingen -->
     </div>
     <!-- /#page-wrapper -->
 </div>
@@ -220,15 +204,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Nieuwe actie aanmaken</h4>
+                <h4 class="modal-title" id="myModalLabel">Nieuwe bestelling aanmaken</h4>
             </div>
             <div class="modal-body text-justify">
                 <div class="col-lg-12">
                     <form class="form-horizontal">
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam actie</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam bestelling</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam actie">
+                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam bestelling">
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>

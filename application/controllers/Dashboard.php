@@ -108,7 +108,12 @@ class Dashboard extends CI_Controller {
 
         $this->load->view('/dashboard/common/header', $data_header);
         $this->load->view('/dashboard/common/top_menu');
-        $this->load->view('/dashboard/orders', $data_content);
+
+        if(strlen($this->uri->segment(3)) != 0) {
+            $this->load->view('/dashboard/orders/'.$this->uri->segment(3), $data_content);
+        } else {
+            $this->load->view('/dashboard/orders', $data_content);
+        }
         $this->load->view('/dashboard/common/footer', $data_footer);
     }
 
@@ -219,9 +224,7 @@ class Dashboard extends CI_Controller {
     /**
      * executed when '/dashboard/bugreport' is loaded
      */
-    public function bugreport() {
-        die('http://'.$_SERVER['HTTP_HOST'].$_SERVER['PATH_INFO']);
-
+    /*public function bugreport() {
         $data_header = array(
             'page_title' => ' - Bug melden',
             'additional_styles' => ''
@@ -239,7 +242,7 @@ class Dashboard extends CI_Controller {
         $this->load->view('/dashboard/common/top_menu');
         $this->load->view('/dashboard/bugreport', $data_content);
         $this->load->view('/dashboard/common/footer', $data_footer);
-    }
+    }*/
 
     /**
      * executed when '/logout' is loaded
