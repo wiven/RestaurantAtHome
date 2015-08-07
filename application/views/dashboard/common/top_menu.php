@@ -265,6 +265,9 @@
                         <a href="/dashboard/actions"><i class="fa fa-fire fa-fw"></i> Acties</a>
                     </li>
                     <li>
+                        <a href="/dashboard/loyalty"><i class="fa fa-group fa-fw"></i> Loyalty</a>
+                    </li>
+                    <li>
                         <a href="/dashboard/partners"><i class="fa fa-link fa-fw"></i> Partners</a>
                     </li>
                     <li>

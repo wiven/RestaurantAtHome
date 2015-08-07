@@ -103,7 +103,7 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => "<script src='".public_url()."js/dashboardorders.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
@@ -172,6 +172,29 @@ class Dashboard extends CI_Controller {
             $this->load->view('/dashboard/actions', $data_content);
         }
 
+        $this->load->view('/dashboard/common/footer', $data_footer);
+    }
+
+    /**
+     * executed when '/dashboard/loyalty' is loaded
+     */
+    public function loyalty() {
+        $data_header = array(
+            'page_title' => ' - Loyalty acties',
+            'additional_styles' => ''
+        );
+
+        $data_content = array(
+            'pretty_page_title' => 'Loyalty acties (klantenkaart)'
+        );
+
+        $data_footer = array(
+            'additional_scripts' => ''
+        );
+
+        $this->load->view('/dashboard/common/header', $data_header);
+        $this->load->view('/dashboard/common/top_menu');
+        $this->load->view('/dashboard/loyalty', $data_content);
         $this->load->view('/dashboard/common/footer', $data_footer);
     }
 

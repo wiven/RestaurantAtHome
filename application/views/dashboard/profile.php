@@ -23,10 +23,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <a href="#" class="btn btn-primary form-control" id="set_today_active_btn">
+                <span class="fa fa-calendar-o fa-fw"></span>
+                Vandaag</a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <a href="#" class="btn btn-primary form-control" id="set_today_active_btn">
+                <span class="fa fa-calendar-o fa-fw"></span>
+                Vandaag</a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <a href="#" class="btn btn-primary form-control" id="set_today_active_btn">
+                <span class="fa fa-calendar-o fa-fw"></span>
+                Vandaag</a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <a href="#" class="btn btn-primary form-control">
+                <span class="fa fa-plus fa-fw"></span>
+                Slot aanmaken</a>
+        </div>
+    </div>
+
+    <div class="row">
 
 
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="">
             <ul class="list-group clearfix">
                 <li class="list-group-item clearfix" id="info_resto">
                     <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
