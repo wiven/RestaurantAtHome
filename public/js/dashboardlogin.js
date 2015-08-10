@@ -1,6 +1,7 @@
 const CALLBACK = "b81ba5e4af3691e5227d91cbda562e9bf8b88bb7e8c9a8e3a9938e4feee62f5a";
-const API_PREFIX = "http://apidev.restaurantathome.be/";
-var redirect_url = window.location.search.replace("?", "").split('=')[1];
+/*const API_PREFIX = "http://apidev.restaurantathome.be/";*/
+const API_PREFIX = "http://localhost/RestaurantAtHomeAPI/";
+const REDIRECT_URL = window.location.search.replace("?", "").split('=')[1];
 
 jQuery( document ).ready(function() {
     jQuery( "form" ).submit(function(e) {
@@ -17,8 +18,10 @@ jQuery( document ).ready(function() {
             xhrFields: { withCredentials: true }
         }).done(function (msg) {
             if(msg.length != 0) {
-                /*console.log(msg[0].hash);*/
-                alert('Welkom '+username+'\nU bent nu ingelogd zonder Facebook!');
+                /*console.log(msg[0].hash);
+                setUserHash(msg[0].hash, username);*/
+                setUserHash(CALLBACK, username);
+                /*alert('Welkom '+username+'\nU bent nu ingelogd zonder Facebook!');*/
             } else {
                 jQuery('input[name="email"]').parent().addClass('has-error');
                 jQuery('#login_danger').removeClass('hidden');
@@ -237,14 +240,25 @@ function setUserHash(hash, email) {
         method: "GET",
         url: 'http://localhost:8888/login/',
         data: { userhash: hash, useremail: email },
-        dataType: "jsonp",
+        dataType: "html",
         crossDomain: true,
         xhrFields: { withCredentials: true }
-    }).done(function (msg) {
-        console.log(msg);
+    }).done(function (jqXHR, textStatus) {
+        /*console.log(jqXHR);
+        console.log(textStatus);*/
+        /*console.log(msg);*/
+
+        if(textStatus === 'success') {
+            /*console.log(window.location.origin +'/'+REDIRECT_URL);*/
+            window.location.href = window.location.origin +'/'+REDIRECT_URL;
+        } else {
+            console.log("Login mislukt: " + textStatus);
+            console.log(jqXHR);
+        }
+
     }).fail(function (jqXHR, textStatus) {
         if(jqXHR.statusText === 'success') {
-            console.log(window.location.origin +'/'+redirect_url);
+            console.log(window.location.origin +'/'+REDIRECT_URL);
             /*window.location.href = window.location.origin +'/'+redirect_url;*/
         } else {
             console.log("Login mislukt: " + textStatus);

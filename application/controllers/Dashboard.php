@@ -12,8 +12,12 @@ class Dashboard extends CI_Controller {
      * executed when '/dashboard' is loaded
      */
     public function index() {
-        if(session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
-        die(var_dump($_SESSION));
+        @session_start();
+
+        if(!is_writable(session_save_path())) {
+            echo 'Session path'.session_save_path().'is not writable in PHP';
+        }
+
         if(!isset($_SESSION['useremail']) && !isset($_SESSION['userhash'])) {
             header('Location: /dashboard/login?redirect_url=dashboard/overview');
         }
@@ -25,6 +29,7 @@ class Dashboard extends CI_Controller {
 
         $data_content = array(
             'pretty_page_title' => 'Dashboard overzicht'
+            /*'pretty_page_title' => @$_SESSION['useremail']*/
         );
 
         $data_footer = array(
