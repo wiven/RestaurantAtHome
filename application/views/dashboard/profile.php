@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-        <div class="">
+        <div class="col-lg-12">
             <ul class="list-group clearfix">
                 <li class="list-group-item clearfix" id="info_resto">
                     <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">

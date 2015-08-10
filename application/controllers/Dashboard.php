@@ -12,7 +12,11 @@ class Dashboard extends CI_Controller {
      * executed when '/dashboard' is loaded
      */
     public function index() {
-        session_start();
+        if(session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
+        die(var_dump($_SESSION));
+        if(!isset($_SESSION['useremail']) && !isset($_SESSION['userhash'])) {
+            header('Location: /dashboard/login?redirect_url=dashboard/overview');
+        }
 
         $data_header = array(
             'page_title' => ' - Dashboard overzicht',
@@ -266,6 +270,29 @@ class Dashboard extends CI_Controller {
         $this->load->view('/dashboard/bugreport', $data_content);
         $this->load->view('/dashboard/common/footer', $data_footer);
     }*/
+
+    /**
+     * executed when '/logout' is loaded
+     */
+    public function login() {
+        $data_header = array(
+            'page_title' => ' - Login',
+            'additional_styles' => ''
+        );
+
+        $data_content = array(
+            'pretty_page_title' => 'Contacteer ons'
+        );
+
+        $data_footer = array(
+            'additional_scripts' => "<script src='".public_url()."js/jquery.md5.js'></script>
+            <script src='".public_url()."js/dashboardlogin.js'></script>"
+        );
+
+        $this->load->view('/dashboard/common/header', $data_header);
+        $this->load->view('/dashboard/login', $data_content);
+        $this->load->view('/dashboard/common/footer', $data_footer);
+    }
 
     /**
      * executed when '/logout' is loaded
