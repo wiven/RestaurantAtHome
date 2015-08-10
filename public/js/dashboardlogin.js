@@ -1,6 +1,6 @@
 const CALLBACK = "b81ba5e4af3691e5227d91cbda562e9bf8b88bb7e8c9a8e3a9938e4feee62f5a";
-/*const API_PREFIX = "http://apidev.restaurantathome.be/";*/
-const API_PREFIX = "http://localhost/RestaurantAtHomeAPI/";
+const API_PREFIX = "http://apidev.restaurantathome.be/";
+/*const API_PREFIX = "http://localhost/RestaurantAtHomeAPI/";*/
 const REDIRECT_URL = window.location.search.replace("?", "").split('=')[1];
 
 jQuery( document ).ready(function() {
@@ -25,9 +25,12 @@ jQuery( document ).ready(function() {
             } else {
                 jQuery('input[name="email"]').parent().addClass('has-error');
                 jQuery('#login_danger').removeClass('hidden');
+                jQuery('#login_danger .alert-danger').html('Ongeldige e-mail of ongeldig paswoord');
             }
         }).fail(function (jqXHR, textStatus) {
-            alert("Login mislukt: " + textStatus);
+            jQuery('input[name="email"]').parent().addClass('has-error');
+            jQuery('#login_danger').removeClass('hidden');
+            jQuery('#login_danger .alert-danger').html('Ongeldige e-mail of ongeldig paswoord');
         });
     });
 
@@ -169,7 +172,8 @@ window.fbAsyncInit = function() {
 function testAPI() {
    /* console.log('Welcome!  Fetching your information.... ');*/
     FB.api('/me', function(response) {
-        /*console.log('Successful login for: ' + response.name);*/
+        console.log('Successful login for: ' + response.name);
+        setUserHash('', response.email);
         /*document.getElementById('status').innerHTML =
          'Bedankt om in te loggen ' + response.name + '!';*/
     });
@@ -206,13 +210,20 @@ function fb_login(){
                     crossDomain: true,
                     xhrFields: { withCredentials: true }
                 }).done(function (msg) {
-                    if(msg.length != 0) {
-                        setUserHash(msg[0].hash, user_email);
-                        /*console.log(msg[0].hash);*/
-                        /*alert('Welkom '+user_email+'\nU bent nu ingelogd met Facebook!');*/
+                    if(msg !== false) {
+                        if((msg[0].hash).length != 0) {
+                            setUserHash(msg[0].hash, user_email);
+                            /*console.log(msg[0].hash);*/
+                            /*alert('Welkom '+user_email+'\nU bent nu ingelogd met Facebook!');*/
+                        } else {
+                            jQuery('input[name="email"]').parent().addClass('has-error');
+                            jQuery('#login_danger').removeClass('hidden');
+                            jQuery('#login_danger .alert-danger').html('Facebook-gebruiker niet gekend');
+                        }
                     } else {
                         jQuery('input[name="email"]').parent().addClass('has-error');
                         jQuery('#login_danger').removeClass('hidden');
+                        jQuery('#login_danger .alert-danger').html('Facebook-gebruiker niet gekend');
                     }
                 }).fail(function (jqXHR, textStatus) {
                     alert("Login mislukt: " + textStatus);
