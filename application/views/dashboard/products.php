@@ -98,9 +98,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-lg-12">
                     <form class="form-horizontal">
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam actie</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam product</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam actie">
+                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam product">
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
@@ -190,7 +190,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-sm-offset-2 col-sm-10">
                         <p class="help-block"><span style="color: #a94442; font-weight: bold;">&ast;</span> Verplicht in te vullen</p>
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Actie cre&euml;eren</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Product aanmaken</button>
                     </div>
                 </div>
             </div>

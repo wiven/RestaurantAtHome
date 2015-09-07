@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="row">
         <!-- START LOPENDE ACTIES -->
-        <?php for($i = 0; $i < 9; $i++) {
+        <?php for($i = 0; $i < 10; $i++) {
             echo '
         <div class="col-lg-3">
             <div class="panel panel-default">
@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
-                            <label class="col-sm-6 control-label" for="inputSuccess2"># slots/uur</label>
+                            <label class="col-sm-6 control-label" for="inputSuccess2"># slots</label>
                             <div class="col-sm-12">
                                 <a href="#" class="btn_slot_zero btn btn-warning btn-block clearfix">
                                     <span class="fa fa-eraser fa-fw"></span> 0 zetten

@@ -212,19 +212,19 @@
                 <!-- /.dropdown-alerts --
             </li>-->
             <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            <li>
+                <a title="Uitloggen" href="<?php echo public_url(); ?>../logout">
+                    Log uit <i class="fa fa-sign-out fa-fw"></i>  <!--<i class="fa fa-caret-down"></i>-->
                 </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="/dashboard/profile"><i class="fa fa-user fa-fw"></i>Profiel</a>
-                    </li>
-                    <!--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                <!--<ul class="dropdown-menu dropdown-user">
+                    <!--<li><a href="/dashboard/profile"><i class="fa fa-user fa-fw"></i>Profiel</a>
                     </li>-->
+                    <!--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    </li>--
                     <li class="divider"></li>
-                    <li><a href="<?php echo public_url(); ?>../logout"><i class="fa fa-sign-out fa-fw"></i> Uitloggen</a>
+                    <li><a href="<?php /*echo public_url(); */?>../logout"><i class="fa fa-sign-out fa-fw"></i> Uitloggen</a>
                     </li>
-                </ul>
+                </ul>-->
                 <!-- /.dropdown-user -->
             </li>
             <!-- /.dropdown -->

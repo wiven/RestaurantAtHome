@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="row">
         <!-- START nieuwe bestellingen -->
-        <div class="col-lg-12">
+        <div class="col-lg-6">
             <div class="panel panel-default panel-red">
                 <div class="panel-heading">
                     Nieuwe bestellingen
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </thead>
                             <tbody>
                             <?php
-                                for($i = 0; $i < 3; $i++) {
+                                for($i = 0; $i < 5; $i++) {
                                     echo '<tr class="order_detail_tr">
                                 <td>17/'.($i+10).'/2015 '.($i+10).'u00</td>
                                 <td>Wim Vandevenne</td>
@@ -74,13 +74,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- /.panel -->
         </div>
         <!-- END nieuwe bestellingen -->
-    </div>
-
-    <div class="row">
         <!-- START  bestellingen in verwerking -->
         <div class="col-lg-6">
-            <div class="panel panel-default panel-yellow">
-                <div class="panel-heading">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-primary">
                     Bestellingen in verwerking
                 </div>
                 <!-- /.panel-heading -->
@@ -125,11 +122,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- END  bestellingen in verwerking -->
 
-        <!-- START afgeronde bestellingen -->
+    </div>
+
+    <div class="row">
+        <!-- START af te leveren bestellingen -->
         <div class="col-lg-6">
-            <div class="panel panel-default panel-green">
+            <div class="panel panel-default panel-yellow">
                 <div class="panel-heading">
-                    Afgeronde bestellingen
+                    Af te leveren bestellingen
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -171,7 +171,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <!-- /.panel -->
         </div>
-        <!-- END afgeronde bestellingen -->
+        <!-- END af te leveren bestellingen -->
+        <!-- START afgeleverde bestellingen -->
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-green">
+                <div class="panel-heading">
+                    Afgeleverde bestellingen
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Afhaaltijdstip</th>
+                                <th>Naam klant</th>
+                                <th># items</th>
+                                <th># slots</th>
+                                <th>Prijs</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            for($i = 0; $i < 5; $i++) {
+                                echo '<tr class="order_detail_tr">
+                                <td>17/0'.($i+5).'/2015 '.($i+14).'u00</td>
+                                <td>Wim Vandevenne</td>
+                                <td>4</td>
+                                <td>31</td>
+                                <td>&euro; 24,85</td>
+                            </tr>';
+                            }
+
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center">
+                        <a href="/dashboard/orders/completed" class="btn btn-default btn-block">
+                            <span class="fa fa-plus-square"></span> Meer bestellingen weergeven ...
+                        </a>
+                    </div>
+                    <!-- /.table-responsive -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- END afgeleverde bestellingen -->
     </div>
     <!-- /#page-wrapper -->
 </div>

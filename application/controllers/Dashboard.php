@@ -15,11 +15,11 @@ class Dashboard extends CI_Controller {
         @session_start();
 
         if(!is_writable(session_save_path())) {
-            echo 'Session path'.session_save_path().'is not writable in PHP';
+            /*echo 'Session path'.session_save_path().'is not writable in PHP';*/
         }
 
         if(!isset($_SESSION['useremail']) && !isset($_SESSION['userhash'])) {
-            header('Location: /dashboard/login?redirect_url=dashboard/overview');
+            /*header('Location: /dashboard/login?redirect_url=dashboard/overview');*/
         }
 
         $data_header = array(
@@ -56,7 +56,7 @@ class Dashboard extends CI_Controller {
         $data_header = array(
             'page_title' => ' - Profiel',
             'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap-switch.min.css'>
-            <link rel='stylesheet' href='".public_url()."css/min/bootstrap-timepicker.min.css'>"
+            <link rel='stylesheet' href='".public_url()."css/bootstrap-timepicker.css'>"
         );
 
         $data_content = array(
@@ -65,7 +65,7 @@ class Dashboard extends CI_Controller {
 
         $data_footer = array(
             'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-switch.min.js'></script>
-            <script src='".public_url()."js/min/bootstrap-timepicker.min.js'></script>
+            <script src='".public_url()."js/bootstrap-timepicker.js'></script>
             <script src='".public_url()."js/dashboardprofile.js'></script>"
         );
 

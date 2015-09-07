@@ -235,15 +235,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Lijkt op</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Type</label>
                             <div class="col-sm-10">
                                 <select class="form-control">
                                     <option value=""></option>
-                                    <option value="">Voorgerechten</option>
-                                    <option value="">Hoofdgerechten</option>
-                                    <option value="">Desserts</option>
-                                    <option value="">Dranken</option>
-                                    <option value="">Extra's</option>
+                                    <option value="">OP = OP</option>
+                                    <option value="">Keuze van de chef</option>
+                                    <option value="">Happy hour</option>
                                 </select>
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
@@ -342,7 +340,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a href="#" class="btn btn-primary btn-sm col-sm-3">Producten selecteren</a>
                         </div>
 
-                        <div class="form-group has-feedback">
+                        <!--<div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Capaciteit</label>
                             <div class="col-sm-10">
 
@@ -414,7 +412,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                             </div>
-                        </div>
+                        </div>-->
                     </form>
                 </div>
             </div>

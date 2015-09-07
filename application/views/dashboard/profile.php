@@ -23,33 +23,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-            <a href="#" class="btn btn-primary form-control" id="set_today_active_btn">
-                <span class="fa fa-calendar-o fa-fw"></span>
-                Vandaag</a>
+        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
+            <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editContactModal" data-backdrop="static" title="Bewerk contactgegevens">
+                <span class="fa fa-edit fa-fw"></span>
+                Bewerk contactgegevens</a>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-            <a href="#" class="btn btn-primary form-control" id="set_today_active_btn">
-                <span class="fa fa-calendar-o fa-fw"></span>
-                Vandaag</a>
+        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
+            <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editCoverModal" data-backdrop="static" title="Bewerk coverfoto">
+                <span class="fa fa-edit fa-fw"></span>
+                Bewerk coverfoto</a>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-            <a href="#" class="btn btn-primary form-control" id="set_today_active_btn">
-                <span class="fa fa-calendar-o fa-fw"></span>
-                Vandaag</a>
+        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
+            <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editOpeningHoursModal" data-backdrop="static" title="Bewerk openingsuren">
+                <span class="fa fa-edit fa-fw"></span>
+                Bewerk openingsuren</a>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
+            <a href="#" class="btn btn-primary form-control" data-toggle="modal" id="edit_social_media" data-target="#editSocialModal" data-backdrop="static" title="Bewerk social media">
+                <span class="fa fa-edit fa-fw"></span>
+                Bewerk social media</a>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
             <a href="#" class="btn btn-primary form-control">
-                <span class="fa fa-plus fa-fw"></span>
-                Slot aanmaken</a>
+                <span class="fa fa-edit fa-fw"></span>
+                Bewerk sfeerfoto's</a>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
+            <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editPaymentsModal" data-backdrop="static" title="Bewerk betaalmogelijkheden">
+                <span class="fa fa-edit fa-fw"></span>
+                Bewerk betaalmogelijkheden</a>
         </div>
     </div>
 
     <div class="row">
-
-
-
         <div class="col-lg-12">
+            <h3>Preview voor de klanten</h3>
+
             <ul class="list-group clearfix">
                 <li class="list-group-item clearfix" id="info_resto">
                     <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
@@ -57,7 +68,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-right" id="important_info_resto">
-                        <a href="#" data-toggle="modal" data-target="#editContactModal" data-backdrop="static" title="Bewerk contactgegevens" data-><span class="fa fa-edit fa-fw fa-2x pull-left"></span></a>
                         <span class="fa fa-map-marker fa-fw"></span>IJzerfrontlaan 13, 8500 Kortrijk
                         <br /> +32 2 123 45 67
                         <br />
@@ -68,7 +78,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<span class="hidden_info_mobile">
 							Specialiteit: Ribbetjes<br />
 							Keuken: Belgisch<br /><br />
-                            <a href="#" data-toggle="modal" id="edit_social_media" data-target="#editSocialModal" data-backdrop="static" title="Bewerk social media" data-><span class="fa fa-edit fa-fw fa-2x pull-left"></span></a>
 							<span class="socials visible-lg-block">
 							   <span class="fa fa-facebook-square fa-2x pull-right"></span>
                                 <span class="fa fa-twitter-square fa-2x pull-right"></span>
@@ -79,12 +88,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center">
-                        <a href="#" id="edit_cover_photo" data-toggle="modal" data-target="#editCoverModal" data-backdrop="static" title="Bewerk coverfoto" data-><span class="fa fa-edit fa-fw fa-2x"></span></a>
                         <img id="logo_resto" class="img-responsive vcenter" src="http://www.restaurantfleurdelin.be/img/1.png">
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden_info_mobile">
-                        <a href="#" data-toggle="modal" data-target="#editOpeningHoursModal" data-backdrop="static" title="Bewerk openingsuren" data-><span class="fa fa-edit fa-fw fa-2x pull-right"></span></a>
                         <p>
                             Ma: 15:00 - 23:00
                             <br /> Di: 15:00 - 23:00
@@ -96,7 +103,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <br /> Zo: 12:00 - 00:00
                             <br />
                             <br />
-                            <a href="#" data-toggle="modal" data-target="#editPaymentsModal" data-backdrop="static" title="Bewerk betaalmogelijkheden" data-><span class="fa fa-edit fa-fw fa-2x pull-right"></span></a>
                             <span class="fa fa-credit-card fa-2x" title="Bancontact/Mister Cash/Maestro"></span>
                             <span class="fa fa-cc-visa fa-2x" title="VISA/MasterCard"></span>
                             <span class="fa fa-bitcoin fa-2x" title="Bitcoin"></span>

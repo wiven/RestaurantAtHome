@@ -17,7 +17,7 @@
                     echo '<a href="#" target="_blank" class="top_resto">
 			<div class="col-sm-6 col-md-3 col-lg-3">
 				<div class="thumbnail">
-					<img src="http://localhost:1500/overview-of-the-restaurant.jpg">
+					<img src="'. public_url() .'img/restaurant-thumbail-preview.jpg">
 					<div class="caption">
 						<h3 id="thumbnail-label">Kaai 17</h3>
 					</div>

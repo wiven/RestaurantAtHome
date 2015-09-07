@@ -307,7 +307,7 @@ table.dataTable thead .sorting:after {
 	background-color: #eee!important;
 }
 
-.show-grid {
+.show-grid, .row-grid {
 	margin: 15px 0;
 }
 

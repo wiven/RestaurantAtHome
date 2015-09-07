@@ -249,7 +249,7 @@ function fb_login(){
 function setUserHash(hash, email) {
     jQuery.ajax({
         method: "GET",
-        url: 'http://localhost:8888/login/',
+        url: window.location.origin + '/login/',
         data: { userhash: hash, useremail: email },
         dataType: "html",
         crossDomain: true,
