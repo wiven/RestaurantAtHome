@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-	<link rel="stylesheet" href="http://localhost:8888/public/css/restaurant-at-home-theme.css">
+	<link rel="stylesheet" href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css">
 	<style>
 		body {
 			padding-top: 50px;
@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-<script src="http://localhost:8888/public/js/min/bootstrap-3.3.2.min.js"></script>
+<script src="<?php echo public_url(); ?>js/min/bootstrap-3.3.2.min.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
