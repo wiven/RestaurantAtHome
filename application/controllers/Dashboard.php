@@ -24,7 +24,8 @@ class Dashboard extends CI_Controller {
 
         $data_header = array(
             'page_title' => ' - Dashboard overzicht',
-            'additional_styles' => ''
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/formValidation.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>"
         );
 
         $data_content = array(
@@ -33,7 +34,14 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => "<script src='".public_url()."js/cookie.js'></script>
+            <script src='".public_url()."js/base64.js'></script>
+            <script src='".public_url()."js/min/formValidation.min.js'></script>
+            <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
+            <script src='".public_url()."js/formValidation_nl_BE.js'></script>
+            <script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
+            <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
+            <script src='".public_url()."js/dashboardoverview.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);

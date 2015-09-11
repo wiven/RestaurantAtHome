@@ -7,11 +7,11 @@
 	</div>
 	<!-- /.row -->
 	<div class="row">
-		<div class="col-lg-12">
+		<div class="col-lg-12 hidden" id="new_order_box">
 			<div class="panel panel-default">
 				<div class="panel-heading pending-orders">
                     <a href="/dashboard/orders/new" id="new_orders_msg">
-                        <h4>U heeft <span class="order-number">3</span> nieuwe bestellingen</h4>
+                        <h4>U heeft <span id="new_order_count">0</span> nieuwe bestelling<span id="multiple_orders">en</span></h4>
                     </a>
 				</div>
 			</div>
@@ -26,7 +26,12 @@
 					</div>
 					<!-- /.panel-heading -->
 					<div class="panel-body">
-						<div class="table-responsive">
+                        <div class="alert alert-info text-center hidden" role="alert" id="no_promos_msg">
+                            <span class="fa fa-info-circle fa-fw"></span> Er zijn geen lopende acties<br />
+                            Klik <a href="/dashboard/actions">hier</a> om een actie aan te maken.
+                        </div>
+
+						<div class="table-responsive" id="active_promos">
 							<table class="table table-hover">
 								<thead>
 								<tr>
@@ -35,48 +40,7 @@
 									<th>#<span class="hidden-xs"> gebruikt</span></th>
 								</tr>
 								</thead>
-								<tbody>
-								<tr>
-									<td>OP = OP</td>
-									<td><span class="hidden-xs">T.e.m. </span>31/12/2015</td>
-									<td>
-										31
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-									</td>
-								</tr>
-								<tr>
-									<td>Weg is pech</td>
-									<td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
-									<td>
-										23
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-									</td>
-								</tr>
-								<tr>
-									<td>Suggestie van de chef</td>
-									<td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
-									<td>
-										7
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-									</td>
-								</tr>
-                                <tr>
-                                    <td>Weg is pech</td>
-                                    <td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
-                                    <td>
-                                        23
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Suggestie van de chef</td>
-                                    <td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
-                                    <td>
-                                        7
-                                        <a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                    </td>
-                                </tr>
-								</tbody>
+								<tbody id="active_promos_div"></tbody>
 							</table>
 						</div>
 						<div class="text-center">
@@ -99,7 +63,12 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <div class="table-responsive">
+                        <div class="alert alert-info text-center" role="alert" id="no_orders_msg">
+                            <span class="fa fa-info-circle fa-fw"></span> Er zijn vandaag geen bestellingen<br />
+                            Klik <a href="/dashboard/orders">hier</a> om alle bestellingen te zien.
+                        </div>
+
+                        <div class="table-responsive" id="todays_orders">
                             <table class="table table-hover">
                                 <thead>
                                 <tr>
@@ -109,38 +78,7 @@
                                     <th>Prijs</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr class="warning order_overview">
-                                    <td>16u30</td>
-                                    <td>Lesley Beunen</td>
-                                    <td>4</td>
-                                    <td>&euro; 64,99</td>
-                                </tr>
-                                <tr class="success order_overview">
-                                    <td>17u30</td>
-                                    <td>Wim Vandevenne</td>
-                                    <td>2</td>
-                                    <td>&euro; 24,69</td>
-                                </tr>
-                                <tr class="success order_overview">
-                                    <td>17u45</td>
-                                    <td>Thomas De Pauw</td>
-                                    <td>11</td>
-                                    <td>&euro; 164,46</td>
-                                </tr>
-                                <tr class="warning order_overview">
-                                    <td>19u30</td>
-                                    <td>Frederik De Roover</td>
-                                    <td>1</td>
-                                    <td>&euro; 8,50</td>
-                                </tr>
-                                <tr class="danger order_overview">
-                                    <td>19u30</td>
-                                    <td>Klant X</td>
-                                    <td>7</td>
-                                    <td>&euro; 64,99</td>
-                                </tr>
-                                </tbody>
+                                <tbody id="todays_orders_div"></tbody>
                             </table>
                         </div>
                         <div class="text-center">
@@ -154,7 +92,7 @@
                 </div>
                 <!-- /.panel -->
             </div>
-			<!-- /.col-lg-4 -->
+
 			<!-- Partners -->
 			<div class="col-lg-12">
 				<div class="panel panel-default">
@@ -163,20 +101,8 @@
 					</div>
 					<!-- /.panel-heading -->
 					<div class="panel-body">
-						<?php
-						for($i = 0; $i < 4; $i++) {
-							echo '<a href="#" class="top_resto">
-			<div class="col-sm-6 col-md-3 col-lg-3">
-				<div class="thumbnail">
-					<img src="'.public_url().'img/restaurant-thumbail-preview.jpg">
-					<div class="caption">
-						<h3 id="thumbnail-label">Kaai 17</h3>
-					</div>
-				</div>
-			</div>
-		</a>';
-						}
-						?>
+                        <div id="partners_div"></div>
+
 						<div class="col-lg-12">
 							<a href="/dashboard/partners" class="btn btn-default btn-block">Bekijk alle partners</a>
 						</div>
@@ -256,51 +182,50 @@
             </div>
             <div class="modal-body text-justify">
                 <div class="col-lg-12">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="promotionForm" type="POST">
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam actie</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam actie<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span></label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam actie">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <input type="text" class="form-control" id="PromotionName" name="PromotionName" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam actie">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Lijkt op</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Type<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span></label>
                             <div class="col-sm-10">
-                                <select class="form-control">
+                                <select class="form-control" name="PromotionType">
                                     <option value=""></option>
-                                    <option value="">Voorgerechten</option>
-                                    <option value="">Hoofdgerechten</option>
-                                    <option value="">Desserts</option>
-                                    <option value="">Dranken</option>
-                                    <option value="">Extra's</option>
+                                    <option value="2">OP = OP</option>
                                 </select>
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Geldig van</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Geldig van
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                            </label>
 
 
                             <div class="col-sm-4">
                                 <div class="form-group has-feedback clearfix">
                                     <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
-                                    <input type="text" id="action_start_date" type="text" class="form-control datepicker">
+                                    <input type="text" id="PromotionStartDate" name="PromotionStartDate" type="text" class="form-control datepicker">
                                 </div>
                             </div>
 
                             <div class="col-sm-2 text-center">
-                                <label class="control-label"><strong>tot</strong></label>
+                                <label class="control-label">
+                                    <strong>tot
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                    </strong></label>
                             </div>
 
                             <div class="col-sm-4">
                                 <div class="form-group has-feedback clearfix">
                                     <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
-                                    <input type="text" id="action_end_date" type="text" class="form-control datepicker">
+                                    <input type="text" id="PromotionEndDate" name="PromotionEndDate" type="text" class="form-control datepicker">
                                 </div>
                             </div>
                         </div>
@@ -310,25 +235,29 @@
                         </div>-->
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Type korting</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Type korting
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                            </label>
 
                             <div class="col-sm-5 form-group has-feedback">
                                 <div class="col-sm-12">
                                     <div class="radio">
                                         <label class="col-xs-6">
-                                            <input type="radio" name="reductionType" value="percentage" checked="checked" required="required"> %
+                                            <input type="radio" name="reductionType" value="Percentage" id="PromotionReductionType1" checked="checked" required="required"> %
                                         </label>
                                         <label class="col-xs-6">
-                                            <input type="radio" name="reductionType" value="euro" required="required"> €
+                                            <input type="radio" name="reductionType" value="Amount" id="PromotionReductionType2" required="required"> €
                                         </label>
                                     </div>
                                 </div>
                             </div>
 
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Hoeveelheid</label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Hoeveelheid
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                            </label>
 
                             <div class="col-sm-3 form-group has-feedback">
-                                <input type="number" min="0" step="1" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Hoeveelheid">
+                                <input type="number" min="0" step="0.1" class="form-control" id="PromotionReductionAmount" name="PromotionReductionAmount" aria-describedby="inputSuccess2Status" placeholder="Hoeveelheid">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
@@ -339,16 +268,17 @@
                                 <a href="#">?</a>
                             </label>
                             <div class="col-sm-10">
-                                <input type="number" min="0" step="1" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Aantal stempels">
+                                <input type="number" min="0" step="1" class="form-control" id="PromotionLoyaltyAmount" name="PromotionLoyaltyAmount" aria-describedby="inputSuccess2Status" placeholder="Aantal stempels">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Beschrijving</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" rows="5"></textarea>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Beschrijving
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                            </label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" rows="5" id="PromotionDescription" name="PromotionDescription"></textarea>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
@@ -359,93 +289,20 @@
                                 <span class="btn btn-success fileinput-button">
                                     <i class="glyphicon glyphicon-plus"></i>
                                     <span>Foto kiezen</span>
-                                    <input type="file" name="files[]">
+                                    <input type="file" name="PromotionPhoto">
                                 </span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Actieproducten</label>
-                            <div class="col-sm-7">
-                                <input type="email" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Actieproducten">
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Actieproduct
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="PromotionProduct" name="PromotionProduct" data-id="" aria-describedby="inputSuccess2Status" required="required" placeholder="Actieproduct">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
-                            <a href="#" class="btn btn-primary btn-sm col-sm-3">Producten selecteren</a>
-                        </div>
-
-                        <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Capaciteit</label>
-                            <div class="col-sm-10">
-
-
-                                <div class="col-sm-6 form-group has-feedback">
-                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Ma</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
-                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 form-group has-feedback">
-                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Vr</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
-                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 form-group has-feedback">
-                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Di</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
-                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 form-group has-feedback">
-                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Za</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
-                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 form-group has-feedback">
-                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Wo</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
-                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 form-group has-feedback">
-                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Zo</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
-                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 form-group has-feedback">
-                                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Do</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Capaciteit">
-                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
+                            <a href="#" class="btn btn-primary btn-sm col-sm-3">Product selecteren</a>
                         </div>
                     </form>
                 </div>
@@ -456,7 +313,7 @@
                     <div class="col-sm-offset-2 col-sm-10">
                         <p class="help-block"><span style="color: #a94442; font-weight: bold;">&ast;</span> Verplicht in te vullen</p>
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Wijzigingen opslaan</button>
+                        <input type="submit" class="btn btn-primary btn-lg" id="editPromotionBtn" value="Wijzigingen opslaan" />
                     </div>
                 </div>
             </div>

@@ -59,21 +59,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     Mijn producten
                 </div>
                 <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <?php
-                        for($i = 0; $i < 12; $i++) {
-                            echo '<a href="#" data-toggle="modal" data-title="Product bewerken" data-target="#newProductModal" data-backdrop="static" class="edit_product">
-			<div class="col-sm-6 col-md-3 col-lg-3">
-				<div class="thumbnail">
-					<img src="http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg">
-					<div class="caption">
-						<h3 id="thumbnail-label">Kaai 17</h3>
-					</div>
-				</div>
-			</div>
-		</a>';
-                        }
-                    ?>
+                <div class="panel-body" id="resto_products">
+                    <p class="text-center">
+                        <i class="fa-li fa fa-spinner fa-spin fa-5x"></i>
+                    </p>
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -100,9 +89,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam product</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam product">
+                                <input type="text" class="form-control" id="prodName" aria-describedby="prodNameStatus" required="required" placeholder="Naam product">
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                <span id="prodNameStatus" class="sr-only">(success)</span>
                             </div>
                         </div>
 
@@ -148,7 +137,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Beschrijving</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" rows="5"></textarea>
+                                <textarea class="form-control" rows="5" id="prodDescription"></textarea>
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
