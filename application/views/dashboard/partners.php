@@ -11,22 +11,13 @@
         <div class="row clearfix">
             <!-- /.col-lg-4 -->
             <!-- Partners -->
-            <div class="col-lg-12">
-                <?php
-                for($i = 0; $i < 10; $i++) {
-                    echo '<a href="#" target="_blank" class="top_resto">
-			<div class="col-sm-6 col-md-3 col-lg-3">
-				<div class="thumbnail">
-					<img src="'. public_url() .'img/restaurant-thumbail-preview.jpg">
-					<div class="caption">
-						<h3 id="thumbnail-label">Kaai 17</h3>
-					</div>
-				</div>
-			</div>
-		</a>';
-                }
-                ?>
+            <div class="col-lg-12 hidden" id="no_partners_msg">
+                <div class="alert alert-info text-center" role="alert">
+                    <span class="fa fa-info-circle fa-fw"></span> Er zijn geen partners te vinden<br />
+                    <a href="/dashboard/contact">Contacteer ons</a> om een partner toe te voegen.
+                </div>
             </div>
+            <div class="col-lg-12" id="partners_div"></div>
             <!-- Partners -->
         </div>
         <!-- /.row -->

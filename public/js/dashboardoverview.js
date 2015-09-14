@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.ajax({
-        method: "POST",
+        method: "GET",
         url: API_URL + '/dashboard/overview/' + resto_id,
         dataType: "jsonp",
         crossDomain: true,
@@ -8,6 +8,7 @@ $(document).ready(function () {
             withCredentials: true
         }
     }).done(function (msg) {
+        //console.log(msg);
         var newOrders = msg.newOrders;
         var activePromos = msg.activePromos;
         var openOrders = msg.openOrders;
@@ -32,8 +33,8 @@ $(document).ready(function () {
                     activePromos[index].usage = 0;
                 }
 
-                var end_date = new Date(activePromos[index].toDate);
-                end_date = pad(end_date.getDate(), 2) + '/' + pad((end_date.getMonth()+1), 2) + '/' + end_date.getFullYear();
+                var end_date = activePromos[index].toDate;
+                end_date = end_date.substr(8,2) + '/' + end_date.substr(5,2) + '/' + end_date.substr(0,4);
 
                 $('#active_promos_div').append('<tr><td>'+activePromos[index].name+'</td><td><span class="hidden-xs">T.e.m. </span>'+end_date+'</td><td>'+activePromos[index].usage+'<a href="#" data-toggle="modal" data-title="Actie wijzigen" data-target="#newActionModal" data-backdrop="static" data-id="'+activePromos[index].id+'" title="Actie wijzigen"><span class="fa fa-edit pull-right edit-action-icon"></span></a></td></tr>');
             });
@@ -55,8 +56,8 @@ $(document).ready(function () {
                     openOrders[index].items = 0;
                 }
 
-                var collection_hour = new Date(openOrders[index].orderDateTime);
-                collection_hour = pad(collection_hour.getHours(), 2) + 'u' + pad(collection_hour.getMinutes(), 2);
+                var collection_hour = openOrders[index].orderDateTime;
+                collection_hour = collection_hour.substr(11,2) + 'u' + collection_hour.substr(14,2);
 
                 $('#todays_orders_div').append('<tr class="warning order_overview"><td>'+collection_hour+'</td><td>'+openOrders[index].name+' '+openOrders[index].surname+'</td><td>'+openOrders[index].items+'</td><td>&euro; '+openOrders[index].amount+'</td></tr>');
             });
@@ -71,16 +72,18 @@ $(document).ready(function () {
         // checking partners
         if(partners.length !== 0) {
             $.each(partners, function(index, value) {
-                $('#partners_div').append('<a href="'+partners[index].url+'" target="_blank" class="top_resto"><div class="col-sm-6 col-md-3 col-lg-3"><div class="thumbnail"><img src="'+partners[index].photo+'"><div class="caption"><h3 id="thumbnail-label">'+partners[index].name+'</h3></div></div></div></a>');
+                if((partners[index].photo == 'null') || (partners[index].photo.length == 0)) {
+                    $('#partners_div').append('<a href="'+partners[index].url+'" target="_blank" class="top_resto"><div class="col-sm-6 col-md-3 col-lg-3"><div class="thumbnail"><img src="../public/img/partner-thumb.jpg"><div class="caption"><h3 id="thumbnail-label">'+partners[index].name+'</h3></div></div></div></a>');
+                } else {
+                    $('#partners_div').append('<a href="'+partners[index].url+'" target="_blank" class="top_resto"><div class="col-sm-6 col-md-3 col-lg-3"><div class="thumbnail"><img src="'+partners[index].photo+'"><div class="caption"><h3 id="thumbnail-label">'+partners[index].name+'</h3></div></div></div></a>');
+                }
             });
 
-            $('#new_order_count').text(msg.newOrders);
-
-            $('#no_promos_msg').addClass('hidden');
-            $('#active_promos').removeClass('hidden');
+            $('#no_partners_msg').addClass('hidden');
+            $('#partners_div').removeClass('hidden');
         } else {
-            $('#no_promos_msg').removeClass('hidden');
-            $('#active_promos').addClass('hidden');
+            $('#partners_div').addClass('hidden');
+            $('#no_partners_msg').removeClass('hidden');
         }
     }).fail(function (jqXHR, textStatus) {
         console.log(jqXHR);
@@ -199,242 +202,124 @@ $(document).ready(function () {
     })
     .on('success.form.fv', function(e) {
         e.preventDefault();
-        console.log('OK');
+        //console.log('OK');
 
-        var updated_promotion = Array();
+        var from = $('#PromotionStartDate').val();
+        var _from = from.substr(6,4)+'-'+from.substr(3,2)+'-'+from.substr(0,2);
 
-        updated_promotion['id'] = promotion_id,
-        updated_promotion['promotiontypeId'] = "2",
-        updated_promotion['restaurantId'] =  resto_id,
-        updated_promotion['name'] = $('#PromotionName').val(),
-        updated_promotion['productId'] = $('#PromotionProduct').attr('data-id'),
-        updated_promotion['fromDate'] = $('#PromotionStartDate').val(),
-        updated_promotion['toDate'] = $('#PromotionEndDate').val(),
-        updated_promotion['description'] = $('#PromotionDescription').val(),
-        updated_promotion['discountType'] = $('input[name="reductionType"]:checked').val(),
-        updated_promotion['discountAmount'] = $('#PromotionReductionAmount').val(),
-        updated_promotion['loyaltyPoints'] = $('#PromotionLoyaltyAmount').val()
+        var to = $('#PromotionEndDate').val();
+        var _to = to.substr(6,4)+'-'+to.substr(3,2)+'-'+to.substr(0,2);
 
-        console.log(updated_promotion);
+        var updated_promotion = {
+            'id': promotion_id,
+            'promotiontypeId': "2",
+            'restaurantId': resto_id,
+            'name': $('#PromotionName').val(),
+            'productId': $('#PromotionProduct').children(':selected').attr('value'),
+            'fromDate': _from,
+            'toDate': _to,
+            'description': $('#PromotionDescription').val(),
+            'discountType': $('input[name="reductionType"]:checked').val(),
+            'discountAmount': $('#PromotionReductionAmount').val(),
+            'loyaltyPoints': $('#PromotionLoyaltyAmount').val()
+        };
 
         $('input').removeClass('has-success');
-    });
-/*    $('#promotionForm').bootstrapValidator({
-        live: 'enabled',
-        message: 'This value is not valid',
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            PromotionName: {
-                message: 'The username is not valid',
-                validators: {
-                    notEmpty: {
-                        message: 'De actienaam mag niet leeg zijn'
-                    },
-                    stringLength: {
-                        min: 3,
-                        max: 45,
-                        message: 'De actienaam moet tussen 3 en 45 karakters lang zijn'
-                    },
-                    regexp: {
-                        regexp: /^[a-zA-Z0-9_\.]+$/,
-                        message: 'The username can only consist of alphabetical, number, dot and underscore'
-                    }
-                }
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": API_URL+"promotion",
+            "method": "PUT",
+            "headers": {
+                "content-type": "application/json"
             },
-            PromotionType: {
-                validators: {
-                    notEmpty: {
-                        message: 'Het type mag niet leeg zijn'
-                    }
-                }
-            },
-            PromotionStartDate: {
-                validators: {
-                    notEmpty: {
-                        message: 'De startdatum is vereist en mag niet leeg zijn'
-                    },
-                    date: {
-                        format: 'DD/MM/YYYY',
-                        message: 'Gelieve een juiste datum in te geven (DD/MM/YYYY)'
-                    }
-                }
-            },
-            PromotionEndDate: {
-                validators: {
-                    notEmpty: {
-                        message: 'De einddatum is vereist en mag niet leeg zijn'
-                    },
-                    date: {
-                        format: 'DD/MM/YYYY',
-                        message: 'Gelieve een juiste datum in te geven (DD/MM/YYYY)'
-                    }
-                }
-            },
-            reductionType: {
-                validators: {
-                    notEmpty: {
-                        message: 'Type korting mag niet leeg zijn'
-                    }
-                }
-            },
-            PromotionReductionAmount: {
-                validators: {
-                    notEmpty: {
-                        message: 'Hoeveelheid korting mag niet leeg zijn'
-                    },
-                    numeric: {
-                        message: 'Enkel cijfers ingeven aub',
-                        separator: ','
-                    },/!*
-                    digits: {
-                        message: 'Enkel cijfers ingeven aub',
-                        thousandsSeparator: '',
-                        decimalSeparator: '.'
-                    },*!/
-                    greaterThan: {
-                        value: 1,
-                        message: 'Minimum 1'
-                    },
-                    lessThan: {
-                        value: 100,
-                        message: 'Maximum 100'
-                    }
-                }
-            },
-            PromotionLoyaltyAmount: {
-                validators: {
-                    digits: {
-                        message: 'Enkel cijfers ingeven aub'
-                    },
-                    greaterThan: {
-                        value: 1,
-                        message: 'Minimum 1'
-                    }
-                }
-            },
-            PromotionDescription: {
-                validators: {
-                    stringlength: {
-                        max: 100,
-                        message: 'test'
-                    }
-                }
-            },
-            acceptTerms: {
-                validators: {
-                    notEmpty: {
-                        message: 'You have to accept the terms and policies'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'The email address is required and can\'t be empty'
-                    },
-                    emailAddress: {
-                        message: 'The input is not a valid email address'
-                    }
-                }
-            },
-            website: {
-                validators: {
-                    uri: {
-                        allowLocal: true,
-                        message: 'The input is not a valid URL'
-                    }
-                }
-            },
-            phoneNumberUS: {
-                validators: {
-                    phone: {
-                        message: 'The input is not a valid US phone number'
-                    }
-                }
-            },
-            phoneNumberUK: {
-                validators: {
-                    phone: {
-                        message: 'The input is not a valid UK phone number',
-                        country: 'GB'
-                    }
-                }
-            },
-            color: {
-                validators: {
-                    color: {
-                        type: ['hex', 'rgb', 'hsl', 'keyword'],
-                        message: 'Must be a valid %s color'
-                    }
-                }
-            },
-            colorAll: {
-                validators: {
-                    color: { }
-                }
-            },
-            zipCode: {
-                validators: {
-                    zipCode: {
-                        country: 'US',
-                        message: 'The input is not a valid US zip code'
-                    }
-                }
-            },
-            password: {
-                validators: {
-                    notEmpty: {
-                        message: 'The password is required and can\'t be empty'
-                    },
-                    identical: {
-                        field: 'confirmPassword',
-                        message: 'The password and its confirm are not the same'
-                    }
-                }
-            },
-            confirmPassword: {
-                validators: {
-                    notEmpty: {
-                        message: 'The confirm password is required and can\'t be empty'
-                    },
-                    identical: {
-                        field: 'password',
-                        message: 'The password and its confirm are not the same'
-                    }
-                }
-            },
-            ages: {
-                validators: {
-                    lessThan: {
-                        value: 100,
-                        inclusive: true,
-                        message: 'The ages has to be less than 100'
-                    },
-                    greaterThan: {
-                        value: 10,
-                        inclusive: false,
-                        message: 'The ages has to be greater than or equals to 10'
-                    }
-                }
-            }
+            "processData": false,
+            "data": JSON.stringify(updated_promotion)
         }
-    });*/
+
+        //console.log(JSON.stringify(updated_promotion));
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+
+        var promotionProduct = $('#PromotionProduct').val();
+
+        if(promotionProduct.length != 0) {
+
+            $.ajax({
+                method: "GET",
+                url: API_URL + 'product/' + promotionProduct,
+                dataType: "jsonp",
+                crossDomain: true,
+                xhrFields: {
+                    withCredentials: true
+                }
+            }).done(function (msg) {
+                var updated_product = {
+                    'id': promotionProduct,
+                    'restaurantId': msg.restaurantId,
+                    'producttypeId': msg.producttypeId,
+                    'name': msg.name,
+                    'description': msg.description,
+                    'promotionId': promotion_id,
+                    'price': msg.price,
+                    'slots': msg.slots
+                };
+
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": API_URL+"product",
+                    "method": "PUT",
+                    "headers": {
+                        "content-type": "application/json"
+                    },
+                    "processData": false,
+                    "data": JSON.stringify(updated_product)
+                }
+
+                console.log(JSON.stringify(updated_product));
+
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                });
+            }).fail(function (jqXHR, textStatus) {
+                console.log(jqXHR);
+                alert("Request failed: " + textStatus);
+            });
+        }
+    });
+
+    $('#PromotionType').chosen({
+        disable_search_threshold: 5,
+        no_results_text: 'Oeps, niets gevonden!',
+        placeholder_text_single: 'Kies een type',
+        search_contains: true,
+        width: '100%'
+    });
+
+    $('#PromotionProduct').chosen({
+        disable_search_threshold: 0,
+        no_results_text: 'Oeps, niets gevonden!',
+        placeholder_text_single: 'Kies een product',
+        search_contains: true,
+        width: '100%'
+    });
 });
 
 var product_html = '';
 var resto_id = '5';
 var promotion_id = '';
 
-const API_URL = 'http://localhost/RestaurantAtHomeAPI/';
+//const API_URL = 'http://localhost/RestaurantAtHomeAPI/';
+const API_URL = 'http://playground.restaurantathome.be/api/';
 
 function check_new_orders(restoId) {
     $.ajax({
         method: "POST",
-        url: API_URL + '/dashboard/neworders/' + restoId,
+        url: API_URL + 'dashboard/neworders/' + restoId,
         dataType: "jsonp",
         crossDomain: true,
         xhrFields: {
@@ -477,6 +362,8 @@ function get_data(method, type, id) {
 }
 
 function pad(num, size) {
+    console.log('num: '+num);
+    console.log('size: '+size);
     var s = num+"";
     while (s.length < size) s = "0" + s;
     return s;
@@ -501,6 +388,8 @@ $('#newActionModal').on('show.bs.modal', function(e) {
     }).done(function (msg) {
         promotion = msg;
 
+        //console.log(promotion);
+
         var fromDate = new Date(promotion.fromDate);
         fromDate = pad(fromDate.getDate(), 2) + '/' + pad((fromDate.getMonth()+1), 2) + '/' + fromDate.getFullYear();
 
@@ -508,11 +397,6 @@ $('#newActionModal').on('show.bs.modal', function(e) {
         toDate = pad(toDate.getDate(), 2) + '/' + pad((toDate.getMonth()+1), 2) + '/' + toDate.getFullYear();
 
         $('#PromotionName').val(promotion.name);
-
-        var opt = $('option[value='+promotion.promotiontypeId+']'), html = $('<div>').append(opt.clone()).html();
-        html = html.replace(/\>/, ' selected="selected">');
-        opt.replaceWith(html);
-
         $('#PromotionStartDate').val(fromDate);
         $('#PromotionEndDate').val(toDate);
 
@@ -528,32 +412,62 @@ $('#newActionModal').on('show.bs.modal', function(e) {
         $('#PromotionLoyaltyAmount').val(promotion.loyaltyPoints);
         $('#PromotionDescription').val(promotion.description);
 
-        if(promotion.products.length !== 0) {
-            $('#PromotionProduct').val(promotion.products[0].name);
-            $('#PromotionProduct').attr('data-id', promotion.products[0].id);
-        } else {
-            $('#PromotionProduct').val('');
-        }
+        // get all the products of the restaurant, to choose from
+        $.ajax({
+            method: "GET",
+            url: API_URL + '/restaurant/product/all/' + resto_id,
+            dataType: "jsonp",
+            crossDomain: true,
+            xhrFields: {
+                withCredentials: true
+            }
+        }).done(function (msg) {
+            console.log('products');
+            var select_to_add = $('#PromotionProduct');
+
+            select_to_add.empty();
+            select_to_add.append('<option value=""></option>');
+
+            $.each(msg, function(index, item) {
+                select_to_add.append($('<option></option>').val(item.id).html(item.name));
+
+            });
+
+            if(promotion.products.length !== 0) {
+                $('#PromotionProduct').val(promotion.products[0].id);
+            }
+
+            $('#PromotionProduct').trigger('chosen:updated');
+        }).fail(function (jqXHR, textStatus) {
+            console.log(jqXHR);
+            alert("Request failed: " + textStatus);
+        });
     }).fail(function (jqXHR, textStatus) {
         alert("Request failed: " + textStatus);
     });
 
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this);
     modal.find('.modal-title').text(title);
-    //modal.find('.modal-body input').val(title);
 
 
 });
 
 $('#newActionModal').on('hide.bs.modal', function(e) {
     $('#editPromotionBtn').removeClass('disabled');
+    $('#editPromotionBtn').prop('disabled', false);
     $('#promotionForm').data('formValidation').resetForm();
+    $('#PromotionType').children().remove();
+    $('#PromotionProduct').children().remove();
 });
 
 $('#editPromotionBtn').on('click', function(evt) {
     evt.preventDefault();
+    $('body').css('opacity', 0.5);
     $(this).addClass('disabled');
+    $(this).prop('disabled', true);
     $('#promotionForm').submit();
+    setTimeout(function() {
+        $('body').css('opacity', 1);
+        $('#newActionModal').modal('hide');
+    }, 1500);
 });

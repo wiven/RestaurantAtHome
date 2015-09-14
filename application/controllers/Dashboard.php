@@ -25,6 +25,7 @@ class Dashboard extends CI_Controller {
         $data_header = array(
             'page_title' => ' - Dashboard overzicht',
             'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/formValidation.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/min/chosen.min.css'>
             <link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>"
         );
 
@@ -36,6 +37,7 @@ class Dashboard extends CI_Controller {
         $data_footer = array(
             'additional_scripts' => "<script src='".public_url()."js/cookie.js'></script>
             <script src='".public_url()."js/base64.js'></script>
+            <script src='".public_url()."js/min/jquery.chosen.min.js'></script>
             <script src='".public_url()."js/min/formValidation.min.js'></script>
             <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
             <script src='".public_url()."js/formValidation_nl_BE.js'></script>
@@ -89,7 +91,9 @@ class Dashboard extends CI_Controller {
     public function products() {
         $data_header = array(
             'page_title' => ' - Producten',
-            'additional_styles' => ''
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/formValidation.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/min/chosen.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/sweetalert.css'>"
         );
 
         $data_content = array(
@@ -97,7 +101,12 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => "<script src='".public_url()."js/dashboardproducts.js'></script>"
+            'additional_scripts' => "<script src='".public_url()."js/min/jquery.chosen.min.js'></script>
+            <script src='".public_url()."js/min/formValidation.min.js'></script>
+            <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
+            <script src='".public_url()."js/formValidation_nl_BE.js'></script>
+            <script src='".public_url()."js/sweetalert.js'></script>
+            <script src='".public_url()."js/dashboardproducts.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
@@ -229,7 +238,7 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => "<script src='".public_url()."js/dashboardpartners.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);

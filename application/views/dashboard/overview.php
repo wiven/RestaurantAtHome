@@ -101,6 +101,10 @@
 					</div>
 					<!-- /.panel-heading -->
 					<div class="panel-body">
+                        <div class="alert alert-info text-center hidden" role="alert" id="no_partners_msg">
+                            <span class="fa fa-info-circle fa-fw"></span> Er zijn geen partners te vinden<br />
+                            <a href="/dashboard/contact">Contacteer ons</a> om een partner toe te voegen.
+                        </div>
                         <div id="partners_div"></div>
 
 						<div class="col-lg-12">
@@ -184,7 +188,7 @@
                 <div class="col-lg-12">
                     <form class="form-horizontal" id="promotionForm" type="POST">
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam actie<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span></label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam actie<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span></label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="PromotionName" name="PromotionName" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam actie">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
@@ -192,9 +196,9 @@
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Type<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span></label>
+                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Type<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span></label>
                             <div class="col-sm-10">
-                                <select class="form-control" name="PromotionType">
+                                <select class="form-control chosen-select" id="PromotionType" name="PromotionType">
                                     <option value=""></option>
                                     <option value="2">OP = OP</option>
                                 </select>
@@ -204,7 +208,7 @@
 
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Geldig van
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
                             </label>
 
 
@@ -218,7 +222,7 @@
                             <div class="col-sm-2 text-center">
                                 <label class="control-label">
                                     <strong>tot
-                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
                                     </strong></label>
                             </div>
 
@@ -236,7 +240,7 @@
 
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Type korting
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
                             </label>
 
                             <div class="col-sm-5 form-group has-feedback">
@@ -253,7 +257,7 @@
                             </div>
 
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Hoeveelheid
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
                             </label>
 
                             <div class="col-sm-3 form-group has-feedback">
@@ -275,7 +279,7 @@
 
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Beschrijving
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
                             </label>
                             <div class="col-sm-10">
                                 <textarea class="form-control" rows="5" id="PromotionDescription" name="PromotionDescription"></textarea>
@@ -296,13 +300,15 @@
 
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Actieproduct
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
                             </label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="PromotionProduct" name="PromotionProduct" data-id="" aria-describedby="inputSuccess2Status" required="required" placeholder="Actieproduct">
+                            <div class="col-sm-10">
+                                <select class="form-control chosen-select" id="PromotionProduct" name="PromotionProduct">
+                                    <option value=""></option>
+                                    <option value="2">OP = OP</option>
+                                </select>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
-                            <a href="#" class="btn btn-primary btn-sm col-sm-3">Product selecteren</a>
                         </div>
                     </form>
                 </div>
@@ -316,6 +322,19 @@
                         <input type="submit" class="btn btn-primary btn-lg" id="editPromotionBtn" value="Wijzigingen opslaan" />
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal loading -->
+<div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content clearfix">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body text-center clearfix">
+                <span class="fa fa-spinner fa-5x fa-pulse"></span>
             </div>
         </div>
     </div>
