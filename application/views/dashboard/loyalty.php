@@ -19,195 +19,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-lg-12">
             <h1 class="page-header"><?php echo (isset($pretty_page_title) ? $pretty_page_title : '') ?></h1>
         </div>
-        <!-- /.col-lg-12 -->
-        <div class="col-xs-12 text-right" id="col_new_action">
-            <a href="#" data-toggle="modal" data-title="Nieuwe actie aanmaken" data-target="#newActionModal" data-backdrop="static" class="btn btn-primary btn-lg" id="btn_new_action">
-                <span class="fa fa-plus"></span>
-                Nieuwe actie
-            </a>
-        </div>
     </div>
 
     <div class="row">
-        <!-- START LOPENDE ACTIES -->
-        <div class="col-lg-6">
-            <div class="panel panel-default panel-green">
-                <div class="panel-heading">
-                    Lopende acties
-                </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs">T.e.m. </span>31/12/2015</td>
-                                <td>
-                                    31
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs">T.e.m. </span>30/09/2015</td>
-                                <td>
-                                    23
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs">T.e.m. </span>15/10/2015</td>
-                                <td>
-                                    7
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="text-center">
-                        <a href="/dashboard/actions/current" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a>
-                    </div>
-                    <!-- /.table-responsive -->
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-justify">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        <!-- END LOPENDE ACTIES -->
 
-        <!-- START AANKOMENDE ACTIES -->
-        <div class="col-lg-6">
-            <div class="panel panel-default panel-yellow">
-                <div class="panel-heading">
-                    Aankomende acties
-                </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs">Start </span>31/10/2015</td>
-                                <td>
-                                    31
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs">Start </span>30/09/2015</td>
-                                <td>
-                                    23
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs">Start </span>15/10/2015</td>
-                                <td>
-                                    7
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="text-center">
-                        <a href="/dashboard/actions/future" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a>
-                    </div>
-                    <!-- /.table-responsive -->
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-        </div>
-        <!-- END AANKOMENDE ACTIES -->
-    </div>
-
-    <div class="row">
-        <!-- START VERLOPEN ACTIES -->
         <div class="col-lg-12">
-            <div class="panel panel-default panel-red">
-                <div class="panel-heading">
-                    Verlopen acties
-                </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>Naam actie</th>
-                                <th>Looptijd</th>
-                                <th># gebruikt</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>OP = OP</td>
-                                <td><span class="hidden-xs">T.e.m.</span>31/12/2014</td>
-                                <td>
-                                    31
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Weg is pech</td>
-                                <td><span class="hidden-xs">T.e.m. </span>30/06/2015</td>
-                                <td>
-                                    23
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Suggestie van de chef</td>
-                                <td><span class="hidden-xs">T.e.m. </span>15/02/2015</td>
-                                <td>
-                                    7
-                                    <a href="#" data-toggle="modal" data-title="Actie bewerken" data-target="#newActionModal" data-backdrop="static" title="Actie bewerken"><span class="fa fa-edit pull-right edit-action-icon"></span></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+            <form class="form-horizontal">
+                <div class="form-group has-feedback">
+                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Datum geldig</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" red="" placeholder="Naam">
+                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
                     </div>
-                    <div class="text-center">
-                        <a href="/dashboard/actions/expired" class="btn btn-default btn-block">
-                            <span class="fa fa-plus-square"></span> Meer acties weergeven ...
-                        </a><!--
-                        <a href="#" class="btn btn-default load_more_actions_btn">
-                            <span class="fa fa-plus-square"></span>
-                            Meer acties weergeven ...
-                        </a>-->
-                    </div>
-                    <!-- /.table-responsive -->
                 </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
+
+                <div class="form-group has-feedback">
+                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Stempels</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Stempels volle kaart">
+                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                    </div>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Cadeau</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="5" placeholder="Volle klantenkaart geeft de klant recht op..."></textarea>
+                        <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <p class="help-block pull-right"><span style="color: #a94442; font-weight: bold;">*</span> Verplicht in te vullen</p>
+                        <button type="submit" class="btn btn-primary">Opslaan</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <!-- END VERLOPEN ACTIES -->
+
+
     </div>
     <!-- /#page-wrapper -->
 </div>
