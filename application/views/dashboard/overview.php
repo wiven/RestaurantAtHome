@@ -16,45 +16,15 @@
 				</div>
 			</div>
 		</div>
+
+        <!--<div class="alert alert-info text-center clearfix">
+            <span class="fa fa-info-circle fa-fw fa-2x"></span><br />
+            Bericht aan Kevin: De menu-items aan de linkerkant zitten in fase 1 van uitrol van de test. <br />
+            Voorziene datum is (zoals afgesproken) begin week 39.
+        </div>-->
+
 		<!-- /.row -->
 		<div class="row clearfix">
-            <!-- LOPENDE ACTIES -->
-			<div class="col-lg-6">
-				<div class="panel panel-default" id="panel_lopende_acties_overview">
-					<div class="panel-heading">
-						<i class="fa fa-fire fa-fw"></i> Lopende acties
-					</div>
-					<!-- /.panel-heading -->
-					<div class="panel-body">
-                        <div class="alert alert-info text-center hidden" role="alert" id="no_promos_msg">
-                            <span class="fa fa-info-circle fa-fw"></span> Er zijn geen lopende acties<br />
-                            Klik <a href="/dashboard/actions">hier</a> om een actie aan te maken.
-                        </div>
-
-						<div class="table-responsive" id="active_promos">
-							<table class="table table-hover">
-								<thead>
-								<tr>
-									<th>Naam actie</th>
-									<th>Looptijd</th>
-									<th>#<span class="hidden-xs"> gebruikt</span></th>
-								</tr>
-								</thead>
-								<tbody id="active_promos_div"></tbody>
-							</table>
-						</div>
-						<div class="text-center">
-							<a href="/dashboard/actions" class="btn btn-default btn-block">
-								<span class="fa fa-plus-square"></span> Meer acties weergeven ...
-							</a>
-						</div>
-						<!-- /.table-responsive -->
-					</div>
-					<!-- /.panel-body -->
-				</div>
-				<!-- /.panel -->
-			</div>
-
 			<!-- BESTELLINGEN VANDAAG -->
             <div class="col-lg-6">
                 <div class="panel panel-default" id="panel_lopende_acties_overview">
@@ -65,7 +35,8 @@
                     <div class="panel-body">
                         <div class="alert alert-info text-center" role="alert" id="no_orders_msg">
                             <span class="fa fa-info-circle fa-fw"></span> Er zijn vandaag geen bestellingen<br />
-                            Klik <a href="/dashboard/orders">hier</a> om alle bestellingen te zien.
+                            Klik <a href="#">hier</a> om alle bestellingen te zien.
+<!--                            Klik <a href="/dashboard/orders">hier</a> om alle bestellingen te zien.-->
                         </div>
 
                         <div class="table-responsive" id="todays_orders">
@@ -82,8 +53,48 @@
                             </table>
                         </div>
                         <div class="text-center">
-                            <a href="/dashboard/orders" class="btn btn-default btn-block">
+                            <a href="#" class="btn btn-default btn-block">
+<!--                            <a href="/dashboard/orders" class="btn btn-default btn-block">-->
                                 <span class="fa fa-plus-square"></span> Alle bestellingen weergeven ...
+                            </a>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+
+            <!-- LOPENDE ACTIES -->
+            <div class="col-lg-6">
+                <div class="panel panel-default" id="panel_lopende_acties_overview">
+                    <div class="panel-heading">
+                        <i class="fa fa-fire fa-fw"></i> Lopende acties
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="alert alert-info text-center hidden" role="alert" id="no_promos_msg">
+                            <span class="fa fa-info-circle fa-fw"></span> Er zijn geen lopende acties<br />
+                            Klik <a href="#">hier</a> om een actie aan te maken.
+<!--                            Klik <a href="/dashboard/actions">hier</a> om een actie aan te maken.-->
+                        </div>
+
+                        <div class="table-responsive" id="active_promos">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Naam actie</th>
+                                    <th>Looptijd</th>
+                                    <th>#<span class="hidden-xs"> gebruikt</span></th>
+                                </tr>
+                                </thead>
+                                <tbody id="active_promos_div"></tbody>
+                            </table>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-default btn-block">
+<!--                            <a href="/dashboard/actions" class="btn btn-default btn-block">-->
+                                <span class="fa fa-plus-square"></span> Meer acties weergeven ...
                             </a>
                         </div>
                         <!-- /.table-responsive -->

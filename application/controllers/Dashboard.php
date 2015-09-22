@@ -66,7 +66,9 @@ class Dashboard extends CI_Controller {
         $data_header = array(
             'page_title' => ' - Profiel',
             'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap-switch.min.css'>
-            <link rel='stylesheet' href='".public_url()."css/bootstrap-timepicker.css'>"
+            <link rel='stylesheet' href='".public_url()."css/min/formValidation.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/bootstrap-timepicker.css'>
+            <link rel='stylesheet' href='".public_url()."css/sweetalert.css'>"
         );
 
         $data_content = array(
@@ -74,8 +76,13 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-switch.min.js'></script>
+            'additional_scripts' => "<script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
+            <script src='".public_url()."js/min/bootstrap-switch.min.js'></script>
             <script src='".public_url()."js/bootstrap-timepicker.js'></script>
+            <script src='".public_url()."js/min/formValidation.min.js'></script>
+            <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
+            <script src='".public_url()."js/sweetalert.js'></script>
+            <script src='".public_url()."js/formValidation_nl_BE.js'></script>
             <script src='".public_url()."js/dashboardprofile.js'></script>"
         );
 
@@ -106,6 +113,7 @@ class Dashboard extends CI_Controller {
             <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
             <script src='".public_url()."js/formValidation_nl_BE.js'></script>
             <script src='".public_url()."js/sweetalert.js'></script>
+            <script src='".public_url()."js/jquery.matchHeight.js'></script>
             <script src='".public_url()."js/dashboardproducts.js'></script>"
         );
 
@@ -206,12 +214,12 @@ class Dashboard extends CI_Controller {
      */
     public function loyalty() {
         $data_header = array(
-            'page_title' => ' - Loyalty acties',
+            'page_title' => ' - Loyalty actie',
             'additional_styles' => ''
         );
 
         $data_content = array(
-            'pretty_page_title' => 'Loyalty acties (klantenkaart)'
+            'pretty_page_title' => 'Loyalty actie'
         );
 
         $data_footer = array(
@@ -238,7 +246,8 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => "<script src='".public_url()."js/dashboardpartners.js'></script>"
+            'additional_scripts' => "<script src='".public_url()."js/jquery.matchHeight.js'></script>
+            <script src='".public_url()."js/dashboardpartners.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
