@@ -33,18 +33,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-lg-6">
                 <div class="form-group has-feedback clearfix">
                     <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
-                    <input type="search" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Product zoeken ...">
+                    <input type="search" class="form-control" id="productSearch" aria-describedby="inputSuccess2Status" placeholder="Product zoeken ...">
                     <span id="inputSuccess2Status" class="sr-only">(search)</span>
                 </div>
             </div>
             <div class="col-lg-6">
-                <select class="form-control">
+                <select class="form-control" id="productCategorieSearch">
                     <option value="">Kies de productcategorie</option>
-                    <option value="">Voorgerechten</option>
-                    <option value="">Hoofdgerechten</option>
-                    <option value="">Desserts</option>
-                    <option value="">Dranken</option>
-                    <option value="">Extra's</option>
+                    <option value="1">Voorgerechten</option>
+                    <option value="2">Hoofdgerechten</option>
+                    <option value="3">Desserts</option>
+                    <option value="4">Dranken</option>
+                    <option value="5">Extra's</option>
                 </select>
             </div>
 
@@ -60,9 +60,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body" id="resto_products">
-                    <p class="text-center">
-                        <i class="fa-li fa fa-spinner fa-spin fa-5x"></i>
-                    </p>
+                    <div class="row" id="loaderDiv" style="margin: 80px;">
+                        <span class="fa fa-spinner fa-spin fa-5x fa-fw" style="width: 100%; z-index: 9999;"></span>
+                    </div>
                 </div>
                 <!-- /.panel-body -->
             </div>
@@ -163,21 +163,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
                             </label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="ProductRelatedProducts" name="ProductRelatedProducts" tabindex="8" multiple>
-                                    <option value=""></option>
-                                    <option value="soep1">Soep 1</option>
-                                    <option value="soep2">Soep 2</option>
-                                    <option value="soep3">Soep 3</option>
-                                    <option value="soep1">Soep 1</option>
-                                    <option value="soep2">Soep 2</option>
-                                    <option value="soep3">Soep 3</option>
-                                    <option value="soep1">Soep 1</option>
-                                    <option value="soep2">Soep 2</option>
-                                    <option value="soep3">Soep 3</option>
-                                    <option value="soep1">Soep 1</option>
-                                    <option value="soep2">Soep 2</option>
-                                    <option value="soep3">Soep 3</option>
-                                </select>
+                                <select class="form-control" id="ProductRelatedProducts" name="ProductRelatedProducts" tabindex="8" multiple></select>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
@@ -193,7 +179,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <button class="btn btn-sm btn-danger pull-left" id="ProductDelete">
                             <span class="fa fa-trash-o fa-2x fa-fw"></span>
                         </button>
-                        <button type="submit" class="btn btn-primary btn-lg">Product aanmaken</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="productModalSubmit">Product aanmaken</button>
                     </div>
                 </div>
             </div>
