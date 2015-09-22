@@ -21,92 +21,104 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- /.col-lg-12 -->
     </div>
-
     <div class="row">
         <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editContactModal" data-backdrop="static" title="Bewerk contactgegevens">
-                <span class="fa fa-edit fa-fw"></span>
+                <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
                 Bewerk contactgegevens</a>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editCoverModal" data-backdrop="static" title="Bewerk coverfoto">
-                <span class="fa fa-edit fa-fw"></span>
+                <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
                 Bewerk coverfoto</a>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editOpeningHoursModal" data-backdrop="static" title="Bewerk openingsuren">
-                <span class="fa fa-edit fa-fw"></span>
+                <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
                 Bewerk openingsuren</a>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
-            <a href="#" class="btn btn-primary form-control" data-toggle="modal" id="edit_social_media" data-target="#editSocialModal" data-backdrop="static" title="Bewerk social media">
-                <span class="fa fa-edit fa-fw"></span>
+            <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editSocialModal" data-backdrop="static" title="Bewerk social media">
+                <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
                 Bewerk social media</a>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
-            <a href="#" class="btn btn-primary form-control">
-                <span class="fa fa-edit fa-fw"></span>
+            <a href="#" class="btn btn-primary form-control" disabled="disabled">
+                <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
                 Bewerk sfeerfoto's</a>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editPaymentsModal" data-backdrop="static" title="Bewerk betaalmogelijkheden">
-                <span class="fa fa-edit fa-fw"></span>
+                <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
                 Bewerk betaalmogelijkheden</a>
         </div>
     </div>
+    <div class="row" id="loaderDiv" style="margin: 80px;">
+        <span class="fa fa-spinner fa-spin fa-5x fa-fw" style="width: 100%; z-index: 9999;"></span>
+    </div>
 
-    <div class="row">
+    <div class="row hidden" id="restoInfoDiv">
         <div class="col-lg-12">
             <h3>Preview voor de klanten</h3>
 
             <ul class="list-group clearfix">
                 <li class="list-group-item clearfix" id="info_resto">
-                    <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
-                        <img id="logo_resto" class="img-responsive" src="http://www.restaurantfleurdelin.be/img/1.png">
+
+                    <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center" id="restoLogoDiv">
+<!--                        <img id="logo_resto" class="img-responsive" src="http://www.restaurantfleurdelin.be/img/1.png">-->
+                        <img id="logo_resto" class="img-responsive restoLogo" src="http://wiven.be/logo.png">
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-right" id="important_info_resto">
-                        <span class="fa fa-map-marker fa-fw"></span>IJzerfrontlaan 13, 8500 Kortrijk
-                        <br /> +32 2 123 45 67
+                        <a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal" data-backdrop="static">
+                            <span class="fa fa-map-marker fa-fw"></span>
+                            <span class="restoAddress">IJzerfrontlaan 13, 8500 Kortrijk</span>
+                        </a>
+                        <br /><span class="restoPhone">+32 2 123 45 67</span>
                         <br />
-                        info@restaurantathome.be
+                        <span class="restoEmail">info@restaurantathome.be</span>
                         <br />
-                        http://restaurantathome.be
+                        <span class="restoUrl">http://restaurantathome.be</span>
                         <br />
 						<span class="hidden_info_mobile">
-							Specialiteit: Ribbetjes<br />
-							Keuken: Belgisch<br /><br />
+							<span class="restoSpecialtyDiv">Specialiteit: <span class="restoSpecialty">Ribbetjes</span><br /></span>
+							Keuken: <span class="restoKitchen">Belgisch</span><br /><br />
 							<span class="socials visible-lg-block">
-							   <span class="fa fa-facebook-square fa-2x pull-right"></span>
-                                <span class="fa fa-twitter-square fa-2x pull-right"></span>
-                                <span class="fa fa-instagram fa-2x pull-right"></span>
-                                <span class="fa fa-picture-o fa-2x pull-right"></span>
+                                <a id="facebookLogo" class="hidden" title="Facebook" href="" target="_blank"><span class="fa fa-facebook-square fa-2x pull-right"></span></a>
+                                <a id="twitterLogo" class="hidden" title="Twitter" href="" target="_blank"><span class="fa fa-twitter-square fa-2x pull-right"></span></a>
+                                <a id="instagramLogo" class="hidden" title="Instagram" href="" target="_blank"><span class="fa fa-instagram fa-2x pull-right"></span></a>
+                                <a id="photosLogo" class="hidden" title="Sfeerfoto's" href="" target="_blank"><span class="fa fa-picture-o fa-2x pull-right"></span></a>
 						    </span>
 						</span>
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center">
-                        <img id="logo_resto" class="img-responsive vcenter" src="http://www.restaurantfleurdelin.be/img/1.png">
+                        <img id="logo_resto" class="img-responsive vcenter restoLogo" src="http://www.restaurantfleurdelin.be/img/1.png">
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden_info_mobile">
                         <p>
-                            Ma: 15:00 - 23:00
-                            <br /> Di: 15:00 - 23:00
-                            <br /> Wo: Gesloten
-                            <br /> Do: 15:00 - 23:00
+                            <span id="RestoOpeningHours">
+                                Ma: 15:00 - 23:00
+                                <br /> Di: 15:00 - 23:00
+                                <br /> Wo: Gesloten
+                                <br /> Do: 15:00 - 23:00
+                                <br />
+                                <strong>Vr: 15:00 - 00:00</strong>
+                                <br /> Za: 12:00 - 00:00
+                                <br /> Zo: 12:00 - 00:00
+                            </span>
+
                             <br />
-                            <strong>Vr: 15:00 - 00:00</strong>
-                            <br /> Za: 12:00 - 00:00
-                            <br /> Zo: 12:00 - 00:00
                             <br />
-                            <br />
-                            <span class="fa fa-credit-card fa-2x" title="Bancontact/Mister Cash/Maestro"></span>
-                            <span class="fa fa-cc-visa fa-2x" title="VISA/MasterCard"></span>
-                            <span class="fa fa-bitcoin fa-2x" title="Bitcoin"></span>
-                            <span class="fa fa-money fa-2x" title="Cash"></span>
+                            <span class="fa fa-credit-card fa-2x PaymentBancontact hidden" title="Bancontact/Mister Cash"></span>
+                            <span class="fa fa-cc-visa fa-2x PaymentCredit hidden" title="VISA/MasterCard"></span>
+                            <span class="fa fa-bitcoin fa-2x PaymentBitcoin hidden" title="Bitcoin"></span>
+                            <span class="fa fa-money fa-2x PaymentCash hidden" title="Cash"></span>
+                            <span class="PaymentSodexo hidden"><img title="Sodexo" src="../public/img/sodexo_icon.jpg" /></span>
+                            <span class="PaymentEMV hidden" title="Maaltijdcheques">EMV</span>
                         </p>
                     </div>
 
@@ -127,27 +139,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Betaalmogelijkheden bewerken</h4>
+                <h4 class="modal-title" id="myModalLabel">Coverfoto bijwerken</h4>
             </div>
             <div class="modal-body text-justify">
                 <div class="col-lg-12">
-                    <form class="form-horizontal">
-                        <div class="form-group has-feedback">
-                            <div class="text-center">
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Cash
-                                </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inlineCheckbox2" value="option2"> BanContact
-                                </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> VISA/MasterCard
-                                </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> BitCoin
-                                </label>
-                            </div>
-                        </div>
+                    <form class="form-horizontal" id="CoverPhotoForm" action="http://test.restaurantathome.be/api/photo/restaurant/logo/2" enctype="multipart/form-data" method="post">
+                        <input type="file" name="files" /><br/>
                     </form>
                 </div>
             </div>
@@ -156,14 +153,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Gegevens opslaan</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="CoverPhotoFormSubmit">Gegevens opslaan</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <!-- Modal edit payments info -->
 <div class="modal fade" id="editPaymentsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -176,24 +172,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="modal-body text-justify">
                 <div class="col-lg-12">
-                    <form class="form-horizontal">
-                        <div class="form-group has-feedback">
-                            <div class="text-center">
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Cash
-                                </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inlineCheckbox2" value="option2"> BanContact
-                                </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> VISA/MasterCard
-                                </label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> BitCoin
-                                </label>
-                            </div>
-                        </div>
-                    </form>
+                    <form id="paymentsForm"></form>
                 </div>
             </div>
 
@@ -201,7 +180,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Gegevens opslaan</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="paymentsFormSubmit">Gegevens opslaan</button>
                     </div>
                 </div>
             </div>
@@ -220,38 +199,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="modal-body text-justify">
                 <div class="col-lg-12">
-                    <form class="form-horizontal">
+                    <p>
+                        Hier kan je overal de link toevoegen naar de sociale media.
+                    </p>
+                </div>
+                <div class="col-lg-12">
+                    <form class="form-horizontal" id="SocialForm">
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Foto's</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="SocialFacebook">Facebook</label>
                             <div class="col-sm-9">
-                                <span class="btn btn-success fileinput-button">
-                                    <i class="glyphicon glyphicon-plus"></i>
-                                    <span>Foto's kiezen</span>
-                                    <input type="file" name="files[]" multiple="multiple">
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Instagram</label>
-                            <div class="col-sm-9">
-                                <input type="url" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Instagram">
+                                <input type="text" class="form-control" id="SocialFacebook" name="SocialFacebook" aria-describedby="inputSuccess2Status" placeholder="https://facebook.com/naamRestaurant">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Twitter</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="SocialTwitter">Twitter</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Twitter">
+                                <input type="text" class="form-control" id="SocialTwitter" name="SocialTwitter" aria-describedby="inputSuccess2Status" placeholder="https://twitter.com/naamRestaurant">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Facebook</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="SocialInstagram">Instagram</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Facebook">
+                                <input type="url" class="form-control" id="SocialInstagram" name="SocialInstagram" aria-describedby="inputSuccess2Status" placeholder="https://instagram.com/naamRestaurant">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
@@ -263,7 +236,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Gegevens opslaan</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="SocialFormSubmit">Gegevens opslaan</button>
                     </div>
                 </div>
             </div>
@@ -282,54 +255,83 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="modal-body text-justify">
                 <div class="col-lg-12">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="contactInfoForm">
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Adres</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="restoName">
+                                Naam
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
+                            </label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Adres">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <input type="text" class="form-control" id="restoName" name="restoName" aria-describedby="inputSuccess2Status" required="required" placeholder="Adres">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Telefoon</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="restoAddress">
+                                Adres
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
+                            </label>
                             <div class="col-sm-9">
-                                <input type="tel" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Telefoon">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <input type="text" class="form-control" id="restoAddress" name="restoAddress" aria-describedby="inputSuccess2Status" required="required" placeholder="Adres">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">E-mail</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="restoPhone">
+                                Telefoon
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
+                            </label>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="E-mail">
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+                                <input type="text" class="form-control" id="restoPhone" name="restoPhone" aria-describedby="inputSuccess2Status" required="required" placeholder="Telefoon">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Website</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="restoEmail">
+                                E-mail
+                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
+                            </label>
                             <div class="col-sm-9">
-                                <input type="url" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Website">
+                                <input type="email" class="form-control" id="restoEmail" name="restoEmail" aria-describedby="inputSuccess2Status" required="required" placeholder="E-mail">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Specialiteit</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="restoWebsite">Website</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Specialiteit">
+                                <input type="url" class="form-control" id="restoWebsite" name="restoWebsite" aria-describedby="inputSuccess2Status" placeholder="Website">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback">
-                            <label class="col-sm-3 control-label" style="text-align: left;" for="inputSuccess2">Type keuken</label>
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="restoSpecialty">Specialiteit</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Type keuken">
+                                <select class="form-control" id="restoSpecialty" name="restoSpecialty" required="required">
+                                    <option></option>
+                                </select>
+                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="restoKitchenType">Type keuken</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="restoKitchenType" name="restoKitchenType" required="required">
+                                    <option></option>
+                                </select>
+                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" style="text-align: left;" for="restoComment">Commentaar</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="5" id="restoComment" name="restoComment" tabindex="5" data-fv-field="ProductDescription"></textarea>
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
                             </div>
                         </div>
@@ -342,7 +344,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-sm-offset-2 col-sm-10">
                         <p class="help-block"><span style="color: #a94442; font-weight: bold;">&ast;</span> Verplicht in te vullen</p>
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Gegevens opslaan</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="contactInfoFormSubmit">Gegevens opslaan</button>
                     </div>
                 </div>
             </div>
@@ -360,58 +362,82 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h4 class="modal-title" id="myModalLabel">Openingsuren bewerken</h4>
             </div>
             <div class="modal-body text-justify">
+                <div class="col-lg-12">
+                    <p>Wanneer uw zaak open is, vult u de openingsuren in bij de juiste dag. Laat u het veld leeg, wordt dit automatisch gezien als een sluitingsdag.</p>
+                </div>
                 <div>
-                    <form class="form-horizontal">
-                        <div class="form-group has-feedback col-lg-6">
+                    <form class="form-horizontal" id="openingHoursForm">
+                        <div class="form-group has-feedback col-lg-6 clearfix">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Ma</label>
                             <div class="col-sm-10">
-                                <input type="checkbox" name="my-checkbox" class="day_openings">
-                                <a href="#" class="edit_hours_link" title="Openingsuren maandag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
+<!--                                <input type="checkbox" name="openMonday" id="openMonday" class="day_openings">-->
+<!--                                <a href="#" class="edit_hours_link" id="changeMonday" title="Openingsuren maandag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>-->
+                                <div class="input-group bootstrap-timepicker timepicker">
+                                    <input id="hoursMonday" type="text" class="form-control text-center" placeholder="11:00-22:00" />
+                                </div>
                             </div>
                         </div>
                         <div class="form-group has-feedback col-lg-6 pull-right">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Vr</label>
                             <div class="col-sm-10">
-                                <input type="checkbox" name="my-checkbox" class="day_openings" checked>
-                                <a href="#" class="edit_hours_link" title="Openingsuren vrijdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
+<!--                                <input type="checkbox" name="openFriday" id="openFriday" class="day_openings">-->
+<!--                                <a href="#" class="edit_hours_link" id="changeFriday" title="Openingsuren vrijdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>-->
+                                <div class="input-group bootstrap-timepicker timepicker">
+                                    <input id="hoursFriday" type="text" class="form-control text-center" placeholder="11:00-22:00" />
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group has-feedback col-lg-6">
+                        <div class="form-group has-feedback col-lg-6 clearfix">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Di</label>
                             <div class="col-sm-10">
-                                <input type="checkbox" name="my-checkbox" class="day_openings" checked>
-                                <a href="#" class="edit_hours_link" title="Openingsuren dinsdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
+<!--                                <input type="checkbox" name="openTuesday" id="openTuesday" class="day_openings">-->
+<!--                                <a href="#" class="edit_hours_link" id="changeTuesday" title="Openingsuren dinsdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>-->
+                                <div class="input-group bootstrap-timepicker timepicker">
+                                    <input id="hoursTuesday" type="text" class="form-control text-center" placeholder="11:00-22:00" />
+                                </div>
                             </div>
                         </div>
                         <div class="form-group has-feedback col-lg-6 pull-right">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Za</label>
                             <div class="col-sm-10">
-                                <input type="checkbox" name="my-checkbox" class="day_openings" checked>
-                                <a href="#" class="edit_hours_link" title="Openingsuren zaterdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
+<!--                                <input type="checkbox" name="openSaturday" id="openSaturday" class="day_openings">-->
+<!--                                <a href="#" class="edit_hours_link" id="changeSaturday" title="Openingsuren zaterdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>-->
+                                <div class="input-group bootstrap-timepicker timepicker">
+                                    <input id="hoursSaturday" type="text" class="form-control text-center" placeholder="11:00-22:00" />
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group has-feedback col-lg-6">
+                        <div class="form-group has-feedback col-lg-6 clearfix">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Wo</label>
                             <div class="col-sm-10">
-                                <input type="checkbox" name="my-checkbox" class="day_openings" checked>
-                                <a href="#" class="edit_hours_link" title="Openingsuren woensdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
+<!--                                <input type="checkbox" name="openWednesday" id="openWednesday" class="day_openings">-->
+<!--                                <a href="#" class="edit_hours_link" id="changeWednesday" title="Openingsuren woensdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>-->
+                                <div class="input-group bootstrap-timepicker timepicker">
+                                    <input id="hoursWednesday" type="text" class="form-control text-center" placeholder="11:00-22:00" />
+                                </div>
                             </div>
                         </div>
                         <div class="form-group has-feedback col-lg-6 pull-right">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Zo</label>
                             <div class="col-sm-10">
-                                <input type="checkbox" name="my-checkbox" class="day_openings" checked>
-                                <a href="#" class="edit_hours_link" title="Openingsuren zondag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
+<!--                                <input type="checkbox" name="openSunday" id="openSunday" class="day_openings">-->
+<!--                                <a href="#" class="edit_hours_link" id="changeSunday" title="Openingsuren zondag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>-->
+                                <div class="input-group bootstrap-timepicker timepicker">
+                                    <input id="hoursSunday" type="text" class="form-control text-center" placeholder="11:00-22:00" />
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group has-feedback col-lg-6">
+                        <div class="form-group has-feedback col-lg-6 clearfix">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Do</label>
                             <div class="col-sm-10">
-                                <input type="checkbox" name="my-checkbox" class="day_openings" checked>
-                                <a href="#" class="edit_hours_link" title="Openingsuren donderdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>
+<!--                                <input type="checkbox" name="openThursday" id="openThursday" class="day_openings">-->
+<!--                                <a href="#" class="edit_hours_link" id="changeThursday" title="Openingsuren donderdag aanpassen"><span class="fa fa-edit fa-fw vcenter"></span></a>-->
+                                <div class="input-group bootstrap-timepicker timepicker">
+                                    <input id="hoursThursday" type="text" class="form-control text-center" placeholder="11:00-22:00" />
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -422,9 +448,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg">Gegevens opslaan</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="openingHoursFormSubmit">Gegevens opslaan</button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Maps Modal -->
+<div class="modal fade" id="mapsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: 0;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="myModalLabel">Locatie</h3>
+            </div>
+            <div class="modal-body clearfix" style="padding-top: 0;">
+                <div id="mapCanvas" style="height: 500px; width: 100%;"></div>
             </div>
         </div>
     </div>
