@@ -15,14 +15,14 @@
                     <label for="addressTop" class="labelStyle">
                         Waar wil je eten?
                     </label>
-                    <input type="text" placeholder="Straat, Nummer, Stad of Postcode" id="addressTop" class="form-control" tabindex="1" />
+                    <input type="text" placeholder="Stad of postcode" id="addressTop" class="form-control" tabindex="1" />
                 </div>
 
                 <div class="form-group col-xs-12 col-sm-6 col-md-5 col-lg-4">
                     <label for="itemTop" class="labelStyle">
                         Wat wil je eten?
                     </label>
-                    <input type="text" placeholder="Sushi, 'Het steakhuis', Aardbei-Sabayon " id="itemTop" class="form-control" tabindex="2" />
+                    <input type="text" placeholder="Sushi, aardbei-sabayon, tomatensoep, ..." id="itemTop" class="form-control" tabindex="2" />
                 </div>
 
                 <div class="form-group col-xs-12 col-md-2 col-lg-2 col-sm-2">
