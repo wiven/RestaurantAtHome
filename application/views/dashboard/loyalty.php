@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-lg-12">
             <form class="form-horizontal">
-                <div class="form-group has-feedback">
+                <!--<div class="form-group has-feedback">
                     <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Datum geldig</label>
                     <div class="col-sm-10">
                         <input type="date" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" red="" placeholder="Naam">
@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <span id="inputSuccess2Status" class="sr-only">(success)</span>
                     </div>
                 </div>
-
+-->
                 <div class="form-group has-feedback">
                     <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Stempels</label>
                     <div class="col-sm-10">
