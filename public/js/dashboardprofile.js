@@ -1,4 +1,4 @@
-var resto_id = 2;
+var resto_id = 5;
 var map = '', restoName = '', specialtyId = 0, kitchenTypeIdDb = 0, addressIdDb = 0;
 var latDb = '', lngDb = '';
 var addressArray = Array();
@@ -6,7 +6,7 @@ var weekDayNames = Array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
 var weekDayNamesNL = Array('maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag', 'zondag');
 var contactInfoFormOK = false, SocialFormOK = false;
 //const API_URL = 'http://localhost/RestaurantAtHomeAPI/';
-const API_URL = 'http://test.restaurantathome.be/api/';
+const API_URL = 'http://playground.restaurantathome.be/api/';
 
 // When the document is ready
 $(document).ready(function () {
@@ -22,6 +22,12 @@ $(document).ready(function () {
         offText: 'gesloten',
         offColor: 'danger'
     });
+
+    // handles the logo upload
+    logoUpload();
+
+    // handle file upload for resto photos
+    restoPhotosUpload();
 });
 
 $('#editSocialModal').off().on('show.bs.modal', function() {
@@ -444,10 +450,10 @@ $('#paymentsForm').on('submit', function(evt) {
 });
 
 $('#CoverPhotoForm').on('submit', function(evt) {
-    /*console.log($(this).serialize());
+    console.log($(this).serialize());
     evt.preventDefault();
     //updateCoverPhoto($('[name="files"]').get(0).files[0], resto_id);
-    updateCoverPhoto($(this).serializeArray(), resto_id);*/
+    updateCoverPhoto($(this).serializeArray(), resto_id);
 });
 
 $('#mapsModal').off().on('shown.bs.modal', function() {
@@ -743,8 +749,9 @@ function getInitialRestoInfo(restoId) {
         /* CENTER COLUMN */
         //console.log(response.restaurantInfo.logoPhoto);
         if(response.restaurantInfo.logoPhoto != null) {
-            console.log(response.restaurantInfo.logoPhoto.length);
+            //console.log(response.restaurantInfo.logoPhoto);
             $('.restoLogo').attr('src', response.restaurantInfo.logoPhoto.url);
+            //$('.restoLogo').attr('src', '../api/files/'+response.restaurantInfo.logoPhoto);
         } else {
             $('.restoLogo').attr('src', 'http://placehold.it/450x210');
         }
@@ -950,7 +957,7 @@ function getKitchenTypes() {
 }
 
 function updateCoverPhoto(file, restoId) {
-    var settings = {
+    /*var settings = {
         "async": true,
         "crossDomain": true,
         "url": API_URL+"photo/restaurant/logo/"+restoId,
@@ -966,7 +973,33 @@ function updateCoverPhoto(file, restoId) {
 
     $.ajax(settings).done(function (response) {
         console.log(response);
-    });
+    });*/
+	
+	'use strict';
+	
+    var url = API_URL+'photo/restaurant/logo/'+restoId;
+    
+    $('#fileupload').fileupload({
+        url: url,
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo('#files');
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            /*$('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );*/
+			
+			if(progress == 100) {
+				$('#editCoverModal').modal('hide');
+            }
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
 }
 
 function getCoordinatesAndUpdateAddress(address) {
@@ -1305,4 +1338,65 @@ function updateOpeningHours(recordId, weekDay, from, to, checkOpen) {
     $.ajax(settings).done(function (response) {
 
     });
+}
+
+function logoUpload() {
+    // handle file upload for logo
+    'use strict';
+
+    var url = API_URL+'photo/restaurant/logo/'+resto_id;
+
+    $('#fileupload').fileupload({
+        url: url,
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                console.log(file.name);
+                //$('<p/>').text(file.name).appendTo('#files');
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+
+            if(progress == 100) {
+                $('#editCoverModal').modal('hide');
+                setTimeout(function() {
+                    getInitialRestoInfo(resto_id);
+                }, 500);
+            }
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+}
+
+function restoPhotosUpload() {
+    // handle file upload for resto photos
+    'use strict';
+
+    var url = API_URL+'photo/restaurant/'+resto_id;
+
+    $('#restoFileupload').fileupload({
+        url: url,
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo('#files');
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            /*$('#progress .progress-bar').css(
+             'width',
+             progress + '%'
+             );*/
+
+            if(progress == 100) {
+                $('#editRestoPhotosModal').modal('hide');
+                setTimeout(function() {
+                    getInitialRestoInfo(resto_id);
+                }, 500);
+            }
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
 }

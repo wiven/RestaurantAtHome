@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 Bewerk social media</a>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
-            <a href="#" class="btn btn-primary form-control" disabled="disabled">
+            <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editRestoPhotosModal" data-backdrop="static" title="Bewerk sfeerfoto's">
                 <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
                 Bewerk sfeerfoto's</a>
         </div>
@@ -134,28 +134,83 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Modal edit cover modal -->
 <div class="modal fade" id="editCoverModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title" id="myModalLabel">Coverfoto bijwerken</h4>
             </div>
-            <div class="modal-body text-justify">
+            <div class="modal-body text-center clearfix">
                 <div class="col-lg-12">
-                    <form class="form-horizontal" id="CoverPhotoForm" action="http://test.restaurantathome.be/api/photo/restaurant/logo/2" enctype="multipart/form-data" method="post">
-                        <input type="file" name="files" /><br/>
-                    </form>
+                    <p>
+                        <strong>Opgelet:</strong> Enkel JPG- en PNG-bestanden zijn toegelaten. Dit tot maximum 3MB.
+                    </p>
+                </div>
+                <div class="col-lg-12">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Selecteer coverfoto</span>
+                        <!-- The file input field used as target for the file upload widget -->
+                        <input id="fileupload" type="file" name="files[]">
+                    </span>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
-            <div class="modal-footer">
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button type="submit" class="btn btn-primary btn-lg" id="CoverPhotoFormSubmit">Gegevens opslaan</button>
+<!-- Modal edit resto photos modal -->
+<div class="modal fade" id="editRestoPhotosModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Coverfoto bijwerken</h4>
+            </div>
+            <div class="modal-body text-justify clearfix">
+                <form id="restoFileupload" action="http://playground.restaurantathome.be/api/photo/restaurant/5" method="POST" enctype="multipart/form-data">
+                    <!-- Redirect browsers with JavaScript disabled to the origin page -->
+                    <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
+                    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                    <div class="row fileupload-buttonbar">
+                        <div class="col-lg-12">
+                            <!-- The fileinput-button span is used to style the file input field as button -->
+                            <span class="btn btn-success fileinput-button">
+                                <i class="glyphicon glyphicon-plus"></i>
+                                <span>Toevoegen</span>
+                                <input type="file" name="files[]" multiple>
+                            </span>
+                            <button type="submit" class="btn btn-primary start">
+                                <i class="glyphicon glyphicon-upload"></i>
+                                <span>Start upload</span>
+                            </button>
+                            <button type="reset" class="btn btn-warning cancel">
+                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                <span>Annuleren</span>
+                            </button>
+                            <button type="button" class="btn btn-danger delete">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                <span>Verwijderen</span>
+                            </button>
+                            <input type="checkbox" class="toggle">
+                            <!-- The global file processing state -->
+                            <span class="fileupload-process"></span>
+                        </div>
+                        <!-- The global progress state -->
+                        <div class="col-lg-5 fileupload-progress fade">
+                            <!-- The global progress bar -->
+                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                            </div>
+                            <!-- The extended global progress state -->
+                            <div class="progress-extended">&nbsp;</div>
+                        </div>
                     </div>
-                </div>
+                    <!-- The table listing the files available for upload/download -->
+                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                </form>
             </div>
         </div>
     </div>
