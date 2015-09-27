@@ -82,6 +82,9 @@ class Dashboard extends CI_Controller {
             <script src='".public_url()."js/min/formValidation.min.js'></script>
             <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
             <script src='".public_url()."js/sweetalert.js'></script>
+			<script src='".public_url()."js/jquery.ui.widget.js'></script>
+			<script src='".public_url()."js/jquery.iframe-transport.js'></script>
+			<script src='".public_url()."js/jquery.fileupload.js'></script>
             <script src='".public_url()."js/formValidation_nl_BE.js'></script>
             <script src='".public_url()."js/dashboardprofile.js'></script>"
         );
@@ -114,6 +117,9 @@ class Dashboard extends CI_Controller {
             <script src='".public_url()."js/formValidation_nl_BE.js'></script>
             <script src='".public_url()."js/sweetalert.js'></script>
             <script src='".public_url()."js/jquery.matchHeight.js'></script>
+            <script src='".public_url()."js/jquery.ui.widget.js'></script>
+			<script src='".public_url()."js/jquery.iframe-transport.js'></script>
+			<script src='".public_url()."js/jquery.fileupload.js'></script>
             <script src='".public_url()."js/dashboardproducts.js'></script>"
         );
 
