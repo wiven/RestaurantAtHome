@@ -142,9 +142,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="ProductPhoto">Foto</label>
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control" id="ProductPhoto" name="ProductPhoto" aria-describedby="inputSuccess2Status" tabindex="6" placeholder="Foto's">
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="ProductPhoto" name="ProductPhoto" disabled="disabled" aria-describedby="inputSuccess2Status" tabindex="6" placeholder="Foto">
                                 <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                            </div>
+                            <div class="col-sm-1">
+                                <button class="btn btn-sm btn-danger pull-right" title="Foto verwijderen" id="ProductPhotoDelete">
+                                    <span class="fa fa-trash-o fa-2x fa-fw"></span>
+                                </button>
                             </div>
                         </div>
 
@@ -160,7 +165,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         <div class="form-group has-feedback">
                             <label class="col-sm-2 control-label" style="text-align: left;" for="ProductRelatedProducts">Gerelateerd<br /><span id="ProductRelatedProductsError">(max. 3)</span>
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>
+                                <!--<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442; right: 0;"></span>-->
                             </label>
                             <div class="col-sm-10">
                                 <select class="form-control" id="ProductRelatedProducts" name="ProductRelatedProducts" tabindex="8" multiple></select>
@@ -179,10 +184,58 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <button class="btn btn-sm btn-danger pull-left" id="ProductDelete">
                             <span class="fa fa-trash-o fa-2x fa-fw"></span>
                         </button>
+                        <span class="btn btn-sm btn-success fileinput-button pull-left" style="margin-top: 4px;" id="PhotoBtn">
+                            <i class="fa fa-camera fa-fw"></i>
+                            <span>Foto toevoegen</span>
+                            <!-- The file input field used as target for the file upload widget -->
+                            <input id="updatedProductPhotoUpload" type="file" name="files[]">
+                        </span>
                         <button type="submit" class="btn btn-primary btn-lg" id="productModalSubmit">Product aanmaken</button>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal new product -->
+<div class="modal fade" id="addProductPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Foto nieuw product</h4>
+            </div>
+            <div class="modal-body text-center clearfix">
+                <div class="col-lg-12">
+                    <span class="btn btn-lg btn-success fileinput-button">
+                        <i class="fa fa-camera fa-fw"></i>
+                        <span>Selecteer productfoto</span>
+                        <!-- The file input field used as target for the file upload widget -->
+                        <input id="newProductPhotoUpload" type="file" name="files[]">
+                    </span>
+                </div>
+            </div>
+
+            <!--<div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <p class="help-block"><span style="color: #a94442; font-weight: bold;">&ast;</span> Verplicht in te vullen</p>
+                        <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
+                        <button class="btn btn-sm btn-danger pull-left" id="ProductDelete">
+                            <span class="fa fa-trash-o fa-2x fa-fw"></span>
+                        </button>
+                        <span class="btn btn-sm btn-success fileinput-button pull-left" style="margin-top: 4px;">
+                            <i class="fa fa-camera fa-fw"></i>
+                            <span>Selecteer productfoto</span>
+                            <!-- The file input field used as target for the file upload widget --
+                            <input id="productPhotoUpload" type="file" name="files[]">
+                        </span>
+                        <button type="submit" class="btn btn-primary btn-lg" id="productModalSubmit">Product aanmaken</button>
+                    </div>
+                </div>
+            </div>-->
         </div>
     </div>
 </div>
