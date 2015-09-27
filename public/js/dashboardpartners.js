@@ -35,4 +35,4 @@ $(document).ready(function () {
 });
 
 //const API_URL = 'http://localhost/RestaurantAtHomeAPI/';
-const API_URL = 'http://test.restaurantathome.be/api/';
+const API_URL = 'http://playground.restaurantathome.be/api/';

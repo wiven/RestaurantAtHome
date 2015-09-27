@@ -310,11 +310,11 @@ $(document).ready(function () {
 });
 
 var product_html = '';
-var resto_id = '2';
+var resto_id = '5';
 var promotion_id = '';
 
 //const API_URL = 'http://localhost/RestaurantAtHomeAPI/';
-const API_URL = 'http://test.restaurantathome.be/api/';
+const API_URL = 'http://playground.restaurantathome.be/api/';
 
 function check_new_orders(restoId) {
     $.ajax({
