@@ -20,20 +20,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h1 class="page-header"><?php echo (isset($pretty_page_title) ? $pretty_page_title : '') ?></h1>
         </div>
         <!-- /.col-lg-12 -->
-        <div class="col-xs-12 text-right" id="col_new_action">
+        <!--<div class="col-xs-12 text-right" id="col_new_action">
             <a href="#" data-toggle="modal" data-target="#editSlotSchemeModal" data-backdrop="static" class="btn btn-primary btn-lg" id="btn_new_action">
                 <span class="fa fa-plus"></span>
                 Weekschema aanpassen
             </a>
-        </div>
+        </div>-->
     </div>
 
     <div class="row">
         <div id="dash_product_search">
-            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                 <div class="form-group has-feedback clearfix">
                     <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
-                    <input type="text" id="action_start_date" type="text" class="form-control datepicker" placeholder="Kies een datum">
+                    <input type="text" id="slotDate" type="text" class="form-control datepicker" placeholder="Kies een datum" readonly="true">
                     <!--<input type="search" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" placeholder="Product zoeken ...">
                     <span id="inputSuccess2Status" class="sr-only">(date)</span>-->
                 </div>
@@ -43,67 +43,67 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <span class="fa fa-calendar-o fa-fw"></span>
                     Vandaag</a>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <!--<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                 <a href="#" class="btn btn-primary form-control">
                     <span class="fa fa-plus fa-fw"></span>
                      Slot aanmaken</a>
-            </div>
+            </div>-->
 
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slotsDiv">
         <!-- START LOPENDE ACTIES -->
-        <?php for($i = 0; $i < 10; $i++) {
-            echo '
-        <div class="col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <form class="form-horizontal">
-                        <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Van</label>
-                            <div class="col-sm-10">
-                                <input type="text" />
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                            </div>
-                        </div>
-
-                        <div class="form-group has-feedback">
-                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Tot</label>
-                            <div class="col-sm-10">
-                                <input type="text" />
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                            </div>
-                        </div>
-
-                        <div class="form-group has-feedback">
-                            <div class="col-sm-5">
-                                <select class="form-control">
-                                    <option value="">0</option>
-                                    <option value="">5</option>
-                                    <option value="">10</option>
-                                    <option value="">15</option>
-                                    <option value="">20</option>
-                                    <option value="">25</option>
-                                </select>
-                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
-                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                            </div>
-                            <label class="col-sm-6 control-label" for="inputSuccess2"># slots</label>
-                            <div class="col-sm-12">
-                                <a href="#" class="btn_slot_zero btn btn-warning btn-block clearfix">
-                                    <span class="fa fa-eraser fa-fw"></span> 0 zetten
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-        </div>'; } ?>
+<!--        --><?php //for($i = 0; $i < 10; $i++) {
+//            echo '
+//        <div class="col-lg-3">
+//            <div class="panel panel-default">
+//                <div class="panel-body">
+//                    <form class="form-horizontal">
+//                        <div class="form-group has-feedback">
+//                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Van</label>
+//                            <div class="col-sm-10">
+//                                <input type="text" />
+//                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+//                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+//                            </div>
+//                        </div>
+//
+//                        <div class="form-group has-feedback">
+//                            <label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Tot</label>
+//                            <div class="col-sm-10">
+//                                <input type="text" />
+//                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+//                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+//                            </div>
+//                        </div>
+//
+//                        <div class="form-group has-feedback">
+//                            <div class="col-sm-5">
+//                                <select class="form-control">
+//                                    <option value="">0</option>
+//                                    <option value="">5</option>
+//                                    <option value="">10</option>
+//                                    <option value="">15</option>
+//                                    <option value="">20</option>
+//                                    <option value="">25</option>
+//                                </select>
+//                                <span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true" style="color: #a94442;"></span>
+//                                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+//                            </div>
+//                            <label class="col-sm-6 control-label" for="inputSuccess2"># slots</label>
+//                            <div class="col-sm-12">
+//                                <a href="#" class="btn_slot_zero btn btn-warning btn-block clearfix">
+//                                    <span class="fa fa-eraser fa-fw"></span> 0 zetten
+//                                </a>
+//                            </div>
+//                        </div>
+//                    </form>
+//                </div>
+//                <!-- /.panel-body -->
+//            </div>
+//            <!-- /.panel -->
+//        </div>'; } ?>
 
         <!--<div class="col-lg-3">
             <div class="panel panel-default">
