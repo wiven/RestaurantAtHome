@@ -217,25 +217,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </span>
                 </div>
             </div>
-
-            <!--<div class="modal-footer">
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <p class="help-block"><span style="color: #a94442; font-weight: bold;">&ast;</span> Verplicht in te vullen</p>
-                        <button type="cancel" class="btn btn-default" data-dismiss="modal">Annuleren</button>
-                        <button class="btn btn-sm btn-danger pull-left" id="ProductDelete">
-                            <span class="fa fa-trash-o fa-2x fa-fw"></span>
-                        </button>
-                        <span class="btn btn-sm btn-success fileinput-button pull-left" style="margin-top: 4px;">
-                            <i class="fa fa-camera fa-fw"></i>
-                            <span>Selecteer productfoto</span>
-                            <!-- The file input field used as target for the file upload widget --
-                            <input id="productPhotoUpload" type="file" name="files[]">
-                        </span>
-                        <button type="submit" class="btn btn-primary btn-lg" id="productModalSubmit">Product aanmaken</button>
-                    </div>
-                </div>
-            </div>-->
         </div>
     </div>
 </div>
