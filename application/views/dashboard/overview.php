@@ -35,8 +35,7 @@
                     <div class="panel-body">
                         <div class="alert alert-info text-center" role="alert" id="no_orders_msg">
                             <span class="fa fa-info-circle fa-fw"></span> Er zijn vandaag geen bestellingen<br />
-                            Klik <a href="#">hier</a> om alle bestellingen te zien.
-<!--                            Klik <a href="/dashboard/orders">hier</a> om alle bestellingen te zien.-->
+                            Klik <a href="/dashboard/orders">hier</a> om alle bestellingen te zien.
                         </div>
 
                         <div class="table-responsive" id="todays_orders">
