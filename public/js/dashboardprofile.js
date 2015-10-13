@@ -1,12 +1,12 @@
-var resto_id = 5;
+var resto_id = 2;
 var map = '', restoName = '', specialtyId = 0, kitchenTypeIdDb = 0, addressIdDb = 0;
-var latDb = '', lngDb = '';
+var latDb = '', lngDb = '', temp = '';
 var addressArray = Array();
 var weekDayNames = Array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
 var weekDayNamesNL = Array('maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag', 'zondag');
 var contactInfoFormOK = false, SocialFormOK = false;
 //const API_URL = 'http://localhost/RestaurantAtHomeAPI/';
-const API_URL = 'http://playground.restaurantathome.be/api/';
+const API_URL = 'http://test.restaurantathome.be/api/';
 
 // When the document is ready
 $(document).ready(function () {
@@ -719,11 +719,10 @@ function getInitialRestoInfo(restoId) {
         "processData": false
     }
 
-    // creating new product
     $.ajax(settings).done(function (response) {
         response = JSON.parse(response.substr(1, response.length-2));
 
-        //console.log(response);
+        console.log(response);
 
         restoName = response.restaurantInfo.name;
         $('input[name="restoName"]').val(response.restaurantInfo.name);
@@ -746,12 +745,30 @@ function getInitialRestoInfo(restoId) {
 
         getKitchenType(response.restaurantInfo.kitchentypeId);
 
+        if(response.photos.length != 0) {
+            $('#photosLogo').removeClass('hidden');
+            $('.carousel-indicators').empty();
+            $('.carousel-inner').empty();
+
+            $.each(response.photos, function(index,item) {
+                if(index == 0) {
+                    $('.carousel-indicators').append('<li data-target="#carousel-example-generic" data-slide-to="'+index+'" class="active"></li>');
+                    $('.carousel-inner').append('<div class="item active"><img src="'+response.photos[index].url.url+'" alt="Sfeerfoto\'s"><div class="carousel-caption"></div></div>');
+                } else {
+                    $('.carousel-indicators').append('<li data-target="#carousel-example-generic" data-slide-to="'+index+'"></li>');
+                    $('.carousel-inner').append('<div class="item"><img src="'+response.photos[index].url.url+'" alt="Sfeerfoto\'s"><div class="carousel-caption"></div></div>');
+                }
+            });
+        } else {
+            $('#photosLogo').addClass('hidden');
+        }
+
         /* CENTER COLUMN */
         //console.log(response.restaurantInfo.logoPhoto);
         if(response.restaurantInfo.logoPhoto != null) {
             //console.log(response.restaurantInfo.logoPhoto);
-            $('.restoLogo').attr('src', response.restaurantInfo.logoPhoto.url);
-            //$('.restoLogo').attr('src', '../api/files/'+response.restaurantInfo.logoPhoto);
+            //$('.restoLogo').attr('src', response.restaurantInfo.logoPhoto);
+            $('.restoLogo').attr('src', '../api/files/'+response.restaurantInfo.logoPhoto);
         } else {
             $('.restoLogo').attr('src', 'http://placehold.it/450x210');
         }
@@ -1344,10 +1361,8 @@ function logoUpload() {
     // handle file upload for logo
     'use strict';
 
-    var url = API_URL+'photo/restaurant/logo/'+resto_id;
-
     $('#fileupload').fileupload({
-        url: url,
+        url: API_URL+'photo/restaurant/logo/'+resto_id,
         dataType: 'json',
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {
@@ -1373,10 +1388,8 @@ function restoPhotosUpload() {
     // handle file upload for resto photos
     'use strict';
 
-    var url = API_URL+'photo/restaurant/'+resto_id;
-
     $('#restoFileupload').fileupload({
-        url: url,
+        url: API_URL+'photo/restaurant/'+resto_id,
         dataType: 'json',
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {

@@ -22,37 +22,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- /.col-lg-12 -->
     </div>
     <div class="row">
-        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 row-grid">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editContactModal" data-backdrop="static" title="Bewerk contactgegevens">
                 <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
-                Bewerk contactgegevens</a>
+                <span class="hidden-md hidden-sm hidden-xs">Bewerk </span>contactgegevens</a>
         </div>
-        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 row-grid">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editCoverModal" data-backdrop="static" title="Bewerk coverfoto">
                 <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
-                Bewerk coverfoto</a>
+                <span class="hidden-md hidden-sm hidden-xs">Bewerk </span>coverfoto</a>
         </div>
-        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12 row-grid">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 row-grid">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editOpeningHoursModal" data-backdrop="static" title="Bewerk openingsuren">
                 <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
-                Bewerk openingsuren</a>
+                <span class="hidden-md hidden-sm hidden-xs">Bewerk </span>openingsuren</a>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editSocialModal" data-backdrop="static" title="Bewerk social media">
                 <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
-                Bewerk social media</a>
+                <span class="hidden-md hidden-sm hidden-xs">Bewerk </span>social media</a>
         </div>
-        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
-            <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editRestoPhotosModal" data-backdrop="static" title="Bewerk sfeerfoto's">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <a href="#" class="btn btn-primary form-control" data-toggle="modal" disabled data-target="#editRestoPhotosModal" data-backdrop="static" title="Bewerk sfeerfoto's">
                 <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
-                Bewerk sfeerfoto's</a>
+                <span class="hidden-md hidden-sm hidden-xs">Bewerk </span>sfeerfoto's</a>
         </div>
-        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <a href="#" class="btn btn-primary form-control" data-toggle="modal" data-target="#editPaymentsModal" data-backdrop="static" title="Bewerk betaalmogelijkheden">
                 <span class="fa fa-edit fa-fw" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actie bewerken"></span>
-                Bewerk betaalmogelijkheden</a>
+                <span class="hidden-md hidden-sm hidden-xs">Bewerk </span>betaalmogelijkheden</a>
         </div>
     </div>
     <div class="row" id="loaderDiv" style="margin: 80px;">
@@ -66,12 +66,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <ul class="list-group clearfix">
                 <li class="list-group-item clearfix" id="info_resto">
 
-                    <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center" id="restoLogoDiv">
-<!--                        <img id="logo_resto" class="img-responsive" src="http://www.restaurantfleurdelin.be/img/1.png">-->
+                    <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center profileColumns" id="restoLogoDiv">
                         <img id="logo_resto" class="img-responsive restoLogo" src="http://wiven.be/logo.png">
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-right" id="important_info_resto">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-right profileColumns" id="important_info_resto">
                         <a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal" data-backdrop="static">
                             <span class="fa fa-map-marker fa-fw"></span>
                             <span class="restoAddress">IJzerfrontlaan 13, 8500 Kortrijk</span>
@@ -89,16 +88,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a id="facebookLogo" class="hidden" title="Facebook" href="" target="_blank"><span class="fa fa-facebook-square fa-2x pull-right"></span></a>
                                 <a id="twitterLogo" class="hidden" title="Twitter" href="" target="_blank"><span class="fa fa-twitter-square fa-2x pull-right"></span></a>
                                 <a id="instagramLogo" class="hidden" title="Instagram" href="" target="_blank"><span class="fa fa-instagram fa-2x pull-right"></span></a>
-                                <a id="photosLogo" class="hidden" title="Sfeerfoto's" href="" target="_blank"><span class="fa fa-picture-o fa-2x pull-right"></span></a>
+                                <a id="photosLogo" class="hidden" title="Sfeerfoto's" href="#"  data-toggle="modal" data-target="#restoPhotosModal" data-backdrop="static" title="Sfeerfoto's">
+                                    <span class="fa fa-picture-o fa-2x pull-right"></span>
+                                </a>
+
+
 						    </span>
 						</span>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center">
+                    <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center profileColumns">
                         <img id="logo_resto" class="img-responsive vcenter restoLogo" src="http://www.restaurantfleurdelin.be/img/1.png">
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden_info_mobile">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden_info_mobile profileColumns">
                         <p>
                             <span id="RestoOpeningHours">
                                 Ma: 15:00 - 23:00
@@ -522,6 +525,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="modal-body clearfix" style="padding-top: 0;">
                 <div id="mapCanvas" style="height: 500px; width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal resto photos -->
+<div class="modal fade" id="restoPhotosModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content clearfix">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Sfeerfoto's</h4>
+            </div>
+            <div class="modal-body text-justify">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators"></ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox"></div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

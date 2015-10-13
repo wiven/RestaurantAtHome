@@ -86,6 +86,7 @@ class Dashboard extends CI_Controller {
 			<script src='".public_url()."js/jquery.iframe-transport.js'></script>
 			<script src='".public_url()."js/jquery.fileupload.js'></script>
             <script src='".public_url()."js/formValidation_nl_BE.js'></script>
+            <script src='".public_url()."js/jquery.matchHeight.js'></script>
             <script src='".public_url()."js/dashboardprofile.js'></script>"
         );
 
@@ -143,7 +144,8 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => "<script src='".public_url()."js/dashboardorders.js'></script>"
+            'additional_scripts' => "<script src='".public_url()."js/jquery.matchHeight.js'></script>
+            <script src='".public_url()."js/dashboardorders.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
@@ -163,7 +165,8 @@ class Dashboard extends CI_Controller {
     public function slots() {
         $data_header = array(
             'page_title' => ' - Slots',
-            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>"
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/min/formValidation.min.css'>"
         );
 
         $data_content = array(
@@ -173,6 +176,9 @@ class Dashboard extends CI_Controller {
         $data_footer = array(
             'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
             <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
+            <script src='".public_url()."js/min/formValidation.min.js'></script>
+            <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
+            <script src='".public_url()."js/formValidation_nl_BE.js'></script>
             <script src='".public_url()."js/dashboardslots.js'></script>"
         );
 
@@ -188,7 +194,9 @@ class Dashboard extends CI_Controller {
     public function actions() {
         $data_header = array(
             'page_title' => ' - Acties',
-            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>"
+            'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap_datepicker.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/min/jquery.select2.min.css'>
+            <link rel='stylesheet' href='".public_url()."css/min/formValidation.min.css'>"
         );
 
         $data_content = array(
@@ -198,7 +206,12 @@ class Dashboard extends CI_Controller {
         $data_footer = array(
             'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
             <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
+            <script src='".public_url()."js/min/jquery.select2.min.js'></script>
             <script src='".public_url()."js/jquery.dataTables.js'></script>
+            <script src='".public_url()."js/min/formValidation.min.js'></script>
+            <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
+            <script src='".public_url()."js/formValidation_nl_BE.js'></script>
+            <script src='".public_url()."js/jquery.matchHeight.js'></script>
             <script src='".public_url()."js/dashboardactions.js'></script>
             "
         );
