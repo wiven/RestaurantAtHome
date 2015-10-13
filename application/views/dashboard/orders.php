@@ -22,9 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- /.col-lg-12 -->
     </div>
 
-    <div class="row">
+    <div class="row ordersRow hidden">
         <!-- START nieuwe bestellingen -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 newOrdersDiv">
             <div class="panel panel-default panel-red">
                 <div class="panel-heading">
                     Nieuwe bestellingen
@@ -42,30 +42,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <th>Prijs</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <?php
-                                for($i = 0; $i < 5; $i++) {
-                                    echo '<tr class="order_detail_tr">
-                                <td>17/'.($i+10).'/2015 '.($i+10).'u00</td>
-                                <td>Wim Vandevenne</td>
-                                <td>4</td>
-                                <td>31</td>
-                                <td>&euro; 24,85</td>
-                            </tr>';
-                                }
-
-                            ?>
-                            </tbody>
+                            <tbody></tbody>
                         </table>
                     </div>
                     <div class="text-center">
                         <a href="/dashboard/orders/new" class="btn btn-default btn-block">
                             <span class="fa fa-plus-square"></span> Meer bestellingen weergeven ...
-                        </a><!--
-                        <a href="#" class="btn btn-default load_more_actions_btn">
-                            <span class="fa fa-plus-square"></span>
-                            Meer bestellingen weergeven ...
-                        </a>-->
+                        </a>
                     </div>
                     <!-- /.table-responsive -->
                 </div>
@@ -75,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- END nieuwe bestellingen -->
         <!-- START  bestellingen in verwerking -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 inprogressOrdersDiv">
             <div class="panel panel-default">
                 <div class="panel-heading panel-primary">
                     Bestellingen in verwerking
@@ -93,20 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <th>Prijs</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <?php
-                            for($i = 0; $i < 5; $i++) {
-                                echo '<tr class="order_detail_tr">
-                                <td>17/0'.($i+5).'/2015 '.($i+10).'u00</td>
-                                <td>Wim Vandevenne</td>
-                                <td>4</td>
-                                <td>31</td>
-                                <td>&euro; 24,85</td>
-                            </tr>';
-                            }
-
-                            ?>
-                            </tbody>
+                            <tbody></tbody>
                         </table>
                     </div>
                     <div class="text-center">
@@ -124,9 +94,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </div>
 
-    <div class="row">
+    <div class="row ordersRow hidden">
         <!-- START af te leveren bestellingen -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 readyOrdersDiv">
             <div class="panel panel-default panel-yellow">
                 <div class="panel-heading">
                     Af te leveren bestellingen
@@ -144,20 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <th>Prijs</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <?php
-                            for($i = 0; $i < 5; $i++) {
-                                echo '<tr class="order_detail_tr">
-                                <td>17/0'.($i+5).'/2015 '.($i+14).'u00</td>
-                                <td>Wim Vandevenne</td>
-                                <td>4</td>
-                                <td>31</td>
-                                <td>&euro; 24,85</td>
-                            </tr>';
-                            }
-
-                            ?>
-                            </tbody>
+                            <tbody></tbody>
                         </table>
                     </div>
                     <div class="text-center">
@@ -173,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- END af te leveren bestellingen -->
         <!-- START afgeleverde bestellingen -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 finishedOrdersDiv">
             <div class="panel panel-default panel-green">
                 <div class="panel-heading">
                     Afgeleverde bestellingen
@@ -192,18 +149,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </tr>
                             </thead>
                             <tbody>
-                            <?php
-                            for($i = 0; $i < 5; $i++) {
-                                echo '<tr class="order_detail_tr">
-                                <td>17/0'.($i+5).'/2015 '.($i+14).'u00</td>
-                                <td>Wim Vandevenne</td>
-                                <td>4</td>
-                                <td>31</td>
-                                <td>&euro; 24,85</td>
-                            </tr>';
-                            }
-
-                            ?>
                             </tbody>
                         </table>
                     </div>
@@ -235,19 +180,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="modal-body text-justify clearfix">
                 <div class="col-lg-6">
-                    Afhaaldatum: <strong><span>19/08/2015</span></strong><br />
-                    Afhaaluur: <strong><span>19u30</span></strong><br />
-                    Betalingsstatus: <span class="label label-success">Betaald (BanContact)</span>
+                    Afhaaldatum: <strong><span id="orderCollectDate">19/08/2015</span></strong><br />
+                    Afhaaluur: <strong><span id="orderCollectHour">19u30</span></strong><br />
+                    Betalingsstatus: <span class="label label-success" id="orderPaymentMethod">Betaald (BanContact)</span>
                 </div>
                 <div class="col-lg-6 text-right ">
-                    Klant: <strong><span>Wim Vandevenne</span></strong><br />
-                    Adres: <em><span>Stokstraat 47, Zele</span></em>
+                    Klant: <strong><span id="orderClientName">Wim Vandevenne</span></strong><br />
+                    Adres: <strong><em><span id="orderClientAddress">Stokstraat 47, Zele</span></em></strong><br />
+                    Kortingscode: <strong><em><span id="orderCouponCode">-</span></em></strong>
                 </div>
                 <div class="col-lg-12 clear">
-                    Opmerkingen klant: <span>De steak moet niet te hard gebakken zijn, en de frietjes mogen nog wat slap zijn!</span>
+                    Opmerkingen klant: <strong><span id="orderClientMsg">De steak moet niet te hard gebakken zijn, en de frietjes mogen nog wat slap zijn!</span></strong>
                 </div>
                 <div class="col-lg-12">
-                    <ul>
+                    <ul id="orderProducts">
                         <?php
                         for($i = 0; $i < 11; $i++) {
                             echo '<li>Product '.($i+1).'</li>';
@@ -256,20 +202,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </ul>
                 </div>
                 <div class="col-lg-12 text-center clear">
-                    <strong>TOTAALBEDRAG: €112,67</strong>
+                    <strong>TOTAALBEDRAG: €<span id="orderTotalAmount">112,67</span></strong>
                 </div>
+                <!--
                 <div class="col-lg-6 col-md-6 col-xs-12">
-                    <a href="#" class="btn btn-warning btn-block">
+                    <a href="#" class="btn btn-warning btn-block orderMarkBusy">
                         <span class="fa fa-check fa-fw"></span>
                         Markeer als bezig
                     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
-                    <a href="#" class="btn btn-success btn-block">
+                    <a href="#" class="btn btn-success btn-block orderMarkReady">
                         <span class="fa fa-check fa-fw"></span>
                         Markeer als klaar
                     </a>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
