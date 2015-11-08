@@ -41,8 +41,6 @@
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/jquery-ui.css">
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css">
 
-	</script>
-
 	<script src="<?php echo public_url(); ?>js/modernizr.js"></script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
