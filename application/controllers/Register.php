@@ -13,7 +13,7 @@ class Register extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => '',
+            'additional_scripts' => "<script src='".public_url()."js/register.js'></script>",
             'current_url' => @explode('.', (@$_SERVER['HTTP_HOST'].@$_SERVER['PATH_INFO']))[1]
         );
 

@@ -76,6 +76,8 @@
 <script src="<?php echo public_url(); ?>js/jquery-password-check.js"></script>
 <script src="<?php echo public_url(); ?>js/parsley.js"></script>
 <script src="<?php echo public_url(); ?>js/parsley-nl.js"></script>
+<script src="<?php echo public_url(); ?>js/base64.js"></script>
+<script src="<?php echo public_url(); ?>js/cookie.js"></script>
 <script src="<?php echo public_url(); ?>js/jquery.cookiebar.js"></script>
 <script src="<?php echo public_url(); ?>js/script.js"></script>
 

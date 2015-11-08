@@ -47,7 +47,7 @@
 			application: "restoathome"
 		}
 	</script>
-	<script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" crossorigin="anonymous">
+<!--	<script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" crossorigin="anonymous">-->
 	</script>
 
 	<script src="<?php echo public_url(); ?>js/modernizr.js"></script>

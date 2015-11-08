@@ -23,8 +23,7 @@ class Search extends CI_Controller {
 
 				$data_footer = array(
 					'additional_scripts' => "<script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-					<script src='".public_url()."js/search.js'></script>
-					<script src='".public_url()."js/restaurantdetail.js'></script>"
+					<script src='".public_url()."js/search.js'></script>"
 				);
 
 				$this->load->view('/common/header', $data_header);
@@ -41,8 +40,7 @@ class Search extends CI_Controller {
 
 				$data_footer = array(
 					'additional_scripts' => "<script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-					<script src='".public_url()."js/search.js'></script>
-					<script src='".public_url()."js/restaurantdetail.js'></script>"
+					<script src='".public_url()."js/search.js'></script>"
 				);
 
 				$this->load->view('/common/header', $data_header);
@@ -59,8 +57,7 @@ class Search extends CI_Controller {
 
 				$data_footer = array(
 					'additional_scripts' => "<script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-					<script src='".public_url()."js/search.js'></script>
-					<script src='".public_url()."js/restaurantdetail.js'></script>"
+					<script src='".public_url()."js/search.js'></script>"
 				);
 
 				$this->load->view('/common/header', $data_header);
@@ -77,8 +74,7 @@ class Search extends CI_Controller {
 
 				$data_footer = array(
 					'additional_scripts' => "<script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-					<script src='".public_url()."js/search.js'></script>
-					<script src='".public_url()."js/restaurantdetail.js'></script>"
+					<script src='".public_url()."js/search.js'></script>"
 				);
 
 				$this->load->view('/common/header', $data_header);
