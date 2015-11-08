@@ -19,23 +19,24 @@ function getUrlParameter(sParam) {
 $(document).ready(function() {
     console.log( "ready!" );
 
-    $('.datepicker').datepicker({
-        format: "dd/mm/yyyy",
-        weekStart: 1,
-        language: "nl-BE",
-        autoclose: true,
-        todayHighlight: true
-    });
+    var month = [];
+    month[0] = "januari";
+    month[1] = "februari";
+    month[2] = "maart";
+    month[3] = "april";
+    month[4] = "mei";
+    month[5] = "juni";
+    month[6] = "juli";
+    month[7] = "augustus";
+    month[8] = "september";
+    month[9] = "oktober";
+    month[10] = "november";
+    month[11] = "december";
 
-    $('.timepicker').timepicker({
-        template: false,
-        showInputs: false,
-        minuteStep: 5,
-        template: "modal",
-        maxHours: 24,
-        showMeridian: false,
-        defaultTime: 'current'
-    });
+    if(Cookies.get('hash') == null)
+        window.location = "../login?redirect_url="+window.location;
+
+    var hash = Base64.decode(Cookies.get('hash'));
 
     var settings = {
         "async": true,
@@ -47,17 +48,46 @@ $(document).ready(function() {
             "content-type": "application/json",
             "Pragma": "no-cache",
             "Cache-Control": "no-cache",
-            "Expires": 0
+            "Expires": 0,
+            "hash": Base64.decode(Cookies.get('hash')) //"1f04ffd563aea220413dae5c41453c6cdaef167a"
         },
         "cache": false,
         "processData": false
     };
 
     console.log(settings);
+    //.always(function (response, textStatus, errorThrown) {
+    $.ajax(settings)
+        .always(function (response, textStatus, errorThrown) {
+            console.log(textStatus);
+            console.log(errorThrown);
+            console.log('getOrder Finished');
 
-    $.ajax(settings).always(function (response, textStatus, errorThrown) {
-        console.log('getRestaurant');
-        response = JSON.parse(response.responseText.substr(1, response.responseText.length - 2));
-        console.log(response);
-    });
+            try {
+                response = JSON.parse(response.responseText.substr(1, response.responseText.length - 2));
+                console.log(response);
+
+                if (response.paymentStatus != 'Payed')
+                {
+                    $(".pending").removeClass("hidden");
+                    $(".payed").addClass("hidden");
+                }
+
+                var date = new Date(response.orderDateTime);
+                var min = date.getMinutes();
+                if(min == 0)
+                    min = '00';
+                $("#readyMessage").html('Uw bestelling zal klaar liggen op ' + date.getDate() + ' ' + month[date.getMonth()] + ' ' + date.getFullYear() + ' om ' + date.getHours() + 'u' +  min + '.');
+
+                $.each(response.lines, function (index, item) {
+                    $("#orderDetails").append(
+                        '<li>' + item.quantity + 'x ' + item.name + '</li>'
+                    );
+                });
+            } catch (e) {
+                console.log("failed");
+                window.location = "../";
+            }
+
+        });
 });

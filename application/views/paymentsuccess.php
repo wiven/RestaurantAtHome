@@ -18,23 +18,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
 
     <h2 class="payed">Betaling voltooid!</h2>
-    <h2 class="pending">Bestelling voltooid!</h2>
+    <h2 class="pending hidden">Bestelling voltooid!</h2>
 
     <div class="text-center">
         <span class="fa fa-check-circle-o fa-5x"></span>
         <span class="fa fa-cutlery fa-5x" style="margin-left: 20px;"></span>
     </div>
     <br><br>
-    <h4 id="readyMessage">Uw bestelling zal klaar liggen op 15 september 2015 om 18u30.</h4>
+    <h4 class="payed">We hebben u betaling ontvangen.</h4>
+    <h4 id="readyMessage"></h4>
 
     <p>
         Uw bestelling:
     </p>
 
-    <ul>
-        <li>4x Product 1</li>
-        <li>2x Product 2</li>
-        <li>1x Product 3</li>
+    <ul id="orderDetails">
     </ul>
 
     <h3>
