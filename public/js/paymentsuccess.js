@@ -1,5 +1,21 @@
 const API_URL = 'http://playground.restaurantathome.be/api/';
 
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+}
+
+
 $(document).ready(function() {
     console.log( "ready!" );
 
@@ -24,7 +40,7 @@ $(document).ready(function() {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": API_URL + 'restaurantdetail/6',
+        "url": API_URL + 'order/' +getUrlParameter("id"),
         "method": "GET",
         "headers": {
             "Access-Control-Allow-Origin":  '*',
@@ -36,6 +52,8 @@ $(document).ready(function() {
         "cache": false,
         "processData": false
     };
+
+    console.log(settings);
 
     $.ajax(settings).always(function (response, textStatus, errorThrown) {
         console.log('getRestaurant');
