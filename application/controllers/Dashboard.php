@@ -14,12 +14,8 @@ class Dashboard extends CI_Controller {
     public function index() {
         @session_start();
 
-        if(!is_writable(session_save_path())) {
-            /*echo 'Session path'.session_save_path().'is not writable in PHP';*/
-        }
-
-        if(!isset($_SESSION['useremail']) && !isset($_SESSION['userhash'])) {
-            /*header('Location: /dashboard/login?redirect_url=dashboard/overview');*/
+        if(!isset($_COOKIE['hash']) && !isset($_COOKIE['restoId'])) {
+            header('Location: /dashboard/login?redirect_url=dashboard/overview');
         }
 
         $data_header = array(
@@ -35,15 +31,13 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => "<script src='".public_url()."js/cookie.js'></script>
-            <script src='".public_url()."js/base64.js'></script>
-            <script src='".public_url()."js/min/jquery.chosen.min.js'></script>
-            <script src='".public_url()."js/min/formValidation.min.js'></script>
-            <script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
-            <script src='".public_url()."js/formValidation_nl_BE.js'></script>
-            <script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
-            <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
-            <script src='".public_url()."js/dashboardoverview.js'></script>"
+            'additional_scripts' => "<script src='".public_url()."js/min/jquery.chosen.min.js'></script>
+<script src='".public_url()."js/min/formValidation.min.js'></script>
+<script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
+<script src='".public_url()."js/formValidation_nl_BE.js'></script>
+<script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
+<script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
+<script src='".public_url()."js/dashboardoverview.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
@@ -63,6 +57,12 @@ class Dashboard extends CI_Controller {
      * executed when '/dashboard/profile' is loaded
      */
     public function profile() {
+        @session_start();
+
+        if(!isset($_COOKIE['hash']) && !isset($_COOKIE['restoId'])) {
+            header('Location: /dashboard/login?redirect_url=dashboard/profile');
+        }
+
         $data_header = array(
             'page_title' => ' - Profiel',
             'additional_styles' => "<link rel='stylesheet' href='".public_url()."css/min/bootstrap-switch.min.css'>
@@ -242,7 +242,10 @@ class Dashboard extends CI_Controller {
         );
 
         $data_footer = array(
-            'additional_scripts' => ''
+            'additional_scripts' => "<script src='".public_url()."js/min/formValidation.min.js'></script>
+<script src='".public_url()."js/min/formValidation.bootstrap.min.js'></script>
+<script src='".public_url()."js/formValidation_nl_BE.js'></script>
+<script src='".public_url()."js/dashboardloyalty.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
@@ -299,30 +302,7 @@ class Dashboard extends CI_Controller {
     }
 
     /**
-     * executed when '/dashboard/bugreport' is loaded
-     */
-    /*public function bugreport() {
-        $data_header = array(
-            'page_title' => ' - Bug melden',
-            'additional_styles' => ''
-        );
-
-        $data_content = array(
-            'pretty_page_title' => 'Bug melden'
-        );
-
-        $data_footer = array(
-            'additional_scripts' => ''
-        );
-
-        $this->load->view('/dashboard/common/header', $data_header);
-        $this->load->view('/dashboard/common/top_menu');
-        $this->load->view('/dashboard/bugreport', $data_content);
-        $this->load->view('/dashboard/common/footer', $data_footer);
-    }*/
-
-    /**
-     * executed when '/logout' is loaded
+     * executed when '/login' is loaded
      */
     public function login() {
         $data_header = array(
@@ -331,12 +311,12 @@ class Dashboard extends CI_Controller {
         );
 
         $data_content = array(
-            'pretty_page_title' => 'Contacteer ons'
+            'pretty_page_title' => ''
         );
 
         $data_footer = array(
-            'additional_scripts' => "<script src='".public_url()."js/jquery.md5.js'></script>
-            <script src='".public_url()."js/dashboardlogin.js'></script>"
+            'additional_scripts' => "<script src='".public_url()."js/dashboardlogin.js'></script>
+<script src='".public_url()."js/min/sha256.min.js'></script>"
         );
 
         $this->load->view('/dashboard/common/header', $data_header);
@@ -348,6 +328,14 @@ class Dashboard extends CI_Controller {
      * executed when '/logout' is loaded
      */
     public function logout() {
+        @session_destroy();
+
+        $data_footer = array(
+            'additional_scripts' => "<script src='".public_url()."js/dashboardlogout.js'></script>"
+        );
+
+        $this->load->view('/dashboard/common/footer', $data_footer);
+
         //TODO: session destroy + redirect to public homepage
     }
 }

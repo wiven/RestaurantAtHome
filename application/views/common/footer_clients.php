@@ -170,9 +170,10 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <!-- Will be included in the controller as a parameter when needed on a page -->
 <!--<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
-<script src="<?php echo public_url(); ?>js/min/jquery.ui.touch-punch.min.js"></script>
+<script src="<?php echo public_url(); ?>js/jquery.ui.touch-punch.js"></script>
 <script src="<?php echo public_url(); ?>js/jquery.steps.min.js"></script>
-
+<script src="<?php echo public_url(); ?>js/base64.js"></script>
+<script src="<?php echo public_url(); ?>js/cookie.js"></script>
 <script src="<?php echo public_url(); ?>js/parsley.js"></script>
 <script src="<?php echo public_url(); ?>js/parsley-nl.js"></script>
 <script src="<?php echo public_url(); ?>js/jquery-placeholder.js"></script>
@@ -231,7 +232,7 @@
 
 		$('#product_type_chooser > a h4').on('click', function () {
 			$(this).addClass('active');
-			console.log('active');
+//			console.log('active');
 		});
 
 		/*
@@ -272,12 +273,7 @@
 			$(this).tab('show');
 		});
 
-		$('.filter_btns').on('click', function () {
-			$('.more_filters_section').slideToggle();
-			$(".filter_btns").toggle();
-		});
-
-		$("#slider-range").slider({
+		/*$("#slider-range").slider({
 			range: true,
 			min: 5,
 			max: 100,
@@ -287,9 +283,9 @@
 				$("#min_price").text(ui.values[0]);
 				$("#max_price").text(ui.values[1]);
 			}
-		});
+		});*/
 
-		$("#slider-range-distance").slider({
+		/*$("#slider-range-distance").slider({
 			range: true,
 			min: 1,
 			max: 50,
@@ -299,7 +295,7 @@
 				$("#min_distance").text(ui.values[0]);
 				$("#max_distance").text(ui.values[1]);
 			}
-		});
+		});*/
 
 		$('#min_price').text($("#slider-range").slider("values", 0));
 		$('#max_price').text($("#slider-range").slider("values", 1));
@@ -473,7 +469,7 @@
 			var content = 'Error: Your browser doesn\'t support geolocation.';
 		}
 
-		alert(content);
+//		alert(content);
 
 		var options = {
 			map: map,

@@ -276,17 +276,17 @@ function setUserHash(hash, email) {
 
                         window.location.href = '/';
 
-                        /*try {
+                        try {
                             alert(REDIRECT_URL);
                             if(REDIRECT_URL.length != 0) {
 
-                                window.location.href = '../'+REDIRECT_URL;
+                                window.location.href = '/'+REDIRECT_URL;
                             } else {
-                                window.location.href = '../../';
+                                window.location.href = '/';
                             }
                         } catch(e) {
-                            window.location.href = '../../';
-                        }*/
+                            window.location.href = '/';
+                        }
 
                         break;
                     case "Resto":

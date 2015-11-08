@@ -4,12 +4,12 @@
 		<span class="fa fa-chevron-circle-left"></span> Terug</span>
 	</button>
 
-	<a href="/checkout" id="checkout_btn" class="btn btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right">
+	<a href="/checkout" id="checkout_btn" class="btn btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right hidden">
 		Afrekenen
 	</a>
 
 	<div class="form-group">
-		<button id="basket_btn" class="btn btn-default col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right" data-toggle="modal" data-target="#basketModal" data-backdrop="static">
+		<button id="basket_btn" class="btn btn-default col-lg-2 col-md-2 col-sm-2 col-xs-12 pull-right hidden" data-toggle="modal" data-target="#basketModal" data-backdrop="static">
 			<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> &euro; 164,89
 			<span class="badge basket_count_badge">11</span>
 		</button>
@@ -24,37 +24,37 @@
 			<ul class="list-group clearfix">
 				<li class="list-group-item clearfix" id="info_resto">
 					<div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
-						<img id="logo_resto" src="http://www.restaurantfleurdelin.be/img/1.png">
+						<img id="logo_resto" class="restoLogo" src="http://placehold.it/450x210">
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center" id="important_info_resto">
-						<a href="#" title="Routebeschrijving" data-toggle="modal" data-target="#mapsModal" data-backdrop="static"><img src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-16.png" /> IJzerfrontlaan 13, 8500 Kortrijk</a>
-						<br /> +32 2 123 45 67
+						<a href="https://www.google.com/maps?daddr=51.0993192,3.8444533&saddr" title="Routebeschrijving" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-16.png" /> <span class="restoAddress">IJzerfrontlaan 13, 8500 Kortrijk</span></a>
+						<!--data-toggle="modal" data-target="#mapsModal" data-backdrop="static"-->
+						<br /> <span class="restoPhone">+32 2 123 45 67</span>
 						<br />
-						<a href="mailto:info@restaurantathome.be">info@restaurantathome.be</a>
+						<a href="mailto:info@restaurantathome.be"><span class="restoEmail">info@restaurantathome.be</span></a>
 						<br />
-						<a href="http://restaurantathome.be" target="_blank">http://restaurantathome.be</a>
+						<a href="http://restaurantathome.be" target="_blank"><span class="restoWebsite">http://restaurantathome.be</span></a>
 						<br />
 						<span class="hidden_info_mobile">
-							Specialiteit: Ribbetjes<br />
-							Keuken: Belgisch<br /><br />
+							<span class="restoSpecialty">Specialiteit: Ribbetjes</span><br />
+							<span class="restoKitchentype">Keuken: Belgisch</span><br /><br />
 							<span class="socials">
-							   <a href="#" target="_blank"><span class="fa fa-facebook-square fa-2x pull-right"></span>
-						</a>
-						<a href="#" target="_blank"><span class="fa fa-twitter-square fa-2x pull-right"></span></a>
-						<a href="#" target="_blank"><span class="fa fa-instagram fa-2x pull-right"></span></a>
-						<a href="#" target="_blank"><span class="fa fa-picture-o fa-2x pull-right"></span></a>
+					   	<a href="#" target="_blank" class="restoFacebook hidden"><span class="fa fa-facebook-square fa-2x pull-right"></span></a>
+						<a href="#" target="_blank" class="restoTwitter hidden"><span class="fa fa-twitter-square fa-2x pull-right"></span></a>
+						<a href="#" target="_blank" class="restoInstagram hidden"><span class="fa fa-instagram fa-2x pull-right"></span></a>
+						<a href="#" target="_blank" class="restoPicture hidden"><span class="fa fa-picture-o fa-2x pull-right"></span></a>
 						</span>
 						</span>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center">
-						<img id="logo_resto" src="http://www.restaurantfleurdelin.be/img/1.png">
+						<img id="logo_resto" class="restoLogo" src="http://placehold.it/450x210">
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden_info_mobile">
-						<p>
-							Ma: 15:00 - 23:00
+						<p class="restoHours">
+							<!--Ma: 15:00 - 23:00
 							<br /> Di: 15:00 - 23:00
 							<br /> Wo: Gesloten
 							<br /> Do: 15:00 - 23:00
@@ -67,7 +67,7 @@
 							<span class="fa fa-credit-card fa-2x" title="Bancontact/Mister Cash/Maestro"></span>
 							<span class="fa fa-cc-visa fa-2x" title="VISA/MasterCard"></span>
 							<span class="fa fa-bitcoin fa-2x" title="Bitcoin"></span>
-							<span class="fa fa-money fa-2x" title="Cash"></span>
+							<span class="fa fa-money fa-2x" title="Cash"></span>-->
 						</p>
 					</div>
 
@@ -80,19 +80,19 @@
 		<div role="tabpanel" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<!-- PRODUCT TYPE CHOOSER -->
 			<div id="product_type_chooser" class="clearfix" role="tablist" style="margin-bottom: 20px;">
-				<a href="#acties" aria-controls="acties" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center active" style="line-height: 40px;"><h4>ACTIES</h4></a>
-				<a href="#voorgerechten" aria-controls="voorgerechten" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>VOORGERECHTEN</h4></a>
-				<a href="#hoofdgerechten" aria-controls="hoofdgerechten" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>HOOFDGERECHTEN</h4></a>
-				<a href="#desserts" aria-controls="desserts" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>DESSERTS</h4></a>
-				<a href="#dranken" aria-controls="dranken" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>DRANKEN</h4></a>
-				<a href="#extras" aria-controls="extras" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>EXTRA'S</h4></a>
+				<a href="#voorgerechtenTab" aria-controls="voorgerechten" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center active" style="line-height: 40px;"><h4>VOORGERECHTEN</h4></a>
+				<a href="#hoofdgerechtenTab" aria-controls="hoofdgerechten" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>HOOFDGERECHTEN</h4></a>
+				<a href="#dessertsTab" aria-controls="desserts" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>DESSERTS</h4></a>
+				<a href="#drankenTab" aria-controls="dranken" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>DRANKEN</h4></a>
+				<a href="#extrasTab" aria-controls="extras" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>EXTRA'S</h4></a>
+				<a href="#actiesTab" aria-controls="acties" role="tab" data-toggle="pill" class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center" style="line-height: 40px;"><h4>ACTIES</h4></a>
 			</div>
 
 			<div class="tab-content">
 
-				<section role="tabpanel" class="tab-pane active" id="acties">
+				<section role="tabpanel" class="tab-pane" id="actiesTab">
 
-					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
+					<!--<article class="col-lg-6 col-md-12 menu-item clearfix">
 						<div class="col-lg-3 col-sm-3 col-xs-12">
 							<img src="http://lorempixel.com/300/300/food" width="100%">
 						</div>
@@ -120,45 +120,13 @@
 									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
 								</div>
 						</div>
-					</article>'; } ?>
+					</article>-->
 
 				</section>
-
-				<section role="tabpanel" class="tab-pane" id="voorgerechten">
-
-					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
-						<div class="col-lg-3 col-sm-3 col-xs-3">
-							<img src="http://lorempixel.com/300/300/food" width="100%">
-						</div>
-						<div class="col-lg-5 col-sm-5 col-xs-5">
-							<h3>Voorgerecht</h3>
-							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</div>
-						<div class="col-lg-4 col-sm-4 col-xs-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-<span class="glyphicon glyphicon-minus"></span>
-								</button>
-								</span>
-								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
-								<span class="input-group-btn">
-<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-<span class="glyphicon glyphicon-plus"></span>
-								</button>
-								</span>
-							</div>
-							<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
-								</div>
-						</div>
-					</article>'; } ?>
+				<section role="tabpanel" class="tab-pane active" id="voorgerechtenTab">
 
 				</section>
-
-				<section role="tabpanel" class="tab-pane" id="hoofdgerechten">
+				<section role="tabpanel" class="tab-pane" id="hoofdgerechtenTab">
 
 					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
 						<div class="col-lg-3 col-sm-3 col-xs-3">
@@ -191,8 +159,7 @@
 					</article>'; } ?>
 
 				</section>
-
-				<section role="tabpanel" class="tab-pane" id="desserts">
+				<section role="tabpanel" class="tab-pane" id="dessertsTab">
 
 					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
 						<div class="col-lg-3 col-sm-3 col-xs-3">
@@ -225,88 +192,17 @@
 					</article>'; } ?>
 
 				</section>
-
-				<section role="tabpanel" class="tab-pane" id="dranken">
-
-					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
-						<div class="col-lg-3 col-sm-3 col-xs-3">
-							<img src="http://lorempixel.com/300/300/food" width="100%">
-						</div>
-						<div class="col-lg-5 col-sm-5 col-xs-5">
-							<h3>Drank</h3>
-							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</div>
-						<div class="col-lg-4 col-sm-4 col-xs-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-<span class="glyphicon glyphicon-minus"></span>
-								</button>
-								</span>
-								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
-								<span class="input-group-btn">
-<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-<span class="glyphicon glyphicon-plus"></span>
-								</button>
-								</span>
-							</div>
-							<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
-								</div>
-						</div>
-					</article>'; } ?>
-
+				<section role="tabpanel" class="tab-pane" id="drankenTab">
+					<article class="col-xs-12 menu-item clearfix">
+						<h4 class="text-center">Er zijn helaas geen producten van dit type.</h4>
+					</article>
 				</section>
-
-				<section role="tabpanel" class="tab-pane" id="extras">
-
-					<?php for ($i=1 ; $i <=11; $i++) { echo '<article class="col-lg-6 col-md-12 menu-item clearfix">
-						<div class="col-lg-3 col-sm-3 col-xs-3">
-							<img src="http://lorempixel.com/300/300/food" width="100%">
-						</div>
-						<div class="col-lg-5 col-sm-5 col-xs-5">
-							<h3>Extra</h3>
-							<h5><span class="label label-warning hidden-sm">Specialiteit</span></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</div>
-						<div class="col-lg-4 col-sm-4 col-xs-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-<span class="glyphicon glyphicon-minus"></span>
-								</button>
-								</span>
-								<input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
-								<span class="input-group-btn">
-<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-<span class="glyphicon glyphicon-plus"></span>
-								</button>
-								</span>
-							</div>
-							<div class="form-group">
-									<a href="#" class="btn btn-primary" style="width: 100%; margin-top: 26px;">Toevoegen</a>
-									<p class="badge" style="color: #FFF; border: 2px solid white; background: #5cb85c; position: absolute; top: 49px; right: 5px; z-index: 500;">1</p>
-								</div>
-						</div>
-					</article>'; } ?>
-
+				<section role="tabpanel" class="tab-pane" id="extrasTab">
+					<article class="col-xs-12 menu-item clearfix">
+						<h4 class="text-center">Er zijn helaas geen producten van dit type.</h4>
+					</article>
 				</section>
 			</div>
-
-			<!--<div class="col-lg-3" id="shopping_list" style="padding-right: 0;">
-				<ul class="list-group">
-					<li class="list-group-item">Cras justo odio</li>
-					<li class="list-group-item">Dapibus ac facilisis in</li>
-					<li class="list-group-item">Morbi leo risus</li>
-					<li class="list-group-item">Porta ac consectetur ac</li>
-					<li class="list-group-item">Vestibulum at eros</li>
-				</ul>
-
-				<button class="btn btn-default">&euro; 164,89</button>
-				<button class="btn btn-primary">Afrekenen</button>
-			</div>-->
 		</div>
 	</div>
 </div>

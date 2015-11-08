@@ -7,7 +7,7 @@ $(document).ready(function () {
         xhrFields: {
             withCredentials: true
         }
-    }).done(function (msg) {
+    }).always(function (msg) {
         //console.log(msg);
         var newOrders = msg.newOrders;
         var activePromos = msg.activePromos;
@@ -86,8 +86,8 @@ $(document).ready(function () {
             $('#no_partners_msg').removeClass('hidden');
         }
     }).fail(function (jqXHR, textStatus) {
-        console.log(jqXHR);
-        alert("Request failed: " + textStatus);
+        //console.log(jqXHR);
+        //alert("Request failed: " + textStatus);
     });
 
 
@@ -310,7 +310,7 @@ $(document).ready(function () {
 });
 
 var product_html = '';
-var resto_id = '5';
+var resto_id = Base64.decode(Cookies.get('restoId'));
 var promotion_id = '';
 
 //const API_URL = 'http://localhost/RestaurantAtHomeAPI/';

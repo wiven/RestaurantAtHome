@@ -270,9 +270,9 @@
                     <li>
                         <a href="/dashboard/partners"><i class="fa fa-link fa-fw"></i> Partners</a>
                     </li>
-                    <!--<li>
+                    <li id="contactLink">
                         <a href="/dashboard/contact"><i class="fa fa-envelope-o fa-fw"></i> Contact</a>
-                    </li>-->
+                    </li>
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->

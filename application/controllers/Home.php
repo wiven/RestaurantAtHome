@@ -26,7 +26,8 @@ class Home extends CI_Controller {
 		}
 
 		$data_footer = array(
-			'additional_scripts' => '<script src="'.public_url().'js/home.js"></script>',
+			'additional_scripts' => '<script src="'.public_url().'js/home.js"></script>
+			<script src="'.public_url().'js/jquery.matchHeight.js"></script>',
 			'current_url' => $cur_url
 		);
 
