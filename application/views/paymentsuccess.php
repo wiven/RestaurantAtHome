@@ -27,6 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <br><br>
     <h4 class="payed">We hebben u betaling ontvangen.</h4>
     <h4 id="readyMessage"></h4>
+    <h4 id="awaitingPayment"></h4>
 
     <p>
         Uw bestelling:
@@ -34,6 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <ul id="orderDetails">
     </ul>
+
 
     <h3>
         Smakelijk!

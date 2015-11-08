@@ -67,10 +67,20 @@ $(document).ready(function() {
                 response = JSON.parse(response.responseText.substr(1, response.responseText.length - 2));
                 console.log(response);
 
-                if (response.paymentStatus != 'Payed')
+                if (response.paymentStatus != 'Payed' && response.paymentmethodid == 1)
                 {
                     $(".pending").removeClass("hidden");
                     $(".payed").addClass("hidden");
+                }
+
+                if(response.paymentmethodid == 2)
+                {
+                    if(response.paymentStatus == 'Pending' )
+                    {
+                        $(".payed").addClass("hidden");
+                        $('#awaitingPayment').html("Wij wachten u betaling af ...");
+                        $("#readyMessage").addClass("hidden");
+                    }
                 }
 
                 var date = new Date(response.orderDateTime);
@@ -86,7 +96,8 @@ $(document).ready(function() {
                 });
             } catch (e) {
                 console.log("failed");
-                window.location = "../";
+                console.log(e);
+                //window.location = "../";
             }
 
         });
