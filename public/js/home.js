@@ -1,6 +1,5 @@
 const API_URL = 'http://playground.restaurantathome.be/api/';
 
-
 $(document).ready(function () {
 
 
@@ -10,6 +9,8 @@ $(document).ready(function () {
         duration: 5000,
         fade: 750
     });
+
+    getRandomRestaurant();
 
     $('#main_search_button').click(function (e) {
         e.preventDefault();
@@ -26,10 +27,6 @@ $(document).ready(function () {
         $('#main_search_button').trigger('click');
     });
 
-});
-
-$(window).bind('load', function() {
-    getRandomRestaurant();
 });
 
 function getRandomRestaurant() {
@@ -53,19 +50,16 @@ function getRandomRestaurant() {
         response = JSON.parse(response.responseText.substr(1, response.responseText.length - 2));
 
         $.each(response.spotlight, function (index, item) {
+
             try {
                 var restoThumb = item.logoPhoto.url;
             } catch (err) {
-                var restoThumb = 'http://www.restaurantmartinwishart.co.uk/wp-content/themes/martin-wishart/images/gallery/overview-of-the-restaurant.jpg';
+                var restoThumb = '//playground.restaurantathome.be/public/img/restaurant-voorbeeld.jpg';
             }
 
             $("#restoInDeKijker").append('<a href="/restaurantdetail?id='+Base64.encode(item.id)+'" class="top_resto">'+'<div class="col-sm-6 col-md-3 col-lg-3">'+'<figure class="thumbnail">'+'<img class="img-responsive" src="'+restoThumb+'">'+'<figcaption class="caption">'+'<h3 id="thumbnail-label">'+item.name+'</h3>'+'</figcaption>'+'</figure>'+'</div>'+'</a>');
-            $("#restoInDeKijker").append('<div class="col-sm-6 col-md-3 col-lg-3">'+'<a href="/restaurantdetail?id='+Base64.encode(item.id)+'" class="top_resto">'+'<figure class="thumbnail">'+'<img class="img-responsive" src="'+restoThumb+'">'+'<figcaption class="caption">'+'<h3 id="thumbnail-label">'+item.name+'</h3>'+'</figcaption>'+'</figure>'+'</a>'+'</div>');
 
-            return index < 4;
         });
-
-        $('.thumbnail').matchHeight();
 
     });
 
