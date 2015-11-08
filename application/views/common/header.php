@@ -34,20 +34,13 @@
 	<meta name="twitter:title" content="Restaurant at home">
 	<meta name="twitter:description" content="">
 	<meta name="twitter:image" content="http://restaurantathome.be/img/logo-marginaalst.jpg">
-
-	<link rel="stylesheet" href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css">
+	
 	<?php echo (isset($additional_styles) ? $additional_styles : '') ?>
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/font-awesome-4.3.0.css">
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/jquery.cookiebar.css">
 	<link rel="stylesheet" href="<?php echo public_url(); ?>css/jquery-ui.css">
+	<link rel="stylesheet" href="<?php echo public_url(); ?>css/restaurant-at-home-theme.css">
 
-	<script type="text/javascript">
-		window._trackJs = {
-			token: "bc42372f6bd04df4ad8783ea5cebd8c2",
-			application: "restoathome"
-		}
-	</script>
-<!--	<script type="text/javascript" src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" crossorigin="anonymous">-->
 	</script>
 
 	<script src="<?php echo public_url(); ?>js/modernizr.js"></script>
