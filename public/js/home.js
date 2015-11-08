@@ -60,6 +60,8 @@ function getRandomRestaurant() {
             }
 
             $("#restoInDeKijker").append('<a href="/restaurantdetail?id='+Base64.encode(item.id)+'" class="top_resto">'+'<div class="col-sm-6 col-md-3 col-lg-3">'+'<figure class="thumbnail">'+'<img class="img-responsive" src="'+restoThumb+'">'+'<figcaption class="caption">'+'<h3 id="thumbnail-label">'+item.name+'</h3>'+'</figcaption>'+'</figure>'+'</div>'+'</a>');
+            $("#restoInDeKijker").append('<div class="col-sm-6 col-md-3 col-lg-3">'+'<a href="/restaurantdetail?id='+Base64.encode(item.id)+'" class="top_resto">'+'<figure class="thumbnail">'+'<img class="img-responsive" src="'+restoThumb+'">'+'<figcaption class="caption">'+'<h3 id="thumbnail-label">'+item.name+'</h3>'+'</figcaption>'+'</figure>'+'</a>'+'</div>');
+
             return index < 4;
         });
 
