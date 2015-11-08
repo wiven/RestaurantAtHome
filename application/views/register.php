@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="col-lg-12">
-			<form class="form-horizontal">
+			<form class="form-horizontal" id="registerForm">
 				<h3>Stap 1 van <span class="totalStepsCount"></span>: Gebruikersinformatie</h3>
 
 				<div class="form-group has-feedback">
@@ -28,23 +28,23 @@
 				</div>
 
 				<div class="form-group has-feedback">
-					<label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Voornaam
+					<label class="col-sm-2 control-label" style="text-align: left;" for="inputName">Voornaam
 						<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true"></span>
 					</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" red placeholder="Voornaam">
-						<span id="inputSuccess2Status" class="sr-only">(success)</span>
+						<input type="text" class="form-control" name="inputName" id="inputName" aria-describedby="inputName" required="required" placeholder="Voornaam">
+						<span id="inputNameStatus" class="sr-only">(success)</span>
 					</div>
 				</div>
 
 				<div class="form-group has-feedback">
-					<label class="col-sm-2 control-label" style="text-align: left;" for="inputSuccess2">Naam
+					<label class="col-sm-2 control-label" style="text-align: left;" for="inputSurname">Naam
 						<span class="glyphicon glyphicon-asterisk form-control-feedback" aria-hidden="true"></span>
 					</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status" required="required" placeholder="Naam">
+						<input type="text" class="form-control" name="inputSurname" id="inputSurname" aria-describedby="inputSurname" required="required" placeholder="Naam">
 
-						<span id="inputSuccess2Status" class="sr-only">(success)</span>
+						<span id="inputSurnameStatus" class="sr-only">(success)</span>
 					</div>
 				</div>
 

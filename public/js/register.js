@@ -60,3 +60,56 @@ $(document).ready(function() {var settings = {
         }*/
     });
 });
+
+$('#registerForm').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'fa fa-check',
+            invalid: 'fa fa-times',
+            validating: 'fa fa-refresh'
+        },
+        live: 'enabled',
+        locale: 'nl_BE',
+        fields: {
+            optionsUserType: {
+                trigger: 'change',
+                validators: {
+                    notEmpty: {}
+                }
+            },
+
+            /*slotAmount: {
+                trigger: 'keyup',
+                validators: {
+                    notEmpty: { },
+                    numeric: { },
+                    greaterThan: {
+                        value: 0
+                    }
+                }
+            }*/
+        }
+    })
+    .on('success.form.fv', function(e) {
+        alert('ok');
+        e.preventDefault();
+
+        console.log('ok');
+    }).on('err.form.fv', function(e) {
+    alert('nok');
+    e.preventDefault();
+
+    setTimeout(function() {
+        $('#actionSubmit').removeClass('disabled');
+        $('#actionSubmit').prop('disabled', false);
+        $('body').css('opacity', 1);
+    }, 750);
+});
+
+$('#SubmitUserBtn').off().on('click', function(evt) {
+    evt.preventDefault();
+    $('body').css('opacity', 0.5);
+    $(this).addClass('disabled');
+    $(this).prop('disabled', true);
+    $('#registerForm').submit();
+});
