@@ -1,18 +1,18 @@
 <?php
-/**
- * Restaurant At Home
- *
- * Login page for restaurants
- *
- * @package	RestaurantAtHome
- * @author	A collaboration of: WiVen Web Solutions - IneTh - Shout!
- * @copyright	Copyright (c) 2014 - 2015
- * @copyright
- * @license	*
- * @link	http://restaurantathome.be
- * @since	Version 1.0.0
- */
-defined('BASEPATH') OR exit('No direct script access allowed');
+    /**
+     * Restaurant At Home
+     *
+     * Login page for restaurants
+     *
+     * @package	RestaurantAtHome
+     * @author	A collaboration of: WiVen Web Solutions - IneTh - Shout!
+     * @copyright	Copyright (c) 2014 - 2015
+     * @copyright
+     * @license	*
+     * @link	http://restaurantathome.be
+     * @since	Version 1.0.0
+     */
+    defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 <body>
@@ -25,10 +25,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h3 class="panel-title">Inloggen aub</h3>
                     </div>
                     <div class="panel-body">
-                        <div class="social-buttons clearfix">
+                        <!--<div class="social-buttons clearfix">
                             <a href="#" id="fb_login_btn" class="btn btn-fb btn-block" onclick="fb_login();"><i class="fa fa-facebook"></i> Facebook</a>
                         </div>
-                        <span style="margin: 15px 0 15px;display: block;">OF</span>
+                        <span style="margin: 15px 0 15px;display: block;">OF</span>-->
                         <form class="form" role="form" method="post" action="/dashboard/login" accept-charset="UTF-8" id="dashboard_login">
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputEmail2">E-mail</label>
@@ -46,11 +46,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="form-group">
                                 <input type="submit" class="btn btn-lg btn-success btn-block" value="Log in" />
                             </div>
-                            <div class="checkbox">
+                            <!--<div class="checkbox">
                                 <label>
                                     <input type="checkbox"> Hou me ingelogd
                                 </label>
-                            </div>
+                            </div>-->
                         </form>
 
                         <div class="bottom text-center">

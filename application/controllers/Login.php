@@ -7,23 +7,24 @@
  * Time: 01:39
  */
 class Login extends CI_Controller {
+
     public function index() {
-        @session_start();
+        $data_header = array(
+            'page_title' => ' - Login',
+            'additional_styles' => ''
+        );
 
-        /*if(!is_writable(session_save_path())) {
-            die('Session path'.session_save_path().'is not writable in PHP');
-        }*/
+        $data_content = array(
+            'pretty_page_title' => ''
+        );
 
-        if(!isset($_SESSION['useremail'])) {
-            $_SESSION['useremail'] = $_GET['useremail'];
-            setcookie('useremail', $_GET['useremail']);
-        }
+        $data_footer = array(
+            'additional_scripts' => "<script src='".public_url()."js/dashboardlogin.js'></script>
+<script src='".public_url()."js/min/sha256.min.js'></script>"
+        );
 
-        if(!isset($_SESSION['userhash'])) {
-            $_SESSION['userhash'] = $_GET['userhash'];
-            setcookie('userhash', $_GET['userhash']);
-        }
-
-        echo true;
+        $this->load->view('/dashboard/common/header', $data_header);
+        $this->load->view('/dashboard/login', $data_content);
+        $this->load->view('/dashboard/common/footer', $data_footer);
     }
 }
