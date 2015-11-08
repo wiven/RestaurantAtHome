@@ -18,7 +18,7 @@ class Paymentsuccess extends CI_Controller {
             'current_url' => $cur_url,
             'additional_scripts' => "<script src='".public_url()."js/min/bootstrap-datepicker.min.js'></script>
             <script src='".public_url()."js/min/bootstrap-datepicker.nl-BE.min.js'></script>
-            <script src='".public_url()."js/checkout.js'></script>
+            <script src='".public_url()."js/paymentsuccess.js'></script>
             <script src='".public_url()."js/min/bootstrap-timepicker.min.js'></script>"
         );
 
