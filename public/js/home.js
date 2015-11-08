@@ -64,6 +64,7 @@ function getRandomRestaurant() {
         });
 
         $('.thumbnail').matchHeight();
+        $('.thumbnail').matchHeight();
 
     });
 
